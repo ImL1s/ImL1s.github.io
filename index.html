@@ -353,69 +353,27 @@
         .project-screenshots {
             margin: -2rem -2rem 1.5rem -2rem;
             position: relative;
-            height: 200px;
+            height: 160px;
             overflow: hidden;
             border-radius: 20px 20px 0 0;
         }
 
-        .screenshot-stack {
-            position: relative;
+        .screenshot-item {
             width: 100%;
             height: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            padding: 16px;
-            background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
-        }
-
-        .screenshot-item {
-            height: 100%;
-            width: auto;
-            max-width: 45%;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            flex-shrink: 0;
         }
 
         .screenshot-item img {
+            width: 100%;
             height: 100%;
-            width: auto;
-            object-fit: contain;
+            object-fit: cover;
+            object-position: top center;
             display: block;
+            transition: transform 0.4s ease;
         }
 
-        /* Single screenshot - centered */
-        .screenshot-stack.single {
-            justify-content: center;
-        }
-
-        .screenshot-stack.single .screenshot-item {
-            max-width: 50%;
-            transform: perspective(1000px) rotateY(-5deg);
-        }
-
-        .screenshot-stack.single:hover .screenshot-item {
-            transform: perspective(1000px) rotateY(0) scale(1.02);
-        }
-
-        /* Multiple screenshots - side by side with perspective */
-        .screenshot-stack.multiple .screenshot-item:nth-child(1) {
-            transform: perspective(1000px) rotateY(8deg);
-        }
-
-        .screenshot-stack.multiple .screenshot-item:nth-child(2) {
-            transform: perspective(1000px) rotateY(-8deg);
-        }
-
-        .screenshot-stack.multiple:hover .screenshot-item:nth-child(1) {
-            transform: perspective(1000px) rotateY(3deg) scale(1.02);
-        }
-
-        .screenshot-stack.multiple:hover .screenshot-item:nth-child(2) {
-            transform: perspective(1000px) rotateY(-3deg) scale(1.02);
+        .project-card:hover .screenshot-item img {
+            transform: scale(1.05);
         }
 
         /* Gradient overlay at bottom */
@@ -428,6 +386,55 @@
             height: 60px;
             background: linear-gradient(to top, var(--bg-card) 0%, transparent 100%);
             pointer-events: none;
+        }
+
+        /* Placeholder Hero for cards without screenshots */
+        .project-hero-placeholder {
+            margin: -2rem -2rem 1.5rem -2rem;
+            position: relative;
+            height: 160px;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--placeholder-gradient, linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%));
+        }
+
+        .project-hero-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
+        }
+
+        .project-hero-placeholder::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(to top, var(--bg-card) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .placeholder-icon {
+            font-size: 4rem;
+            opacity: 0.6;
+            filter: grayscale(20%);
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         /* Platform Badges */
@@ -654,10 +661,8 @@
                 <!-- StickerAI Studio -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ec4899, #f59e0b);">
                     <div class="project-screenshots">
-                        <div class="screenshot-stack single">
-                            <div class="screenshot-item">
-                                <img src="assets/screenshots/stickerai_generate.png" alt="StickerAI 生成貼圖">
-                            </div>
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/stickerai_sticker.png" alt="StickerAI 生成貼圖" style="object-position: center 45%;">
                         </div>
                     </div>
                     <div class="project-icon"><img src="assets/icons/sticker_ai.png" alt="StickerAI Studio"></div>
@@ -692,6 +697,9 @@
 
                 <!-- Light Wallet -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #8b5cf6, #3b82f6);">
+                    <div class="project-hero-placeholder" style="--placeholder-gradient: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);">
+                        <span class="placeholder-icon">💎</span>
+                    </div>
                     <div class="project-icon"><img src="assets/icons/light_wallet.png" alt="Light Wallet"></div>
                     <div class="platform-badges">
                         <span class="platform-badge ios">iOS</span>
@@ -717,13 +725,8 @@
                 <!-- Crypto AI Analysis -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f59e0b, #ef4444);">
                     <div class="project-screenshots">
-                        <div class="screenshot-stack multiple">
-                            <div class="screenshot-item">
-                                <img src="assets/screenshots/crypto_ai_dashboard.png" alt="加密 AI 分析儀表板">
-                            </div>
-                            <div class="screenshot-item">
-                                <img src="assets/screenshots/crypto_ai_analysis.png" alt="AI 圖表分析">
-                            </div>
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/crypto_ai_dashboard.png" alt="加密 AI 分析儀表板" style="object-position: center 35%;">
                         </div>
                     </div>
                     <div class="project-icon"><img src="assets/icons/crypto_ai.png" alt="加密 AI 分析"></div>
@@ -748,6 +751,9 @@
 
                 <!-- Light Wallet Extension -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ec4899, #8b5cf6);">
+                    <div class="project-hero-placeholder" style="--placeholder-gradient: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);">
+                        <span class="placeholder-icon">🔐</span>
+                    </div>
                     <div class="project-icon">🔐</div>
                     <div class="platform-badges">
                         <span class="platform-badge extension">Chrome Extension</span>
@@ -770,6 +776,11 @@
 
                 <!-- Insurance Pass TW -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #10b981, #3b82f6);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/insurance_pass_home.png" alt="保險證照考試題庫首頁">
+                        </div>
+                    </div>
                     <div class="project-icon"><img src="assets/icons/insurance_pass.png" alt="保險證照考試題庫"></div>
                     <div class="platform-badges">
                         <span class="platform-badge ios">iOS</span>
@@ -785,7 +796,7 @@
                         <span class="tech-tag">RevenueCat</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.iml1s.insurance_pass_tw" target="_blank" class="project-link primary">
+                        <a href="https://play.google.com/store/apps/details?id=com.insurance_pass_tw.insurance_pass_tw" target="_blank" class="project-link primary">
                             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
                             Android
                         </a>
@@ -798,6 +809,9 @@
 
                 <!-- Taxi Pass TW -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f59e0b, #ef4444);">
+                    <div class="project-hero-placeholder" style="--placeholder-gradient: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);">
+                        <span class="placeholder-icon">🚕</span>
+                    </div>
                     <div class="project-icon"><img src="assets/icons/taxi_pass.png" alt="計程車執業登記證模擬考"></div>
                     <div class="platform-badges">
                         <span class="platform-badge ios">iOS</span>
@@ -823,13 +837,8 @@
                 <!-- AutoStar -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #3b82f6, #10b981);">
                     <div class="project-screenshots">
-                        <div class="screenshot-stack multiple">
-                            <div class="screenshot-item">
-                                <img src="assets/screenshots/autostar_home.png" alt="AutoStar 首頁">
-                            </div>
-                            <div class="screenshot-item">
-                                <img src="assets/screenshots/autostar_buycar.png" alt="AutoStar 買車列表">
-                            </div>
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/autostar_car.jpg" alt="AutoStar 汽車實價登錄" style="object-position: center 40%;">
                         </div>
                     </div>
                     <div class="project-icon"><img src="assets/icons/auto_star.png" alt="AutoStar 汽車實價登錄"></div>
@@ -859,6 +868,9 @@
 
                 <!-- Super Hello World -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #8b5cf6, #ec4899);">
+                    <div class="project-hero-placeholder" style="--placeholder-gradient: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);">
+                        <span class="placeholder-icon">🌍</span>
+                    </div>
                     <div class="project-icon">🌍</div>
                     <div class="platform-badges">
                         <span class="platform-badge opensource">Open Source</span>
@@ -880,6 +892,9 @@
 
                 <!-- TodoList Demo -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #10b981, #f59e0b);">
+                    <div class="project-hero-placeholder" style="--placeholder-gradient: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);">
+                        <span class="placeholder-icon">📋</span>
+                    </div>
                     <div class="project-icon">📋</div>
                     <div class="platform-badges">
                         <span class="platform-badge opensource">Open Source</span>
