@@ -17,6 +17,13 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://iml1s.github.io/">
 
+    <!-- Hreflang for multi-language SEO -->
+    <link rel="alternate" hreflang="zh-TW" href="https://iml1s.github.io/">
+    <link rel="alternate" hreflang="zh-CN" href="https://iml1s.github.io/">
+    <link rel="alternate" hreflang="en" href="https://iml1s.github.io/">
+    <link rel="alternate" hreflang="ja" href="https://iml1s.github.io/">
+    <link rel="alternate" hreflang="x-default" href="https://iml1s.github.io/">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://iml1s.github.io/">
@@ -741,6 +748,93 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Language Switcher */
+        .lang-switcher {
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+
+        .lang-btn svg {
+            width: 12px;
+            height: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.5rem;
+            min-width: 150px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .lang-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            color: var(--text-secondary);
+        }
+
+        .lang-option:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+
+        .lang-option.active {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+        }
+
+        @media (max-width: 768px) {
+            .lang-switcher {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .lang-dropdown {
+                right: auto;
+                left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -750,10 +844,24 @@
         <div class="header-content">
             <div class="logo">ImL1s</div>
             <nav>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
+                <a href="#projects" data-i18n="nav.projects">Projects</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
                 <a href="https://github.com/ImL1s" target="_blank">GitHub</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn" onclick="toggleLanguageDropdown()">
+                        <span class="lang-btn-text">🇹🇼 繁體中文</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" onclick="setLanguage('zh-TW')">🇹🇼 繁體中文</div>
+                        <div class="lang-option" onclick="setLanguage('zh-CN')">🇨🇳 简体中文</div>
+                        <div class="lang-option" onclick="setLanguage('en')">🇺🇸 English</div>
+                        <div class="lang-option" onclick="setLanguage('ja')">🇯🇵 日本語</div>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -761,21 +869,21 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="hero-badge">Full Stack Developer</div>
-                <h1>Building <span>Digital Products</span> That Matter</h1>
-                <p>專注於 Flutter、React、TypeScript 的全端開發者。熱愛打造跨平台應用程式與開源專案。</p>
+                <div class="hero-badge" data-i18n="hero.badge">Full Stack Developer</div>
+                <h1><span data-i18n="hero.title">Building Digital Products</span> <span data-i18n="hero.title.highlight">That Matter</span></h1>
+                <p data-i18n="hero.description">專注於 Flutter、React、TypeScript 的全端開發者。熱愛打造跨平台應用程式與開源專案。</p>
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">9+</div>
-                        <div class="stat-label">公開專案</div>
+                        <div class="stat-label" data-i18n="hero.stat.projects">公開專案</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">5</div>
-                        <div class="stat-label">上架應用</div>
+                        <div class="stat-label" data-i18n="hero.stat.apps">上架應用</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">43+</div>
-                        <div class="stat-label">支援區塊鏈</div>
+                        <div class="stat-label" data-i18n="hero.stat.chains">支援區塊鏈</div>
                     </div>
                 </div>
             </div>
@@ -783,8 +891,8 @@
 
         <section id="projects">
             <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-desc">涵蓋行動應用、Web 應用、瀏覽器擴充功能與開源專案</p>
+                <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
+                <p class="section-desc" data-i18n="projects.subtitle">涵蓋行動應用、Web 應用、瀏覽器擴充功能與開源專案</p>
             </div>
 
             <div class="projects-grid">
@@ -801,8 +909,8 @@
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title">StickerAI Studio</h3>
-                    <p class="project-desc">使用 Google Gemini AI 生成符合 LINE Creators Market 規範的貼圖包。支援一鍵匯出、推薦系統、多語系。</p>
+                    <h3 class="project-title" data-i18n="project.stickerai.title">StickerAI Studio</h3>
+                    <p class="project-desc" data-i18n="project.stickerai.desc">使用 Google Gemini AI 生成符合 LINE Creators Market 規範的貼圖包。支援一鍵匯出、推薦系統、多語系。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Flutter</span>
@@ -836,8 +944,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title">Light Wallet</h3>
-                    <p class="project-desc">輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含 Bitcoin、Ethereum、Solana、TON、Cosmos 等。</p>
+                    <h3 class="project-title" data-i18n="project.lightwallet.title">Light Wallet</h3>
+                    <p class="project-desc" data-i18n="project.lightwallet.desc">輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含 Bitcoin、Ethereum、Solana、TON、Cosmos 等。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Riverpod</span>
@@ -863,8 +971,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title">加密 AI 分析</h3>
-                    <p class="project-desc">AI 驅動的加密貨幣市場分析平台。整合恐懼貪婪指數、多空比、ETF 資金流等 5+ 數據源，支援 AI 圖表分析。</p>
+                    <h3 class="project-title" data-i18n="project.cryptoai.title">加密 AI 分析</h3>
+                    <p class="project-desc" data-i18n="project.cryptoai.desc">AI 驅動的加密貨幣市場分析平台。整合恐懼貪婪指數、多空比、ETF 資金流等 5+ 數據源，支援 AI 圖表分析。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Next.js 16</span>
                         <span class="tech-tag">FastAPI</span>
@@ -888,8 +996,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge extension">Chrome Extension</span>
                     </div>
-                    <h3 class="project-title">Light Wallet Extension</h3>
-                    <p class="project-desc">輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript 開發，支援 EVM 相容鏈。</p>
+                    <h3 class="project-title" data-i18n="project.extension.title">Light Wallet Extension</h3>
+                    <p class="project-desc" data-i18n="project.extension.desc">輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript 開發，支援 EVM 相容鏈。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React 19</span>
                         <span class="tech-tag">TypeScript</span>
@@ -917,8 +1025,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title">保險證照考試題庫</h3>
-                    <p class="project-desc">台灣保險證照考試練習 APP，涵蓋人身、財產、投資型保險等。支援 AI 解釋、雲端同步、模擬考試。</p>
+                    <h3 class="project-title" data-i18n="project.insurance.title">保險證照考試題庫</h3>
+                    <p class="project-desc" data-i18n="project.insurance.desc">台灣保險證照考試練習 APP，涵蓋人身、財產、投資型保險等。支援 AI 解釋、雲端同步、模擬考試。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Firebase</span>
@@ -948,8 +1056,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title">計程車執業登記證模擬考</h3>
-                    <p class="project-desc">台灣計程車執業登記證考試練習 APP。包含交通法規、地理環境共 236 題，支援 AI 助手功能。</p>
+                    <h3 class="project-title" data-i18n="project.taxi.title">計程車執業登記證模擬考</h3>
+                    <p class="project-desc" data-i18n="project.taxi.desc">台灣計程車執業登記證考試練習 APP。包含交通法規、地理環境共 236 題，支援 AI 助手功能。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Firebase AI</span>
@@ -976,8 +1084,8 @@
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title">AutoStar 汽車實價登錄</h3>
-                    <p class="project-desc">專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero 動畫。Clean Architecture 架構。</p>
+                    <h3 class="project-title" data-i18n="project.autostar.title">AutoStar 汽車實價登錄</h3>
+                    <p class="project-desc" data-i18n="project.autostar.desc">專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero 動畫。Clean Architecture 架構。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Riverpod</span>
@@ -1005,8 +1113,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge opensource">Open Source</span>
                     </div>
-                    <h3 class="project-title">Multi-Language Hello World</h3>
-                    <p class="project-desc">60+ 程式語言的 Hello World 實作集合，包含編譯型、直譯型、函數式等類別。附自動測試腳本。</p>
+                    <h3 class="project-title" data-i18n="project.helloworld.title">Multi-Language Hello World</h3>
+                    <p class="project-desc" data-i18n="project.helloworld.desc">60+ 程式語言的 Hello World 實作集合，包含編譯型、直譯型、函數式等類別。附自動測試腳本。</p>
                     <div class="project-tech">
                         <span class="tech-tag">60+ Languages</span>
                         <span class="tech-tag">Bash Scripts</span>
@@ -1029,8 +1137,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge opensource">Open Source</span>
                     </div>
-                    <h3 class="project-title">TodoList - 100+ 技術棧</h3>
-                    <p class="project-desc">同一個 Todo List 應用的 100+ 種實現。涵蓋 Web、Mobile、Desktop、遊戲引擎等完整學習資源。</p>
+                    <h3 class="project-title" data-i18n="project.todolist.title">TodoList - 100+ 技術棧</h3>
+                    <p class="project-desc" data-i18n="project.todolist.desc">同一個 Todo List 應用的 100+ 種實現。涵蓋 Web、Mobile、Desktop、遊戲引擎等完整學習資源。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Vue</span>
@@ -1050,8 +1158,8 @@
 
         <section id="skills">
             <div class="section-header">
-                <h2 class="section-title">Tech Stack</h2>
-                <p class="section-desc">專精於跨平台開發與現代前端技術</p>
+                <h2 class="section-title" data-i18n="skills.title">Tech Stack</h2>
+                <p class="section-desc" data-i18n="skills.subtitle">專精於跨平台開發與現代前端技術</p>
             </div>
 
             <div class="skills-grid">
@@ -1123,8 +1231,8 @@
 
         <section id="contact">
             <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-desc">歡迎交流合作</p>
+                <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+                <p class="section-desc" data-i18n="contact.subtitle">歡迎交流合作</p>
             </div>
 
             <div class="contact-grid">
@@ -1168,7 +1276,7 @@
     </main>
 
     <footer>
-        <p>© 2025 ImL1s. Built with passion.</p>
+        <p data-i18n="footer.copyright">© 2025 ImL1s. Built with passion.</p>
     </footer>
 
     <script>
@@ -1204,5 +1312,6 @@
             });
         });
     </script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
