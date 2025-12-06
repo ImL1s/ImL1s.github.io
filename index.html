@@ -349,66 +349,102 @@
             height: 16px;
         }
 
-        /* Screenshot Gallery */
+        /* Screenshot Gallery - 3D Floating Stack */
         .project-screenshots {
-            display: flex;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-            overflow-x: auto;
-            padding-bottom: 0.5rem;
-            scrollbar-width: thin;
-            scrollbar-color: rgba(255,255,255,0.2) transparent;
-        }
-
-        .project-screenshots::-webkit-scrollbar {
-            height: 4px;
-        }
-
-        .project-screenshots::-webkit-scrollbar-track {
-            background: transparent;
-        }
-
-        .project-screenshots::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.2);
-            border-radius: 2px;
-        }
-
-        .phone-mockup {
-            flex-shrink: 0;
-            width: 120px;
-            height: 240px;
-            background: #000;
-            border-radius: 16px;
-            padding: 6px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 0 0 2px rgba(255,255,255,0.1);
             position: relative;
-            overflow: hidden;
+            height: 180px;
+            margin-bottom: 1.5rem;
+            perspective: 1000px;
         }
 
-        .phone-mockup::before {
-            content: '';
+        .screenshot-stack {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .screenshot-item {
             position: absolute;
-            top: 8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 6px;
-            background: #1a1a1a;
-            border-radius: 3px;
-            z-index: 10;
+            width: 100px;
+            height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
         }
 
-        .phone-mockup img {
+        .screenshot-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: top;
-            border-radius: 10px;
         }
 
-        .phone-mockup:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
+        /* Single screenshot - centered with tilt */
+        .screenshot-stack.single .screenshot-item {
+            transform: rotateY(-8deg) rotateX(5deg);
+        }
+
+        .screenshot-stack.single:hover .screenshot-item {
+            transform: rotateY(0) rotateX(0) scale(1.05);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+
+        /* Multiple screenshots - stacked effect */
+        .screenshot-stack.multiple .screenshot-item:nth-child(1) {
+            transform: translateX(-30px) rotateY(15deg) scale(0.95);
+            z-index: 1;
+        }
+
+        .screenshot-stack.multiple .screenshot-item:nth-child(2) {
+            transform: translateX(30px) rotateY(-15deg) scale(0.95);
+            z-index: 2;
+        }
+
+        .screenshot-stack.multiple:hover .screenshot-item:nth-child(1) {
+            transform: translateX(-60px) rotateY(5deg) scale(1);
+            z-index: 2;
+        }
+
+        .screenshot-stack.multiple:hover .screenshot-item:nth-child(2) {
+            transform: translateX(60px) rotateY(-5deg) scale(1);
+            z-index: 2;
+        }
+
+        /* Glow effect on hover */
+        .screenshot-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .screenshot-item:hover::after {
+            opacity: 1;
+        }
+
+        /* Screenshot overlay gradient */
+        .screenshot-item::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .screenshot-item:hover::before {
+            opacity: 1;
         }
 
         /* Platform Badges */
@@ -642,8 +678,10 @@
                     </div>
                     <h3 class="project-title">StickerAI Studio</h3>
                     <div class="project-screenshots">
-                        <div class="phone-mockup">
-                            <img src="assets/screenshots/stickerai_generate.png" alt="StickerAI 生成貼圖">
+                        <div class="screenshot-stack single">
+                            <div class="screenshot-item">
+                                <img src="assets/screenshots/stickerai_generate.png" alt="StickerAI 生成貼圖">
+                            </div>
                         </div>
                     </div>
                     <p class="project-desc">使用 Google Gemini AI 生成符合 LINE Creators Market 規範的貼圖包。支援一鍵匯出、推薦系統、多語系。</p>
@@ -776,11 +814,13 @@
                     </div>
                     <h3 class="project-title">AutoStar 汽車實價登錄</h3>
                     <div class="project-screenshots">
-                        <div class="phone-mockup">
-                            <img src="assets/screenshots/autostar_home.png" alt="AutoStar 首頁">
-                        </div>
-                        <div class="phone-mockup">
-                            <img src="assets/screenshots/autostar_buycar.png" alt="AutoStar 買車列表">
+                        <div class="screenshot-stack multiple">
+                            <div class="screenshot-item">
+                                <img src="assets/screenshots/autostar_home.png" alt="AutoStar 首頁">
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="assets/screenshots/autostar_buycar.png" alt="AutoStar 買車列表">
+                            </div>
                         </div>
                     </div>
                     <p class="project-desc">專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero 動畫。Clean Architecture 架構。</p>
