@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://iml1s.github.io/</loc>
-    <lastmod>2025-12-06</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-12-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://iml1s.github.io/assets/og-image.png</image:loc>
+      <image:title>ImL1s Portfolio - Full Stack Developer</image:title>
+      <image:caption>台灣全端開發者 ImL1s 的作品集網站</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://iml1s.github.io/assets/screenshots/stickerai_sticker.png</image:loc>
+      <image:title>StickerAI Studio - AI 貼圖生成器</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://iml1s.github.io/assets/screenshots/crypto_ai_dashboard.png</image:loc>
+      <image:title>加密 AI 分析 - 市場數據儀表板</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://iml1s.github.io/assets/screenshots/autostar_car.jpg</image:loc>
+      <image:title>AutoStar 汽車實價登錄</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://iml1s.github.io/assets/screenshots/insurance_pass_home.png</image:loc>
+      <image:title>保險證照考試題庫</image:title>
+    </image:image>
   </url>
 </urlset>
