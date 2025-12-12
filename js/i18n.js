@@ -21,7 +21,7 @@ const translations = {
 
         // Project: StickerAI
         'project.stickerai.title': 'StickerAI Studio',
-        'project.stickerai.desc': '使用 Google Gemini AI 生成符合 LINE Creators Market 規範的貼圖包。支援一鍵匯出、推薦系統、多語系。',
+        'project.stickerai.desc': '全新 AI 貼圖生成器！上傳一張照片，Google Gemini AI 自動生成完整 LINE 貼圖包。保持角色一致性，支援多種風格（Cutecore、Kawaii、Pixel Art、Watercolor 等），一鍵下載符合 LINE 規範的 ZIP 檔。',
 
         // Project: Light Wallet
         'project.lightwallet.title': 'Light Wallet',
@@ -45,7 +45,7 @@ const translations = {
 
         // Project: AutoStar
         'project.autostar.title': 'AutoStar 汽車實價登錄',
-        'project.autostar.desc': '專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero 動畫。Clean Architecture 架構。',
+        'project.autostar.desc': '您的二手車價格查詢專家！揭露真實車價，即時同步全台二手車成交價、智能估價試算、收藏追蹤心儀車款。支援品牌車系篩選、價格比較分析、即時價格通知。',
 
         // Project: Hello World
         'project.helloworld.title': 'Multi-Language Hello World',
@@ -101,7 +101,7 @@ const translations = {
 
         // Project: StickerAI
         'project.stickerai.title': 'StickerAI Studio',
-        'project.stickerai.desc': '使用 Google Gemini AI 生成符合 LINE Creators Market 规范的贴图包。支持一键导出、推荐系统、多语系。',
+        'project.stickerai.desc': '全新 AI 贴图生成器！上传一张照片，Google Gemini AI 自动生成完整 LINE 贴图包。保持角色一致性，支持多种风格（Cutecore、Kawaii、Pixel Art、Watercolor 等），一键下载符合 LINE 规范的 ZIP 档。',
 
         // Project: Light Wallet
         'project.lightwallet.title': 'Light Wallet',
@@ -125,7 +125,7 @@ const translations = {
 
         // Project: AutoStar
         'project.autostar.title': 'AutoStar 汽车实价登录',
-        'project.autostar.desc': '专业的二手车实价登录与查询应用，支持 38 个品牌、折旧率分析、Hero 动画。Clean Architecture 架构。',
+        'project.autostar.desc': '您的二手车价格查询专家！揭露真实车价，即时同步全台二手车成交价、智能估价试算、收藏追踪心仪车款。支持品牌车系筛选、价格比较分析、即时价格通知。',
 
         // Project: Hello World
         'project.helloworld.title': 'Multi-Language Hello World',
@@ -181,7 +181,7 @@ const translations = {
 
         // Project: StickerAI
         'project.stickerai.title': 'StickerAI Studio',
-        'project.stickerai.desc': 'Generate LINE sticker packs using Google Gemini AI. Features one-click export, referral system, and multi-language support.',
+        'project.stickerai.desc': 'New AI sticker generator! Upload a photo and Google Gemini AI automatically generates a complete LINE sticker pack. Maintains character consistency, supports multiple styles (Cutecore, Kawaii, Pixel Art, Watercolor, etc.), one-click download ZIP file compliant with LINE specifications.',
 
         // Project: Light Wallet
         'project.lightwallet.title': 'Light Wallet',
@@ -205,7 +205,7 @@ const translations = {
 
         // Project: AutoStar
         'project.autostar.title': 'AutoStar Used Car Prices',
-        'project.autostar.desc': 'Professional used car price registry app supporting 38 brands, depreciation analysis, and Hero animations. Clean Architecture.',
+        'project.autostar.desc': 'Your used car price expert! Reveals real car prices, syncs Taiwan used car transaction prices in real-time, smart price estimation, and track favorite vehicles. Supports brand filtering, price comparison analysis, and real-time price notifications.',
 
         // Project: Hello World
         'project.helloworld.title': 'Multi-Language Hello World',
@@ -261,7 +261,7 @@ const translations = {
 
         // Project: StickerAI
         'project.stickerai.title': 'StickerAI Studio',
-        'project.stickerai.desc': 'Google Gemini AI を使用して LINE Creators Market 規格のスタンプパックを生成。ワンクリックエクスポート、紹介システム、多言語対応。',
+        'project.stickerai.desc': '新しい AI スタンプジェネレーター！写真を1枚アップロードするだけで、Google Gemini AI が自動的に LINE スタンプパックを生成。キャラクターの一貫性を維持し、複数のスタイル（Cutecore、Kawaii、Pixel Art、Watercolor など）をサポート、LINE 規格に準拠した ZIP ファイルをワンクリックでダウンロード。',
 
         // Project: Light Wallet
         'project.lightwallet.title': 'Light Wallet',
@@ -285,7 +285,7 @@ const translations = {
 
         // Project: AutoStar
         'project.autostar.title': 'AutoStar 中古車価格登録',
-        'project.autostar.desc': '38 ブランド対応のプロ仕様中古車価格登録・検索アプリ。減価償却分析、Hero アニメーション。Clean Architecture。',
+        'project.autostar.desc': 'あなたの中古車価格検索の専門家！実際の車価を公開し、台湾全土の中古車取引価格をリアルタイムで同期、スマート価格見積もり、お気に入りの車両を追跡。ブランドフィルタリング、価格比較分析、リアルタイム価格通知をサポート。',
 
         // Project: Hello World
         'project.helloworld.title': 'Multi-Language Hello World',

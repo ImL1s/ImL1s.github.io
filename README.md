@@ -13,11 +13,11 @@
 - SEO / 社群完整度：OG、Twitter、結構化資料（Person / WebSite / ItemList / Breadcrumb）。
 
 ## 精選專案一覽
-- StickerAI Studio：Gemini AI 生成 LINE 規格貼圖，Web / iOS / Android，React + Flutter + Supabase。
+ - StickerAI Studio：全新 AI 貼圖生成器！上傳照片自動生成完整 LINE 貼圖包，保持角色一致性，支援多種風格，Web / iOS / Android，React + Flutter + Supabase。（iOS：https://apps.apple.com/tw/app/stickerai-studio/id6755986531）
 - Light Wallet（含 Extension）：支援 43+ 多鏈錢包與瀏覽器擴充，Flutter、Ethers.js、TypeScript。
 - 加密 AI 分析：Next.js + FastAPI，整合 Fear & Greed、ETF 資金流等指標並加上 AI 圖表解讀。
 - 保險證照題庫、計程車執業模擬考：Flutter + Firebase + AI 助手，行動 / Web 全平台。
-- AutoStar 汽車實價登錄：38 品牌二手車行情、折舊分析，Flutter + Clean Architecture。
+ - AutoStar 汽車實價登錄：二手車價格查詢專家！揭露真實車價，即時同步全台成交價、智能估價、收藏追蹤，Flutter + Clean Architecture。（iOS：https://apps.apple.com/tw/app/autostar-%E4%BA%8C%E6%89%8B%E8%BB%8A%E5%AF%A6%E5%83%B9%E7%99%BB%E9%8C%84/id6756206346）
 - Multi-Language Hello World、TodoList 100+ 技術棧：開源學習型專案集合。
 
 ## 技術棧
@@ -54,4 +54,5 @@ robots.txt, sitemap.xml, 404.html, light-wallet-privacy.html
 ## 部署
 - 專案為純靜態檔案，推送至 `main`（預設 Pages 分支）即可自動更新：https://iml1s.github.io
 - 如需自訂網域，於 Repo Settings → Pages 設定 CNAME 並新增 DNS 記錄。
+
 
