@@ -28,4 +28,10 @@
       <image:title>保險證照考試題庫</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://iml1s.github.io/taxi-pass-privacy.html</loc>
+    <lastmod>2025-12-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
