@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <!-- Primary Meta Tags -->
     <title>ImL1s | Full Stack Developer - Flutter, React, TypeScript</title>
     <meta name="title" content="ImL1s | Full Stack Developer - Flutter, React, TypeScript">
-    <meta name="description" content="ImL1s - 台灣全端開發者。專精 Flutter、React、TypeScript 跨平台應用開發。9+ 開源專案、5 款上架應用、支援 43+ 區塊鏈。Mobile Apps, Web Applications, Open Source Projects.">
-    <meta name="keywords" content="ImL1s, Full Stack Developer, Flutter Developer, React Developer, TypeScript, iOS Developer, Android Developer, Web Developer, Taiwan Developer, 台灣開發者, 全端工程師, Mobile App Development, Cross-platform, Blockchain, Crypto Wallet, LINE Sticker, StickerAI">
+    <meta name="description"
+        content="ImL1s - 台灣全端開發者。專精 Flutter、React、TypeScript 跨平台應用開發。9+ 開源專案、5 款上架應用、支援 43+ 區塊鏈。Mobile Apps, Web Applications, Open Source Projects.">
+    <meta name="keywords"
+        content="ImL1s, Full Stack Developer, Flutter Developer, React Developer, TypeScript, iOS Developer, Android Developer, Web Developer, Taiwan Developer, 台灣開發者, 全端工程師, Mobile App Development, Cross-platform, Blockchain, Crypto Wallet, LINE Sticker, StickerAI">
     <meta name="author" content="ImL1s">
     <meta name="robots" content="index, follow">
     <meta name="language" content="zh-TW">
@@ -32,7 +35,8 @@
     <meta property="og:image" content="https://iml1s.github.io/assets/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="ImL1s Portfolio - Full Stack Developer specializing in Flutter, React, TypeScript">
+    <meta property="og:image:alt"
+        content="ImL1s Portfolio - Full Stack Developer specializing in Flutter, React, TypeScript">
     <meta property="og:locale" content="zh_TW">
     <meta property="og:locale:alternate" content="zh_CN">
     <meta property="og:locale:alternate" content="en_US">
@@ -70,7 +74,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 
     <!-- Identity Verification Links -->
     <link rel="me" href="https://github.com/ImL1s">
@@ -79,8 +85,10 @@
     <link rel="me" href="https://www.threads.net/@sam_lung2077">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
 
     <!-- Structured Data - Person -->
     <script type="application/ld+json">
@@ -286,13 +294,20 @@
             width: 200%;
             height: 200%;
             background: radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                        radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+                radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
             animation: gradientMove 20s ease-in-out infinite;
         }
 
         @keyframes gradientMove {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            50% { transform: translate(-5%, -5%) rotate(5deg); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            50% {
+                transform: translate(-5%, -5%) rotate(5deg);
+            }
         }
 
         /* Header */
@@ -345,16 +360,58 @@
 
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            padding: 8rem 4rem 6rem;
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 6rem 2rem;
-            text-align: center;
         }
 
-        .hero-content {
-            max-width: 800px;
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            width: 100%;
+        }
+
+        .hero-text-content {
+            flex: 1;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero-image {
+            flex: 1;
+            max-width: 500px;
+            animation: float-hero 6s ease-in-out infinite;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            display: block;
+        }
+
+        @keyframes float-hero {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
         }
 
         .hero-badge {
@@ -364,15 +421,18 @@
             border: 1px solid rgba(59, 130, 246, 0.3);
             border-radius: 50px;
             font-size: 0.875rem;
+            font-weight: 600;
             color: var(--accent-blue);
             margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
+            text-align: left;
         }
 
         .hero h1 span {
@@ -386,18 +446,20 @@
             font-size: 1.25rem;
             color: var(--text-secondary);
             max-width: 600px;
-            margin: 0 auto 2rem;
+            margin: 0 0 2rem 0;
+            text-align: left;
+            line-height: 1.6;
         }
 
         .hero-stats {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 3rem;
-            margin-top: 3rem;
+            margin-top: 1rem;
         }
 
         .stat {
-            text-align: center;
+            text-align: left;
         }
 
         .stat-number {
@@ -635,8 +697,8 @@
             right: 0;
             bottom: 0;
             background-image:
-                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.03) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(255,255,255,0.03) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
         }
 
         .project-hero-placeholder::after {
@@ -659,8 +721,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         /* Platform Badges */
@@ -807,12 +876,28 @@
             }
 
             .hero {
-                padding: 8rem 1.5rem 4rem;
+                padding: 6rem 1.5rem 4rem;
+                text-align: center;
+            }
+
+            .hero-container {
+                flex-direction: column-reverse;
+                gap: 2rem;
+            }
+
+            .hero-text-content {
+                align-items: center;
+                text-align: center;
             }
 
             .hero-stats {
                 gap: 1.5rem;
                 flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-image {
+                max-width: 280px;
             }
 
             .stat-number {
@@ -932,6 +1017,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="bg-gradient"></div>
 
@@ -947,7 +1033,9 @@
                     <button class="lang-btn" onclick="toggleLanguageDropdown()">
                         <span class="lang-btn-text">🇹🇼 繁體中文</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
                         </svg>
                     </button>
                     <div class="lang-dropdown">
@@ -963,23 +1051,29 @@
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <div class="hero-badge" data-i18n="hero.badge">Full Stack Developer</div>
-                <h1><span data-i18n="hero.title">Building Digital Products</span> <span data-i18n="hero.title.highlight">That Matter</span></h1>
-                <p data-i18n="hero.description">專注於 Flutter、React、TypeScript 的全端開發者。熱愛打造跨平台應用程式與開源專案。</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number">9+</div>
-                        <div class="stat-label" data-i18n="hero.stat.projects">公開專案</div>
+            <div class="hero-container">
+                <div class="hero-text-content">
+                    <div class="hero-badge" data-i18n="hero.badge">Full Stack Developer</div>
+                    <h1><span data-i18n="hero.title">Building Digital Products</span> <span
+                            data-i18n="hero.title.highlight">That Matter</span></h1>
+                    <p data-i18n="hero.description">專注於 Flutter、React、TypeScript 的全端開發者。熱愛打造跨平台應用程式與開源專案。</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">9+</div>
+                            <div class="stat-label" data-i18n="hero.stat.projects">公開專案</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label" data-i18n="hero.stat.apps">上架應用</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">43+</div>
+                            <div class="stat-label" data-i18n="hero.stat.chains">支援區塊鏈</div>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label" data-i18n="hero.stat.apps">上架應用</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">43+</div>
-                        <div class="stat-label" data-i18n="hero.stat.chains">支援區塊鏈</div>
-                    </div>
+                </div>
+                <div class="hero-image fade-in">
+                    <img src="assets/hero_illustration.png" alt="Developer Workspace">
                 </div>
             </div>
         </section>
@@ -995,7 +1089,8 @@
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ec4899, #f59e0b);">
                     <div class="project-screenshots">
                         <div class="screenshot-item">
-                            <img src="assets/screenshots/stickerai_sticker.png" alt="StickerAI 生成貼圖" style="object-position: center 45%;">
+                            <img src="assets/screenshots/stickerai_sticker.png" alt="StickerAI 生成貼圖"
+                                style="object-position: center 45%;">
                         </div>
                     </div>
                     <div class="project-icon"><img src="assets/icons/sticker_ai.png" alt="StickerAI Studio"></div>
@@ -1005,7 +1100,8 @@
                         <span class="platform-badge android">Android</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.stickerai.title">StickerAI Studio</h3>
-                    <p class="project-desc" data-i18n="project.stickerai.desc">使用 Google Gemini AI 生成符合 LINE Creators Market 規範的貼圖包。支援一鍵匯出、推薦系統、多語系。</p>
+                    <p class="project-desc" data-i18n="project.stickerai.desc">使用 Google Gemini AI 生成符合 LINE Creators
+                        Market 規範的貼圖包。支援一鍵匯出、推薦系統、多語系。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Flutter</span>
@@ -1014,19 +1110,35 @@
                     </div>
                     <div class="project-links">
                         <a href="https://stickerstudio.xyz" target="_blank" class="project-link primary">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <path
+                                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
                             Web
                         </a>
-                        <a href="https://apps.apple.com/tw/app/stickerai-studio/id6755986531" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z"/></svg>
+                        <a href="https://apps.apple.com/tw/app/stickerai-studio/id6755986531" target="_blank"
+                            class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z" />
+                            </svg>
                             iOS
                         </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.stickerai.studio" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        <a href="https://play.google.com/store/apps/details?id=com.stickerai.studio" target="_blank"
+                            class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
                             Android
                         </a>
-                        <a href="https://github.com/ImL1s/line-sticker-maker-ai" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <a href="https://github.com/ImL1s/line-sticker-maker-ai" target="_blank"
+                            class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1034,7 +1146,8 @@
 
                 <!-- Light Wallet -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #8b5cf6, #3b82f6);">
-                    <div class="project-hero-placeholder" style="--placeholder-gradient: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);">
+                    <div class="project-hero-placeholder"
+                        style="--placeholder-gradient: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);">
                         <span class="placeholder-icon">💎</span>
                     </div>
                     <div class="project-icon"><img src="assets/icons/light_wallet.png" alt="Light Wallet"></div>
@@ -1044,7 +1157,8 @@
                         <span class="platform-badge web">Web</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.lightwallet.title">Light Wallet</h3>
-                    <p class="project-desc" data-i18n="project.lightwallet.desc">輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含 Bitcoin、Ethereum、Solana、TON、Cosmos 等。</p>
+                    <p class="project-desc" data-i18n="project.lightwallet.desc">輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含
+                        Bitcoin、Ethereum、Solana、TON、Cosmos 等。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Riverpod</span>
@@ -1053,7 +1167,10 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/ImL1s/light_wallet" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1063,7 +1180,8 @@
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f59e0b, #ef4444);">
                     <div class="project-screenshots">
                         <div class="screenshot-item">
-                            <img src="assets/screenshots/crypto_ai_dashboard.png" alt="加密 AI 分析儀表板" style="object-position: center 35%;">
+                            <img src="assets/screenshots/crypto_ai_dashboard.png" alt="加密 AI 分析儀表板"
+                                style="object-position: center 35%;">
                         </div>
                     </div>
                     <div class="project-icon"><img src="assets/icons/crypto_ai.png" alt="加密 AI 分析"></div>
@@ -1071,7 +1189,8 @@
                         <span class="platform-badge web">Web</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.cryptoai.title">加密 AI 分析</h3>
-                    <p class="project-desc" data-i18n="project.cryptoai.desc">AI 驅動的加密貨幣市場分析平台。整合恐懼貪婪指數、多空比、ETF 資金流等 5+ 數據源，支援 AI 圖表分析。</p>
+                    <p class="project-desc" data-i18n="project.cryptoai.desc">AI 驅動的加密貨幣市場分析平台。整合恐懼貪婪指數、多空比、ETF 資金流等 5+
+                        數據源，支援 AI 圖表分析。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Next.js 16</span>
                         <span class="tech-tag">FastAPI</span>
@@ -1079,8 +1198,12 @@
                         <span class="tech-tag">Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/ImL1s/crypto_ai_analysis" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <a href="https://github.com/ImL1s/crypto_ai_analysis" target="_blank"
+                            class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1088,7 +1211,8 @@
 
                 <!-- Light Wallet Extension -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ec4899, #8b5cf6);">
-                    <div class="project-hero-placeholder" style="--placeholder-gradient: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);">
+                    <div class="project-hero-placeholder"
+                        style="--placeholder-gradient: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);">
                         <span class="placeholder-icon">🔐</span>
                     </div>
                     <div class="project-icon">🔐</div>
@@ -1096,7 +1220,8 @@
                         <span class="platform-badge extension">Chrome Extension</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.extension.title">Light Wallet Extension</h3>
-                    <p class="project-desc" data-i18n="project.extension.desc">輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript 開發，支援 EVM 相容鏈。</p>
+                    <p class="project-desc" data-i18n="project.extension.desc">輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript
+                        開發，支援 EVM 相容鏈。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React 19</span>
                         <span class="tech-tag">TypeScript</span>
@@ -1104,8 +1229,12 @@
                         <span class="tech-tag">Tailwind</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/ImL1s/light_wallet_extension" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <a href="https://github.com/ImL1s/light_wallet_extension" target="_blank"
+                            class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1125,7 +1254,8 @@
                         <span class="platform-badge web">Web</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.insurance.title">保險證照考試題庫</h3>
-                    <p class="project-desc" data-i18n="project.insurance.desc">台灣保險證照考試練習 APP，涵蓋人身、財產、投資型保險等。支援 AI 解釋、雲端同步、模擬考試。</p>
+                    <p class="project-desc" data-i18n="project.insurance.desc">台灣保險證照考試練習 APP，涵蓋人身、財產、投資型保險等。支援 AI
+                        解釋、雲端同步、模擬考試。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Firebase</span>
@@ -1133,12 +1263,20 @@
                         <span class="tech-tag">RevenueCat</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.insurance_pass_tw.insurance_pass_tw" target="_blank" class="project-link primary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        <a href="https://play.google.com/store/apps/details?id=com.insurance_pass_tw.insurance_pass_tw"
+                            target="_blank" class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
                             Android
                         </a>
-                        <a href="https://github.com/ImL1s/insurance_pass_tw" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <a href="https://github.com/ImL1s/insurance_pass_tw" target="_blank"
+                            class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1146,7 +1284,8 @@
 
                 <!-- Taxi Pass TW -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f59e0b, #ef4444);">
-                    <div class="project-hero-placeholder" style="--placeholder-gradient: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);">
+                    <div class="project-hero-placeholder"
+                        style="--placeholder-gradient: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(239, 68, 68, 0.2) 100%);">
                         <span class="placeholder-icon">🚕</span>
                     </div>
                     <div class="project-icon"><img src="assets/icons/taxi_pass.png" alt="計程車執業登記證模擬考"></div>
@@ -1156,7 +1295,8 @@
                         <span class="platform-badge web">Web</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.taxi.title">計程車執業登記證模擬考</h3>
-                    <p class="project-desc" data-i18n="project.taxi.desc">台灣計程車執業登記證考試練習 APP。包含交通法規、地理環境共 236 題，支援 AI 助手功能。</p>
+                    <p class="project-desc" data-i18n="project.taxi.desc">台灣計程車執業登記證考試練習 APP。包含交通法規、地理環境共 236 題，支援 AI
+                        助手功能。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Firebase AI</span>
@@ -1165,7 +1305,10 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/ImL1s/taxi_pass_tw" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1175,7 +1318,8 @@
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #3b82f6, #10b981);">
                     <div class="project-screenshots">
                         <div class="screenshot-item">
-                            <img src="assets/screenshots/autostar_car.jpg" alt="AutoStar 汽車實價登錄" style="object-position: center 40%;">
+                            <img src="assets/screenshots/autostar_car.jpg" alt="AutoStar 汽車實價登錄"
+                                style="object-position: center 40%;">
                         </div>
                     </div>
                     <div class="project-icon"><img src="assets/icons/auto_star.png" alt="AutoStar 汽車實價登錄"></div>
@@ -1184,7 +1328,8 @@
                         <span class="platform-badge android">Android</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.autostar.title">AutoStar 汽車實價登錄</h3>
-                    <p class="project-desc" data-i18n="project.autostar.desc">專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero 動畫。Clean Architecture 架構。</p>
+                    <p class="project-desc" data-i18n="project.autostar.desc">專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero
+                        動畫。Clean Architecture 架構。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
                         <span class="tech-tag">Riverpod</span>
@@ -1192,16 +1337,27 @@
                         <span class="tech-tag">Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://play.google.com/store/apps/details?id=com.autostar.autostar_app" target="_blank" class="project-link primary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+                        <a href="https://play.google.com/store/apps/details?id=com.autostar.autostar_app"
+                            target="_blank" class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
                             Android
                         </a>
-                        <a href="https://apps.apple.com/tw/app/autostar-%E4%BA%8C%E6%89%8B%E8%BB%8A%E5%AF%A6%E5%83%B9%E7%99%BB%E9%8C%84/id6756206346" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z"/></svg>
+                        <a href="https://apps.apple.com/tw/app/autostar-%E4%BA%8C%E6%89%8B%E8%BB%8A%E5%AF%A6%E5%83%B9%E7%99%BB%E9%8C%84/id6756206346"
+                            target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z" />
+                            </svg>
                             iOS
                         </a>
                         <a href="https://github.com/ImL1s/auto_star" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1211,7 +1367,8 @@
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #8b5cf6, #ec4899);">
                     <div class="project-screenshots">
                         <div class="screenshot-item">
-                            <img src="assets/screenshots/hello_world_hero.png" alt="Multi-Language Hello World" style="object-position: center 40%;">
+                            <img src="assets/screenshots/hello_world_hero.png" alt="Multi-Language Hello World"
+                                style="object-position: center 40%;">
                         </div>
                     </div>
                     <div class="project-icon"><img src="assets/icons/hello_world.png" alt="Hello World"></div>
@@ -1219,15 +1376,20 @@
                         <span class="platform-badge opensource">Open Source</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.helloworld.title">Multi-Language Hello World</h3>
-                    <p class="project-desc" data-i18n="project.helloworld.desc">60+ 程式語言的 Hello World 實作集合，包含編譯型、直譯型、函數式等類別。附自動測試腳本。</p>
+                    <p class="project-desc" data-i18n="project.helloworld.desc">60+ 程式語言的 Hello World
+                        實作集合，包含編譯型、直譯型、函數式等類別。附自動測試腳本。</p>
                     <div class="project-tech">
                         <span class="tech-tag">60+ Languages</span>
                         <span class="tech-tag">Bash Scripts</span>
                         <span class="tech-tag">Educational</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/ImL1s/super_hello_world" target="_blank" class="project-link primary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <a href="https://github.com/ImL1s/super_hello_world" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1237,7 +1399,8 @@
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #10b981, #f59e0b);">
                     <div class="project-screenshots">
                         <div class="screenshot-item">
-                            <img src="assets/screenshots/todolist_hero.png" alt="TodoList Demo" style="object-position: center 40%;">
+                            <img src="assets/screenshots/todolist_hero.png" alt="TodoList Demo"
+                                style="object-position: center 40%;">
                         </div>
                     </div>
                     <div class="project-icon"><img src="assets/icons/todolist.png" alt="TodoList"></div>
@@ -1245,7 +1408,8 @@
                         <span class="platform-badge opensource">Open Source</span>
                     </div>
                     <h3 class="project-title" data-i18n="project.todolist.title">TodoList - 100+ 技術棧</h3>
-                    <p class="project-desc" data-i18n="project.todolist.desc">同一個 Todo List 應用的 100+ 種實現。涵蓋 Web、Mobile、Desktop、遊戲引擎等完整學習資源。</p>
+                    <p class="project-desc" data-i18n="project.todolist.desc">同一個 Todo List 應用的 100+ 種實現。涵蓋
+                        Web、Mobile、Desktop、遊戲引擎等完整學習資源。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Vue</span>
@@ -1255,7 +1419,10 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/ImL1s/TodoListDemo" target="_blank" class="project-link primary">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
                             GitHub
                         </a>
                     </div>
@@ -1345,7 +1512,10 @@
             <div class="contact-grid">
                 <a href="https://github.com/ImL1s" target="_blank" class="contact-card fade-in">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
                     </div>
                     <div class="contact-label">GitHub</div>
                     <div class="contact-value">@ImL1s</div>
@@ -1353,7 +1523,10 @@
 
                 <a href="https://x.com/l1s_ai" target="_blank" class="contact-card fade-in">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
                     </div>
                     <div class="contact-label">X (Twitter)</div>
                     <div class="contact-value">@l1s_ai</div>
@@ -1361,7 +1534,10 @@
 
                 <a href="https://www.facebook.com/shanglol/" target="_blank" class="contact-card fade-in">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
                     </div>
                     <div class="contact-label">Facebook</div>
                     <div class="contact-value">shanglol</div>
@@ -1369,7 +1545,10 @@
 
                 <a href="https://www.threads.net/@sam_lung2077" target="_blank" class="contact-card fade-in">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.182.408-2.256 1.333-3.022.812-.672 1.927-1.09 3.22-1.208.945-.086 1.848-.05 2.702.106-.073-.624-.27-1.095-.588-1.405-.455-.443-1.197-.674-2.21-.689l-.046-.002c-.804 0-1.732.206-2.282.582l-1.103-1.69c.858-.584 2.165-.99 3.478-.99l.062.002c1.545.029 2.773.47 3.65 1.313.794.762 1.27 1.824 1.418 3.158.474.196.915.43 1.32.697 1.137.75 1.987 1.726 2.46 2.823.752 1.742.828 4.634-1.416 6.837-1.87 1.836-4.2 2.616-7.543 2.637zm.086-7.907c-.674.061-1.263.252-1.654.536-.38.275-.57.635-.545 1.015.03.44.283.793.732 1.02.503.254 1.2.37 1.952.324 1.078-.058 1.9-.427 2.445-1.097.379-.466.652-1.07.82-1.81a10.71 10.71 0 0 0-3.75.012z"/></svg>
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                            <path
+                                d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.182.408-2.256 1.333-3.022.812-.672 1.927-1.09 3.22-1.208.945-.086 1.848-.05 2.702.106-.073-.624-.27-1.095-.588-1.405-.455-.443-1.197-.674-2.21-.689l-.046-.002c-.804 0-1.732.206-2.282.582l-1.103-1.69c.858-.584 2.165-.99 3.478-.99l.062.002c1.545.029 2.773.47 3.65 1.313.794.762 1.27 1.824 1.418 3.158.474.196.915.43 1.32.697 1.137.75 1.987 1.726 2.46 2.823.752 1.742.828 4.634-1.416 6.837-1.87 1.836-4.2 2.616-7.543 2.637zm.086-7.907c-.674.061-1.263.252-1.654.536-.38.275-.57.635-.545 1.015.03.44.283.793.732 1.02.503.254 1.2.37 1.952.324 1.078-.058 1.9-.427 2.445-1.097.379-.466.652-1.07.82-1.81a10.71 10.71 0 0 0-3.75.012z" />
+                        </svg>
                     </div>
                     <div class="contact-label">Threads</div>
                     <div class="contact-value">@sam_lung2077</div>
@@ -1377,7 +1556,10 @@
 
                 <a href="https://stickerstudio.xyz" target="_blank" class="contact-card fade-in">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
                     </div>
                     <div class="contact-label">StickerAI</div>
                     <div class="contact-value">stickerstudio.xyz</div>
@@ -1385,7 +1567,10 @@
 
                 <a href="mailto:aa22396584@gmail.com" class="contact-card fade-in">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
                     </div>
                     <div class="contact-label">Email</div>
                     <div class="contact-value">aa22396584@gmail.com</div>
@@ -1419,7 +1604,7 @@
 
         // Smooth scroll for navigation
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -1433,4 +1618,5 @@
     </script>
     <script src="js/i18n.js"></script>
 </body>
+
 </html>
