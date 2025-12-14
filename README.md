@@ -1,38 +1,56 @@
 <div align="center">
-  <img src="assets/banner_v1.png" alt="ImL1s Portfolio Banner" width="100%" />
+  <img src="assets/banner_v1.png" alt="ImL1s Portfolio Banner" width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.5);" />
 
   # Hi there, I'm ImL1s 👋
   
   [![Portfolio](https://img.shields.io/badge/Portfolio-iml1s.github.io-blue?style=for-the-badge&logo=github)](https://iml1s.github.io)
   [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/l1s_ai?style=for-the-badge)](https://x.com/l1s_ai)
 
-  **Full Stack Developer | AI Enthusiast | Blockchain Explorer**
+  **Senior Full Stack Developer | Blockchain Specialist | 10+ Years Experience**
   
-  *Taipei, Taiwan* 🇹🇼
+  *Taipei, Taiwan* 🇹🇼 | *Remote Ready* 🌍
 </div>
 
 ---
 
 ## 🚀 About Me
 
-全端開發者 ImL1s 的個人作品集著陸頁，展示跨平台專案（Flutter、React、TypeScript）、AI/區塊鏈錢包、教育類 App 與開源學習資源。頁面支援多語系（繁中 / 簡中 / 英文 / 日文）、漸層動態背景與精緻卡片動畫，直接部署於 GitHub Pages。
+Experienced developer with **10+ years** in the industry, specializing in **Android, Flutter, and Blockchain** technologies. I've been active in the **Crypto/DeFi/GameFi** space since 2013.
 
-- 🔭 I’m currently working on **StickerAI Studio** & **Light Wallet**
-- 🌱 I’m currently learning **Advanced AI Agents** & **Rust**
-- 💬 Ask me about **Flutter, React, Web3**
-- 📫 How to reach me: [Twitter](https://x.com/l1s_ai)
+- 📱 **Mobile Expert**: 10 years of Android experience, expert in Kotlin/Java & Flutter.
+- ⛓️ **Blockchain Native**: Writing Solidity smart contracts (ERC-20/721, Mining, Staking) and building deep integrations with EVM, Bitcoin, Tron, and Solana chains.
+- 🌏 **International Collaborator**: Extensive experience working with teams from **Japan 🇯🇵, China 🇨🇳, Vietnam 🇻🇳, and Cambodia 🇰🇭**.
+- 🏗️ **Architecture Focused**: Strong advocate for clean architecture, MVVM/MVI, and rigorous code reviews.
+- 🗣️ **Languages**: Chinese (Native), English (Conversational), Japanese (Basic).
 
-## 🛠 Tech Stack
+> *"I can independently implement interactions between Android/Flutter and major blockchains (Ethereum, Bitcoin, Solana, Tron) from scratch."*
+
+## 🛠 Tech Stack & Skills
 
 <div align="center">
-
-| Frontend | Mobile | Backend/Tools |
-| :---: | :---: | :---: |
-| ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) | ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) | ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) |
-| ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) | ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) | ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white) |
-| ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) | ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white) | ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) |
-
+  <img src="assets/skills_matrix.png" alt="Skills Matrix" width="80%" style="border-radius: 10px;" />
 </div>
+
+### 📱 Mobile Development
+| Platform | Skills |
+| :--- | :--- |
+| **Android** | Kotlin, Java, RxJava/RxKotlin, Retrofit, OkHttp, MVVM/MVP/MVC, Jetpack Compose, Coroutines (Flow), Dagger2/Koin, Room/Realm, Bluetooth LE, Custom Views |
+| **iOS** | Swift, RxSwift, MVVM, Alamofire, Moya |
+| **Flutter** | Dart, BLoC, RxDart, WebSocket, Clean Architecture, Platform Channels (Embed) |
+
+### ⛓️ Blockchain & Web3
+| Area | Skills |
+| :--- | :--- |
+| **Solidity** | ERC-20, ERC-721, Staking Pools, Token Minting/Repay, DeFi Protocols |
+| **Integration** | Web3j (Android), Web3dart (Flutter), Ethers.js (Web), Wallet Connect |
+| **Chains** | Ethereum, BSC, Polygon, Solana, Tron, Bitcoin |
+
+### 💻 Backend & Tools
+| Usage | Tech |
+| :--- | :--- |
+| **Backend** | ASP.NET Core (Web API, DI), Node.js, Python (FastAPI) |
+| **Game/AR** | Unity, Vuforia AR SDK |
+| **CI/CD** | GitHub Actions, Gitlab CI, Docker |
 
 ## 🌟 Featured Projects
 
@@ -51,23 +69,14 @@
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ImL1s&layout=compact&theme=tokyonight" height="150" alt="Top Languages" />
 </div>
 
-## 🏃‍♂️ Quick Start
-
-```bash
-git clone https://github.com/ImL1s/ImL1s.github.io.git
-cd ImL1s.github.io
-# 任選一種
-python3 -m http.server 3000   # 或用 VS Code Live Server、任意靜態伺服器
-open http://localhost:3000
-```
-
 ## 📂 Project Structure
 
 ```
 index.html          # 主頁（版面、動效、內容區塊）
 js/i18n.js          # 多語系字串與切換邏輯
 assets/             # 圖示、OG 圖、截圖
-  banner_v1.png     # 新增：Banner
+  banner_v1.png     # Banner
+  skills_matrix.png # New: Skills Visualization
   icons/
   screenshots/
 ```
