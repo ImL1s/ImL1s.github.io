@@ -66,7 +66,6 @@ Experienced developer with **10+ years** in the industry, specializing in **Andr
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=ImL1s&show_icons=true&theme=tokyonight" height="150" alt="ImL1s's GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ImL1s&layout=compact&theme=tokyonight" height="150" alt="Top Languages" />
 </div>
 
 ## 📂 Project Structure
