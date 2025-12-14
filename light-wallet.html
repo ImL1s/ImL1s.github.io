@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Wallet - Multi-Chain Crypto Wallet</title>
+    <meta name="description"
+        content="Light Wallet - A lightweight, secure multi-chain cryptocurrency wallet supporting 43+ blockchains. Browser extension and mobile app available.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-image {
+            width: 320px;
+            height: 320px;
+            margin-bottom: 2rem;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 0 80px rgba(59, 130, 246, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #60a5fa 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        .hero .tagline {
+            font-size: 1.5rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            box-shadow: 0 4px 24px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #f1f5f9;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        /* Chains Section */
+        .chains {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: rgba(30, 41, 59, 0.3);
+        }
+
+        .chains h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #f1f5f9;
+        }
+
+        .chain-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .chain-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.25rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .chain-badge span {
+            font-size: 1.25rem;
+        }
+
+        /* Security Section */
+        .security {
+            padding: 6rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .security h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f1f5f9;
+        }
+
+        .security .subtitle {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 3rem;
+        }
+
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .security-item {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        .security-item .icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .security-item p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, transparent 0%, rgba(59, 130, 246, 0.1) 100%);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #f1f5f9;
+        }
+
+        .cta-section p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #60a5fa;
+        }
+
+        .copyright {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+            }
+
+            .hero-image {
+                width: 240px;
+                height: 240px;
+            }
+
+            .stats {
+                gap: 2rem;
+            }
+
+            .stat-value {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="assets/light_wallet_hero.png" alt="Light Wallet">
+        </div>
+        <h1>Light Wallet</h1>
+        <p class="tagline">Your lightweight, secure gateway to the multi-chain crypto world</p>
+
+        <div class="cta-buttons">
+            <a href="https://chrome.google.com/webstore" class="btn btn-primary" target="_blank">
+                🌐 Chrome Extension
+            </a>
+            <a href="https://github.com/iml1s/light-wallet-extension" class="btn btn-secondary" target="_blank">
+                ⭐ View on GitHub
+            </a>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">43+</div>
+                <div class="stat-label">Blockchains</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Local Storage</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Keys Shared</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Why Light Wallet?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⛓️</div>
+                <h3>Multi-Chain Support</h3>
+                <p>Connect to 43+ blockchains including Ethereum, BSC, Polygon, Solana, Tron, Bitcoin, and many more.
+                    One wallet, all chains.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3>Self-Custody</h3>
+                <p>Your private keys never leave your device. Encrypted locally with industry-standard cryptography. You
+                    own your crypto.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Optimized for speed. Quick transactions, instant balance updates, and smooth dApp interactions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>dApp Browser</h3>
+                <p>Seamlessly connect to your favorite DeFi protocols, NFT marketplaces, and Web3 applications.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💱</div>
+                <h3>Real-Time Prices</h3>
+                <p>Track your portfolio with live price feeds from CoinGecko. Multi-currency support (USD, TWD, JPY,
+                    etc.).</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>NFT Gallery</h3>
+                <p>View and manage your NFT collections across multiple chains. Beautiful gallery view for your digital
+                    art.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Chains -->
+    <section class="chains">
+        <h2>Supported Blockchains</h2>
+        <div class="chain-logos">
+            <div class="chain-badge"><span>⟠</span> Ethereum</div>
+            <div class="chain-badge"><span>₿</span> Bitcoin</div>
+            <div class="chain-badge"><span>◎</span> Solana</div>
+            <div class="chain-badge"><span>🔷</span> Polygon</div>
+            <div class="chain-badge"><span>🟡</span> BSC</div>
+            <div class="chain-badge"><span>🔴</span> Avalanche</div>
+            <div class="chain-badge"><span>🔵</span> Arbitrum</div>
+            <div class="chain-badge"><span>🟣</span> Optimism</div>
+            <div class="chain-badge"><span>⬡</span> Tron</div>
+            <div class="chain-badge"><span>+34</span> More...</div>
+        </div>
+    </section>
+
+    <!-- Security -->
+    <section class="security">
+        <h2>Security First</h2>
+        <p class="subtitle">Your assets are protected with enterprise-grade security measures</p>
+        <div class="security-grid">
+            <div class="security-item">
+                <div class="icon">🔒</div>
+                <p>AES-256 Encryption</p>
+            </div>
+            <div class="security-item">
+                <div class="icon">📱</div>
+                <p>Local Key Storage</p>
+            </div>
+            <div class="security-item">
+                <div class="icon">⏰</div>
+                <p>Auto-Lock Protection</p>
+            </div>
+            <div class="security-item">
+                <div class="icon">🛡️</div>
+                <p>Phishing Detection</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Join thousands of users managing their crypto with Light Wallet</p>
+        <div class="cta-buttons">
+            <a href="https://chrome.google.com/webstore" class="btn btn-primary" target="_blank">
+                Install Now - It's Free
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="light-wallet-privacy.html">Privacy Policy</a>
+            <a href="https://github.com/iml1s/light-wallet-extension" target="_blank">GitHub</a>
+            <a href="https://x.com/l1s_ai" target="_blank">Twitter</a>
+            <a href="index.html">Developer Portfolio</a>
+        </div>
+        <p class="copyright">&copy; 2024 Light Wallet. Open-source software.</p>
+    </footer>
+</body>
+
+</html>
