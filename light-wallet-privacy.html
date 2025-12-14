@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light Wallet - Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,166 +16,243 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.7;
-            color: #1e293b;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            color: #e2e8f0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
             min-height: 100vh;
-            padding: 2rem;
         }
 
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+        }
+
+        .hero-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 60px rgba(59, 130, 246, 0.3);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+
+        /* Container */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-            padding: 3rem;
+            padding: 0 2rem 4rem;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .logo {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-        }
-
-        .logo svg {
-            width: 36px;
-            height: 36px;
-            fill: white;
-        }
-
-        h1 {
-            font-size: 1.75rem;
-            color: #0f172a;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            color: #64748b;
-            font-size: 0.95rem;
-        }
-
-        h2 {
-            font-size: 1.25rem;
-            color: #1e40af;
-            margin: 2rem 0 1rem;
-            padding-top: 1rem;
-        }
-
-        h3 {
-            font-size: 1.1rem;
-            color: #334155;
-            margin: 1.5rem 0 0.75rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-            color: #475569;
-        }
-
-        ul,
-        ol {
-            margin: 1rem 0 1rem 1.5rem;
-            color: #475569;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
-        }
-
-        strong {
-            color: #1e293b;
-        }
-
+        /* Highlight Box */
         .highlight {
-            background: #dbeafe;
-            border-left: 4px solid #3b82f6;
-            padding: 1rem 1.25rem;
-            border-radius: 0 8px 8px 0;
-            margin: 1.5rem 0;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            text-align: center;
         }
 
         .highlight p {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #22c55e;
             margin: 0;
-            color: #1e40af;
         }
 
-        footer {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e2e8f0;
+        /* Section Cards */
+        .section-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-card h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(180deg, #60a5fa 0%, #a78bfa 100%);
+            border-radius: 2px;
+        }
+
+        .section-card p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+        }
+
+        .section-card ul,
+        .section-card ol {
+            margin: 1rem 0 0 1.5rem;
+            color: #cbd5e1;
+        }
+
+        .section-card li {
+            margin-bottom: 0.75rem;
+        }
+
+        .section-card strong {
+            color: #f1f5f9;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-item {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            padding: 1.25rem;
             text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            margin: 0;
+            font-size: 0.9rem;
             color: #94a3b8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            color: #64748b;
             font-size: 0.875rem;
         }
 
-        a {
-            color: #3b82f6;
+        footer a {
+            color: #60a5fa;
             text-decoration: none;
         }
 
-        a:hover {
+        footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .hero-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .section-card {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
 
 <body>
+    <section class="hero">
+        <div class="hero-image">
+            <img src="assets/privacy_shield.png" alt="Privacy Shield">
+        </div>
+        <h1>Light Wallet</h1>
+        <p class="subtitle">Privacy Policy</p>
+    </section>
+
     <div class="container">
-        <header>
-            <div class="logo">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
-                </svg>
-            </div>
-            <h1>Light Wallet</h1>
-            <p class="subtitle">Privacy Policy</p>
-        </header>
+        <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">
+            <strong>Last updated:</strong> December 2024
+        </p>
 
-        <main>
-            <p><strong>Last updated:</strong> December 2024</p>
+        <div class="highlight">
+            <p>🔒 We do not collect any personal data.</p>
+        </div>
 
+        <div class="section-card">
             <h2>Overview</h2>
             <p>Light Wallet is a browser extension that allows users to manage Ethereum-based cryptocurrency. We are
                 committed to protecting your privacy and ensuring the security of your data.</p>
+        </div>
 
-            <div class="highlight">
-                <p><strong>We do not collect any personal data.</strong></p>
+        <div class="section-card">
+            <h2>What We Don't Do</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚫</div>
+                    <p>Collect personal information</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👁️‍🗨️</div>
+                    <p>Track your browsing</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">☁️</div>
+                    <p>Store data on servers</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🤝</div>
+                    <p>Share with third parties</p>
+                </div>
             </div>
+        </div>
 
-            <h2>Data Collection</h2>
-            <p>Light Wallet operates entirely on your local device. We do not:</p>
-            <ul>
-                <li>Collect personal information</li>
-                <li>Track your browsing activity</li>
-                <li>Store any data on external servers</li>
-                <li>Share any information with third parties</li>
-            </ul>
-
-            <h2>Data Storage</h2>
+        <div class="section-card">
+            <h2>Local Data Storage</h2>
             <p>All data is stored locally on your device using your browser's secure storage:</p>
             <ul>
                 <li><strong>Private Keys & Seed Phrases:</strong> Encrypted and stored only on your device. They never
                     leave your browser.</li>
                 <li><strong>Wallet Settings:</strong> Network preferences and settings are stored locally.</li>
-                <li><strong>Transaction History:</strong> Fetched from public blockchain explorers and not stored by us.
+                <li><strong>Transaction History:</strong> Fetched from public blockchain explorers, not stored by us.
                 </li>
             </ul>
+        </div>
 
+        <div class="section-card">
             <h2>Third-Party Services</h2>
             <p>Light Wallet interacts with the following external services:</p>
             <ol>
@@ -180,35 +260,47 @@
                 <li><strong>Block Explorers (Etherscan, etc.):</strong> To fetch transaction history</li>
                 <li><strong>CoinGecko API:</strong> To fetch current cryptocurrency prices</li>
             </ol>
-            <p>These services receive only the necessary blockchain data (wallet addresses, transaction data) and are
+            <p>These services receive only necessary blockchain data (wallet addresses, transaction data) and are
                 subject to their own privacy policies.</p>
+        </div>
 
-            <h2>Security</h2>
-            <ul>
-                <li>All sensitive data is encrypted using industry-standard cryptography</li>
-                <li>Private keys never leave your device</li>
-                <li>Auto-lock feature protects against unauthorized access</li>
-            </ul>
+        <div class="section-card">
+            <h2>Security Measures</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🔐</div>
+                    <p>Industry-standard encryption</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <p>Keys never leave device</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⏰</div>
+                    <p>Auto-lock protection</p>
+                </div>
+            </div>
+        </div>
 
+        <div class="section-card">
             <h2>Your Rights</h2>
             <p>Since we don't collect personal data, there is no personal data to access, correct, or delete. All your
                 data remains under your control on your device.</p>
+        </div>
 
-            <h2>Changes to This Policy</h2>
-            <p>We may update this privacy policy from time to time. Any changes will be reflected in the "Last updated"
-                date above.</p>
-
+        <div class="section-card">
             <h2>Contact</h2>
             <p>For questions about this privacy policy, please open an issue on our <a
                     href="https://github.com/iml1s/light-wallet-extension" target="_blank" rel="noopener">GitHub
                     repository</a>.</p>
-        </main>
-
-        <footer>
-            <p>Light Wallet is open-source software.</p>
-            <p>&copy; 2024 Light Wallet. All rights reserved.</p>
-        </footer>
+        </div>
     </div>
+
+    <footer>
+        <p>Light Wallet is open-source software.</p>
+        <p>&copy; 2024 Light Wallet. All rights reserved.</p>
+        <p style="margin-top: 1rem;"><a href="index.html">← Back to Portfolio</a></p>
+    </footer>
 </body>
 
 </html>
