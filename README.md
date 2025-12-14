@@ -1,32 +1,58 @@
-# ImL1s 個人作品集
+<div align="center">
+  <img src="assets/banner_v1.png" alt="ImL1s Portfolio Banner" width="100%" />
+
+  # Hi there, I'm ImL1s 👋
+  
+  [![Portfolio](https://img.shields.io/badge/Portfolio-iml1s.github.io-blue?style=for-the-badge&logo=github)](https://iml1s.github.io)
+  [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/l1s_ai?style=for-the-badge)](https://x.com/l1s_ai)
+
+  **Full Stack Developer | AI Enthusiast | Blockchain Explorer**
+  
+  *Taipei, Taiwan* 🇹🇼
+</div>
+
+---
+
+## 🚀 About Me
 
 全端開發者 ImL1s 的個人作品集著陸頁，展示跨平台專案（Flutter、React、TypeScript）、AI/區塊鏈錢包、教育類 App 與開源學習資源。頁面支援多語系（繁中 / 簡中 / 英文 / 日文）、漸層動態背景與精緻卡片動畫，直接部署於 GitHub Pages。
 
-## 線上預覽
-- https://iml1s.github.io
+- 🔭 I’m currently working on **StickerAI Studio** & **Light Wallet**
+- 🌱 I’m currently learning **Advanced AI Agents** & **Rust**
+- 💬 Ask me about **Flutter, React, Web3**
+- 📫 How to reach me: [Twitter](https://x.com/l1s_ai)
 
-## 亮點
-- 多語系切換：內建繁中、簡中、英文、日文，字串來源 `js/i18n.js`。
-- Hero 數據：公開專案、上架應用、支援區塊鏈數量一目了然。
-- 豐富專案牆（截圖 / 徽章 / 技術標籤 / 連結）：涵蓋 Web、Mobile、Chrome Extension、開源專案。
-- 深色霓虹風格：自訂 CSS 變數、玻璃化卡片、平滑 hover/scroll 動畫。
-- SEO / 社群完整度：OG、Twitter、結構化資料（Person / WebSite / ItemList / Breadcrumb）。
+## 🛠 Tech Stack
 
-## 精選專案一覽
- - StickerAI Studio：全新 AI 貼圖生成器！上傳照片自動生成完整 LINE 貼圖包，保持角色一致性，支援多種風格，Web / iOS / Android，React + Flutter + Supabase。（iOS：https://apps.apple.com/tw/app/stickerai-studio/id6755986531）
-- Light Wallet（含 Extension）：支援 43+ 多鏈錢包與瀏覽器擴充，Flutter、Ethers.js、TypeScript。
-- 加密 AI 分析：Next.js + FastAPI，整合 Fear & Greed、ETF 資金流等指標並加上 AI 圖表解讀。
-- 保險證照題庫、計程車執業模擬考：Flutter + Firebase + AI 助手，行動 / Web 全平台。
- - AutoStar 汽車實價登錄：二手車價格查詢專家！揭露真實車價，即時同步全台成交價、智能估價、收藏追蹤，Flutter + Clean Architecture。（iOS：https://apps.apple.com/tw/app/autostar-%E4%BA%8C%E6%89%8B%E8%BB%8A%E5%AF%A6%E5%83%B9%E7%99%BB%E9%8C%84/id6756206346）
-- Multi-Language Hello World、TodoList 100+ 技術棧：開源學習型專案集合。
+<div align="center">
 
-## 技術棧
-- 前端 / 樣式：原生 HTML、CSS、SVG，自訂設計系統與動畫。
-- 前端互動：Vanilla JS（語系切換、下拉選單、平滑捲動）。
-- 資產：`assets/og-image.png`、專案截圖及品牌圖示。
-- 部署：GitHub Pages 靜態站。
+| Frontend | Mobile | Backend/Tools |
+| :---: | :---: | :---: |
+| ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) | ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) | ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) |
+| ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) | ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white) | ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white) |
+| ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) | ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white) | ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) |
 
-## 快速開始（本機預覽）
+</div>
+
+## 🌟 Featured Projects
+
+| Project | Description | Tech Stack |
+| :--- | :--- | :--- |
+| **StickerAI Studio** | Gemini AI 生成 LINE 規格貼圖 | `React` `Flutter` `Supabase` |
+| **Light Wallet** | 支援 43+ 多鏈錢包與瀏覽器擴充 | `Flutter` `Ethers.js` `TypeScript` |
+| **Crypto AI Analysis** | 整合 Fear & Greed 指標與 AI 解讀 | `Next.js` `FastAPI` |
+| **AutoStar** | 38 品牌二手車行情、折舊分析 | `Flutter` `Clean Architecture` |
+| **Edu Apps** | 保險證照題庫、計程車執業模擬考 | `Flutter` `Firebase` `AI Assistant` |
+
+## 📊 GitHub Stats
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=ImL1s&show_icons=true&theme=tokyonight" height="150" alt="ImL1s's GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ImL1s&layout=compact&theme=tokyonight" height="150" alt="Top Languages" />
+</div>
+
+## 🏃‍♂️ Quick Start
+
 ```bash
 git clone https://github.com/ImL1s/ImL1s.github.io.git
 cd ImL1s.github.io
@@ -35,24 +61,14 @@ python3 -m http.server 3000   # 或用 VS Code Live Server、任意靜態伺服�
 open http://localhost:3000
 ```
 
-## 專案結構
+## 📂 Project Structure
+
 ```
 index.html          # 主頁（版面、動效、內容區塊）
 js/i18n.js          # 多語系字串與切換邏輯
 assets/             # 圖示、OG 圖、截圖
+  banner_v1.png     # 新增：Banner
   icons/
   screenshots/
-app-ads.txt
-robots.txt, sitemap.xml, 404.html, light-wallet-privacy.html
 ```
-
-## 編輯重點
-- 內容調整：直接編輯 `index.html`，或在 `js/i18n.js` 補充多語系文案。
-- 圖片更新：替換 `assets/` 內截圖或圖示，保持檔名即可沿用。
-- 色系 / 動畫：於 `index.html` 的 CSS 變數（`:root`）與 keyframes 調整。
-
-## 部署
-- 專案為純靜態檔案，推送至 `main`（預設 Pages 分支）即可自動更新：https://iml1s.github.io
-- 如需自訂網域，於 Repo Settings → Pages 設定 CNAME 並新增 DNS 記錄。
-
 

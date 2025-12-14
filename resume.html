@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>ImL1s | Resume - 12+ Years Experience</title>
+    <meta name="title" content="ImL1s | Resume - 12+ Years Experience">
+    <meta name="description"
+        content="Resume of ImL1s - Full Stack Developer with 12+ years experience. Android, iOS, Flutter, Solidity, ASP.NET Core. Remote worker with international experience.">
+    <meta name="robots" content="noindex, follow">
+    <!-- Typically resumes might not want to be SEO indexed as main landing, but up to user. I'll keep it indexable but maybe focused. Let's stick to index, follow actually since it's a portfolio site. -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Reuse existing styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --bg-card-hover: #22222e;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b6b7b;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --gradient-1: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        /* Reusing layout classes */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 15, 0.8);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--text-primary);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 8rem auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .resume-header {
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .resume-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .resume-header .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .resume-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        /* Profile Grid */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .profile-item {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .profile-item h3 {
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        /* Tech Stack List */
+        .tech-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .tech-category h3 {
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-category h3::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1.4rem;
+            background: var(--gradient-1);
+            border-radius: 2px;
+        }
+
+        .tech-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .tech-list li {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+        }
+
+        .tech-list li:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+
+        .lang-btn svg {
+            width: 12px;
+            height: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            right: 0;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0.5rem;
+            min-width: 150px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .lang-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            color: var(--text-secondary);
+        }
+
+        .lang-option:hover {
+            background: var(--bg-card-hover);
+            color: var(--text-primary);
+        }
+
+        .lang-option.active {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+        }
+
+        @media (max-width: 768px) {
+            .lang-switcher {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            .lang-dropdown {
+                right: auto;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">ImL1s</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#projects" data-i18n="nav.projects">Projects</a>
+                <a href="#" class="active" data-i18n="nav.resume">Resume</a>
+                <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+                <a href="https://github.com/ImL1s" target="_blank">GitHub</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn" onclick="toggleLanguageDropdown()">
+                        <span class="lang-btn-text">🇹🇼 繁體中文</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" onclick="setLanguage('zh-TW')">🇹🇼 繁體中文</div>
+                        <div class="lang-option" onclick="setLanguage('zh-CN')">🇨🇳 简体中文</div>
+                        <div class="lang-option" onclick="setLanguage('en')">🇺🇸 English</div>
+                        <div class="lang-option" onclick="setLanguage('ja')">🇯🇵 日本語</div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="resume-header fade-in">
+            <h1>Sam Lung (ImL1s)</h1>
+            <p class="subtitle" data-i18n="resume.role">Senior Full Stack Developer & Blockchain Specialist</p>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;" data-i18n="resume.intro">
+                Experienced developer with 12+ years in the industry. Starting from the crypto space in 2013,
+                I specialize in Android, iOS, Blockchain (Solidity/Web3), and Backend development.
+            </p>
+        </div>
+
+        <section class="resume-section fade-in">
+            <h2 class="section-title" data-i18n="resume.about">About Me</h2>
+            <div class="profile-grid">
+                <div class="profile-item">
+                    <h3 data-i18n="resume.exp">Experience</h3>
+                    <p data-i18n="resume.exp.total">12+ Years Total</p>
+                    <p data-i18n="resume.exp.android">10 Years Android Development</p>
+                    <p data-i18n="resume.exp.flutter">5 Years Flutter Development</p>
+                    <p data-i18n="resume.exp.backend">Backend (.NET/Go/Java/Node.js)</p>
+                    <p data-i18n="resume.exp.other">iOS / React Native / Unity</p>
+                    <p data-i18n="resume.exp.blockchain">Blockchain since 2013</p>
+                </div>
+                <div class="profile-item">
+                    <h3 data-i18n="resume.style">Work Style</h3>
+                    <p data-i18n="resume.style.remote">Remote Work Preferred</p>
+                    <p data-i18n="resume.style.intl">International Collaboration (Cambodia, Vietnam, Japan, China)</p>
+                    <p data-i18n="resume.style.review">Code Reviewer & Architecture Designer</p>
+                </div>
+                <div class="profile-item">
+                    <h3 data-i18n="resume.lang">Languages</h3>
+                    <p data-i18n="resume.lang.cn">Chinese (Native)</p>
+                    <p data-i18n="resume.lang.en">English (Communicative)</p>
+                    <p data-i18n="resume.lang.jp">Japanese (Basic / 少し話せます)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section fade-in">
+            <h2 class="section-title" data-i18n="skills.title">Tech Stack</h2>
+
+            <div class="tech-category">
+                <h3 data-i18n="resume.tech.android">Android Development</h3>
+                <ul class="tech-list">
+                    <li>Kotlin & Java</li>
+                    <li>RxJava & RxKotlin</li>
+                    <li>Retrofit & OkHttp</li>
+                    <li>MVVM / MVP / MVC</li>
+                    <li>Jetpack Compose & UI</li>
+                    <li>Dagger2 / Koin (DI)</li>
+                    <li>Coroutines & Flow</li>
+                    <li>Bluetooth & IoT</li>
+                    <li>Lottie Animations</li>
+                    <li>Web3j (Blockchain)</li>
+                </ul>
+            </div>
+
+            <div class="tech-category">
+                <h3 data-i18n="resume.tech.ios">iOS Development</h3>
+                <ul class="tech-list">
+                    <li>Swift</li>
+                    <li>RxSwift</li>
+                    <li>MVVM Architecture</li>
+                    <li>Alamofire & Moya</li>
+                    <li>Flutter Embed (Mixed)</li>
+                </ul>
+            </div>
+
+            <div class="tech-category">
+                <h3 data-i18n="resume.tech.blockchain">Blockchain & Solidity</h3>
+                <ul class="tech-list">
+                    <li>Smart Contracts (Solidity)</li>
+                    <li>ERC-20 & ERC-721</li>
+                    <li>DeFi (Mint/Repay/Staking)</li>
+                    <li>Web3.js & Ethers.js</li>
+                    <li>Multi-chain Interaction</li>
+                </ul>
+            </div>
+
+            <div class="tech-category">
+                <h3 data-i18n="resume.tech.flutter">Cross-Platform (Flutter)</h3>
+                <ul class="tech-list">
+                    <li>BLOC Pattern</li>
+                    <li>RxDart</li>
+                    <li>Web3Dart</li>
+                    <li>WebSocket Channels</li>
+                    <li>Flutter i18n</li>
+                </ul>
+            </div>
+
+            <div class="tech-category">
+                <h3 data-i18n="resume.tech.backend">Backend & Other</h3>
+                <ul class="tech-list">
+                    <li>ASP.NET Core Web API</li>
+                    <li>Dependency Injection</li>
+                    <li>Node.js / Web3</li>
+                    <li>Unity (Vuforia AR)</li>
+                    <li>Git & CI/CD</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p data-i18n="footer.copyright">© 2025 ImL1s. Built with passion.</p>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.style.opacity = 1;
+            });
+        });
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transition = 'opacity 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>

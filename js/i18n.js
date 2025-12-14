@@ -77,7 +77,34 @@ const translations = {
         'platform.ios': 'iOS',
         'platform.android': 'Android',
         'platform.chrome': 'Chrome Extension',
-        'platform.opensource': 'Open Source'
+        'platform.chrome': 'Chrome Extension',
+        'platform.opensource': 'Open Source',
+
+        // Resume Page
+        'nav.resume': '履歷',
+        'resume.role': '資深全端工程師 & 區塊鏈專家',
+        'resume.intro': '擁有 12 年以上產業經驗。10 年 Android、5 年 Flutter，並熟悉後端 (.NET/Go/Java/Node.js)、iOS、React Native 與 Unity 開發。',
+        'resume.about': '關於我',
+        'resume.exp': '工作經驗',
+        'resume.exp.total': '12+ 年總經驗',
+        'resume.exp.android': '10 年 Android 開發',
+        'resume.exp.flutter': '5 年 Flutter 開發',
+        'resume.exp.backend': '後端 (.NET/Go/Java/Node.js)',
+        'resume.exp.other': 'iOS / React Native / Unity',
+        'resume.exp.blockchain': '區塊鏈經驗自 2013',
+        'resume.style': '工作風格',
+        'resume.style.remote': '偏好遠端工作',
+        'resume.style.intl': '跨國合作經驗 (柬埔寨、越南、日本、中國)',
+        'resume.style.review': '代碼審查 & 架構設計',
+        'resume.lang': '語言能力',
+        'resume.lang.cn': '中文 (母語)',
+        'resume.lang.en': '英文 (可溝通)',
+        'resume.lang.jp': '日文 (基礎會話)',
+        'resume.tech.android': 'Android 開發',
+        'resume.tech.ios': 'iOS 開發',
+        'resume.tech.blockchain': '區塊鏈 & Solidity',
+        'resume.tech.flutter': '跨平台開發 (Flutter)',
+        'resume.tech.backend': '後端 & 其他'
     },
 
     'zh-CN': {
@@ -157,7 +184,34 @@ const translations = {
         'platform.ios': 'iOS',
         'platform.android': 'Android',
         'platform.chrome': 'Chrome Extension',
-        'platform.opensource': 'Open Source'
+        'platform.chrome': 'Chrome Extension',
+        'platform.opensource': 'Open Source',
+
+        // Resume Page
+        'nav.resume': '简历',
+        'resume.role': '资深全栈工程师 & 区块链专家',
+        'resume.intro': '拥有 12 年以上产业经验。10 年 Android、5 年 Flutter，并熟悉后端 (.NET/Go/Java/Node.js)、iOS、React Native 与 Unity 开发。',
+        'resume.about': '关于我',
+        'resume.exp': '工作经验',
+        'resume.exp.total': '12+ 年总经验',
+        'resume.exp.android': '10 年 Android 开发',
+        'resume.exp.flutter': '5 年 Flutter 开发',
+        'resume.exp.backend': '后端 (.NET/Go/Java/Node.js)',
+        'resume.exp.other': 'iOS / React Native / Unity',
+        'resume.exp.blockchain': '区块链经验自 2013',
+        'resume.style': '工作风格',
+        'resume.style.remote': '偏好远程工作',
+        'resume.style.intl': '跨国合作经验 (柬埔寨、越南、日本、中国)',
+        'resume.style.review': '代码审查 & 架构设计',
+        'resume.lang': '语言能力',
+        'resume.lang.cn': '中文 (母语)',
+        'resume.lang.en': '英文 (可沟通)',
+        'resume.lang.jp': '日文 (基础会话)',
+        'resume.tech.android': 'Android 开发',
+        'resume.tech.ios': 'iOS 开发',
+        'resume.tech.blockchain': '区块链 & Solidity',
+        'resume.tech.flutter': '跨平台开发 (Flutter)',
+        'resume.tech.backend': '后端 & 其他'
     },
 
     'en': {
@@ -237,7 +291,34 @@ const translations = {
         'platform.ios': 'iOS',
         'platform.android': 'Android',
         'platform.chrome': 'Chrome Extension',
-        'platform.opensource': 'Open Source'
+        'platform.chrome': 'Chrome Extension',
+        'platform.opensource': 'Open Source',
+
+        // Resume Page
+        'nav.resume': 'Resume',
+        'resume.role': 'Senior Full Stack Developer & Blockchain Specialist',
+        'resume.intro': '12+ years of industry experience. 10 years Android, 5 years Flutter. Experienced in backend (.NET/Go/Java/Node.js), iOS, React Native, and Unity development.',
+        'resume.about': 'About Me',
+        'resume.exp': 'Experience',
+        'resume.exp.total': '12+ Years Total',
+        'resume.exp.android': '10 Years Android Development',
+        'resume.exp.flutter': '5 Years Flutter Development',
+        'resume.exp.backend': 'Backend (.NET/Go/Java/Node.js)',
+        'resume.exp.other': 'iOS / React Native / Unity',
+        'resume.exp.blockchain': 'Blockchain since 2013',
+        'resume.style': 'Work Style',
+        'resume.style.remote': 'Remote Work Preferred',
+        'resume.style.intl': 'International Collaboration (Cambodia, Vietnam, Japan, China)',
+        'resume.style.review': 'Code Reviewer & Architecture Designer',
+        'resume.lang': 'Languages',
+        'resume.lang.cn': 'Chinese (Native)',
+        'resume.lang.en': 'English (Communicative)',
+        'resume.lang.jp': 'Japanese (Basic)',
+        'resume.tech.android': 'Android Development',
+        'resume.tech.ios': 'iOS Development',
+        'resume.tech.blockchain': 'Blockchain & Solidity',
+        'resume.tech.flutter': 'Cross-Platform (Flutter)',
+        'resume.tech.backend': 'Backend & Other'
     },
 
     'ja': {
@@ -317,7 +398,34 @@ const translations = {
         'platform.ios': 'iOS',
         'platform.android': 'Android',
         'platform.chrome': 'Chrome Extension',
-        'platform.opensource': 'Open Source'
+        'platform.chrome': 'Chrome Extension',
+        'platform.opensource': 'Open Source',
+
+        // Resume Page
+        'nav.resume': '履歴書',
+        'resume.role': 'シニアフルスタックエンジニア & ブロックチェーン専門家',
+        'resume.intro': '業界経験12年以上。Android 10年、Flutter 5年。バックエンド (.NET/Go/Java/Node.js)、iOS、React Native、Unity 開發にも精通。',
+        'resume.about': '自己紹介',
+        'resume.exp': '職務経験',
+        'resume.exp.total': '総経験 12年以上',
+        'resume.exp.android': 'Android 開發 10年',
+        'resume.exp.flutter': 'Flutter 開發 5年',
+        'resume.exp.backend': 'バックエンド (.NET/Go/Java/Node.js)',
+        'resume.exp.other': 'iOS / React Native / Unity',
+        'resume.exp.blockchain': 'ブロックチェーン 2013年〜',
+        'resume.style': 'ワークスタイル',
+        'resume.style.remote': 'リモートワーク希望',
+        'resume.style.intl': '国際協業経験 (カンボジア、ベトナム、日本、中国)',
+        'resume.style.review': 'コードレビュー & アーキテクチャ設計',
+        'resume.lang': '語学',
+        'resume.lang.cn': '中国語 (ネイティブ)',
+        'resume.lang.en': '英語 (日常会話)',
+        'resume.lang.jp': '日本語 (少し話せます)',
+        'resume.tech.android': 'Android 開發',
+        'resume.tech.ios': 'iOS 開発',
+        'resume.tech.blockchain': 'ブロックチェーン & Solidity',
+        'resume.tech.flutter': 'クロスプラットフォーム (Flutter)',
+        'resume.tech.backend': 'バックエンド & その他'
     }
 };
 
@@ -382,8 +490,8 @@ function applyTranslations() {
 
     // Update HTML lang attribute
     document.documentElement.lang = currentLanguage === 'zh-CN' ? 'zh-CN' :
-                                     currentLanguage === 'ja' ? 'ja' :
-                                     currentLanguage === 'en' ? 'en' : 'zh-TW';
+        currentLanguage === 'ja' ? 'ja' :
+            currentLanguage === 'en' ? 'en' : 'zh-TW';
 
     // Update meta description
     const metaDesc = document.querySelector('meta[name="description"]');
