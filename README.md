@@ -1,4 +1,10 @@
 <div align="center">
+
+🌐 **Language / 語言**: &nbsp; **English** &nbsp;|&nbsp; [繁體中文](README.zh-TW.md) &nbsp;|&nbsp; [日本語](README.ja.md)
+
+</div>
+
+<div align="center">
   <img src="assets/banner_v1.png" alt="ImL1s Portfolio Banner" width="80%" />
 
   # Hi there, I'm ImL1s 👋
