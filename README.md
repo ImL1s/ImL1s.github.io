@@ -6,7 +6,7 @@
   [![Portfolio](https://img.shields.io/badge/Portfolio-iml1s.github.io-blue?style=for-the-badge&logo=github)](https://iml1s.github.io)
   [![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/l1s_ai?style=for-the-badge)](https://x.com/l1s_ai)
 
-  **Senior Full Stack Developer | Blockchain Specialist | 10+ Years Experience**
+  **Senior Full Stack Developer | Blockchain Specialist | AI-Native Engineer**
   
   *Taipei, Taiwan* 🇹🇼 | *Remote Ready* 🌍
 </div>
@@ -15,15 +15,41 @@
 
 ## 🚀 About Me
 
-Experienced developer with **10+ years** in the industry, specializing in **Android, Flutter, and Blockchain** technologies. I've been active in the **Crypto/DeFi/GameFi** space since 2013.
+Experienced developer with **10+ years** of industry experience, seamlessly blending **Mobile Engineering**, **Blockchain Innovation**, and **AI-Augmented Development**.
 
-- 📱 **Mobile Expert**: 10 years of Android experience, expert in Kotlin/Java & Flutter.
-- ⛓️ **Blockchain Native**: Writing Solidity smart contracts (ERC-20/721, Mining, Staking) and building deep integrations with EVM, Bitcoin, Tron, and Solana chains.
-- 🌏 **International Collaborator**: Extensive experience working with teams from **Japan 🇯🇵, China 🇨🇳, Vietnam 🇻🇳, and Cambodia 🇰🇭**.
-- 🏗️ **Architecture Focused**: Strong advocate for clean architecture, MVVM/MVI, and rigorous code reviews.
-- 🗣️ **Languages**: Chinese (Native), English (Conversational), Japanese (Basic).
+<div align="center">
+  <img src="assets/global_map.png" alt="Global Collaboration Map" width="70%" style="border-radius: 10px;" />
+</div>
 
-> *"I can independently implement interactions between Android/Flutter and major blockchains (Ethereum, Bitcoin, Solana, Tron) from scratch."*
+- 🌏 **Global Collaborator**: Proven track record of remote collaboration with cross-functional teams in **Japan 🇯🇵, China 🇨🇳, Vietnam 🇻🇳, and Cambodia 🇰🇭**.
+- 📱 **Mobile & Architecture**: 10 years in Android/Kotlin & Flutter. Expert in implementing clean architecture (MVVM/MVI) and leading strict code reviews.
+- ⛓️ **Blockchain Native**: Since 2013. Deep expertise in EVM/Solana/Tron/Bitcoin integration, smart contracts (Solidity), and DeFi/GameFi protocols.
+- 🏗️ **Languages**: Chinese (Native), English (Conversational), Japanese (Basic).
+
+> *"I bridge the gap between complex blockchain protocols and smooth mobile user experiences."*
+
+---
+
+## 🤖 AI-Native Workflow
+
+I leverage cutting-edge AI agents to accelerate development, architect solutions, and automate workflows.
+
+<div align="center">
+  <img src="assets/ai_workflow.png" alt="AI Augmented Workflow" width="70%" style="border-radius: 10px;" />
+</div>
+
+<div align="center">
+
+| Core Models (Brains) | AI Tools (Hands) |
+| :---: | :---: |
+| **Claude** | **Claude Code** (Terminal Agent) |
+| **Gemini** | **Gemini CLI** (Command Line) |
+| **GPT** | **GitHub Copilot** / **Codex** |
+| | **Cursor** / **Windsurf** |
+
+</div>
+
+---
 
 ## 🛠 Tech Stack & Skills
 
@@ -62,12 +88,6 @@ Experienced developer with **10+ years** in the industry, specializing in **Andr
 | **AutoStar** | 38 品牌二手車行情、折舊分析 | `Flutter` `Clean Architecture` |
 | **Edu Apps** | 保險證照題庫、計程車執業模擬考 | `Flutter` `Firebase` `AI Assistant` |
 
-## 📊 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=ImL1s&show_icons=true&theme=tokyonight" height="150" alt="ImL1s's GitHub stats" />
-</div>
-
 ## 📂 Project Structure
 
 ```
@@ -75,7 +95,9 @@ index.html          # 主頁（版面、動效、內容區塊）
 js/i18n.js          # 多語系字串與切換邏輯
 assets/             # 圖示、OG 圖、截圖
   banner_v1.png     # Banner
-  skills_matrix.png # New: Skills Visualization
+  skills_matrix.png # Visual: Skill Matrix
+  ai_workflow.png   # Visual: AI Tools
+  global_map.png    # Visual: Int'l Collaboration
   icons/
   screenshots/
 ```
