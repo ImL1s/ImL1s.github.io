@@ -53,11 +53,9 @@ I leverage AI to accelerate coding, automate reviews, and architect solutions:
 
 <div align="center">
 
-| 🧠 **Models** | 🛠️ **Tools** |
-| :---: | :---: |
-| Claude • Gemini • GPT | Claude Code • Gemini CLI |
-| | GitHub Copilot • Codex |
-| | Cursor • Windsurf |
+**🧠 Models**: &nbsp; Claude &nbsp;•&nbsp; Gemini &nbsp;•&nbsp; GPT
+
+**🛠️ Tools**: &nbsp; Claude Code &nbsp;•&nbsp; Gemini CLI &nbsp;•&nbsp; GitHub Copilot &nbsp;•&nbsp; Codex &nbsp;•&nbsp; Cursor &nbsp;•&nbsp; Windsurf
 
 </div>
 
