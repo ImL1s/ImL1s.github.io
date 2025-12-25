@@ -47,6 +47,10 @@ const translations = {
         'project.autostar.title': 'AutoStar 汽車實價登錄',
         'project.autostar.desc': '您的二手車價格查詢專家！揭露真實車價，即時同步全台二手車成交價、智能估價試算、收藏追蹤心儀車款。支援品牌車系篩選、價格比較分析、即時價格通知。',
 
+        // Project: Safer Radar
+        'project.saferradar.title': '安心雷達 Safer Radar',
+        'project.saferradar.desc': '提供即時治安通知與犯罪風險地圖的社區安全應用。支援 12 種語言，包含風險熱點分析與事件回報功能。',
+
         // Project: Hello World
         'project.helloworld.title': 'Multi-Language Hello World',
         'project.helloworld.desc': '60+ 程式語言的 Hello World 實作集合，包含編譯型、直譯型、函數式等類別。附自動測試腳本。',
@@ -153,6 +157,10 @@ const translations = {
         // Project: AutoStar
         'project.autostar.title': 'AutoStar 汽车实价登录',
         'project.autostar.desc': '您的二手车价格查询专家！揭露真实车价，即时同步全台二手车成交价、智能估价试算、收藏追踪心仪车款。支持品牌车系筛选、价格比较分析、即时价格通知。',
+
+        // Project: Safer Radar
+        'project.saferradar.title': '安心雷达 Safer Radar',
+        'project.saferradar.desc': '提供即时治安通知与犯罪风险地图的社区安全应用。支持 12 种语言，包含风险热点分析与事件回报功能。',
 
         // Project: Hello World
         'project.helloworld.title': 'Multi-Language Hello World',
@@ -261,6 +269,10 @@ const translations = {
         'project.autostar.title': 'AutoStar Used Car Prices',
         'project.autostar.desc': 'Your used car price expert! Reveals real car prices, syncs Taiwan used car transaction prices in real-time, smart price estimation, and track favorite vehicles. Supports brand filtering, price comparison analysis, and real-time price notifications.',
 
+        // Project: Safer Radar
+        'project.saferradar.title': 'Safer Radar',
+        'project.saferradar.desc': 'Real-time neighborhood safety alerts and crime risk map. Supports 12 languages, featuring risk heatmap analysis and incident reporting.',
+
         // Project: Hello World
         'project.helloworld.title': 'Multi-Language Hello World',
         'project.helloworld.desc': 'Hello World implementations in 60+ programming languages including compiled, interpreted, and functional paradigms.',
@@ -367,6 +379,10 @@ const translations = {
         // Project: AutoStar
         'project.autostar.title': 'AutoStar 中古車価格登録',
         'project.autostar.desc': 'あなたの中古車価格検索の専門家！実際の車価を公開し、台湾全土の中古車取引価格をリアルタイムで同期、スマート価格見積もり、お気に入りの車両を追跡。ブランドフィルタリング、価格比較分析、リアルタイム価格通知をサポート。',
+
+        // Project: Safer Radar
+        'project.saferradar.title': 'Safer Radar - 安心レーダー',
+        'project.saferradar.desc': 'リアルタイムの治安通知と犯罪リスクマップを提供するコミュニティ安全アプリ。12言語対応、リスクヒートマップ分析と事件報告機能を搭載。',
 
         // Project: Hello World
         'project.helloworld.title': 'Multi-Language Hello World',
