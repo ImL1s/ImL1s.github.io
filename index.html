@@ -1025,9 +1025,9 @@
         <div class="header-content">
             <div class="logo">ImL1s</div>
             <nav>
-                <a href="#projects" data-i18n="nav.projects">Projects</a>
-                <a href="#skills" data-i18n="nav.skills">Skills</a>
-                <a href="#contact" data-i18n="nav.contact">Contact</a>
+                <a href="#projects" >Projects</a>
+                <a href="#skills" >Skills</a>
+                <a href="#contact" >Contact</a>
                 <a href="https://github.com/ImL1s" target="_blank">GitHub</a>
                 <div class="lang-switcher">
                     <button class="lang-btn" onclick="toggleLanguageDropdown()">
@@ -1053,22 +1053,22 @@
         <section class="hero">
             <div class="hero-container">
                 <div class="hero-text-content">
-                    <div class="hero-badge" data-i18n="hero.badge">Full Stack Developer</div>
-                    <h1><span data-i18n="hero.title">Building Digital Products</span> <span
-                            data-i18n="hero.title.highlight">That Matter</span></h1>
-                    <p data-i18n="hero.description">專注於 Flutter、React、TypeScript 的全端開發者。熱愛打造跨平台應用程式與開源專案。</p>
+                    <div class="hero-badge" >Full Stack Developer</div>
+                    <h1><span >Building Digital Products</span> <span
+                            >That Matter</span></h1>
+                    <p >專注於 Flutter、React、TypeScript 的全端開發者。熱愛打造跨平台應用程式與開源專案。</p>
                     <div class="hero-stats">
                         <div class="stat">
                             <div class="stat-number">17+</div>
-                            <div class="stat-label" data-i18n="hero.stat.projects">公開專案</div>
+                            <div class="stat-label" >公開專案</div>
                         </div>
                         <div class="stat">
                             <div class="stat-number">5</div>
-                            <div class="stat-label" data-i18n="hero.stat.apps">上架應用</div>
+                            <div class="stat-label" >上架應用</div>
                         </div>
                         <div class="stat">
                             <div class="stat-number">43+</div>
-                            <div class="stat-label" data-i18n="hero.stat.chains">支援區塊鏈</div>
+                            <div class="stat-label" >支援區塊鏈</div>
                         </div>
                     </div>
                 </div>
@@ -1080,10 +1080,13 @@
 
         <section id="projects">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
-                <p class="section-desc" data-i18n="projects.subtitle">涵蓋行動應用、Web 應用、瀏覽器擴充功能與開源專案</p>
+                <h2 class="section-title" >Featured Projects</h2>
+                <p class="section-desc" >涵蓋行動應用、Web 應用、瀏覽器擴充功能與開源專案</p>
             </div>
 
+            <h3 class="section-subtitle"
+                style="text-align: center; margin-bottom: 2rem; font-size: 1.5rem; color: var(--text-secondary);">
+                Consumer Applications</h3>
             <div class="projects-grid">
                 <!-- StickerAI Studio -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ec4899, #f59e0b);">
@@ -1099,8 +1102,8 @@
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.stickerai.title">StickerAI Studio</h3>
-                    <p class="project-desc" data-i18n="project.stickerai.desc">使用 Google Gemini AI 生成符合 LINE Creators
+                    <h3 class="project-title" >StickerAI Studio</h3>
+                    <p class="project-desc" >使用 Google Gemini AI 生成符合 LINE Creators
                         Market 規範的貼圖包。支援一鍵匯出、推薦系統、多語系。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
@@ -1156,8 +1159,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.lightwallet.title">Light Wallet</h3>
-                    <p class="project-desc" data-i18n="project.lightwallet.desc">輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含
+                    <h3 class="project-title" >Light Wallet</h3>
+                    <p class="project-desc" >輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含
                         Bitcoin、Ethereum、Solana、TON、Cosmos 等。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1176,11 +1179,13 @@
                     </div>
                 </div>
 
-                <!-- Bitfinex Lending Platform -->
+                <!-- Yodora Lending Platform -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #10b981, #f59e0b);">
-                    <div class="project-hero-placeholder"
-                        style="--placeholder-gradient: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);">
-                        <span class="placeholder-icon">💰</span>
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/yodora_hero.png" alt="Yodora Lending Platform"
+                                style="object-position: center;">
+                        </div>
                     </div>
                     <div class="project-icon emoji">💹</div>
                     <div class="platform-badges">
@@ -1188,8 +1193,8 @@
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.lending.title">Bitfinex Lending Platform</h3>
-                    <p class="project-desc" data-i18n="project.lending.desc">Bitfinex USD/USDT 放貸機器人結合多租戶 SaaS
+                    <h3 class="project-title">Yodora Lending Platform</h3>
+                    <p class="project-desc">Bitfinex USD/USDT 放貸機器人結合多租戶 SaaS
                         平台。智能放貸引擎自動優化利率，支援 Flutter App 即時監控收益。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Go</span>
@@ -1221,8 +1226,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.cryptoai.title">加密 AI 分析</h3>
-                    <p class="project-desc" data-i18n="project.cryptoai.desc">AI 驅動的加密貨幣市場分析平台。整合恐懼貪婪指數、多空比、ETF 資金流等 5+
+                    <h3 class="project-title" >加密 AI 分析</h3>
+                    <p class="project-desc" >AI 驅動的加密貨幣市場分析平台。整合恐懼貪婪指數、多空比、ETF 資金流等 5+
                         數據源，支援 AI 圖表分析。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Next.js 16</span>
@@ -1254,8 +1259,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge extension">Chrome Extension</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.extension.title">Light Wallet Extension</h3>
-                    <p class="project-desc" data-i18n="project.extension.desc">輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript
+                    <h3 class="project-title" >Light Wallet Extension</h3>
+                    <p class="project-desc" >輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript
                         開發，支援 EVM 相容鏈。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React 19</span>
@@ -1296,8 +1301,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.insurance.title">保險證照考試題庫</h3>
-                    <p class="project-desc" data-i18n="project.insurance.desc">台灣保險證照考試練習 APP，涵蓋人身、財產、投資型保險等。支援 AI
+                    <h3 class="project-title" >保險證照考試題庫</h3>
+                    <p class="project-desc" >台灣保險證照考試練習 APP，涵蓋人身、財產、投資型保險等。支援 AI
                         解釋、雲端同步、模擬考試。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1337,8 +1342,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.taxi.title">計程車執業登記證模擬考</h3>
-                    <p class="project-desc" data-i18n="project.taxi.desc">台灣計程車執業登記證考試練習 APP。包含交通法規、地理環境共 236 題，支援 AI
+                    <h3 class="project-title" >計程車執業登記證模擬考</h3>
+                    <p class="project-desc" >台灣計程車執業登記證考試練習 APP。包含交通法規、地理環境共 236 題，支援 AI
                         助手功能。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1369,8 +1374,8 @@
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.saferradar.title">安心雷達 Safer Radar</h3>
-                    <p class="project-desc" data-i18n="project.saferradar.desc">提供即時治安通知與犯罪風險地圖的社區安全應用。支援 12
+                    <h3 class="project-title" >安心雷達 Safer Radar</h3>
+                    <p class="project-desc" >提供即時治安通知與犯罪風險地圖的社區安全應用。支援 12
                         種語言，包含風險熱點分析與事件回報功能。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1408,8 +1413,8 @@
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.autostar.title">AutoStar 汽車實價登錄</h3>
-                    <p class="project-desc" data-i18n="project.autostar.desc">專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero
+                    <h3 class="project-title" >AutoStar 汽車實價登錄</h3>
+                    <p class="project-desc" >專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero
                         動畫。Clean Architecture 架構。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1456,8 +1461,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge opensource">Open Source</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.helloworld.title">Multi-Language Hello World</h3>
-                    <p class="project-desc" data-i18n="project.helloworld.desc">60+ 程式語言的 Hello World
+                    <h3 class="project-title" >Multi-Language Hello World</h3>
+                    <p class="project-desc" >60+ 程式語言的 Hello World
                         實作集合，包含編譯型、直譯型、函數式等類別。附自動測試腳本。</p>
                     <div class="project-tech">
                         <span class="tech-tag">60+ Languages</span>
@@ -1488,8 +1493,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge opensource">Open Source</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.todolist.title">TodoList - 100+ 技術棧</h3>
-                    <p class="project-desc" data-i18n="project.todolist.desc">同一個 Todo List 應用的 100+ 種實現。涵蓋
+                    <h3 class="project-title" >TodoList - 100+ 技術棧</h3>
+                    <p class="project-desc" >同一個 Todo List 應用的 100+ 種實現。涵蓋
                         Web、Mobile、Desktop、遊戲引擎等完整學習資源。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
@@ -1513,6 +1518,12 @@
                 <!-- 🛠️ DEVELOPER TOOLS SECTION -->
                 <!-- ═══════════════════════════════════════════════════════════════════ -->
 
+            </div>
+
+            <h3 class="section-subtitle"
+                style="text-align: center; margin: 4rem 0 2rem; font-size: 1.5rem; color: var(--text-secondary);">
+                Developer Tools & SDKs</h3>
+            <div class="projects-grid">
                 <!-- Flux - Flutter SDUI Engine -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #06b6d4, #8b5cf6);">
                     <div class="project-hero-placeholder"
@@ -1767,8 +1778,8 @@
 
         <section id="skills">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="skills.title">Tech Stack</h2>
-                <p class="section-desc" data-i18n="skills.subtitle">專精於跨平台開發與現代前端技術</p>
+                <h2 class="section-title" >Tech Stack</h2>
+                <p class="section-desc" >專精於跨平台開發與現代前端技術</p>
             </div>
 
             <div class="skills-grid">
@@ -1840,8 +1851,8 @@
 
         <section id="contact">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
-                <p class="section-desc" data-i18n="contact.subtitle">歡迎交流合作</p>
+                <h2 class="section-title" >Get In Touch</h2>
+                <p class="section-desc" >歡迎交流合作</p>
             </div>
 
             <div class="contact-grid">
@@ -1915,7 +1926,7 @@
     </main>
 
     <footer>
-        <p data-i18n="footer.copyright">© 2025 ImL1s. Built with passion.</p>
+        <p >© 2025 ImL1s. Built with passion.</p>
     </footer>
 
     <script>
