@@ -19,6 +19,10 @@ google.com, pub-7147633290594636, DIRECT, f08c47fec0942fa0
 
 
 
+#Meta Audience Network
+
+facebook.com, 2451244371807305, RESELLER, c3e20eee3f780d68
+
 #Add other networks if applicable
 
 #Resellers
