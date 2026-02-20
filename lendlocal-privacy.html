@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LendLocal - Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #1e293b;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+            padding: 3rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: #D97706;
+            margin: 2rem 0 1rem;
+            padding-top: 1rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: #334155;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+
+        ul,
+        ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: #475569;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: #1e293b;
+        }
+
+        .highlight {
+            background: #fef9ee;
+            border-left: 4px solid #F59E0B;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: #92400e;
+        }
+
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .warning p {
+            margin: 0;
+            color: #92400e;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        a {
+            color: #D97706;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #f8fafc;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        td {
+            color: #475569;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">L</div>
+            <h1>LendLocal</h1>
+            <p class="subtitle">Privacy Policy</p>
+        </header>
+
+        <main>
+            <p><strong>Effective Date:</strong> February 20, 2026</p>
+
+            <h2>Overview</h2>
+            <p>LendLocal is an automated Bitfinex lending tool that runs entirely on your device. You provide your own
+                Bitfinex API keys and the app manages your lending positions on your behalf — locally, with no backend
+                server involved.</p>
+
+            <div class="highlight">
+                <p><strong>We do not collect any personal data.</strong> LendLocal has no servers, no accounts, no
+                    registration, and no cloud storage. Everything stays on your device.</p>
+            </div>
+
+            <h2>Information We Collect</h2>
+            <p>LendLocal does <strong>not</strong> collect, transmit, or store any personal information on external
+                servers. Specifically:</p>
+            <ul>
+                <li>No account registration or login is required</li>
+                <li>No name, email address, or contact information is collected</li>
+                <li>No usage analytics or behavioral tracking</li>
+                <li>No crash reporting sent to external services</li>
+                <li>No advertising identifiers or device fingerprinting</li>
+            </ul>
+
+            <h2>API Key Storage</h2>
+            <p>Your Bitfinex API keys are the only sensitive data the app handles. They are stored exclusively on your
+                device using the platform's built-in secure storage:</p>
+            <ul>
+                <li><strong>iOS:</strong> Stored in the iOS Keychain — Apple's hardware-backed secure enclave</li>
+                <li><strong>Android:</strong> Stored in the Android KeyStore — Android's hardware-backed secure
+                    credential storage</li>
+            </ul>
+
+            <div class="highlight">
+                <p><strong>Your API keys never leave your device.</strong> They are never transmitted to our servers
+                    (we have no servers), never stored in the cloud, and never shared with any third party.</p>
+            </div>
+
+            <h2>How the App Communicates</h2>
+            <p>LendLocal communicates directly from your device to Bitfinex's own API using your API credentials. The
+                data flow is:</p>
+            <ul>
+                <li>Your Device &rarr; Bitfinex API (direct connection)</li>
+                <li>There is no intermediate server or proxy owned by CB Studio</li>
+            </ul>
+            <p>All communication with Bitfinex is encrypted via HTTPS/TLS, consistent with Bitfinex's own security
+                standards. Please review <a href="https://www.bitfinex.com/legal/privacy" target="_blank"
+                    rel="noopener">Bitfinex's Privacy Policy</a> for details on how they handle API requests.</p>
+
+            <h2>Data Stored on Your Device</h2>
+            <p>The app may store the following information locally on your device only:</p>
+            <ul>
+                <li><strong>API Keys:</strong> Stored in Keychain / KeyStore (encrypted, secure)</li>
+                <li><strong>App Settings &amp; Preferences:</strong> Strategy configuration, rate thresholds, and other
+                    lending parameters</li>
+                <li><strong>Lending History Cache:</strong> Temporary cache of recent lending activity fetched from
+                    Bitfinex, used for display purposes only</li>
+            </ul>
+            <p>All of this data remains on your device and can be deleted at any time by uninstalling the app.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>LendLocal does not integrate with any analytics, advertising, or tracking services. The only external
+                service the app communicates with is:</p>
+            <ul>
+                <li><strong>Bitfinex API</strong> — to execute lending operations on your behalf using your own
+                    credentials</li>
+            </ul>
+            <p>We have no other third-party integrations.</p>
+
+            <h2>No Analytics or Tracking</h2>
+            <p>LendLocal contains:</p>
+            <ul>
+                <li>No analytics SDKs (no Firebase Analytics, no Mixpanel, no Amplitude, etc.)</li>
+                <li>No advertising networks</li>
+                <li>No crash reporting services that transmit data externally</li>
+                <li>No cookies or web tracking of any kind</li>
+            </ul>
+
+            <h2>Children's Privacy</h2>
+            <p>LendLocal is not intended for children under the age of 13. We do not knowingly collect any information
+                from children. As the app requires a Bitfinex account (which itself has age requirements), use by
+                minors is not applicable.</p>
+
+            <h2>Data Security</h2>
+            <p>Because we collect no data, there is no centralized database to breach. Your API keys are protected by
+                the same hardware-level security that protects your device passwords and banking apps. We strongly
+                recommend:</p>
+            <ul>
+                <li>Using a device passcode or biometric lock</li>
+                <li>Creating Bitfinex API keys with only the minimum required permissions (no withdrawal permissions
+                    needed)</li>
+                <li>Regularly reviewing your active API keys in your Bitfinex account settings</li>
+            </ul>
+
+            <h2>Changes to This Policy</h2>
+            <p>If we make material changes to this privacy policy, we will update the effective date at the top of this
+                page. We encourage you to review this page periodically. Since we collect no data, changes are unlikely
+                to affect your privacy.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this privacy policy, please contact us at:</p>
+            <p><a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></p>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 CB Studio. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="lendlocal-terms.html">Terms of Service</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
