@@ -1,0 +1,115 @@
+[debug] [2026-02-06T06:11:39.086Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-06T06:11:39.087Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-06T06:11:39.087Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-06T06:11:39.088Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-06T06:11:39.088Z] Checked if tokens are valid: true, expires at: 1770359602014
+[debug] [2026-02-06T06:11:39.088Z] Checked if tokens are valid: true, expires at: 1770359602014
+[debug] [2026-02-06T06:11:39.088Z] Checked if tokens are valid: true, expires at: 1770359602014
+[debug] [2026-02-06T06:11:39.088Z] Checked if tokens are valid: true, expires at: 1770359602014
+[debug] [2026-02-06T06:11:39.088Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-06T06:11:39.088Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-06T06:11:39.088Z] Checked if tokens are valid: true, expires at: 1770359602014
+[debug] [2026-02-06T06:11:39.088Z] Checked if tokens are valid: true, expires at: 1770359602014
+[debug] [2026-02-06T06:11:39.089Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-06T06:11:39.089Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-06T06:11:39.090Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-06T06:11:39.483Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo 403
+[debug] [2026-02-06T06:11:39.483Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-02-06T06:11:39.581Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo 403
+[debug] [2026-02-06T10:09:11.889Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-06T10:09:11.891Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-06T10:09:11.891Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-06T10:09:11.891Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-06T10:09:11.891Z] Checked if tokens are valid: false, expires at: 1770373068654
+[debug] [2026-02-06T10:09:11.891Z] Checked if tokens are valid: false, expires at: 1770373068654
+[debug] [2026-02-06T10:09:11.891Z] > refreshing access token with scopes: []
+[debug] [2026-02-06T10:09:11.892Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-06T10:09:11.892Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-06T10:09:11.893Z] Checked if tokens are valid: false, expires at: 1770373068654
+[debug] [2026-02-06T10:09:11.893Z] Checked if tokens are valid: false, expires at: 1770373068654
+[debug] [2026-02-06T10:09:11.893Z] > refreshing access token with scopes: []
+[debug] [2026-02-06T10:09:11.893Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-06T10:09:11.893Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-06T10:09:11.894Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-06T10:09:11.894Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-06T10:09:11.894Z] Checked if tokens are valid: false, expires at: 1770373068654
+[debug] [2026-02-06T10:09:11.894Z] Checked if tokens are valid: false, expires at: 1770373068654
+[debug] [2026-02-06T10:09:11.894Z] > refreshing access token with scopes: []
+[debug] [2026-02-06T10:09:11.894Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-06T10:09:11.894Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-06T10:09:11.942Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-06T10:09:11.942Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-06T10:09:11.969Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-06T10:09:11.970Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-06T10:09:11.970Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-06T10:09:11.988Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-06T10:09:11.989Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-06T10:09:11.989Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-06T10:09:11.998Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-06T10:09:12.513Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo 403
+[debug] [2026-02-06T10:09:12.513Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-02-06T10:09:13.206Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo 403
+[debug] [2026-02-07T08:41:40.317Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-07T08:41:40.318Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-07T08:41:40.318Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-07T08:41:40.318Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-07T08:41:40.318Z] Checked if tokens are valid: false, expires at: 1770451561833
+[debug] [2026-02-07T08:41:40.318Z] Checked if tokens are valid: false, expires at: 1770451561833
+[debug] [2026-02-07T08:41:40.319Z] > refreshing access token with scopes: []
+[debug] [2026-02-07T08:41:40.319Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-07T08:41:40.319Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T08:41:40.320Z] Checked if tokens are valid: false, expires at: 1770451561833
+[debug] [2026-02-07T08:41:40.320Z] Checked if tokens are valid: false, expires at: 1770451561833
+[debug] [2026-02-07T08:41:40.320Z] > refreshing access token with scopes: []
+[debug] [2026-02-07T08:41:40.321Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-07T08:41:40.321Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T08:41:40.321Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-07T08:41:40.321Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-07T08:41:40.321Z] Checked if tokens are valid: false, expires at: 1770451561833
+[debug] [2026-02-07T08:41:40.321Z] Checked if tokens are valid: false, expires at: 1770451561833
+[debug] [2026-02-07T08:41:40.321Z] > refreshing access token with scopes: []
+[debug] [2026-02-07T08:41:40.321Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-07T08:41:40.321Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T08:41:40.382Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-07T08:41:40.382Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T08:41:40.406Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-07T08:41:40.407Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-07T08:41:40.408Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T08:41:40.449Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-07T08:41:40.450Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-07T08:41:40.450Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T08:41:40.458Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-07T08:41:40.818Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo 403
+[debug] [2026-02-07T12:39:01.479Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-07T12:39:01.480Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-07T12:39:01.480Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-07T12:39:01.480Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-07T12:39:01.481Z] Checked if tokens are valid: false, expires at: 1770457299450
+[debug] [2026-02-07T12:39:01.481Z] Checked if tokens are valid: false, expires at: 1770457299450
+[debug] [2026-02-07T12:39:01.481Z] > refreshing access token with scopes: []
+[debug] [2026-02-07T12:39:01.482Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-07T12:39:01.482Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T12:39:01.483Z] Checked if tokens are valid: false, expires at: 1770457299450
+[debug] [2026-02-07T12:39:01.483Z] Checked if tokens are valid: false, expires at: 1770457299450
+[debug] [2026-02-07T12:39:01.483Z] > refreshing access token with scopes: []
+[debug] [2026-02-07T12:39:01.483Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-07T12:39:01.483Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T12:39:01.483Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-07T12:39:01.483Z] > authorizing via signed-in user (mikuxyuki@gmail.com)
+[debug] [2026-02-07T12:39:01.484Z] Checked if tokens are valid: false, expires at: 1770457299450
+[debug] [2026-02-07T12:39:01.484Z] Checked if tokens are valid: false, expires at: 1770457299450
+[debug] [2026-02-07T12:39:01.484Z] > refreshing access token with scopes: []
+[debug] [2026-02-07T12:39:01.484Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-07T12:39:01.484Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T12:39:01.536Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-07T12:39:01.536Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T12:39:01.549Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-07T12:39:01.550Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-07T12:39:01.550Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T12:39:01.561Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-07T12:39:01.562Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-07T12:39:01.562Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-07T12:39:01.573Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo [none]
+[debug] [2026-02-07T12:39:02.817Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo 403
+[debug] [2026-02-07T12:39:02.817Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-02-07T12:39:04.007Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/admob-app-id-3887247702/billingInfo 403
