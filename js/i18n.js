@@ -59,6 +59,34 @@ const translations = {
         'project.todolist.title': 'TodoList - 100+ 技術棧',
         'project.todolist.desc': '同一個 Todo List 應用的 100+ 種實現。涵蓋 Web、Mobile、Desktop、遊戲引擎等完整學習資源。',
 
+        // Protect: Lobster
+        'project.lobster.title': 'Lobster - AI Agent Social',
+        'project.lobster.desc': 'Moltbook 平台的第三方客戶端',
+
+        // Project: RentAHuman
+        'project.rentahuman.title': 'RentAHuman: AI Hires Humans',
+        'project.rentahuman.desc': 'AI 代理人僱用真人完成任務',
+
+        // Project: MoltX
+        'project.moltx.title': 'MoltX: AI Agent Social Feed',
+        'project.moltx.desc': 'AI 代理人的社群推文平台',
+
+        // Project: Intake
+        'project.intake.title': 'Intake',
+        'project.intake.desc': '在 Telegram 中建立高品質表單',
+
+        // Project: FlashClaw
+        'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
+        'project.flashclaw.desc': '基於 OpenClaw 構建的隨身 AI 代理人',
+
+        // Project: T-Memo
+        'project.tmemo.title': 'T-Memo: AI Bookmark Organizer',
+        'project.tmemo.desc': '將 X/Twitter 貼文儲存為結構化筆記',
+
+        // Project: ClawHub
+        'project.clawhub.title': 'ClawHub - OpenClaw AI Gateway',
+        'project.clawhub.desc': '單一 API 整合多種 AI 模型的統一網關',
+
         // Skills Section
         'skills.title': 'Tech Stack',
         'skills.subtitle': '專精於跨平台開發與現代前端技術',
@@ -169,6 +197,34 @@ const translations = {
         // Project: TodoList
         'project.todolist.title': 'TodoList - 100+ 技术栈',
         'project.todolist.desc': '同一个 Todo List 应用的 100+ 种实现。涵盖 Web、Mobile、Desktop、游戏引擎等完整学习资源。',
+
+        // Project: Lobster
+        'project.lobster.title': 'Lobster - AI Agent Social',
+        'project.lobster.desc': 'Moltbook 平台的第三方客户端',
+
+        // Project: RentAHuman
+        'project.rentahuman.title': 'RentAHuman: AI Hires Humans',
+        'project.rentahuman.desc': 'AI 代理人雇用真人完成任务',
+
+        // Project: MoltX
+        'project.moltx.title': 'MoltX: AI Agent Social Feed',
+        'project.moltx.desc': 'AI 代理人的社交推文平台',
+
+        // Project: Intake
+        'project.intake.title': 'Intake',
+        'project.intake.desc': '在 Telegram 中创建高质量表单',
+
+        // Project: FlashClaw
+        'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
+        'project.flashclaw.desc': '基于 OpenClaw 构建的随身 AI 代理人',
+
+        // Project: T-Memo
+        'project.tmemo.title': 'T-Memo: AI Bookmark Organizer',
+        'project.tmemo.desc': '将 X/Twitter 帖子保存为结构化笔记',
+
+        // Project: ClawHub
+        'project.clawhub.title': 'ClawHub - OpenClaw AI Gateway',
+        'project.clawhub.desc': '单一 API 整合多种 AI 模型的统一网关',
 
         // Skills Section
         'skills.title': 'Tech Stack',
@@ -281,6 +337,34 @@ const translations = {
         'project.todolist.title': 'TodoList - 100+ Tech Stacks',
         'project.todolist.desc': '100+ implementations of the same Todo List app across Web, Mobile, Desktop, and game engines.',
 
+        // Project: Lobster
+        'project.lobster.title': 'Lobster - AI Agent Social',
+        'project.lobster.desc': 'Third-party client for the Moltbook platform.',
+
+        // Project: RentAHuman
+        'project.rentahuman.title': 'RentAHuman: AI Hires Humans',
+        'project.rentahuman.desc': 'AI agents hiring humans to complete tasks.',
+
+        // Project: MoltX
+        'project.moltx.title': 'MoltX: AI Agent Social Feed',
+        'project.moltx.desc': 'Social feed platform for AI agents.',
+
+        // Project: Intake
+        'project.intake.title': 'Intake',
+        'project.intake.desc': 'Create high-quality forms in Telegram.',
+
+        // Project: FlashClaw
+        'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
+        'project.flashclaw.desc': 'Your portable AI agent built on OpenClaw.',
+
+        // Project: T-Memo
+        'project.tmemo.title': 'T-Memo: AI Bookmark Organizer',
+        'project.tmemo.desc': 'Save X/Twitter posts & threads as structured notes.',
+
+        // Project: ClawHub
+        'project.clawhub.title': 'ClawHub - OpenClaw AI Gateway',
+        'project.clawhub.desc': 'A unified gateway for multiple AI models via a single API.',
+
         // Skills Section
         'skills.title': 'Tech Stack',
         'skills.subtitle': 'Specialized in cross-platform development and modern frontend technologies',
@@ -391,6 +475,34 @@ const translations = {
         // Project: TodoList
         'project.todolist.title': 'TodoList - 100+ 技術スタック',
         'project.todolist.desc': '同じ Todo List アプリの 100+ 種類の実装。Web、Mobile、Desktop、ゲームエンジンなど完全な学習リソース。',
+
+        // Protect: Lobster
+        'project.lobster.title': 'Lobster - AI Agent Social',
+        'project.lobster.desc': 'Moltbookプラットフォームのサードパーティクライアント。',
+
+        // Project: RentAHuman
+        'project.rentahuman.title': 'RentAHuman: AI Hires Humans',
+        'project.rentahuman.desc': 'AIエージェントが人間にタスクを依頼します。',
+
+        // Project: MoltX
+        'project.moltx.title': 'MoltX: AI Agent Social Feed',
+        'project.moltx.desc': 'AIエージェント向けのソーシャルフィードプラットフォーム。',
+
+        // Project: Intake
+        'project.intake.title': 'Intake',
+        'project.intake.desc': 'Telegramで高品質なフォームを作成。',
+
+        // Project: FlashClaw
+        'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
+        'project.flashclaw.desc': 'OpenClawベースのポータブルAIエージェント。',
+
+        // Project: T-Memo
+        'project.tmemo.title': 'T-Memo: AI Bookmark Organizer',
+        'project.tmemo.desc': 'X/Twitterの投稿を構造化されたノートとして保存。',
+
+        // Project: ClawHub
+        'project.clawhub.title': 'ClawHub - OpenClaw AI Gateway',
+        'project.clawhub.desc': '単一APIで複数のAIモデルを統合するゲートウェイ。',
 
         // Skills Section
         'skills.title': 'Tech Stack',
