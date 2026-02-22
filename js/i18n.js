@@ -73,7 +73,7 @@ const translations = {
 
         // Project: Intake
         'project.intake.title': 'Intake',
-        'project.intake.desc': '在 Telegram 中建立高品質表單',
+        'project.intake.desc': 'AI 食物掃描與熱量追蹤，輕鬆記錄每日飲食與營養攝取。',
 
         // Project: FlashClaw
         'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
@@ -233,7 +233,7 @@ const translations = {
 
         // Project: Intake
         'project.intake.title': 'Intake',
-        'project.intake.desc': '在 Telegram 中创建高质量表单',
+        'project.intake.desc': 'AI 食物扫描与热量追踪，轻松记录每日饮食与营养摄取。',
 
         // Project: FlashClaw
         'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
@@ -393,7 +393,7 @@ const translations = {
 
         // Project: Intake
         'project.intake.title': 'Intake',
-        'project.intake.desc': 'Create high-quality forms in Telegram.',
+        'project.intake.desc': 'AI food scanner & calorie tracker. Effortlessly log daily meals and nutrition intake.',
 
         // Project: FlashClaw
         'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
@@ -553,7 +553,7 @@ const translations = {
 
         // Project: Intake
         'project.intake.title': 'Intake',
-        'project.intake.desc': 'Telegramで高品質なフォームを作成。',
+        'project.intake.desc': 'AI食品スキャナー＆カロリートラッカー。毎日の食事と栄養摂取を簡単に記録。',
 
         // Project: FlashClaw
         'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
