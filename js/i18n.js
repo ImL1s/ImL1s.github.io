@@ -84,8 +84,8 @@ const translations = {
         'project.tmemo.desc': '將 X/Twitter 貼文儲存為結構化筆記',
 
         // Project: ClawHub
-        'project.clawhub.title': 'ClawHub - OpenClaw AI Gateway',
-        'project.clawhub.desc': '單一 API 整合多種 AI 模型的統一網關',
+        'project.clawhub.title': 'ClawHub - OpenClaw Dashboard',
+        'project.clawhub.desc': 'OpenClaw AI Gateway 的行動管理面板 — 掃 QR Code 即可即時監控、聊天、管理排程與用量分析。',
 
         // Skills Section
         'skills.title': 'Tech Stack',
@@ -244,8 +244,8 @@ const translations = {
         'project.tmemo.desc': '将 X/Twitter 帖子保存为结构化笔记',
 
         // Project: ClawHub
-        'project.clawhub.title': 'ClawHub - OpenClaw AI Gateway',
-        'project.clawhub.desc': '单一 API 整合多种 AI 模型的统一网关',
+        'project.clawhub.title': 'ClawHub - OpenClaw Dashboard',
+        'project.clawhub.desc': 'OpenClaw AI Gateway 的移动管理面板 — 扫 QR Code 即可实时监控、聊天、管理排程与用量分析。',
 
         // Skills Section
         'skills.title': 'Tech Stack',
@@ -404,8 +404,8 @@ const translations = {
         'project.tmemo.desc': 'Save X/Twitter posts & threads as structured notes.',
 
         // Project: ClawHub
-        'project.clawhub.title': 'ClawHub - OpenClaw AI Gateway',
-        'project.clawhub.desc': 'A unified gateway for multiple AI models via a single API.',
+        'project.clawhub.title': 'ClawHub - OpenClaw Dashboard',
+        'project.clawhub.desc': 'Mobile management dashboard for OpenClaw AI Gateway — scan a QR code to monitor, chat, manage schedules & analyze usage in real time.',
 
         // Skills Section
         'skills.title': 'Tech Stack',
@@ -564,8 +564,8 @@ const translations = {
         'project.tmemo.desc': 'X/Twitterの投稿を構造化されたノートとして保存。',
 
         // Project: ClawHub
-        'project.clawhub.title': 'ClawHub - OpenClaw AI Gateway',
-        'project.clawhub.desc': '単一APIで複数のAIモデルを統合するゲートウェイ。',
+        'project.clawhub.title': 'ClawHub - OpenClaw Dashboard',
+        'project.clawhub.desc': 'OpenClaw AI Gatewayのモバイル管理パネル — QRコードをスキャンしてリアルタイム監視、チャット、スケジュール管理、使用量分析。',
 
         // Skills Section
         'skills.title': 'Tech Stack',
