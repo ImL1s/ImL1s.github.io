@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Memo — AI Bookmark Organizer</title>
+    <meta name="description" content="T-Memo 是最聰明的書籤整理工具。一鍵儲存連結，搭載 Google Gemini AI 自動分類，跨裝置同步。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a2e;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo {
+            font-size: 64px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 2em;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 32px;
+        }
+
+        .features {
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .feature-icon {
+            font-size: 1.4em;
+            flex-shrink: 0;
+        }
+
+        .feature-text h3 {
+            font-size: 1em;
+            margin-bottom: 2px;
+        }
+
+        .feature-text p {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .links {
+            margin-top: 30px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: transform 0.2s;
+        }
+
+        .links a:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: #f0f0f5;
+            color: #333;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85em;
+        }
+
+        footer a {
+            color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="logo">📌</div>
+            <h1>T-Memo</h1>
+            <p class="tagline">AI Bookmark Organizer — 最聰明的連結儲存與整理工具</p>
+
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">⚡</span>
+                    <div class="feature-text">
+                        <h3>一鍵儲存</h3>
+                        <p>從任何 App 分享連結，立即擷取完整預覽</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🤖</span>
+                    <div class="feature-text">
+                        <h3>AI 自動分類</h3>
+                        <p>搭載 Google Gemini AI，自動建議最適合的分類和標籤</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🔒</span>
+                    <div class="feature-text">
+                        <h3>隱私至上</h3>
+                        <p>離線優先，資料預設保存在你的裝置。雲端同步僅供 Pro 用戶選用</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">🌐</span>
+                    <div class="feature-text">
+                        <h3>跨平台</h3>
+                        <p>iOS、Android、Chrome 擴充功能——隨時隨地整理你的書籤</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="https://apps.apple.com/app/threadmemo/id6504754587" class="btn-primary">📱 App Store</a>
+                <a href="https://play.google.com/store/apps/details?id=com.nicholasliu.threadmemo"
+                    class="btn-primary">🤖 Google Play</a>
+                <a href="https://iml1s.github.io/threadmemo-support.html" class="btn-secondary">💬 聯絡支援</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                <a href="https://iml1s.github.io/threadmemo-privacy.html">隱私權政策</a> ·
+                <a href="https://iml1s.github.io/threadmemo-terms.html">服務條款</a> ·
+                <a href="https://iml1s.github.io/threadmemo-support.html">支援</a>
+            </p>
+            <p style="margin-top: 8px;">© 2026 T-Memo. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
