@@ -27,9 +27,9 @@ const translations = {
         'project.lightwallet.title': 'Light Wallet',
         'project.lightwallet.desc': '輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含 Bitcoin、Ethereum、Solana、TON、Cosmos 等。',
 
-        // Project: Crypto AI
-        'project.cryptoai.title': '加密 AI 分析',
-        'project.cryptoai.desc': 'AI 驅動的加密貨幣市場分析平台。整合恐懼貪婪指數、多空比、ETF 資金流等 5+ 數據源，支援 AI 圖表分析。',
+        // Project: ChartWise
+        'project.cryptoai.title': 'ChartWise – 市場研究',
+        'project.cryptoai.desc': 'AI 驅動的加密貨幣與股票圖表分析平台。支援 355+ 交易標的即時數據，整合恐懼貪婪指數、多空比、ETF 資金流等多維數據源，提供 AI 智能圖表分析。',
 
         // Project: Light Wallet Extension
         'project.extension.title': 'Light Wallet Extension',
@@ -187,9 +187,9 @@ const translations = {
         'project.lightwallet.title': 'Light Wallet',
         'project.lightwallet.desc': '轻量级多链加密货币钱包，支持 43+ 区块链包含 Bitcoin、Ethereum、Solana、TON、Cosmos 等。',
 
-        // Project: Crypto AI
-        'project.cryptoai.title': '加密 AI 分析',
-        'project.cryptoai.desc': 'AI 驱动的加密货币市场分析平台。整合恐惧贪婪指数、多空比、ETF 资金流等 5+ 数据源，支持 AI 图表分析。',
+        // Project: ChartWise
+        'project.cryptoai.title': 'ChartWise – 市场研究',
+        'project.cryptoai.desc': 'AI 驱动的加密货币与股票图表分析平台。支持 355+ 交易标的即时数据，整合恐惧贪婪指数、多空比、ETF 资金流等多维数据源，提供 AI 智能图表分析。',
 
         // Project: Light Wallet Extension
         'project.extension.title': 'Light Wallet Extension',
@@ -347,9 +347,9 @@ const translations = {
         'project.lightwallet.title': 'Light Wallet',
         'project.lightwallet.desc': 'Lightweight multi-chain crypto wallet supporting 43+ blockchains including Bitcoin, Ethereum, Solana, TON, Cosmos and more.',
 
-        // Project: Crypto AI
-        'project.cryptoai.title': 'Crypto AI Analysis',
-        'project.cryptoai.desc': 'AI-powered cryptocurrency market analysis platform. Integrates Fear & Greed Index, Long/Short ratio, ETF flows and 5+ data sources.',
+        // Project: ChartWise
+        'project.cryptoai.title': 'ChartWise – Market Research',
+        'project.cryptoai.desc': 'AI-powered crypto & stock chart analysis platform. Real-time data for 355+ symbols, integrating Fear & Greed Index, Long/Short ratio, ETF flows and more.',
 
         // Project: Light Wallet Extension
         'project.extension.title': 'Light Wallet Extension',
@@ -507,9 +507,9 @@ const translations = {
         'project.lightwallet.title': 'Light Wallet',
         'project.lightwallet.desc': 'Bitcoin、Ethereum、Solana、TON、Cosmos など 43+ ブロックチェーン対応の軽量マルチチェーン暗号通貨ウォレット。',
 
-        // Project: Crypto AI
-        'project.cryptoai.title': '暗号 AI 分析',
-        'project.cryptoai.desc': 'AI 駆動の暗号通貨市場分析プラットフォーム。Fear & Greed 指数、ロング/ショート比率、ETF フローなど 5+ データソースを統合。',
+        // Project: ChartWise
+        'project.cryptoai.title': 'ChartWise – マーケットリサーチ',
+        'project.cryptoai.desc': 'AI 駆動の暗号通貨・株式チャート分析プラットフォーム。355+ 銘柄のリアルタイムデータ、Fear & Greed 指数、ロング/ショート比率、ETF フローなど多次元データを統合。',
 
         // Project: Light Wallet Extension
         'project.extension.title': 'Light Wallet Extension',
