@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Car Log Plus 車記加 技術支援 - 常見問題、問題回報指引及聯繫方式。">
+  <meta property="og:title" content="Car Log Plus 車記加 - 技術支援">
+  <meta property="og:description" content="Car Log Plus 技術支援頁面，包含常見問題解答與聯繫方式。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iml1s.github.io/car-log-plus/support.html">
+  <meta property="og:locale" content="zh_TW">
+  <title>Car Log Plus 車記加 - 技術支援</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A56DB;
+      --primary-dark: #1344b8;
+      --primary-light: #EBF1FF;
+      --text: #111827;
+      --text-secondary: #6B7280;
+      --border: #E5E7EB;
+      --bg: #FFFFFF;
+      --bg-alt: #F9FAFB;
+      --radius: 8px;
+      --green: #059669;
+      --green-light: #ECFDF5;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                   "Noto Sans TC", "PingFang TC", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 20px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .header-title { font-size: 20px; font-weight: 700; }
+    .header-sub   { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+
+    nav {
+      background: var(--primary-dark);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+    }
+    nav a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      display: inline-block;
+      transition: color 0.15s, background 0.15s;
+    }
+    nav a:hover  { color: #fff; background: rgba(255,255,255,0.1); }
+    nav a.active { color: #fff; background: rgba(255,255,255,0.15); font-weight: 600; }
+
+    .page-hero {
+      background: var(--primary-light);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px 32px;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 28px; font-weight: 700; color: var(--primary); }
+    .page-hero p  { margin-top: 8px; font-size: 15px; color: var(--text-secondary); }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px 64px;
+    }
+
+    /* Contact cards */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .contact-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      text-align: center;
+    }
+    .contact-card .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .contact-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .contact-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .contact-card a {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .contact-card a:hover { background: var(--primary-dark); }
+
+    /* Section headings */
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+
+    /* FAQ accordion */
+    .faq-list { margin-bottom: 48px; }
+    details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    details[open] { border-color: var(--primary); }
+    summary {
+      padding: 16px 20px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg);
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-left: 12px;
+    }
+    details[open] summary::after { content: '−'; }
+    details[open] summary { background: var(--primary-light); color: var(--primary); }
+    .faq-body {
+      padding: 16px 20px;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      font-size: 15px;
+      color: var(--text-secondary);
+    }
+    .faq-body p  { margin-bottom: 8px; }
+    .faq-body ul { padding-left: 20px; }
+    .faq-body li { margin-bottom: 4px; }
+
+    /* Report guide */
+    .report-steps {
+      counter-reset: step;
+      margin-bottom: 48px;
+    }
+    .report-step {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .step-num {
+      counter-increment: step;
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .step-content p  { font-size: 14px; color: var(--text-secondary); }
+
+    /* Info box */
+    .callout {
+      background: var(--primary-light);
+      border: 1px solid #BFDBFE;
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 15px;
+    }
+    .callout-green {
+      background: var(--green-light);
+      border-color: #6EE7B7;
+    }
+
+    code {
+      background: #F3F4F6;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 13px;
+      font-family: "SF Mono", "Fira Code", monospace;
+    }
+
+    footer {
+      background: #111827;
+      color: #9CA3AF;
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 13px;
+    }
+    footer a { color: #6B7280; text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: #D1D5DB; }
+    footer .copyright { margin-top: 8px; font-size: 12px; color: #6B7280; }
+
+    @media (max-width: 600px) {
+      .page-hero h1 { font-size: 22px; }
+      main { padding: 28px 16px 48px; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-mark">🚗</div>
+    <div>
+      <div class="header-title">Car Log Plus 車記加</div>
+      <div class="header-sub">台灣車輛管理 App</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html">首頁</a>
+    <a href="privacy-policy.html">隱私政策</a>
+    <a href="terms-of-service.html">服務條款</a>
+    <a href="support.html" class="active">技術支援</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>技術支援</h1>
+  <p>查閱常見問題，或直接與我們聯繫取得協助</p>
+</div>
+
+<main>
+
+  <!-- 聯繫方式 -->
+  <h2 class="section-title">聯繫我們</h2>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="icon">📧</div>
+      <h3>電子郵件支援</h3>
+      <p>一般問題與功能建議</p>
+      <a href="mailto:support@carlogplus.com">寄送郵件</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">🔒</div>
+      <h3>隱私相關詢問</h3>
+      <p>個人資料、刪除帳號等</p>
+      <a href="mailto:privacy@carlogplus.com">聯繫隱私團隊</a>
+    </div>
+    <div class="contact-card">
+      <div class="icon">🐛</div>
+      <h3>問題回報</h3>
+      <p>App 錯誤、當機問題</p>
+      <a href="mailto:bugs@carlogplus.com">回報問題</a>
+    </div>
+  </div>
+
+  <!-- 常見問題 -->
+  <h2 class="section-title">常見問題 FAQ</h2>
+  <div class="faq-list">
+
+    <details>
+      <summary>如何開始使用 Car Log Plus？</summary>
+      <div class="faq-body">
+        <p>您可以選擇以<strong>訪客模式</strong>或<strong>建立帳號</strong>開始使用：</p>
+        <ul>
+          <li>訪客模式：直接使用核心功能，資料儲存於本機</li>
+          <li>帳號登入：支援 Google 帳號、Apple ID 登入，可啟用雲端同步</li>
+        </ul>
+        <p>登入後，點選「新增車輛」輸入您的車輛資訊即可開始記錄。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>如何連結台灣監理站（MVDIS）查詢功能？</summary>
+      <div class="faq-body">
+        <p>前往「設定 → 台灣服務 → 監理站連結」，輸入以下資訊：</p>
+        <ul>
+          <li>國民身分證字號</li>
+          <li>出生日期</li>
+          <li>監理站帳號密碼（需先在監理服務網註冊）</li>
+        </ul>
+        <p>完成後即可查詢驗車到期日、違規記錄及燃料費狀態。您的憑證以 AES-256-CBC 加密儲存於裝置本機，不會上傳至任何伺服器。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>油耗是如何計算的？</summary>
+      <div class="faq-body">
+        <p>本應用程式採用業界標準的<strong>滿罐法（Full Tank Method）</strong>：</p>
+        <p><code>油耗 (km/L) = (本次里程 - 上次滿罐里程) / 本次加油量</code></p>
+        <p>計算前提：</p>
+        <ul>
+          <li>本次加油必須勾選「滿罐」</li>
+          <li>上一次加油記錄也必須是滿罐</li>
+          <li>兩次里程差必須大於 0</li>
+        </ul>
+        <p>若不符合條件，本次記錄仍會儲存，但不計算油耗。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>監理站查詢資料顯示不正確，怎麼辦？</summary>
+      <div class="faq-body">
+        <p>本應用程式顯示的監理站資料來源為政府 MVDIS 系統，快取期限為：</p>
+        <ul>
+          <li>車輛資訊（驗車到期等）：7 天</li>
+          <li>違規記錄 / 燃料費：24 小時</li>
+        </ul>
+        <p>如資料有疑義，建議：</p>
+        <ul>
+          <li>在「台灣服務」頁面點選「立即重新整理」強制更新</li>
+          <li>直接至<a href="https://www.mvdis.gov.tw/" target="_blank" rel="noopener">監理服務網</a>查詢官方資料</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>如何匯出我的資料？</summary>
+      <div class="faq-body">
+        <p>前往「設定 → 資料管理 → 匯出資料」，可選擇匯出：</p>
+        <ul>
+          <li>加油記錄（CSV 格式）</li>
+          <li>保養記錄（CSV 格式）</li>
+          <li>費用記錄（CSV 格式）</li>
+        </ul>
+        <p>匯出檔案可用 Excel、Numbers 等試算表軟體開啟。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>如何刪除帳號與所有資料？</summary>
+      <div class="faq-body">
+        <p>前往「設定 → 帳號 → 刪除帳號」，確認後執行：</p>
+        <ul>
+          <li>雲端資料將於 30 天內永久刪除</li>
+          <li>本機資料會立即清除</li>
+          <li>此操作<strong>無法復原</strong></li>
+        </ul>
+        <p>若您無法在應用程式內操作，請寄信至 <a href="mailto:privacy@carlogplus.com">privacy@carlogplus.com</a> 申請人工刪除。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>App 為何需要定位權限？</summary>
+      <div class="faq-body">
+        <p>定位權限用於：</p>
+        <ul>
+          <li>自動填入加油記錄的 GPS 位置</li>
+          <li>搜尋附近加油站 / 維修廠</li>
+        </ul>
+        <p>您可選擇「使用 App 期間允許」或「永不允許」，不影響核心記錄功能。定位資料不會上傳至伺服器。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>雲端同步需要費用嗎？</summary>
+      <div class="faq-body">
+        <p>目前雲端同步功能<strong>完全免費</strong>。本應用程式採離線優先架構，所有核心功能在無網路環境下仍可完整使用。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>支援哪些平台？</summary>
+      <div class="faq-body">
+        <ul>
+          <li><strong>iOS</strong>：iOS 13.0 以上</li>
+          <li><strong>Android</strong>：Android 6.0（API Level 23）以上</li>
+        </ul>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- 問題回報指引 -->
+  <h2 class="section-title">問題回報指引</h2>
+  <p style="margin-bottom: 24px; color: var(--text-secondary);">
+    提供完整的問題資訊可以幫助我們更快速地解決問題。回報問題時，請盡量包含以下資訊：
+  </p>
+
+  <div class="report-steps">
+
+    <div class="report-step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h4>描述問題現象</h4>
+        <p>清楚說明發生了什麼問題、在哪個頁面或操作中發生、錯誤訊息的完整文字。</p>
+      </div>
+    </div>
+
+    <div class="report-step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h4>說明重現步驟</h4>
+        <p>詳細列出導致問題出現的操作步驟，讓我們能夠重現並驗證問題。例如：「1. 點選加油記錄 → 2. 輸入里程 → 3. 點儲存後 App 當機」。</p>
+      </div>
+    </div>
+
+    <div class="report-step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h4>提供裝置資訊</h4>
+        <p>裝置型號（例如 iPhone 15、Samsung Galaxy S23）、作業系統版本（iOS 17.2 / Android 14）、App 版本號（在「設定 → 關於」中查看）。</p>
+      </div>
+    </div>
+
+    <div class="report-step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h4>附上截圖（如適用）</h4>
+        <p>截圖能幫助我們快速理解問題。請確保截圖不包含您的個人敏感資料（如身分證字號）。</p>
+      </div>
+    </div>
+
+    <div class="report-step">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h4>寄送至問題回報信箱</h4>
+        <p>將以上資訊整理後寄至 <a href="mailto:bugs@carlogplus.com">bugs@carlogplus.com</a>，我們通常在 3 個工作日內回覆。</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 回應時間 -->
+  <div class="callout callout-green">
+    <strong>回應時間承諾：</strong>一般技術問題 3 個工作日內、隱私相關請求 15 個工作日內、緊急安全問題 24 小時內。
+  </div>
+
+</main>
+
+<footer>
+  <div>
+    <a href="index.html">首頁</a>
+    <a href="privacy-policy.html">隱私政策</a>
+    <a href="terms-of-service.html">服務條款</a>
+    <a href="support.html">技術支援</a>
+  </div>
+  <div class="copyright">© 2026 Car Log Plus 車記加. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
