@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bitfinex 借貸機器人使用說明書與操作指南。了解如何連結您的 API、選擇放貸策略以及管理您的被動收入。">
+    <meta name="theme-color" content="#080808">
+
+    <title>操作指南 | Bitfinex 借貸機器人</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .guide-header {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .guide-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+
+        .guide-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .guide-section h2 {
+            color: #d4af37;
+            /* text-gold */
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .guide-section h3 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .guide-section p,
+        .guide-section li {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .guide-section ul,
+        .guide-section ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .guide-section li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="particle-bg" id="particles"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; color: inherit;">
+                    <span class="logo-icon">✦</span>
+                    <span class="logo-text">Lending<span class="text-gold">Bot</span></span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">首頁</a>
+                <a href="/app" class="btn btn-primary">開啟 App</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="guide-header">
+        <div class="container">
+            <h1 class="hero-title">操作<span class="text-gradient">指南</span></h1>
+            <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto;">關於設定並執行 Bitfinex 自動借貸策略，您需要知道的一切都在這裡。</p>
+        </div>
+    </header>
+
+    <main class="guide-content">
+
+        <section class="guide-section">
+            <h2>1. 連結您的 Bitfinex 帳號</h2>
+            <p>為了讓機器人可以自動幫您放貸，您必須提供您的 Bitfinex API 金鑰。我們使用這些金鑰<strong>僅限於執行放貸操作</strong>。</p>
+
+            <h3>必要的 API 權限</h3>
+            <p>為了您的安全，在 Bitfinex 建立 API 金鑰時，您應該只開啟最少必須的權限：</p>
+            <ul>
+                <li><strong>保證金資金 (Margin Funding):</strong> 讀取與寫入 (必要，用來掛單與取消放貸訂單)</li>
+                <li><strong>錢包 (Wallets):</strong> 讀取 (必要，用來檢查您可用的放貸餘額)</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>安全提示：</strong> 請確保絕對<strong>不要</strong>開啟任何提款 (Withdrawal) 或是交易 (Trading) 權限。機器人不需要這些權限，也無法動用您的資金。</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>2. 了解放貸策略</h2>
+            <p>借貸機器人支援多種智慧策略，專為不同的市場狀況設計。您可以隨時在 App 中切換它們。</p>
+
+            <h3>FRR (閃電回報率)</h3>
+            <p>一個動態利率，取決於當前活躍的固定利率資金合約的平均值。機器人會以略高或略低於此利率放貸，以確保跟隨市場趨勢並最大化您的資金利用率。</p>
+
+            <h3>網格策略 (Grid Strategy)</h3>
+            <p>網格策略會將您可用的本金切分為多個區塊，並將它們掛在階梯式的利率上 (例如 10%、15%、20%)。如果市場利率暫時飆升，您較高層級的區塊將被成交，捕捉到極高的收益。</p>
+
+            <h3>自適應 AI (Premium)</h3>
+            <p>我們獨家的機器學習模型，能夠預測短期的利率變動，並在市場飆升前自動調整您的放貸利率。</p>
+        </section>
+
+        <section class="guide-section">
+            <h2>3. 管理您的資金</h2>
+            <p>一旦機器人啟動，它將持續監控您的 Bitfinex funding 錢包。</p>
+
+            <h3>最低放貸金額</h3>
+            <p>Bitfinex 對於掛出放貸訂單有嚴格的最低金額限制。如果您可用的餘額低於這個門檻，機器人將無法替您掛單：</p>
+            <ul>
+                <li><strong>USD:</strong> 最低 $50.00</li>
+                <li><strong>USDT:</strong> 最低 50.00 USDT</li>
+            </ul>
+
+            <h3>自動複利 (Auto-Compounding)</h3>
+            <p>預設情況下，Bitfinex 借貸機器人完全支援自動複利。當借款人歸還本金與利息時，機器人會立即偵測到新釋出的可用餘額，並將其全數投入下一次的放貸循環中。</p>
+        </section>
+
+        <section class="guide-section">
+            <h2>4. 常見問題排除</h2>
+
+            <h3>為什麼我目前的有效連線數量 (Session) 是 0？</h3>
+            <p>請檢查您的 API 金鑰是否正確且未過期。Bitfinex API 金鑰可能會根據您的安全設定需要定期重新展期 (Renew)。</p>
+
+            <h3>為什麼我的資金一直停留在「可用餘額」沒有借出？</h3>
+            <p>這種情況通常發生在您要求的放貸利率遠高於當前市場的成交利率，或是您的可用餘額低於最低要求的 $50 門檻。</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="logo">Lending<span class="text-gold">Bot</span></div>
+                <p class="copyright">© 2026 Lending Bot. 保留所有權利。</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:aa22396584@gmail.com">聯絡客服</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

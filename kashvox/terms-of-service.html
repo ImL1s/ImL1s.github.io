@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KashVox 服務條款</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #0ea5e9;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC",
+        "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .app-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.88;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .summary-box {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+
+    .summary-box h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 8px;
+    }
+
+    .summary-box p {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    section h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    section h2 .icon {
+      font-size: 1.3rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .plan-card {
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .plan-card.featured {
+      border-color: var(--primary);
+      background: #eff6ff;
+    }
+
+    .plan-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+
+    .plan-card .plan-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .plan-card ul {
+      font-size: 0.9rem;
+    }
+
+    .highlight-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .highlight-box.warning {
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+
+    .highlight-box.danger {
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+
+    .highlight-box.info {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 32px;
+    }
+
+    .toc h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 4px;
+    }
+
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    .step-list {
+      counter-reset: step-counter;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .step-list li {
+      counter-increment: step-counter;
+      padding: 12px 16px 12px 52px;
+      position: relative;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    .step-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .disclaimer-box {
+      background: #1e293b;
+      color: #e2e8f0;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 16px 0;
+    }
+
+    .disclaimer-box h4 {
+      color: #f59e0b;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+
+    .disclaimer-box p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .disclaimer-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    table.refund-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 16px 0;
+    }
+
+    table.refund-table th {
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 10px 14px;
+      text-align: left;
+      border: 1px solid #334155;
+    }
+
+    table.refund-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    table.refund-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      section {
+        padding: 20px 16px;
+      }
+
+      .plan-grid {
+        grid-template-columns: 1fr;
+      }
+
+      table.refund-table {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">📜</div>
+  <h1>KashVox 服務條款</h1>
+  <p>CB Studio &nbsp;·&nbsp; com.cbstudio.kashvox</p>
+  <div class="badge">最後更新：2026 年 2 月 24 日</div>
+</header>
+
+<main>
+
+  <!-- Summary -->
+  <div class="summary-box">
+    <h2>重要提示</h2>
+    <p>
+      請在使用 KashVox 前仔細閱讀本服務條款。下載、安裝或使用本應用程式，即表示您同意本條款。若您不同意，請勿安裝或使用本應用程式。
+    </p>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <h2>目錄</h2>
+    <ol>
+      <li><a href="#t1">服務描述與接受條款</a></li>
+      <li><a href="#t2">訂閱方案與定價</a></li>
+      <li><a href="#t3">自動續訂政策</a></li>
+      <li><a href="#t4">退費政策</a></li>
+      <li><a href="#t5">帳戶註冊與安全</a></li>
+      <li><a href="#t6">可接受使用政策</a></li>
+      <li><a href="#t7">智慧財產權</a></li>
+      <li><a href="#t8">AI 功能免責聲明</a></li>
+      <li><a href="#t9">財務資料免責聲明</a></li>
+      <li><a href="#t10">服務中斷與修改</a></li>
+      <li><a href="#t11">責任限制</a></li>
+      <li><a href="#t12">賠償</a></li>
+      <li><a href="#t13">準據法與爭議解決</a></li>
+      <li><a href="#t14">一般條款</a></li>
+      <li><a href="#t15">聯絡資訊</a></li>
+    </ol>
+  </div>
+
+  <!-- Section 1 -->
+  <section id="t1">
+    <h2><span class="icon">📋</span>1. 服務描述與接受條款</h2>
+
+    <h3>1.1 服務提供者</h3>
+    <p>
+      本服務條款（以下稱「本條款」）由 <strong>CB Studio</strong>（以下稱「我們」或「公司」）制定，規範 <strong>KashVox</strong> 應用程式（套件名稱：<code>com.cbstudio.kashvox</code>，以下稱「本服務」或「本應用程式」）的使用。
+    </p>
+
+    <h3>1.2 服務描述</h3>
+    <p>KashVox 是一款 AI 語音記帳應用程式，提供以下核心功能：</p>
+    <ul>
+      <li>語音輸入記帳（使用裝置本地端語音辨識）</li>
+      <li>收據與發票掃描（使用裝置本地端 OCR）</li>
+      <li>財務資料管理與視覺化分析</li>
+      <li>AI 助理對話與財務諮詢</li>
+      <li>多裝置雲端同步（付費功能）</li>
+    </ul>
+
+    <h3>1.3 條款接受</h3>
+    <p>
+      您透過下載、安裝、註冊或使用本應用程式，即表示您已閱讀、理解並同意受本條款約束。若您代表組織使用本服務，您聲明您有權代表該組織接受本條款。
+    </p>
+
+    <h3>1.4 年齡要求</h3>
+    <p>
+      您須年滿 <strong>13 歲</strong>（在歐盟為 16 歲）方可使用本服務。13 歲以下兒童不得使用本應用程式。
+    </p>
+  </section>
+
+  <!-- Section 2 -->
+  <section id="t2">
+    <h2><span class="icon">💳</span>2. 訂閱方案與定價</h2>
+
+    <div class="plan-grid">
+      <div class="plan-card">
+        <h4>免費版</h4>
+        <span class="plan-tag">Free</span>
+        <ul>
+          <li>每月最多 50 筆記帳</li>
+          <li>基本語音輸入</li>
+          <li>收據掃描（每月 10 次）</li>
+          <li>本地資料儲存</li>
+          <li>廣告支持</li>
+        </ul>
+      </div>
+      <div class="plan-card featured">
+        <h4>KashVox Pro</h4>
+        <span class="plan-tag">Pro</span>
+        <ul>
+          <li>無限記帳筆數</li>
+          <li>無限收據掃描</li>
+          <li>多裝置雲端同步</li>
+          <li>AI 財務分析</li>
+          <li>進階報表匯出</li>
+          <li>無廣告</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="highlight-box info">
+      <p>
+        <strong>定價說明：</strong>訂閱費用以您所在地區的 App Store 或 Google Play 頁面所顯示的金額為準。費用可能因地區、幣別及促銷活動而有所不同。價格如有調整，我們將提前通知現有訂閱者。
+      </p>
+    </div>
+
+    <h3>2.1 試用期</h3>
+    <p>
+      我們可能不定期提供免費試用期。試用期結束後，若未取消訂閱，將自動轉為付費訂閱。試用期資格可能依帳戶及裝置而有所限制，每位使用者每個訂閱方案僅限使用一次試用資格。
+    </p>
+
+    <h3>2.2 訂閱週期</h3>
+    <p>
+      KashVox Pro 提供以下訂閱週期選項（以實際上架頁面為準）：
+    </p>
+    <ul>
+      <li><strong>月訂閱</strong>：每月計費一次</li>
+      <li><strong>年訂閱</strong>：每年計費一次（通常較月訂閱優惠）</li>
+    </ul>
+  </section>
+
+  <!-- Section 3 -->
+  <section id="t3">
+    <h2><span class="icon">🔄</span>3. 自動續訂政策</h2>
+
+    <div class="highlight-box warning">
+      <p>
+        <strong>重要：</strong>訂閱將在每個計費週期結束前 <strong>24 小時</strong>自動續訂，除非您在此截止時間前取消訂閱。
+      </p>
+    </div>
+
+    <h3>3.1 iOS（App Store）</h3>
+    <ol class="step-list">
+      <li>開啟 iPhone/iPad 的「設定」App</li>
+      <li>點選您的 Apple ID（頂部顯示名稱）</li>
+      <li>點選「訂閱項目」</li>
+      <li>選擇「KashVox」並點選「取消訂閱」</li>
+    </ol>
+    <p>
+      或前往 <strong>App Store → 帳戶 → 訂閱項目</strong> 進行管理。
+    </p>
+
+    <h3>3.2 Android（Google Play）</h3>
+    <ol class="step-list">
+      <li>開啟 Google Play 商店</li>
+      <li>點選右上角個人圖示</li>
+      <li>選擇「付款與訂閱」→「訂閱項目」</li>
+      <li>選擇「KashVox」並點選「取消訂閱」</li>
+    </ol>
+
+    <h3>3.3 取消後的服務存取</h3>
+    <p>
+      取消訂閱後，您仍可使用 Pro 功能直到當前計費週期結束。週期結束後，帳戶將自動降級至免費方案，您的資料不會遺失。
+    </p>
+
+    <h3>3.4 價格變更</h3>
+    <p>
+      若訂閱價格有所調整，我們將提前至少 <strong>30 天</strong>透過應用程式通知或電子郵件告知。價格變更將於下一個計費週期生效。若您不接受新價格，可在生效前取消訂閱。
+    </p>
+  </section>
+
+  <!-- Section 4 -->
+  <section id="t4">
+    <h2><span class="icon">💰</span>4. 退費政策</h2>
+
+    <p>
+      訂閱費用由 Apple App Store 或 Google Play 商店收取及管理，退費請求需透過相應平台處理。
+    </p>
+
+    <table class="refund-table">
+      <thead>
+        <tr>
+          <th>平台</th>
+          <th>退費途徑</th>
+          <th>退費期限</th>
+          <th>說明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>iOS / App Store</strong></td>
+          <td>reportaproblem.apple.com 或透過 App Store 申請</td>
+          <td>購買後 90 天內</td>
+          <td>依 Apple 退費政策處理，CB Studio 不直接處理 App Store 退費</td>
+        </tr>
+        <tr>
+          <td><strong>Android / Google Play</strong></td>
+          <td>Google Play 商店 → 訂閱 → 退費申請</td>
+          <td>購買後 48 小時內可自助退費；超過後需聯絡 Google 支援</td>
+          <td>依 Google 退費政策處理，CB Studio 不直接處理 Google Play 退費</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>4.1 特殊退費情況</h3>
+    <p>在下列情況下，您可直接聯絡我們申請退費考量：</p>
+    <ul>
+      <li>技術問題導致您無法使用核心 Pro 功能，且問題在報告後 7 個工作日內未得到解決</li>
+      <li>服務條款或功能有重大變更，且您在變更後 14 天內提出申請</li>
+      <li>重複扣款或帳單錯誤</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p>
+        <strong>退費申請：</strong>請寄送電子郵件至 <a href="mailto:support@cbstudio.com">support@cbstudio.com</a>，主旨填寫「退費申請 - KashVox」，並附上購買收據及問題說明。我們將在 5 個工作日內回覆。
+      </p>
+    </div>
+
+    <h3>4.2 不予退費情況</h3>
+    <ul>
+      <li>已使用的訂閱週期（部分使用不予退費）</li>
+      <li>免費試用後轉為付費訂閱（若已事先明確告知）</li>
+      <li>因違反服務條款而終止的帳戶</li>
+      <li>超出平台退費時間限制的請求</li>
+    </ul>
+  </section>
+
+  <!-- Section 5 -->
+  <section id="t5">
+    <h2><span class="icon">👤</span>5. 帳戶註冊與安全</h2>
+
+    <h3>5.1 帳戶建立</h3>
+    <p>
+      使用雲端同步等特定功能需建立帳戶。您同意提供準確、完整且最新的帳戶資訊，並在資訊有所變更時及時更新。
+    </p>
+
+    <h3>5.2 帳戶安全責任</h3>
+    <p>您負責：</p>
+    <ul>
+      <li>保管您的帳戶登入憑證</li>
+      <li>設定強度足夠的密碼</li>
+      <li>限制他人存取您的帳戶</li>
+      <li>立即通知我們任何未授權的帳戶存取</li>
+    </ul>
+    <p>
+      帳戶活動均視為由帳戶持有人所為，即使是未授權存取。我們對因您未盡安全責任而造成的損失不承擔責任。
+    </p>
+
+    <h3>5.3 帳戶終止</h3>
+    <p>您可隨時刪除您的帳戶。詳細步驟請參閱<a href="privacy-policy.html#s7">隱私權政策第 7 節</a>。</p>
+  </section>
+
+  <!-- Section 6 -->
+  <section id="t6">
+    <h2><span class="icon">✅</span>6. 可接受使用政策</h2>
+
+    <h3>6.1 允許的使用</h3>
+    <p>KashVox 僅供合法的個人或家庭財務管理用途。您可以：</p>
+    <ul>
+      <li>記錄個人或家庭的合法收入與支出</li>
+      <li>掃描您自己的合法收據與發票</li>
+      <li>與 AI 助理進行財務相關的對話</li>
+      <li>匯出您自己的財務資料</li>
+    </ul>
+
+    <h3>6.2 禁止行為</h3>
+    <p>您不得透過本應用程式：</p>
+    <ul>
+      <li>記錄或處理任何非法活動的財務資料</li>
+      <li>嘗試破解、逆向工程或破壞本應用程式</li>
+      <li>使用自動化工具或腳本存取本服務</li>
+      <li>試圖存取其他使用者的資料</li>
+      <li>上傳惡意程式碼或有害內容</li>
+      <li>規避廣告、訂閱或其他收費機制</li>
+      <li>將本服務用於商業轉售或為他人提供記帳代管服務</li>
+      <li>違反任何適用法律法規</li>
+    </ul>
+
+    <div class="highlight-box warning">
+      <p>
+        <strong>違規處理：</strong>違反可接受使用政策可能導致帳戶暫停或永久終止，且不予退費。情節重大者，我們保留依法追究責任的權利。
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 7 -->
+  <section id="t7">
+    <h2><span class="icon">©️</span>7. 智慧財產權</h2>
+
+    <h3>7.1 我們的智慧財產</h3>
+    <p>
+      KashVox 應用程式（包含其所有程式碼、設計、商標、品牌識別、介面及內容）均為 CB Studio 的財產，受中華民國及國際著作權、商標及其他智慧財產法律保護。
+    </p>
+    <p>
+      我們授予您有限、非獨家、不可轉讓、可撤銷的授權，僅供個人、非商業用途使用本應用程式。
+    </p>
+
+    <h3>7.2 您的資料</h3>
+    <p>
+      您輸入本應用程式的所有財務資料（包含交易記錄、備註、掃描資料等）均屬於您。我們不主張對您的使用者資料擁有所有權。
+    </p>
+    <p>
+      您授予我們有限授權，僅為提供、維護及改善本服務之必要目的使用您的資料，且不得用於本條款以外的目的。
+    </p>
+
+    <h3>7.3 禁止行為</h3>
+    <p>除非獲得我們的明確書面授權，您不得：</p>
+    <ul>
+      <li>複製、修改、散布或銷售本應用程式</li>
+      <li>對本應用程式進行逆向工程或反編譯</li>
+      <li>移除或修改版權聲明或商標</li>
+      <li>建立基於本應用程式的衍生作品</li>
+    </ul>
+  </section>
+
+  <!-- Section 8 -->
+  <section id="t8">
+    <h2><span class="icon">🤖</span>8. AI 功能免責聲明</h2>
+
+    <div class="highlight-box warning">
+      <p>
+        <strong>AI 功能限制：</strong>KashVox 的 AI 功能（包含語音解析、收據辨識、財務分析建議）由 Google Gemini API 提供支援，本質上是基於統計模型的預測，並非完全準確的專業意見。
+      </p>
+    </div>
+
+    <h3>8.1 AI 輸出的限制</h3>
+    <ul>
+      <li>AI 產生的記帳分類建議可能有誤，使用者應自行確認</li>
+      <li>語音辨識可能在嘈雜環境或特殊口音下出現辨識錯誤</li>
+      <li>收據 OCR 掃描可能因圖片品質或格式而出現辨識錯誤</li>
+      <li>AI 財務建議僅供參考，不構成專業財務、稅務或投資建議</li>
+    </ul>
+
+    <h3>8.2 使用者責任</h3>
+    <p>
+      您應對本應用程式記錄的所有財務資料進行最終確認，並對您依據本應用程式 AI 建議所做的任何財務決策承擔全部責任。重要財務決策請諮詢合格的財務或稅務專業人員。
+    </p>
+
+    <h3>8.3 AI 服務可用性</h3>
+    <p>
+      AI 功能的可用性取決於 Google Gemini API 的服務狀態。若 Google 服務中斷或變更 API 政策，相關 AI 功能可能暫時或永久停止運作，此情況不視為我們的服務違約。
+    </p>
+  </section>
+
+  <!-- Section 9 -->
+  <section id="t9">
+    <h2><span class="icon">💹</span>9. 財務資料免責聲明</h2>
+
+    <div class="highlight-box danger">
+      <p>
+        <strong>重要警告：</strong>KashVox 是個人記帳工具，<strong>不是</strong>正式的會計軟體、稅務申報工具或財務顧問服務。
+      </p>
+    </div>
+
+    <h3>9.1 非專業財務建議</h3>
+    <p>
+      本應用程式提供的所有財務分析、統計圖表及 AI 建議，均僅供個人財務管理參考，<strong>不構成</strong>：
+    </p>
+    <ul>
+      <li>專業會計或財務顧問意見</li>
+      <li>稅務申報指引或稅務建議</li>
+      <li>投資建議或理財規劃</li>
+      <li>任何形式的法律建議</li>
+    </ul>
+
+    <h3>9.2 資料正確性責任</h3>
+    <p>
+      您負責確認並維護您在應用程式中記錄的財務資料的正確性。我們對因資料記錄錯誤、AI 辨識錯誤或應用程式故障導致的財務資料不準確不承擔責任。
+    </p>
+
+    <h3>9.3 資料備份建議</h3>
+    <p>
+      我們建議您定期使用應用程式的匯出功能備份您的財務資料。對於因技術故障、帳戶問題或服務中斷導致的資料遺失，我們的賠償責任以本條款第 11 節規定的限額為準。
+    </p>
+  </section>
+
+  <!-- Section 10 -->
+  <section id="t10">
+    <h2><span class="icon">🔧</span>10. 服務中斷與修改</h2>
+
+    <h3>10.1 服務可用性</h3>
+    <p>
+      我們致力於提供穩定的服務，但不保證本服務不中斷、不出錯或完全符合您的需求。服務可能因以下原因暫時中斷：
+    </p>
+    <ul>
+      <li>排定的系統維護（我們將盡量提前通知）</li>
+      <li>緊急安全修補</li>
+      <li>第三方服務（Firebase、Google API）中斷</li>
+      <li>不可抗力事件（天災、戰爭、政府法令等）</li>
+    </ul>
+
+    <h3>10.2 功能變更</h3>
+    <p>
+      我們保留在不另行通知的情況下修改、新增或移除功能的權利，但涉及付費 Pro 功能的重大移除將提前 <strong>30 天</strong>通知。
+    </p>
+
+    <h3>10.3 服務終止</h3>
+    <p>
+      若我們決定終止本服務，將提前至少 <strong>90 天</strong>通知使用者，並提供資料匯出工具，以便您在服務終止前匯出所有財務資料。按比例退還未使用的訂閱費用。
+    </p>
+  </section>
+
+  <!-- Section 11 -->
+  <section id="t11">
+    <h2><span class="icon">⚠️</span>11. 責任限制</h2>
+
+    <div class="disclaimer-box">
+      <h4>免責聲明</h4>
+      <p>
+        本服務依「現狀」（AS IS）及「可用狀態」（AS AVAILABLE）提供，不附帶任何明示或暗示的保證，包含但不限於對特定用途的適用性、不侵權性或不中斷性的保證。
+      </p>
+      <p>
+        在適用法律允許的最大範圍內，CB Studio 對下列情形不承擔任何責任：(1) 您使用或無法使用本服務所造成的損失；(2) 因依賴本服務內容或 AI 輸出而做出的財務決策；(3) 未經授權存取或修改您的資料；(4) 第三方服務的行為或疏失；(5) 任何間接、偶發、特殊、懲罰性或衍生性損害。
+      </p>
+    </div>
+
+    <h3>11.1 責任上限</h3>
+    <p>
+      在任何情況下，CB Studio 對您的責任總額不超過您在發生損害事件前 <strong>12 個月</strong>內為本服務支付的訂閱費用，或新台幣 <strong>1,000 元</strong>（以較高者為準）。
+    </p>
+
+    <h3>11.2 消費者保護</h3>
+    <p>
+      本條款不排除或限制依據中華民國《消費者保護法》或其他強制性消費者保護法律所賦予您的任何不可放棄的法定權利。
+    </p>
+  </section>
+
+  <!-- Section 12 -->
+  <section id="t12">
+    <h2><span class="icon">🛡️</span>12. 賠償</h2>
+    <p>
+      您同意在法律允許的範圍內，對 CB Studio 及其關聯方、董事、員工和代理人進行賠償，使其免受因下列行為引起的任何索賠、損失、損害、罰款、費用（包含合理的律師費）：
+    </p>
+    <ul>
+      <li>您違反本條款</li>
+      <li>您違反任何適用法律或第三方權利</li>
+      <li>您透過本服務發布或傳輸的任何內容</li>
+      <li>您使用本服務的方式</li>
+    </ul>
+  </section>
+
+  <!-- Section 13 -->
+  <section id="t13">
+    <h2><span class="icon">⚖️</span>13. 準據法與爭議解決</h2>
+
+    <h3>13.1 準據法</h3>
+    <p>
+      本條款依中華民國法律解釋及執行，不適用衝突法則。
+    </p>
+
+    <h3>13.2 爭議解決程序</h3>
+    <p>若發生與本服務相關的爭議，雙方同意依下列步驟解決：</p>
+    <ol>
+      <li>
+        <strong>非正式協商（30 天）：</strong>先透過電子郵件（support@cbstudio.com）嘗試友好協商解決爭議。
+      </li>
+      <li>
+        <strong>調解：</strong>若協商未能解決，雙方同意嘗試透過雙方均認可的調解機構進行調解。
+      </li>
+      <li>
+        <strong>司法途徑：</strong>若調解仍未能解決，雙方同意以台灣台北地方法院為第一審管轄法院，但消費者依消費者保護法享有的管轄地選擇權不受影響。
+      </li>
+    </ol>
+
+    <div class="highlight-box info">
+      <p>
+        <strong>消費者申訴管道：</strong>您也可向行政院消費者保護處（電話：1950）或各縣市消保官提出申訴，或透過 ODR 線上爭議解決平台處理。
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 14 -->
+  <section id="t14">
+    <h2><span class="icon">📝</span>14. 一般條款</h2>
+
+    <h3>14.1 完整協議</h3>
+    <p>
+      本條款與我們的隱私權政策共同構成您與 CB Studio 之間關於本服務的完整協議，取代所有先前或同期的任何口頭或書面溝通。
+    </p>
+
+    <h3>14.2 條款修改</h3>
+    <p>
+      我們保留隨時修改本條款的權利。重大變更將提前 <strong>30 天</strong>透過應用程式通知或電子郵件告知。修改後繼續使用本服務視為接受新條款。
+    </p>
+
+    <h3>14.3 可分割性</h3>
+    <p>
+      若本條款任何條款被法院認定為無效或不可執行，該條款將以最低限度的必要範圍修改，其餘條款仍繼續有效。
+    </p>
+
+    <h3>14.4 棄權</h3>
+    <p>
+      我們未行使或延遲行使本條款下的任何權利，不構成對該等權利的棄權。
+    </p>
+
+    <h3>14.5 轉讓</h3>
+    <p>
+      您不得在未獲得我們書面同意的情況下轉讓本條款下的任何權利或義務。我們可在符合本條款的前提下，因企業重組、收購或資產出售等原因轉讓本條款。
+    </p>
+
+    <h3>14.6 語言</h3>
+    <p>
+      本條款以繁體中文為主要版本。若提供其他語言翻譯版本，如有爭議，以繁體中文版為準。
+    </p>
+
+    <h3>14.7 平台條款</h3>
+    <p>
+      您透過 Apple App Store 或 Google Play 下載本應用程式時，亦須遵守各平台的使用條款。本條款與平台條款不一致之處，以不損害您的法定消費者權益為原則。
+    </p>
+  </section>
+
+  <!-- Section 15 -->
+  <section id="t15">
+    <h2><span class="icon">📧</span>15. 聯絡資訊</h2>
+    <p>若您對本服務條款有任何疑問，請透過以下方式聯絡我們：</p>
+
+    <div class="contact-card">
+      <h3>CB Studio 客戶服務</h3>
+      <p>
+        <strong>電子郵件：</strong>
+        <a href="mailto:support@cbstudio.com">support@cbstudio.com</a>
+      </p>
+      <p>
+        <strong>網站：</strong>
+        <a href="https://iml1s.github.io" target="_blank" rel="noopener">https://iml1s.github.io</a>
+      </p>
+      <p>
+        <strong>應用程式：</strong> KashVox（com.cbstudio.kashvox）
+      </p>
+      <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
+        我們的客戶服務時間為週一至週五（台北時間 09:00–18:00），一般在 <strong>3 個工作日</strong>內回覆。
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 CB Studio. 保留所有權利。</p>
+  <p style="margin-top: 6px;">
+    <a href="privacy-policy.html" style="color: var(--primary); text-decoration: none;">隱私權政策</a>
+    &nbsp;·&nbsp;
+    <a href="https://iml1s.github.io" style="color: var(--primary); text-decoration: none;">CB Studio 官網</a>
+  </p>
+  <p style="margin-top: 8px;">KashVox · com.cbstudio.kashvox · 版本：2026-02-24</p>
+</footer>
+
+</body>
+</html>

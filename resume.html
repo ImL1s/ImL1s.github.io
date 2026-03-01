@@ -6,17 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>ImL1s | Resume - 12+ Years Experience</title>
-    <meta name="title" content="ImL1s | Resume - 12+ Years Experience">
+    <title>Sam Lung (ImL1s) | Resume - Senior Mobile Developer | Android・Flutter・Blockchain</title>
+    <meta name="title" content="Sam Lung (ImL1s) | Resume - Senior Mobile Developer">
     <meta name="description"
-        content="Resume of ImL1s - Full Stack Developer with 12+ years experience. Android, iOS, Flutter, Solidity, ASP.NET Core. Remote worker with international experience.">
-    <meta name="robots" content="noindex, follow">
-    <!-- Typically resumes might not want to be SEO indexed as main landing, but up to user. I'll keep it indexable but maybe focused. Let's stick to index, follow actually since it's a portfolio site. -->
+        content="Sam Lung (ImL1s) - 資深行動開發工程師，13+ 年產業經驗，10+ 年 Android 開發。專精 Android、Flutter 跨平台、區塊鏈（Solidity/Web3）、後端開發。支援 43+ 區塊鏈，遠端工作者。">
     <meta name="robots" content="index, follow">
 
-    <!-- Reuse existing styles -->
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Sam Lung (ImL1s) | Resume">
+    <meta property="og:description" content="Senior Mobile Developer | Android・Flutter・Blockchain. 13+ years experience, 10+ years Android.">
+    <meta property="og:url" content="https://iml1s.github.io/resume.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap"
         rel="stylesheet">
 
     <style>
@@ -33,7 +39,11 @@
             --accent-green: #10b981;
             --accent-orange: #f59e0b;
             --accent-red: #ef4444;
+            --accent-pink: #ec4899;
+            --accent-cyan: #06b6d4;
             --gradient-1: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --gradient-2: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            --gradient-3: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
             --border-color: rgba(255, 255, 255, 0.08);
             --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
         }
@@ -45,13 +55,12 @@
         }
 
         body {
-            font-family: 'Inter', 'Noto Sans TC', sans-serif;
+            font-family: 'Inter', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
         }
 
-        /* Reusing layout classes */
         .bg-gradient {
             position: fixed;
             top: 0;
@@ -59,10 +68,27 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+            overflow: hidden;
         }
 
+        .bg-gradient::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+            animation: gradientMove 20s ease-in-out infinite;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-5%, -5%) rotate(5deg); }
+        }
+
+        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -90,6 +116,7 @@
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            text-decoration: none;
         }
 
         nav {
@@ -106,115 +133,8 @@
             transition: color 0.3s;
         }
 
-        nav a:hover,
-        nav a.active {
+        nav a:hover, nav a.active {
             color: var(--text-primary);
-        }
-
-        main {
-            max-width: 1000px;
-            margin: 8rem auto 4rem;
-            padding: 0 2rem;
-        }
-
-        .resume-header {
-            margin-bottom: 4rem;
-            text-align: center;
-        }
-
-        .resume-header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .resume-header .subtitle {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .resume-section {
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 1.75rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        /* Profile Grid */
-        .profile-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .profile-item {
-            background: var(--bg-card);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-
-        .profile-item h3 {
-            color: var(--accent-blue);
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-            text-transform: uppercase;
-        }
-
-        /* Tech Stack List */
-        .tech-category {
-            margin-bottom: 2.5rem;
-        }
-
-        .tech-category h3 {
-            font-size: 1.4rem;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .tech-category h3::before {
-            content: '';
-            display: block;
-            width: 4px;
-            height: 1.4rem;
-            background: var(--gradient-1);
-            border-radius: 2px;
-        }
-
-        .tech-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 0.75rem;
-        }
-
-        .tech-list li {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            color: var(--text-secondary);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            font-size: 0.95rem;
-        }
-
-        .tech-list li:hover {
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--text-primary);
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem 2rem;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
         }
 
         /* Language Switcher */
@@ -292,16 +212,715 @@
             color: var(--accent-blue);
         }
 
+        /* Main */
+        main {
+            max-width: 1100px;
+            margin: 7rem auto 4rem;
+            padding: 0 2rem;
+        }
+
+        /* Resume Hero */
+        .resume-hero {
+            display: flex;
+            align-items: flex-start;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            padding: 3rem;
+            background: var(--bg-card);
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resume-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-1);
+        }
+
+        .hero-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 3px solid rgba(59, 130, 246, 0.3);
+            flex-shrink: 0;
+        }
+
+        .hero-info {
+            flex: 1;
+        }
+
+        .hero-info h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
+        }
+
+        .hero-info h1 span {
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+
+        .hero-title {
+            font-size: 1.2rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .meta-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .hero-summary {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .hero-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .hero-link.primary {
+            background: var(--gradient-1);
+            color: white;
+        }
+
+        .hero-link.secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-link:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .hero-link.secondary:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.25rem;
+        }
+
+        /* Section */
+        .resume-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 1.5rem;
+            background: var(--gradient-1);
+            border-radius: 2px;
+        }
+
+        /* Category Filter */
+        .category-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(59, 130, 246, 0.15);
+            border-color: rgba(59, 130, 246, 0.3);
+            color: var(--accent-blue);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--accent-blue), var(--accent-purple), var(--accent-green));
+            border-radius: 1px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding: 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            transition: all 0.3s;
+        }
+
+        .timeline-item:hover {
+            background: var(--bg-card-hover);
+            border-color: rgba(59, 130, 246, 0.2);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 2.25rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+            border: 3px solid var(--bg-primary);
+            box-shadow: 0 0 0 2px var(--accent-blue);
+            z-index: 1;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .timeline-role {
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .timeline-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            white-space: nowrap;
+        }
+
+        .timeline-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-highlights {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-highlights li {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            padding-left: 1.25rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .timeline-highlights li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+        }
+
+        .timeline-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-tag {
+            padding: 0.2rem 0.65rem;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--accent-blue);
+            font-weight: 500;
+        }
+
+        .tech-tag.green {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.2);
+            color: var(--accent-green);
+        }
+
+        .tech-tag.purple {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.2);
+            color: var(--accent-purple);
+        }
+
+        .tech-tag.orange {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.2);
+            color: var(--accent-orange);
+        }
+
+        .tech-tag.cyan {
+            background: rgba(6, 182, 212, 0.1);
+            border-color: rgba(6, 182, 212, 0.2);
+            color: var(--accent-cyan);
+        }
+
+        .tech-tag.pink {
+            background: rgba(236, 72, 153, 0.1);
+            border-color: rgba(236, 72, 153, 0.2);
+            color: var(--accent-pink);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .project-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .project-card h3 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .project-card h3 a:hover {
+            color: var(--accent-blue);
+        }
+
+        .project-badge {
+            padding: 0.15rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .badge-blockchain {
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent-purple);
+        }
+
+        .badge-mobile {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-blue);
+        }
+
+        .badge-web {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+        }
+
+        .badge-ai {
+            background: rgba(236, 72, 153, 0.15);
+            color: var(--accent-pink);
+        }
+
+        .badge-oss {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-orange);
+        }
+
+        .badge-desktop {
+            background: rgba(6, 182, 212, 0.15);
+            color: var(--accent-cyan);
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            font-size: 0.88rem;
+            line-height: 1.6;
+            flex: 1;
+            margin-bottom: 1rem;
+        }
+
+        .project-card .timeline-tech {
+            margin-top: auto;
+        }
+
+        /* Tech Stack */
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tech-category {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: all 0.3s;
+        }
+
+        .tech-category:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .tech-category h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tech-category h3 .icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        .tech-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-list li {
+            padding: 0.35rem 0.85rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .tech-list li:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+        }
+
+        .info-card p, .info-card li {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .info-card ul {
+            list-style: none;
+        }
+
+        .info-card ul li {
+            padding: 0.35rem 0;
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .info-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-blue);
+        }
+
+        /* Print Btn */
+        .print-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--gradient-1);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
+            transition: all 0.3s;
+            z-index: 50;
+        }
+
+        .print-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(59, 130, 246, 0.5);
+        }
+
+        .print-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .lang-switcher {
-                margin-left: 0;
-                margin-top: 1rem;
+            .resume-hero {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 2rem 1.5rem;
             }
 
-            .lang-dropdown {
-                right: auto;
-                left: 0;
+            .hero-info h1 {
+                font-size: 2rem;
             }
+
+            .hero-meta {
+                justify-content: center;
+            }
+
+            .hero-links {
+                justify-content: center;
+            }
+
+            .hero-summary {
+                text-align: left;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-header {
+                flex-direction: column;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-stack-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Print styles */
+        @media print {
+            header, .print-btn, .bg-gradient, .lang-switcher, .category-filter { display: none !important; }
+            body { background: white; color: #1a1a1a; }
+            main { margin-top: 0; }
+            .resume-hero, .stat-card, .timeline-item, .project-card, .tech-category, .info-card {
+                background: white;
+                border-color: #e5e5e5;
+                box-shadow: none;
+            }
+            .hero-info h1, .section-title, .stat-number, .hero-title {
+                -webkit-text-fill-color: #1a1a1a;
+                color: #1a1a1a;
+            }
+            .text-secondary, .text-muted, p, li {
+                color: #444;
+            }
+            .tech-tag { background: #f5f5f5; color: #333; border-color: #ddd; }
+            .project-card { break-inside: avoid; }
         }
     </style>
 </head>
@@ -320,18 +939,16 @@
                 <a href="https://github.com/ImL1s" target="_blank">GitHub</a>
                 <div class="lang-switcher">
                     <button class="lang-btn" onclick="toggleLanguageDropdown()">
-                        <span class="lang-btn-text">🇹🇼 繁體中文</span>
+                        <span class="lang-btn-text">繁體中文</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                         </svg>
                     </button>
                     <div class="lang-dropdown">
-                        <div class="lang-option" onclick="setLanguage('zh-TW')">🇹🇼 繁體中文</div>
-                        <div class="lang-option" onclick="setLanguage('zh-CN')">🇨🇳 简体中文</div>
-                        <div class="lang-option" onclick="setLanguage('en')">🇺🇸 English</div>
-                        <div class="lang-option" onclick="setLanguage('ja')">🇯🇵 日本語</div>
+                        <div class="lang-option" onclick="setLanguage('zh-TW')">繁體中文</div>
+                        <div class="lang-option" onclick="setLanguage('zh-CN')">简体中文</div>
+                        <div class="lang-option" onclick="setLanguage('en')">English</div>
+                        <div class="lang-option" onclick="setLanguage('ja')">日本語</div>
                     </div>
                 </div>
             </nav>
@@ -339,125 +956,872 @@
     </header>
 
     <main>
-        <div class="resume-header fade-in">
-            <h1>Sam Lung (ImL1s)</h1>
-            <p class="subtitle" data-i18n="resume.role">Senior Full Stack Developer & Blockchain Specialist</p>
-            <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;" data-i18n="resume.intro">
-                Experienced developer with 12+ years in the industry. Starting from the crypto space in 2013,
-                I specialize in Android, iOS, Blockchain (Solidity/Web3), and Backend development.
-            </p>
-        </div>
-
-        <section class="resume-section fade-in">
-            <h2 class="section-title" data-i18n="resume.about">About Me</h2>
-            <div class="profile-grid">
-                <div class="profile-item">
-                    <h3 data-i18n="resume.exp">Experience</h3>
-                    <p data-i18n="resume.exp.total">12+ Years Total</p>
-                    <p data-i18n="resume.exp.android">10 Years Android Development</p>
-                    <p data-i18n="resume.exp.flutter">5 Years Flutter Development</p>
-                    <p data-i18n="resume.exp.backend">Backend (.NET/Go/Java/Node.js)</p>
-                    <p data-i18n="resume.exp.other">iOS / React Native / Unity</p>
-                    <p data-i18n="resume.exp.blockchain">Blockchain since 2013</p>
+        <!-- Hero Section -->
+        <section class="resume-hero fade-in">
+            <img src="img/profile.jpg" alt="Sam Lung" class="hero-avatar">
+            <div class="hero-info">
+                <h1>Sam Lung <span>(ImL1s)</span></h1>
+                <div class="hero-title" data-i18n="resume.hero.title">Senior Mobile Developer | Android・Flutter・Blockchain</div>
+                <div class="hero-meta">
+                    <span class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                        Taipei, Taiwan
+                    </span>
+                    <span class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0" /></svg>
+                        <span data-i18n="resume.hero.remote">Remote Work Preferred</span>
+                    </span>
+                    <span class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" /></svg>
+                        <span data-i18n="resume.hero.edu">China University of Technology</span>
+                    </span>
                 </div>
-                <div class="profile-item">
-                    <h3 data-i18n="resume.style">Work Style</h3>
-                    <p data-i18n="resume.style.remote">Remote Work Preferred</p>
-                    <p data-i18n="resume.style.intl">International Collaboration (Cambodia, Vietnam, Japan, China)</p>
-                    <p data-i18n="resume.style.review">Code Reviewer & Architecture Designer</p>
-                </div>
-                <div class="profile-item">
-                    <h3 data-i18n="resume.lang">Languages</h3>
-                    <p data-i18n="resume.lang.cn">Chinese (Native)</p>
-                    <p data-i18n="resume.lang.en">English (Communicative)</p>
-                    <p data-i18n="resume.lang.jp">Japanese (Basic / 少し話せます)</p>
+                <p class="hero-summary" data-i18n="resume.hero.summary">
+                    資深行動開發工程師，13+ 年產業經驗，10+ 年 Android 原生開發。精通 Flutter 跨平台開發與後端架構，自 2013 年起深耕區塊鏈領域（幣圈/鏈圈/礦圈）。擅長架構設計與跨國團隊協作，經常擔任 Code Reviewer 角色。獨立完成多鏈區塊鏈交互開發，支援 43+ 區塊鏈。長期與柬埔寨、越南、日本的工程師與設計師遠端合作。
+                </p>
+                <div class="hero-links">
+                    <a href="https://github.com/ImL1s" target="_blank" class="hero-link primary">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/sam-lung-86ab62191/" target="_blank" class="hero-link secondary">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://iml1s.github.io" target="_blank" class="hero-link secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 003 12c0-1.605.42-3.113 1.157-4.418" /></svg>
+                        Portfolio
+                    </a>
                 </div>
             </div>
         </section>
 
+        <!-- Stats -->
+        <section class="stats-bar fade-in">
+            <div class="stat-card">
+                <div class="stat-number">13+</div>
+                <div class="stat-label" data-i18n="resume.stat.years">Years Experience</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">43+</div>
+                <div class="stat-label" data-i18n="resume.stat.chains">Blockchains Supported</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">16+</div>
+                <div class="stat-label" data-i18n="resume.stat.apps">Published Apps</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3+</div>
+                <div class="stat-label" data-i18n="resume.stat.countries">Countries Collaborated</div>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
         <section class="resume-section fade-in">
-            <h2 class="section-title" data-i18n="skills.title">Tech Stack</h2>
+            <h2 class="section-title" data-i18n="resume.exp.title">Work Experience</h2>
+            <div class="timeline">
 
-            <div class="tech-category">
-                <h3 data-i18n="resume.tech.android">Android Development</h3>
-                <ul class="tech-list">
-                    <li>Kotlin & Java</li>
-                    <li>RxJava & RxKotlin</li>
-                    <li>Retrofit & OkHttp</li>
-                    <li>MVVM / MVP / MVC</li>
-                    <li>Jetpack Compose & UI</li>
-                    <li>Dagger2 / Koin (DI)</li>
-                    <li>Coroutines & Flow</li>
-                    <li>Bluetooth & IoT</li>
-                    <li>Lottie Animations</li>
-                    <li>Web3j (Blockchain)</li>
-                </ul>
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">TB Wallet - Android (Custodial + Self-Custodial)</div>
+                            <div class="timeline-role" data-i18n="resume.exp.tb.role">Android Tech Lead</div>
+                        </div>
+                        <span class="timeline-date">2023.09 - 2025.02</span>
+                    </div>
+                    <p class="timeline-desc" data-i18n="resume.exp.tb.desc">
+                        託管 + 自託管混合錢包 Android 專案技術負責人，負責整體架構設計、核心功能開發與 Code Review。
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li data-i18n="resume.exp.tb.h1">架構設計與技術決策，MVVM + Jetpack Compose 現代化 UI，託管與自託管雙模式錢包</li>
+                        <li data-i18n="resume.exp.tb.h2">RxKotlin + Retrofit 響應式網路請求，Dagger2 依賴注入</li>
+                        <li data-i18n="resume.exp.tb.h3">擔任 Code Reviewer，制定開發規範與最佳實踐</li>
+                        <li data-i18n="resume.exp.tb.h4">建立 CI/CD 自動化流程，優化應用性能與穩定性</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Jetpack Compose</span>
+                        <span class="tech-tag">MVVM</span>
+                        <span class="tech-tag">RxKotlin</span>
+                        <span class="tech-tag">Dagger2</span>
+                        <span class="tech-tag">Retrofit</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">BB / YY Sport (Multi-Brand Sports APP)</div>
+                            <div class="timeline-role" data-i18n="resume.exp.bbsport.role">Android Developer</div>
+                        </div>
+                        <span class="timeline-date">2023 - 2025.02</span>
+                    </div>
+                    <p class="timeline-desc" data-i18n="resume.exp.bbsport.desc">
+                        多品牌體育應用 Android 開發，模組化架構設計。11 個業務模組 + 共享庫，支援多渠道多包版本構建。
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li data-i18n="resume.exp.bbsport.h1">AppJoint 組件化架構，11 個業務模組隔離（首頁、體育、訂單、用戶、支付等）</li>
+                        <li data-i18n="resume.exp.bbsport.h2">MVVM + DataBinding，RxKotlin + Coroutines 混合異步處理</li>
+                        <li data-i18n="resume.exp.bbsport.h3">雙日誌系統（Alibaba Cloud SLS + Tencent Cloud CLS），多渠道打包（Walle）</li>
+                        <li data-i18n="resume.exp.bbsport.h4">集成客服 SDK（imchat）、推送（JPush/EngageLab）、驗證（GEETEST）</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">MVVM</span>
+                        <span class="tech-tag">RxKotlin</span>
+                        <span class="tech-tag">Coroutines</span>
+                        <span class="tech-tag green">AppJoint</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">White Sand Group APP</div>
+                            <div class="timeline-role" data-i18n="resume.exp.ws.role">Full Stack Developer</div>
+                        </div>
+                        <span class="timeline-date">2022.01 - 2022.09</span>
+                    </div>
+                    <p class="timeline-desc" data-i18n="resume.exp.ws.desc">
+                        去中心化/中心化混合錢包，類似 OKX 架構。支援 USDt 充值、租車等多元服務整合。
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li data-i18n="resume.exp.ws.h1">開發去中心化 + 中心化混合錢包架構</li>
+                        <li data-i18n="resume.exp.ws.h2">整合 USDt 支付、租車等多元生活服務</li>
+                        <li data-i18n="resume.exp.ws.h3">跨國團隊協作，多語言支援</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag purple">Web3</span>
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag green">Node.js</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">Heytok (IM + Centralized Crypto Wallet)</div>
+                            <div class="timeline-role" data-i18n="resume.exp.heytok.role">Flutter Tech Lead & DevOps</div>
+                        </div>
+                        <span class="timeline-date">2021.04 - 2021.06</span>
+                    </div>
+                    <p class="timeline-desc" data-i18n="resume.exp.heytok.desc">
+                        跨平台即時通訊 + 中心化加密貨幣錢包應用技術負責人。Melos 多模組 monorepo 架構，支援 iOS/Android/macOS/Windows 四平台。
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li data-i18n="resume.exp.heytok.h1">Melos 多模組架構（chat、contact、wallet 等 8+ 業務模組），抽象路由跨模組通訊</li>
+                        <li data-i18n="resume.exp.heytok.h2">Riverpod 狀態管理 + Dio/Retrofit 網路層 + Floor SQLite 離線存儲</li>
+                        <li data-i18n="resume.exp.heytok.h3">Agora RTC 即時音視頻整合，WebSocket 實時聊天</li>
+                        <li data-i18n="resume.exp.heytok.h4">iOS 公證自動化，搭建 CI/CD 自動打包發布系統</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag purple">Dart</span>
+                        <span class="tech-tag">Riverpod</span>
+                        <span class="tech-tag">Melos</span>
+                        <span class="tech-tag green">Agora RTC</span>
+                        <span class="tech-tag orange">CI/CD</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">Jump+ APP (Manga Reading)</div>
+                            <div class="timeline-role" data-i18n="resume.exp.jump.role">Android Developer</div>
+                        </div>
+                        <span class="timeline-date">2019.12 - 2021.03</span>
+                    </div>
+                    <p class="timeline-desc" data-i18n="resume.exp.jump.desc">
+                        少年 Jump+ 漫畫閱讀 Android 應用開發，高性能列表渲染、複雜 UI 交互與即時內容更新。
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li data-i18n="resume.exp.jump.h1">RecyclerView 高性能漫畫列表實現，支援複雜資料結構與動態更新</li>
+                        <li data-i18n="resume.exp.jump.h2">MVVM 架構，RxKotlin 處理複雜異步邏輯</li>
+                        <li data-i18n="resume.exp.jump.h3">數據緩存機制，優化列表性能（ViewHolder 重用、DiffUtil）</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">MVVM</span>
+                        <span class="tech-tag">RxKotlin</span>
+                        <span class="tech-tag">Retrofit</span>
+                        <span class="tech-tag green">RecyclerView</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title">Mars Crypto Wallet</div>
+                            <div class="timeline-role" data-i18n="resume.exp.mars.role">Mobile Developer (Android/iOS/Flutter)</div>
+                        </div>
+                        <span class="timeline-date">2019.04 - 2019.12</span>
+                    </div>
+                    <p class="timeline-desc" data-i18n="resume.exp.mars.desc">
+                        中心化錢包，包含金融功能、DApp 瀏覽器、閃兌等，使用 Flutter 混合開發提升效率。
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li data-i18n="resume.exp.mars.h1">Android + iOS + Flutter 三端混合開發</li>
+                        <li data-i18n="resume.exp.mars.h2">DApp 瀏覽器、閃兌功能開發</li>
+                        <li data-i18n="resume.exp.mars.h3">Flutter Embed 混合架構，共享業務邏輯</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag cyan">Swift</span>
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag green">Web3</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title" data-i18n="resume.exp.lottery.title">Lottery Platform</div>
+                            <div class="timeline-role" data-i18n="resume.exp.lottery.role">Android Developer</div>
+                        </div>
+                        <span class="timeline-date">2017.01 - 2019.02</span>
+                    </div>
+                    <p class="timeline-desc" data-i18n="resume.exp.lottery.desc">
+                        彩票平台 Android 應用開發，負責核心業務模組與即時開獎功能實現。
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li data-i18n="resume.exp.lottery.h1">彩票購買、即時開獎、歷史記錄等核心功能開發</li>
+                        <li data-i18n="resume.exp.lottery.h2">高併發即時推播，Socket 實時數據更新</li>
+                        <li data-i18n="resume.exp.lottery.h3">複雜 UI 交互與動畫效果實現</li>
+                    </ul>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag green">Socket</span>
+                        <span class="tech-tag">MVP</span>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-title" data-i18n="resume.exp.early.title">Early Career Projects</div>
+                            <div class="timeline-role" data-i18n="resume.exp.early.role">Android / Backend Developer</div>
+                        </div>
+                        <span class="timeline-date">2013 - 2016</span>
+                    </div>
+                    <p class="timeline-desc" data-i18n="resume.exp.early.desc">
+                        Unity AR 工具開發（UI Inject）、RPG 遊戲 Socket Server 開發等。自 2013 年起進入區塊鏈領域，深度參與 DeFi 與 GameFi 生態。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Android</span>
+                        <span class="tech-tag orange">Unity</span>
+                        <span class="tech-tag green">Socket</span>
+                        <span class="tech-tag purple">Blockchain</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Key Projects -->
+        <section class="resume-section fade-in">
+            <h2 class="section-title" data-i18n="resume.projects.title">Key Projects</h2>
+
+            <div class="category-filter">
+                <button class="filter-btn active" onclick="filterProjects('all')" data-i18n="resume.filter.all">All</button>
+                <button class="filter-btn" onclick="filterProjects('blockchain')">Blockchain</button>
+                <button class="filter-btn" onclick="filterProjects('mobile')">Mobile</button>
+                <button class="filter-btn" onclick="filterProjects('ai')">AI</button>
+                <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+                <button class="filter-btn" onclick="filterProjects('oss')" data-i18n="resume.filter.oss">Open Source</button>
+                <button class="filter-btn" onclick="filterProjects('desktop')">Desktop</button>
             </div>
 
-            <div class="tech-category">
-                <h3 data-i18n="resume.tech.ios">iOS Development</h3>
-                <ul class="tech-list">
-                    <li>Swift</li>
-                    <li>RxSwift</li>
-                    <li>MVVM Architecture</li>
-                    <li>Alamofire & Moya</li>
-                    <li>Flutter Embed (Mixed)</li>
-                </ul>
-            </div>
+            <div class="projects-grid">
 
-            <div class="tech-category">
-                <h3 data-i18n="resume.tech.blockchain">Blockchain & Solidity</h3>
-                <ul class="tech-list">
-                    <li>Smart Contracts (Solidity)</li>
-                    <li>ERC-20 & ERC-721</li>
-                    <li>DeFi (Mint/Repay/Staking)</li>
-                    <li>Web3.js & Ethers.js</li>
-                    <li>Multi-chain Interaction</li>
-                </ul>
-            </div>
+                <!-- Blockchain Projects -->
+                <div class="project-card" data-category="blockchain">
+                    <div class="project-card-header">
+                        <h3>Multi-Chain Wallet</h3>
+                        <span class="project-badge badge-blockchain">Blockchain</span>
+                    </div>
+                    <p data-i18n="resume.proj.wallet.desc">
+                        支援 43+ 區塊鏈的去中心化非託管錢包。HD 錢包（BIP-32/44）、AES-256-GCM 加密、DApp 瀏覽器、DeFi 功能。190+ 頁面、125+ UI 組件。支援 Ledger/Keystone/Trezor 硬體錢包。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag">Riverpod</span>
+                        <span class="tech-tag green">web3dart</span>
+                        <span class="tech-tag">BIP-32/44</span>
+                        <span class="tech-tag orange">43 Chains</span>
+                    </div>
+                </div>
 
-            <div class="tech-category">
-                <h3 data-i18n="resume.tech.flutter">Cross-Platform (Flutter)</h3>
-                <ul class="tech-list">
-                    <li>BLOC Pattern</li>
-                    <li>RxDart</li>
-                    <li>Web3Dart</li>
-                    <li>WebSocket Channels</li>
-                    <li>Flutter i18n</li>
-                </ul>
-            </div>
+                <div class="project-card" data-category="blockchain mobile">
+                    <div class="project-card-header">
+                        <h3>WearWallet</h3>
+                        <span class="project-badge badge-mobile">Wearable</span>
+                    </div>
+                    <p data-i18n="resume.proj.wear.desc">
+                        全球首款 Wear OS + Apple Watch 穿戴裝置區塊鏈錢包。Kotlin Multiplatform 跨平台、Keystone 硬體錢包離線簽名、Gemini AI 語音命令交易。支援 22 條鏈。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">KMP</span>
+                        <span class="tech-tag cyan">SwiftUI</span>
+                        <span class="tech-tag">Compose</span>
+                        <span class="tech-tag">Wear OS</span>
+                        <span class="tech-tag purple">watchOS</span>
+                    </div>
+                </div>
 
-            <div class="tech-category">
-                <h3 data-i18n="resume.tech.backend">Backend & Other</h3>
-                <ul class="tech-list">
-                    <li>ASP.NET Core Web API</li>
-                    <li>Dependency Injection</li>
-                    <li>Node.js / Web3</li>
-                    <li>Unity (Vuforia AR)</li>
-                    <li>Git & CI/CD</li>
-                </ul>
+                <div class="project-card" data-category="blockchain web">
+                    <div class="project-card-header">
+                        <h3>Wallet_Go Backend</h3>
+                        <span class="project-badge badge-web">Backend</span>
+                    </div>
+                    <p data-i18n="resume.proj.walletgo.desc">
+                        企業級中心化錢包後端。Go 語言高性能服務、HD 錢包地址池（900 預生成地址）、三層冷存儲架構、PostgreSQL RLS、API 響應 &lt; 200ms、99.9% uptime。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag green">Go</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag orange">Docker</span>
+                        <span class="tech-tag">JWT</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="blockchain oss">
+                    <div class="project-card-header">
+                        <h3><a href="https://github.com/ImL1s/dart_web3" target="_blank">dart_web3 SDK</a></h3>
+                        <span class="project-badge badge-oss">Open Source</span>
+                    </div>
+                    <p data-i18n="resume.proj.dartweb3.desc">
+                        純 Dart Web3 SDK，模組化架構、無原生依賴（不需 FFI/C++/Rust bindings），可在所有 Dart/Flutter 平台使用。提供 EVM 核心，延伸支援 Solana / Polkadot / Tron / TON / Bitcoin。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Dart</span>
+                        <span class="tech-tag">EVM</span>
+                        <span class="tech-tag green">Solana</span>
+                        <span class="tech-tag">Tron</span>
+                        <span class="tech-tag orange">Bitcoin</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="blockchain">
+                    <div class="project-card-header">
+                        <h3>Solidity Smart Contracts</h3>
+                        <span class="project-badge badge-blockchain">Blockchain</span>
+                    </div>
+                    <p data-i18n="resume.proj.solidity.desc">
+                        ERC-20/721 代幣合約、Staking Pool 質押池、DeFi 借貸協議、Mint & Repay 機制。使用 OpenZeppelin 標準庫、Hardhat 測試部署、Gas 優化。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Solidity</span>
+                        <span class="tech-tag">Hardhat</span>
+                        <span class="tech-tag green">Ethers.js</span>
+                        <span class="tech-tag">OpenZeppelin</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="blockchain oss">
+                    <div class="project-card-header">
+                        <h3><a href="https://pub.dev/packages/ordinals_sdk" target="_blank">Ordinals SDK</a></h3>
+                        <span class="project-badge badge-oss">Open Source</span>
+                    </div>
+                    <p data-i18n="resume.proj.ordinals.desc">
+                        比特幣 Ordinals、BRC-20 代幣與銘文管理的 Dart SDK。支援 PSBT 建構、銘文交易、純 Dart 實作跨平台。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Dart</span>
+                        <span class="tech-tag orange">Bitcoin</span>
+                        <span class="tech-tag">Ordinals</span>
+                        <span class="tech-tag">BRC-20</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="blockchain oss">
+                    <div class="project-card-header">
+                        <h3><a href="https://github.com/ImL1s/monero-high-level" target="_blank">Monero High-Level</a></h3>
+                        <span class="project-badge badge-oss">Open Source</span>
+                    </div>
+                    <p data-i18n="resume.proj.monero.desc">
+                        純 Kotlin Multiplatform + Dart 實作的高效能 Monero 錢包函式庫。無需 C++ bindings，原生支援 Android、iOS、Desktop。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">KMP</span>
+                        <span class="tech-tag purple">Dart</span>
+                        <span class="tech-tag green">Monero</span>
+                        <span class="tech-tag">Ed25519</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="blockchain web">
+                    <div class="project-card-header">
+                        <h3>Swap Aggregator</h3>
+                        <span class="project-badge badge-blockchain">Blockchain</span>
+                    </div>
+                    <p data-i18n="resume.proj.swap.desc">
+                        產品級多鏈交換聚合器。統一介面整合 20+ 供應商（1inch、Jupiter、Odos 等），支援 EVM、Solana、Bitcoin、Cosmos 鏈。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Dart</span>
+                        <span class="tech-tag">1inch</span>
+                        <span class="tech-tag green">Jupiter</span>
+                        <span class="tech-tag">Multi-chain</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-card-header">
+                        <h3>imchat SDK</h3>
+                        <span class="project-badge badge-mobile">SDK</span>
+                    </div>
+                    <p data-i18n="resume.proj.imchat.desc">
+                        企業級客服 SDK，為第三方應用提供實時客服聊天。WebSocket 長連接自動重連、訊息加密傳輸、29+ 業務資料模型、Room 離線存儲。支援 15+ 語言，Maven 發布。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag green">WebSocket</span>
+                        <span class="tech-tag">Room</span>
+                        <span class="tech-tag">RxJava3</span>
+                        <span class="tech-tag orange">Maven</span>
+                    </div>
+                </div>
+
+                <!-- AI Projects -->
+                <div class="project-card" data-category="ai mobile">
+                    <div class="project-card-header">
+                        <h3><a href="https://stickerstudio.xyz" target="_blank">StickerAI Studio</a></h3>
+                        <span class="project-badge badge-ai">AI</span>
+                    </div>
+                    <p data-i18n="resume.proj.stickerai.desc">
+                        AI 貼圖生成器。上傳照片，Google Gemini AI 自動生成 LINE 貼圖包。保持角色一致性，支援多種風格，一鍵下載 LINE 規範 ZIP 檔。已上架 App Store & Google Play。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag orange">Gemini AI</span>
+                        <span class="tech-tag green">Firebase</span>
+                        <span class="tech-tag">RevenueCat</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai web">
+                    <div class="project-card-header">
+                        <h3><a href="https://crypto-ai-analysis.vercel.app" target="_blank">ChartWise</a></h3>
+                        <span class="project-badge badge-ai">AI</span>
+                    </div>
+                    <p data-i18n="resume.proj.chartwise.desc">
+                        AI 驅動的加密貨幣與股票圖表分析平台。支援 355+ 交易標的即時數據，整合恐懼貪婪指數、多空比、ETF 資金流等多維數據源。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag green">Next.js</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag orange">Gemini AI</span>
+                        <span class="tech-tag purple">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai mobile">
+                    <div class="project-card-header">
+                        <h3>Yieldora Lending</h3>
+                        <span class="project-badge badge-ai">AI</span>
+                    </div>
+                    <p data-i18n="resume.proj.yieldora.desc">
+                        ML 驅動的 Bitfinex 加密貨幣借貸機器人。6 種智能策略自動優化利率，結合多租戶 SaaS 平台。Flutter App 即時收益監控。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag green">Go</span>
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag pink">Python AI</span>
+                        <span class="tech-tag">SaaS</span>
+                    </div>
+                </div>
+
+                <!-- Mobile Projects -->
+                <div class="project-card" data-category="mobile ai">
+                    <div class="project-card-header">
+                        <h3>FlashClaw</h3>
+                        <span class="project-badge badge-mobile">Mobile</span>
+                    </div>
+                    <p data-i18n="resume.proj.flashclaw.desc">
+                        基於 OpenClaw 構建的隨身 AI 代理人。零設定即刻使用，支援多模型切換、視覺分析、隱私優先設計。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag green">Firebase</span>
+                        <span class="tech-tag orange">OpenClaw</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile ai">
+                    <div class="project-card-header">
+                        <h3>ClawHub</h3>
+                        <span class="project-badge badge-mobile">Mobile</span>
+                    </div>
+                    <p data-i18n="resume.proj.clawhub.desc">
+                        OpenClaw AI Gateway 行動管理面板。掃 QR Code 即時監控、聊天、管理排程與用量分析。支援 WebSocket 即時通訊。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag green">Go</span>
+                        <span class="tech-tag">WebSocket</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile ai">
+                    <div class="project-card-header">
+                        <h3>Lobster</h3>
+                        <span class="project-badge badge-ai">AI</span>
+                    </div>
+                    <p data-i18n="resume.proj.lobster.desc">
+                        Moltbook AI 代理人社交網絡客戶端。瀏覽 AI 生成內容、管理個人 AI 代理人、觀察代理人自主互動。支援訂閱與多模型管理。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag green">Firebase</span>
+                        <span class="tech-tag pink">AI Agent</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-card-header">
+                        <h3>RentAHuman</h3>
+                        <span class="project-badge badge-mobile">Mobile</span>
+                    </div>
+                    <p data-i18n="resume.proj.rentahuman.desc">
+                        AI 代理人僱用真人完成任務的媒合平台。反轉典型的人機關係，支援 11 種語言、即時通訊、安全預約系統。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag green">Firebase</span>
+                        <span class="tech-tag pink">AI Agent</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-card-header">
+                        <h3>Car Log Plus</h3>
+                        <span class="project-badge badge-mobile">Mobile</span>
+                    </div>
+                    <p data-i18n="resume.proj.carlog.desc">
+                        台灣專用車輛管理 App。油耗記錄、保養提醒、油耗效率分析，整合台灣監理站驗車日期、違規紀錄、燃料稅狀態與中油即時油價。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag green">Firebase</span>
+                        <span class="tech-tag">MVDIS API</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile ai">
+                    <div class="project-card-header">
+                        <h3>KashVox</h3>
+                        <span class="project-badge badge-ai">AI</span>
+                    </div>
+                    <p data-i18n="resume.proj.kashvox.desc">
+                        AI 語音記帳 App。語音輸入智能辨識消費、發票掃描、智能分析月度支出趨勢。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag orange">Gemini AI</span>
+                        <span class="tech-tag">Speech-to-Text</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="blockchain web">
+                    <div class="project-card-header">
+                        <h3>Light Wallet Extension</h3>
+                        <span class="project-badge badge-web">Chrome</span>
+                    </div>
+                    <p data-i18n="resume.proj.extension.desc">
+                        輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript 開發，支援 EVM 相容鏈。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">React 19</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag green">Ethers.js</span>
+                        <span class="tech-tag">Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- Open Source / Developer Tools -->
+                <div class="project-card" data-category="oss">
+                    <div class="project-card-header">
+                        <h3><a href="https://github.com/ImL1s/flux" target="_blank">Flux SDUI Engine</a></h3>
+                        <span class="project-badge badge-oss">Open Source</span>
+                    </div>
+                    <p data-i18n="resume.proj.flux.desc">
+                        輕量級 Flutter Server-Driven UI 腳本引擎。自訂 .flux 語言編譯為位元組碼，VM 安全執行動態 UI 更新，無需重新上架。含 7 個套件：編譯器、VM、CLI、LSP、VSCode 擴充。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag purple">Dart</span>
+                        <span class="tech-tag">SDUI</span>
+                        <span class="tech-tag green">BLE</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="oss">
+                    <div class="project-card-header">
+                        <h3><a href="https://github.com/ImL1s/termux-flutter-ide" target="_blank">Termux Flutter IDE</a></h3>
+                        <span class="project-badge badge-oss">Open Source</span>
+                    </div>
+                    <p data-i18n="resume.proj.termuxide.desc">
+                        在 Android Termux 上的完整 Flutter 開發環境。支援 100+ 語言語法高亮、多檔案分頁、終端機整合、SSH 連線。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag">Riverpod</span>
+                        <span class="tech-tag green">Termux</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="oss">
+                    <div class="project-card-header">
+                        <h3><a href="https://github.com/ImL1s/super_hello_world" target="_blank">Hello World 60+</a></h3>
+                        <span class="project-badge badge-oss">Open Source</span>
+                    </div>
+                    <p data-i18n="resume.proj.helloworld.desc">
+                        60+ 程式語言的 Hello World 實作集合，涵蓋編譯型、直譯型、函數式等類別。附自動測試腳本。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">60+ Languages</span>
+                        <span class="tech-tag green">Shell</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="oss">
+                    <div class="project-card-header">
+                        <h3><a href="https://github.com/ImL1s/TodoListDemo" target="_blank">TodoList 100+</a></h3>
+                        <span class="project-badge badge-oss">Open Source</span>
+                    </div>
+                    <p data-i18n="resume.proj.todolist.desc">
+                        同一個 Todo List 應用的 100+ 種實現。涵蓋 Web、Mobile、Desktop、遊戲引擎等完整學習資源。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag orange">Unity</span>
+                        <span class="tech-tag cyan">Tauri</span>
+                    </div>
+                </div>
+
+                <!-- Desktop -->
+                <div class="project-card" data-category="desktop">
+                    <div class="project-card-header">
+                        <h3><a href="https://github.com/ImL1s/screen_inu" target="_blank">Screen Inu</a></h3>
+                        <span class="project-badge badge-desktop">Desktop</span>
+                    </div>
+                    <p data-i18n="resume.proj.screeninu.desc">
+                        跨平台桌面截圖 OCR 工具。Rust + Tauri 高效能、多引擎 OCR（Windows OCR + Tesseract 5）、全域快捷鍵、歷史紀錄、自動複製剪貼簿。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag orange">Tauri 2.0</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag pink">Rust</span>
+                        <span class="tech-tag">OCR</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="blockchain mobile">
+                    <div class="project-card-header">
+                        <h3><a href="https://github.com/ImL1s/XMRigMiner-Android" target="_blank">XMRig Multi-Platform</a></h3>
+                        <span class="project-badge badge-blockchain">Crypto</span>
+                    </div>
+                    <p data-i18n="resume.proj.xmrig.desc">
+                        跨平台 Monero/Wownero/DERO 挖礦應用。支援 6 平台（Android、iOS、Web、Desktop、WearOS、watchOS），即時算力監控、多礦池支援。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag cyan">SwiftUI</span>
+                        <span class="tech-tag orange">Tauri</span>
+                        <span class="tech-tag green">WASM</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-card-header">
+                        <h3>Mahjong Game</h3>
+                        <span class="project-badge badge-mobile">Game</span>
+                    </div>
+                    <p data-i18n="resume.proj.mahjong.desc">
+                        跨平台線上遊戲：台灣 16 張麻將 + 德州撲克。Flutter + Rust 實作，完整遊戲流程、胡牌偵測、計分、Bot AI。
+                    </p>
+                    <div class="timeline-tech">
+                        <span class="tech-tag purple">Flutter</span>
+                        <span class="tech-tag pink">Rust</span>
+                        <span class="tech-tag">Game Logic</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="resume-section fade-in">
+            <h2 class="section-title" data-i18n="resume.tech.title">Tech Stack</h2>
+            <div class="tech-stack-grid">
+
+                <div class="tech-category">
+                    <h3><span class="icon" style="background: rgba(59,130,246,0.15);">📱</span> <span data-i18n="resume.tech.android">Android Development</span></h3>
+                    <ul class="tech-list">
+                        <li>Kotlin</li>
+                        <li>Java</li>
+                        <li>Jetpack Compose</li>
+                        <li>MVVM / MVP</li>
+                        <li>Coroutines & Flow</li>
+                        <li>RxKotlin</li>
+                        <li>Dagger2 / Koin</li>
+                        <li>Retrofit / OkHttp</li>
+                        <li>Web3j</li>
+                        <li>Bluetooth / IoT</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3><span class="icon" style="background: rgba(139,92,246,0.15);">🦋</span> <span data-i18n="resume.tech.flutter">Flutter & Cross-Platform</span></h3>
+                    <ul class="tech-list">
+                        <li>Dart</li>
+                        <li>BLOC / Riverpod</li>
+                        <li>RxDart</li>
+                        <li>web3dart</li>
+                        <li>Freezed</li>
+                        <li>flutter_i18n</li>
+                        <li>WebSocket</li>
+                        <li>Plugin Dev</li>
+                        <li>KMP</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3><span class="icon" style="background: rgba(6,182,212,0.15);">🍎</span> <span data-i18n="resume.tech.ios">iOS Development</span></h3>
+                    <ul class="tech-list">
+                        <li>Swift</li>
+                        <li>SwiftUI</li>
+                        <li>RxSwift</li>
+                        <li>Alamofire / Moya</li>
+                        <li>MVVM</li>
+                        <li>Flutter Embed</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3><span class="icon" style="background: rgba(245,158,11,0.15);">⛓️</span> <span data-i18n="resume.tech.blockchain">Blockchain & Web3</span></h3>
+                    <ul class="tech-list">
+                        <li>Solidity</li>
+                        <li>ERC-20 / 721</li>
+                        <li>Web3.js / Ethers.js</li>
+                        <li>Hardhat</li>
+                        <li>HD Wallet (BIP-32/44)</li>
+                        <li>Multi-sig</li>
+                        <li>DeFi / Staking</li>
+                        <li>Multi-chain (43+)</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3><span class="icon" style="background: rgba(16,185,129,0.15);">🖥️</span> <span data-i18n="resume.tech.backend">Backend</span></h3>
+                    <ul class="tech-list">
+                        <li>Go</li>
+                        <li>ASP.NET Core</li>
+                        <li>Node.js</li>
+                        <li>Java</li>
+                        <li>PostgreSQL</li>
+                        <li>Redis</li>
+                        <li>Docker</li>
+                        <li>RESTful API</li>
+                    </ul>
+                </div>
+
+                <div class="tech-category">
+                    <h3><span class="icon" style="background: rgba(236,72,153,0.15);">🤖</span> <span data-i18n="resume.tech.ai">AI & Other</span></h3>
+                    <ul class="tech-list">
+                        <li>Gemini API</li>
+                        <li>OpenAI API</li>
+                        <li>Claude API</li>
+                        <li>React / Next.js</li>
+                        <li>TypeScript</li>
+                        <li>Tauri / Rust</li>
+                        <li>CI/CD</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Education & Languages -->
+        <section class="resume-section fade-in">
+            <h2 class="section-title" data-i18n="resume.info.title">Education & Languages</h2>
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <h3 data-i18n="resume.info.edu">Education</h3>
+                    <p data-i18n="resume.info.edu.school">China University of Technology</p>
+                </div>
+
+                <div class="info-card">
+                    <h3 data-i18n="resume.info.lang">Languages</h3>
+                    <ul>
+                        <li data-i18n="resume.info.lang.cn">Chinese - Native</li>
+                        <li data-i18n="resume.info.lang.en">English - Communicative (Technical docs, code review, international meetings)</li>
+                        <li data-i18n="resume.info.lang.jp">Japanese - Basic conversation</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3 data-i18n="resume.info.style">Work Style</h3>
+                    <ul>
+                        <li data-i18n="resume.info.style.remote">Remote work preferred, experienced in async collaboration</li>
+                        <li data-i18n="resume.info.style.intl">International teams: Cambodia, Vietnam, Japan</li>
+                        <li data-i18n="resume.info.style.review">Code Reviewer & Architecture Designer</li>
+                        <li data-i18n="resume.info.style.drive">Self-driven, able to deliver complex projects independently</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
     </main>
 
+    <!-- Print Button -->
+    <button class="print-btn" onclick="window.print()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0110.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0l.229 2.523a1.125 1.125 0 01-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0021 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 00-1.913-.247M6.34 18H5.25A2.25 2.25 0 013 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 011.913-.247m10.5 0a48.536 48.536 0 00-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18.75 12h.008v.008h-.008V12zm-2.25 0h.008v.008h-.008V12z" /></svg>
+        <span data-i18n="resume.print">Print / PDF</span>
+    </button>
+
     <footer>
-        <p data-i18n="footer.copyright">© 2025 ImL1s. Built with passion.</p>
+        <p data-i18n="footer.copyright">&copy; 2026 ImL1s. Built with passion.</p>
     </footer>
 
     <script src="js/i18n.js"></script>
-
     <script>
+        // Intersection Observer for fade-in animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.style.opacity = 1;
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
-        });
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.opacity = 0;
-            el.style.transition = 'opacity 0.6s ease-out';
-            observer.observe(el);
-        });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Project category filter
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category.includes(category)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
     </script>
 </body>
 

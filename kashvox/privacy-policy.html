@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KashVox 隱私權政策</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --accent: #0ea5e9;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC",
+        "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .app-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.88;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.85rem;
+      margin-top: 10px;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .summary-box {
+      background: #eff6ff;
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+
+    .summary-box h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .summary-box p {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    section h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    section h2 .icon {
+      font-size: 1.3rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 20px 0 8px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    ul,
+    ol {
+      padding-left: 24px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.9rem;
+    }
+
+    .data-table th {
+      background: #f1f5f9;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      color: var(--primary-dark);
+    }
+
+    .data-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    .highlight-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .highlight-box.warning {
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+
+    .highlight-box.info {
+      background: #eff6ff;
+      border-color: #bfdbfe;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #eff6ff, #f0f9ff);
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+    }
+
+    .contact-card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .right-item {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .right-item .right-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    .right-item h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--primary-dark);
+    }
+
+    .right-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    .third-party-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .third-party-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .third-party-item .tp-badge {
+      flex-shrink: 0;
+      background: var(--primary);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-top: 2px;
+    }
+
+    .third-party-item .tp-info h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .third-party-item .tp-info p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
+
+    .third-party-item .tp-info a {
+      color: var(--primary);
+      font-size: 0.8rem;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 32px;
+    }
+
+    .toc h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+    }
+
+    .toc li {
+      margin-bottom: 4px;
+    }
+
+    .toc a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      section {
+        padding: 20px 16px;
+      }
+
+      .data-table {
+        font-size: 0.8rem;
+      }
+
+      .rights-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="app-icon">🎙️</div>
+    <h1>KashVox 隱私權政策</h1>
+    <p>CB Studio &nbsp;·&nbsp; com.cbstudio.kashvox</p>
+    <div class="badge">最後更新：2026 年 2 月 24 日</div>
+  </header>
+
+  <main>
+
+    <!-- Summary -->
+    <div class="summary-box">
+      <h2>政策摘要</h2>
+      <p>
+        KashVox 是一款 AI
+        語音記帳應用程式。我們重視您的隱私，語音辨識與收據掃描均在<strong>裝置本地端</strong>處理，不會上傳您的原始錄音或影像。財務資料可選擇同步至雲端以供多裝置使用。我們不販售您的個人資料給任何第三方。
+      </p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <h2>目錄</h2>
+      <ol>
+        <li><a href="#s1">適用範圍與定義</a></li>
+        <li><a href="#s2">我們收集的資料</a></li>
+        <li><a href="#s3">資料使用目的</a></li>
+        <li><a href="#s4">資料共享與揭露</a></li>
+        <li><a href="#s5">資料儲存與安全</a></li>
+        <li><a href="#s6">您的隱私權利</a></li>
+        <li><a href="#s7">資料刪除申請</a></li>
+        <li><a href="#s8">Cookie 與追蹤技術</a></li>
+        <li><a href="#s9">第三方服務</a></li>
+        <li><a href="#s10">兒童隱私保護</a></li>
+        <li><a href="#s11">跨境資料傳輸</a></li>
+        <li><a href="#s12">政策變更通知</a></li>
+        <li><a href="#s13">聯絡我們</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <section id="s1">
+      <h2><span class="icon">📋</span>1. 適用範圍與定義</h2>
+      <p>
+        本隱私權政策（以下稱「本政策」）適用於 CB Studio（以下稱「我們」）所開發及營運的 <strong>KashVox</strong> 應用程式（App Store / Google
+        Play，套件名稱：<code>com.cbstudio.kashvox</code>）及相關服務。
+      </p>
+      <p>
+        本政策依據下列法規制定：
+      </p>
+      <ul>
+        <li>中華民國《個人資料保護法》（個資法）及相關子法</li>
+        <li>歐盟《通用資料保護規則》（GDPR）基本原則</li>
+        <li>Apple App Store 審查指南隱私要求</li>
+        <li>Google Play 開發人員政策中心隱私要求</li>
+      </ul>
+      <h3>定義</h3>
+      <ul>
+        <li><strong>個人資料</strong>：任何可直接或間接識別特定自然人之資訊。</li>
+        <li><strong>處理</strong>：包含收集、儲存、使用、分析、傳輸或刪除個人資料等操作。</li>
+        <li><strong>使用者</strong>：下載或使用本應用程式之自然人。</li>
+        <li><strong>本地端處理</strong>：資料在您的裝置上處理，不傳送至外部伺服器。</li>
+      </ul>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="s2">
+      <h2><span class="icon">📊</span>2. 我們收集的資料</h2>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>資料類型</th>
+            <th>具體內容</th>
+            <th>處理方式</th>
+            <th>是否必要</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>語音錄音</strong></td>
+            <td>語音記帳輸入時的麥克風收音</td>
+            <td>裝置本地端語音辨識（speech_to_text），原始音訊不上傳</td>
+            <td>核心功能必要</td>
+          </tr>
+          <tr>
+            <td><strong>相機與照片</strong></td>
+            <td>收據、發票及相關票據影像</td>
+            <td>裝置本地端 OCR 文字辨識（ML Kit），原始影像不上傳</td>
+            <td>掃描功能必要</td>
+          </tr>
+          <tr>
+            <td><strong>財務交易資料</strong></td>
+            <td>金額、類別、日期、備註、標籤</td>
+            <td>優先儲存於本地 SQLite；使用者啟用雲端同步後上傳至 Cloud Firestore</td>
+            <td>核心功能必要</td>
+          </tr>
+          <tr>
+            <td><strong>AI 對話記錄</strong></td>
+            <td>您與 AI 助理的問答內容</td>
+            <td>傳送至 Google Gemini API 進行處理</td>
+            <td>AI 功能必要</td>
+          </tr>
+          <tr>
+            <td><strong>帳戶資訊</strong></td>
+            <td>電子郵件地址、顯示名稱（登入時）</td>
+            <td>儲存於 Firebase Authentication</td>
+            <td>雲端功能必要</td>
+          </tr>
+          <tr>
+            <td><strong>分析資料</strong></td>
+            <td>功能使用事件、裝置型號、作業系統版本、語言設定</td>
+            <td>傳送至 Firebase Analytics（已匿名化）</td>
+            <td>應用改善用途</td>
+          </tr>
+          <tr>
+            <td><strong>崩潰報告</strong></td>
+            <td>錯誤堆疊、裝置狀態（崩潰時）</td>
+            <td>傳送至 Firebase Crashlytics</td>
+            <td>穩定性改善用途</td>
+          </tr>
+          <tr>
+            <td><strong>廣告識別碼</strong></td>
+            <td>iOS IDFA（需 ATT 授權）、Android AAID</td>
+            <td>Google AdMob 廣告個人化</td>
+            <td>免費版廣告收益</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight-box">
+        <p>
+          <strong>重要說明：</strong>語音錄音與拍攝的收據影像均<strong>僅在您的裝置上處理</strong>，原始音訊與影像檔案不會傳送至我們或任何第三方伺服器。
+        </p>
+      </div>
+
+      <h3>我們不收集的資料</h3>
+      <ul>
+        <li>精確 GPS 位置</li>
+        <li>通訊錄或簡訊內容</li>
+        <li>其他應用程式的使用資訊</li>
+        <li>生物特徵辨識資料</li>
+        <li>政府核發身分識別碼（如身分證字號）</li>
+      </ul>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="s3">
+      <h2><span class="icon">🎯</span>3. 資料使用目的</h2>
+      <p>我們依據《個人資料保護法》第 19、20 條規定，基於下列特定目的使用您的資料：</p>
+
+      <h3>核心服務提供</h3>
+      <ul>
+        <li>處理語音輸入並轉換為記帳分錄</li>
+        <li>掃描收據並自動擷取交易金額、日期及商家資訊</li>
+        <li>儲存及管理財務交易記錄</li>
+        <li>提供 AI 財務分析與問答服務</li>
+      </ul>
+
+      <h3>帳戶與雲端同步</h3>
+      <ul>
+        <li>驗證使用者身分</li>
+        <li>跨裝置同步財務資料（使用者主動啟用後）</li>
+      </ul>
+
+      <h3>服務改善</h3>
+      <ul>
+        <li>分析功能使用模式以優化使用者體驗</li>
+        <li>偵測並修復應用程式錯誤</li>
+        <li>評估新功能的使用情況</li>
+      </ul>
+
+      <h3>廣告（免費版）</h3>
+      <ul>
+        <li>在免費版應用程式中顯示廣告以支持服務營運</li>
+        <li>在您同意後提供個人化廣告（iOS 需 ATT 授權；Android 可選擇退出）</li>
+      </ul>
+
+      <h3>法律合規</h3>
+      <ul>
+        <li>遵循適用法律法規的要求</li>
+        <li>回應合法的政府或司法機關請求</li>
+      </ul>
+
+      <div class="highlight-box info">
+        <p>
+          <strong>法律依據（GDPR）：</strong>我們處理您個人資料的法律依據為：(1) 契約履行（提供您要求的服務）；(2) 合法利益（改善服務、預防詐欺）；(3) 同意（廣告個人化、分析）。您可隨時撤回同意。
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="s4">
+      <h2><span class="icon">🤝</span>4. 資料共享與揭露</h2>
+
+      <div class="highlight-box">
+        <p><strong>我們不販售您的個人資料。</strong>我們僅在下列有限情況下共享您的資料：</p>
+      </div>
+
+      <h3>服務提供商（資料處理商）</h3>
+      <p>我們委由以下廠商在嚴格的保密協議下協助提供服務，這些廠商僅能依我們的指示使用您的資料：</p>
+      <ul>
+        <li><strong>Google Firebase</strong>：身分驗證、資料庫、分析、崩潰報告</li>
+        <li><strong>Google Gemini API</strong>：AI 對話與語音解析</li>
+        <li><strong>Google AdMob</strong>：廣告投放</li>
+      </ul>
+
+      <h3>法律要求</h3>
+      <p>當我們有充分理由相信下列情況發生時，可能揭露您的資料：</p>
+      <ul>
+        <li>遵守法律、法規或司法命令</li>
+        <li>保護 CB Studio、使用者或公眾的安全與合法權益</li>
+        <li>偵測、預防或處理詐欺及安全問題</li>
+      </ul>
+
+      <h3>企業變更</h3>
+      <p>若發生合併、收購或資產出售，我們將提前通知受影響的使用者，且繼受方須遵守本政策。</p>
+
+      <div class="highlight-box warning">
+        <p><strong>除上述情況外，我們不會與任何第三方共享您的個人資料。</strong></p>
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="s5">
+      <h2><span class="icon">🔒</span>5. 資料儲存與安全</h2>
+
+      <h3>儲存位置</h3>
+      <ul>
+        <li><strong>本地資料</strong>：儲存於您裝置的 SQLite 資料庫，受裝置加密保護。</li>
+        <li><strong>雲端資料</strong>：儲存於 Google Cloud（Firebase）伺服器，資料中心主要位於美國及亞太地區。</li>
+      </ul>
+
+      <h3>安全措施</h3>
+      <ul>
+        <li>資料傳輸使用 TLS 1.2 以上加密</li>
+        <li>Firebase Security Rules 限制資料存取，確保使用者只能存取自己的資料</li>
+        <li>Firebase Authentication 管理存取控制</li>
+        <li>定期安全性評估與更新</li>
+      </ul>
+
+      <h3>資料保留期限</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>資料類型</th>
+            <th>保留期限</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>財務交易資料</td>
+            <td>帳戶存續期間，刪除帳戶後 30 天內完全清除</td>
+          </tr>
+          <tr>
+            <td>Firebase Analytics 資料</td>
+            <td>最長 14 個月（依 Google 預設設定）</td>
+          </tr>
+          <tr>
+            <td>Crashlytics 崩潰報告</td>
+            <td>90 天</td>
+          </tr>
+          <tr>
+            <td>AI 對話記錄</td>
+            <td>Google Gemini API 依其政策處理，我們不儲存對話歷史</td>
+          </tr>
+          <tr>
+            <td>廣告識別碼</td>
+            <td>由 AdMob 依其政策管理</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight-box warning">
+        <p>
+          <strong>安全提醒：</strong>雖然我們採取合理的安全措施，但網際網路傳輸和電子儲存無法保證 100% 安全。若您發現任何安全疑慮，請立即聯絡我們。
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="s6">
+      <h2><span class="icon">⚖️</span>6. 您的隱私權利</h2>
+      <p>依據《個人資料保護法》第 3 條及 GDPR，您享有以下權利：</p>
+
+      <div class="rights-grid">
+        <div class="right-item">
+          <div class="right-icon">👁️</div>
+          <h4>查詢與閱覽權</h4>
+          <p>查詢我們持有的您的個人資料及其處理方式。</p>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">📋</div>
+          <h4>複製請求權</h4>
+          <p>請求提供您個人資料的副本（資料可攜性）。</p>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">✏️</div>
+          <h4>更正補充權</h4>
+          <p>要求更正不正確或不完整的個人資料。</p>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">🗑️</div>
+          <h4>刪除權</h4>
+          <p>要求刪除您的個人資料（「被遺忘權」）。</p>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">⏸️</div>
+          <h4>停止處理權</h4>
+          <p>要求停止或限制處理您的個人資料。</p>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">🚫</div>
+          <h4>反對處理權</h4>
+          <p>反對基於合法利益的資料處理，包括直接行銷。</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px;">
+        如需行使上述權利，請透過本政策第 13 節所列的聯絡方式與我們聯繫。我們將在收到請求後 <strong>30 個工作日</strong>內回應，特殊情況下可延長至 60 天（屆時將另行通知）。
+      </p>
+
+      <div class="highlight-box info">
+        <p>
+          若您認為我們處理您的個人資料有違規情形，您有權向主管機關提出申訴。在台灣，主管機關為<strong>個人資料保護委員會</strong>或各目的事業主管機關。在歐盟，您可向當地資料保護機關（DPA）提出申訴。
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="s7">
+      <a id="delete-account"></a>
+      <h2><span class="icon">🗑️</span>7. 資料刪除申請</h2>
+      <p>您可透過以下方式申請刪除您的帳戶及所有相關個人資料：</p>
+
+      <h3>方式一：應用程式內刪除（建議）</h3>
+      <ol>
+        <li>開啟 KashVox 應用程式</li>
+        <li>前往「設定」→「帳戶」</li>
+        <li>點選「刪除帳戶」</li>
+        <li>確認刪除操作</li>
+      </ol>
+
+      <h3>方式二：電子郵件申請</h3>
+      <p>
+        寄送電子郵件至 <a href="mailto:support@cbstudio.com">support@cbstudio.com</a>，主旨請填寫「資料刪除申請 - KashVox」，並在信中提供：
+      </p>
+      <ol>
+        <li>您的帳戶電子郵件地址</li>
+        <li>申請原因（選填）</li>
+        <li>身分驗證資訊（如有需要，我們將另行說明）</li>
+      </ol>
+
+      <div class="highlight-box">
+        <p>
+          <strong>刪除範圍：</strong>帳戶刪除後，我們將於 <strong>30 天內</strong>從 Firebase
+          伺服器清除您的財務資料、帳戶資訊及雲端同步資料。本地裝置上的資料需由您手動解除安裝應用程式以清除。部分資料（如匿名化的分析資料）可能因技術限制無法完全刪除，但將無法再與您的身分連結。
+        </p>
+      </div>
+
+      <div class="highlight-box warning">
+        <p>
+          <strong>注意：</strong>資料刪除為<strong>不可逆操作</strong>。刪除後將無法恢復您的財務記錄。建議在申請前先匯出您需要的資料。
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="s8">
+      <h2><span class="icon">🍪</span>8. Cookie 與追蹤技術</h2>
+      <p>KashVox 為行動應用程式，不使用傳統網頁 Cookie。但我們使用以下類似技術：</p>
+
+      <h3>應用程式內追蹤技術</h3>
+      <ul>
+        <li>
+          <strong>Firebase Analytics</strong>：使用裝置識別碼追蹤匿名化的應用程式使用事件，幫助我們了解功能使用情況。您可在裝置設定中選擇退出廣告個人化，這也會影響部分分析追蹤。
+        </li>
+        <li>
+          <strong>Firebase Crashlytics</strong>：在應用程式崩潰時收集診斷資料，包含裝置識別碼。
+        </li>
+        <li>
+          <strong>Google AdMob</strong>：使用廣告識別碼（iOS：IDFA；Android：AAID）投放廣告。
+          <ul>
+            <li><strong>iOS：</strong>首次啟動時會出現 App Tracking Transparency（ATT）提示，您可選擇是否授權追蹤。</li>
+            <li><strong>Android：</strong>可至「設定」→「Google」→「廣告」中選擇退出廣告個人化。</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>如何管理追蹤偏好</h3>
+      <ul>
+        <li>
+          <strong>iOS：</strong>前往「設定」→「隱私權與安全性」→「追蹤」管理各 App 的追蹤授權。
+        </li>
+        <li>
+          <strong>Android：</strong>前往「設定」→「隱私權」→「廣告」重置廣告 ID 或選擇退出廣告個人化。
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="s9">
+      <h2><span class="icon">🔗</span>9. 第三方服務</h2>
+      <p>KashVox 整合下列第三方服務，各自擁有獨立的隱私權政策：</p>
+
+      <div class="third-party-list">
+        <div class="third-party-item">
+          <span class="tp-badge">Google</span>
+          <div class="tp-info">
+            <h4>Firebase Authentication</h4>
+            <p>使用者帳戶驗證與管理</p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策 →</a>
+          </div>
+        </div>
+        <div class="third-party-item">
+          <span class="tp-badge">Google</span>
+          <div class="tp-info">
+            <h4>Cloud Firestore</h4>
+            <p>雲端資料庫儲存與同步</p>
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私權 →</a>
+          </div>
+        </div>
+        <div class="third-party-item">
+          <span class="tp-badge">Google</span>
+          <div class="tp-info">
+            <h4>Firebase Analytics</h4>
+            <p>匿名化應用程式使用分析</p>
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私權 →</a>
+          </div>
+        </div>
+        <div class="third-party-item">
+          <span class="tp-badge">Google</span>
+          <div class="tp-info">
+            <h4>Firebase Crashlytics</h4>
+            <p>崩潰報告與診斷</p>
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私權 →</a>
+          </div>
+        </div>
+        <div class="third-party-item">
+          <span class="tp-badge">Google AI</span>
+          <div class="tp-info">
+            <h4>Gemini API (Firebase AI)</h4>
+            <p>AI 對話處理與語音語意解析；您的對話內容將傳送至 Google 伺服器進行處理</p>
+            <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 服務條款 →</a>
+          </div>
+        </div>
+        <div class="third-party-item">
+          <span class="tp-badge">Google</span>
+          <div class="tp-info">
+            <h4>ML Kit (On-Device OCR)</h4>
+            <p>裝置本地端收據文字辨識，不傳送影像至外部伺服器</p>
+            <a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener">ML Kit 條款 →</a>
+          </div>
+        </div>
+        <div class="third-party-item">
+          <span class="tp-badge">Google</span>
+          <div class="tp-info">
+            <h4>Google AdMob</h4>
+            <p>廣告投放（免費版）；可能依廣告識別碼進行個人化廣告</p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策 →</a>
+          </div>
+        </div>
+        <div class="third-party-item">
+          <span class="tp-badge">Google</span>
+          <div class="tp-info">
+            <h4>speech_to_text (on-device)</h4>
+            <p>使用裝置原生語音辨識引擎（iOS SFSpeechRecognizer / Android Speech API），音訊在本地處理</p>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策 →</a>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 16px; font-size: 0.9rem; color: var(--text-muted);">
+        我們建議您查閱上述第三方服務的隱私權政策，以了解它們如何處理您的資料。我們對第三方服務的隱私實踐不承擔責任。
+      </p>
+    </section>
+
+    <!-- Section 10 -->
+    <section id="s10">
+      <h2><span class="icon">👶</span>10. 兒童隱私保護</h2>
+      <p>
+        KashVox 不針對 <strong>13 歲以下</strong>（在歐盟為 16 歲以下）的兒童設計，我們不會故意收集未成年兒童的個人資料。
+      </p>
+      <p>
+        若您是未滿 13 歲的兒童，請勿使用本應用程式或提供任何個人資料。若我們得知不慎收集了兒童的個人資料，將立即予以刪除。
+      </p>
+      <p>
+        若您是家長或監護人，發現您的子女在未經授權的情況下使用本應用程式並提供個人資料，請聯絡我們，我們將採取適當措施。
+      </p>
+    </section>
+
+    <!-- Section 11 -->
+    <section id="s11">
+      <h2><span class="icon">🌐</span>11. 跨境資料傳輸</h2>
+      <p>
+        本應用程式主要服務台灣用戶。部分資料（包含帳戶資料、雲端同步的財務資料、AI 對話記錄、分析資料）可能傳輸至並儲存於<strong>台灣以外</strong>的 Google 資料中心（包含美國及亞太地區）。
+      </p>
+      <p>
+        對於歐盟/歐洲經濟區（EEA）用戶，此等跨境傳輸依 GDPR 第 46 條，透過歐盟標準契約條款（Standard Contractual Clauses, SCC）或歐盟委員會充分性決定提供適當保障。
+      </p>
+      <p>
+        Google 已通過相關資料保護認證，詳情請參閱
+        <a href="https://cloud.google.com/privacy/gdpr" target="_blank" rel="noopener">Google Cloud GDPR 資源</a>。
+      </p>
+    </section>
+
+    <!-- Section 12 -->
+    <section id="s12">
+      <h2><span class="icon">📢</span>12. 政策變更通知</h2>
+      <p>
+        我們可能不定期更新本隱私權政策，以反映服務變更、法律要求或其他因素。重大變更時，我們將透過以下方式通知您：
+      </p>
+      <ul>
+        <li>在應用程式內顯示顯著通知</li>
+        <li>更新本頁面頂部的「最後更新」日期</li>
+        <li>如有提供電子郵件，將寄送電子郵件通知</li>
+      </ul>
+      <p>
+        建議您定期查閱本政策。在我們發布通知後繼續使用本應用程式，即視為您接受更新後的政策。
+      </p>
+      <p>
+        本政策的歷史版本可透過電子郵件向我們索取。
+      </p>
+    </section>
+
+    <!-- Section 13 -->
+    <section id="s13">
+      <h2><span class="icon">📧</span>13. 聯絡我們</h2>
+      <p>若您對本隱私權政策有任何疑問、意見或請求，請透過以下方式聯絡我們：</p>
+
+      <div class="contact-card">
+        <h3>CB Studio 個人資料管理聯絡窗口</h3>
+        <p>
+          <strong>電子郵件：</strong>
+          <a href="mailto:support@cbstudio.com">support@cbstudio.com</a>
+        </p>
+        <p>
+          <strong>網站：</strong>
+          <a href="https://iml1s.github.io" target="_blank" rel="noopener">https://iml1s.github.io</a>
+        </p>
+        <p>
+          <strong>應用程式：</strong> KashVox（com.cbstudio.kashvox）
+        </p>
+        <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
+          我們承諾在收到您的請求後 <strong>30 個工作日</strong>內回應。
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 CB Studio. 保留所有權利。</p>
+    <p style="margin-top: 6px;">
+      <a href="terms-of-service.html" style="color: var(--primary); text-decoration: none;">服務條款</a>
+      &nbsp;·&nbsp;
+      <a href="https://iml1s.github.io" style="color: var(--primary); text-decoration: none;">CB Studio 官網</a>
+    </p>
+    <p style="margin-top: 8px;">KashVox · com.cbstudio.kashvox · 版本：2026-02-24</p>
+  </footer>
+
+</body>
+
+</html>

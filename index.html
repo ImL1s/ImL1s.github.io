@@ -1015,6 +1015,263 @@
                 left: 0;
             }
         }
+
+        /* ═══════════════════════════════════════════ */
+        /* Services / Hire Me Section                 */
+        /* ═══════════════════════════════════════════ */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            position: relative;
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            cursor: default;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Animated gradient border on hover */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 22px;
+            background: conic-gradient(from var(--card-angle, 0deg),
+                    var(--card-color-1, #3b82f6),
+                    var(--card-color-2, #8b5cf6),
+                    var(--card-color-1, #3b82f6));
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            animation: rotateBorder 3s linear infinite;
+        }
+
+        @property --card-angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+
+        @keyframes rotateBorder {
+            to {
+                --card-angle: 360deg;
+            }
+        }
+
+        .service-card:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-icon-wrapper {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
+            background: var(--service-icon-bg, linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15)));
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon-wrapper {
+            transform: scale(1.1);
+        }
+
+        .service-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .service-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .service-tag {
+            padding: 0.2rem 0.6rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* CTA Banner */
+        .hire-cta {
+            position: relative;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(139, 92, 246, 0.08) 50%, rgba(236, 72, 153, 0.08) 100%);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            overflow: hidden;
+        }
+
+        .hire-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+            animation: ctaPulse 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes ctaPulse {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.6;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.8);
+                opacity: 0.1;
+            }
+        }
+
+        .hire-cta-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .hire-cta-title span {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hire-cta-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .hire-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hire-cta-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .hire-cta-btn svg {
+            width: 18px;
+            height: 18px;
+            transition: transform 0.3s;
+        }
+
+        .hire-cta-btn:hover svg {
+            transform: translateX(3px);
+        }
+
+        /* Availability badge */
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #10b981;
+            margin-bottom: 2rem;
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+
+            50% {
+                opacity: 0.7;
+                box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hire-cta {
+                padding: 2rem 1.5rem;
+            }
+
+            .hire-cta-title {
+                font-size: 1.4rem;
+            }
+        }
     </style>
 </head>
 
@@ -1027,6 +1284,7 @@
             <nav>
                 <a href="#projects" data-i18n="nav.projects">Projects</a>
                 <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#services" data-i18n="nav.services">Services</a>
                 <a href="#contact" data-i18n="nav.contact">Contact</a>
                 <a href="https://github.com/ImL1s" target="_blank">GitHub</a>
                 <div class="lang-switcher">
@@ -1059,7 +1317,7 @@
                     <p data-i18n="hero.description">專注於 Flutter、React、TypeScript 的全端開發者。熱愛打造跨平台應用程式與開源專案。</p>
                     <div class="hero-stats">
                         <div class="stat">
-                            <div class="stat-number">9+</div>
+                            <div class="stat-number">17+</div>
                             <div class="stat-label" data-i18n="hero.stat.projects">公開專案</div>
                         </div>
                         <div class="stat">
@@ -1084,7 +1342,260 @@
                 <p class="section-desc" data-i18n="projects.subtitle">涵蓋行動應用、Web 應用、瀏覽器擴充功能與開源專案</p>
             </div>
 
+            <h3 class="section-subtitle"
+                style="text-align: center; margin-bottom: 2rem; font-size: 1.5rem; color: var(--text-secondary);">
+                Consumer Applications</h3>
             <div class="projects-grid">
+                <!-- Lobster -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ef4444, #f59e0b);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/moltbook_hero.png" alt="Lobster - AI Agent Social"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon"><img src="assets/icons/moltbook.png" alt="Lobster - AI Agent Social">
+                    </div>
+                    <div class="platform-badges">
+                        <span class="platform-badge ios">iOS</span>
+                        <span class="platform-badge android">Android</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="project.lobster.title">Lobster - AI Agent Social</h3>
+                    <p class="project-desc" data-i18n="project.lobster.desc">Moltbook 平台的第三方客戶端</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.cbstudio.moltbook" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
+                            Android
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/lobster-ai-agent-social/id6758557430" target="_blank"
+                            class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z" />
+                            </svg>
+                            iOS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RentAHuman -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #10b981, #3b82f6);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/rentahuman_hero.png" alt="RentAHuman: AI Hires Humans"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon"><img src="assets/icons/rentahuman.png" alt="RentAHuman"></div>
+                    <div class="platform-badges">
+                        <span class="platform-badge ios">iOS</span>
+                        <span class="platform-badge android">Android</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="project.rentahuman.title">RentAHuman: AI Hires Humans</h3>
+                    <p class="project-desc" data-i18n="project.rentahuman.desc">AI 代理人雇用真人完成任務</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.cbstudio.rentahuman" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
+                            Android
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/rentahuman/id6758720609" target="_blank"
+                            class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z" />
+                            </svg>
+                            iOS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MoltX -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #8b5cf6, #3b82f6);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/moltx_hero.png" alt="MoltX: AI Agent Social Feed"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon"><img src="assets/icons/moltx.png" alt="MoltX"></div>
+                    <div class="platform-badges">
+                        <span class="platform-badge android">Android</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="project.moltx.title">MoltX: AI Agent Social Feed</h3>
+                    <p class="project-desc" data-i18n="project.moltx.desc">AI Agent Social Feed Platform</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=io.moltx.moltx_app" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
+                            Android
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Intake -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #10b981, #f59e0b);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/intake_hero.png" alt="Intake" style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon"><img src="assets/icons/intake.png" alt="Intake"></div>
+                    <div class="platform-badges">
+                        <span class="platform-badge android">Android</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="project.intake.title">Intake</h3>
+                    <p class="project-desc" data-i18n="project.intake.desc">AI 食物掃描與熱量追蹤，輕鬆記錄每日飲食與營養攝取。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.cbstudio.intake" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
+                            Android
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FlashClaw -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f59e0b, #ef4444);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/flashclaw_hero.png" alt="FlashClaw - OpenClaw Agent"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon"><img src="assets/icons/flashclaw.png" alt="FlashClaw"></div>
+                    <div class="platform-badges">
+                        <span class="platform-badge ios">iOS</span>
+                        <span class="platform-badge android">Android</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="project.flashclaw.title">FlashClaw - OpenClaw Agent</h3>
+                    <p class="project-desc" data-i18n="project.flashclaw.desc">Your portable AI agent, built on
+                        OpenClaw.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=dev.flashclaw.quickclaw" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
+                            Android
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/flashclaw-ai-%E6%8A%80%E8%83%BD%E8%88%87%E6%99%BA%E8%83%BD%E9%AB%94/id6759159972"
+                            target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z" />
+                            </svg>
+                            iOS
+                        </a>
+                    </div>
+                </div>
+
+                <!-- T-Memo -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #3b82f6, #06b6d4);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/tmemo_hero.png" alt="T-Memo: AI Bookmark Organizer"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon"><img src="assets/icons/tmemo.png" alt="T-Memo"></div>
+                    <div class="platform-badges">
+                        <span class="platform-badge android">Android</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="project.tmemo.title">T-Memo: AI Bookmark Organizer</h3>
+                    <p class="project-desc" data-i18n="project.tmemo.desc">Save X/Twitter posts & threads as structured
+                        notes</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.cbstudio.threadmemo" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
+                            Android
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ClawHub -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #a855f7, #ec4899);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/clawhub_hero.png" alt="ClawHub - OpenClaw Dashboard"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon"><img src="assets/icons/clawhub.png" alt="ClawHub"></div>
+                    <div class="platform-badges">
+                        <span class="platform-badge ios">iOS</span>
+                        <span class="platform-badge android">Android</span>
+                    </div>
+                    <h3 class="project-title" data-i18n="project.clawhub.title">ClawHub - OpenClaw Dashboard</h3>
+                    <p class="project-desc" data-i18n="project.clawhub.desc">OpenClaw AI Gateway 的行動管理面板 — 掃 QR Code
+                        即可即時監控、聊天、管理排程與用量分析。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.cbstudio.openclaw_dashboard"
+                            target="_blank" class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
+                            Android
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/clawhub-openclaw-ai-%E6%8E%A7%E5%88%B6%E5%8F%B0/id6759405207"
+                            target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z" />
+                            </svg>
+                            iOS
+                        </a>
+                    </div>
+                </div>
                 <!-- StickerAI Studio -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ec4899, #f59e0b);">
                     <div class="project-screenshots">
@@ -1099,8 +1610,8 @@
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.stickerai.title">StickerAI Studio</h3>
-                    <p class="project-desc" data-i18n="project.stickerai.desc">使用 Google Gemini AI 生成符合 LINE Creators
+                    <h3 class="project-title">StickerAI Studio</h3>
+                    <p class="project-desc">使用 Google Gemini AI 生成符合 LINE Creators
                         Market 規範的貼圖包。支援一鍵匯出、推薦系統、多語系。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
@@ -1133,14 +1644,7 @@
                             </svg>
                             Android
                         </a>
-                        <a href="https://github.com/ImL1s/line-sticker-maker-ai" target="_blank"
-                            class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
+
                     </div>
                 </div>
 
@@ -1156,8 +1660,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.lightwallet.title">Light Wallet</h3>
-                    <p class="project-desc" data-i18n="project.lightwallet.desc">輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含
+                    <h3 class="project-title">Light Wallet</h3>
+                    <p class="project-desc">輕量級多鏈加密貨幣錢包，支援 43+ 區塊鏈包含
                         Bitcoin、Ethereum、Solana、TON、Cosmos 等。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1166,31 +1670,26 @@
                         <span class="tech-tag">Multi-chain</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/ImL1s/light_wallet" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
                     </div>
                 </div>
 
-                <!-- Bitfinex Lending Platform -->
+                <!-- Yieldora Lending Platform -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #10b981, #f59e0b);">
-                    <div class="project-hero-placeholder"
-                        style="--placeholder-gradient: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);">
-                        <span class="placeholder-icon">💰</span>
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/yieldora_hero.png" alt="Yieldora Lending Platform"
+                                style="object-position: center;">
+                        </div>
                     </div>
-                    <div class="project-icon emoji">💹</div>
+                    <div class="project-icon"><img src="assets/icons/yieldora.png" alt="Yieldora"></div>
                     <div class="platform-badges">
                         <span class="platform-badge web">Web</span>
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.lending.title">Bitfinex Lending Platform</h3>
-                    <p class="project-desc" data-i18n="project.lending.desc">Bitfinex USD/USDT 放貸機器人結合多租戶 SaaS
-                        平台。智能放貸引擎自動優化利率，支援 Flutter App 即時監控收益。</p>
+                    <h3 class="project-title">Yieldora Lending Platform</h3>
+                    <p class="project-desc">ML 驅動的 Bitfinex 加密貨幣放貸機器人。6 種智能策略自動優化利率，結合多租戶 SaaS
+                        平台，支援 Flutter App 即時監控收益。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Go</span>
                         <span class="tech-tag">Flutter</span>
@@ -1198,32 +1697,34 @@
                         <span class="tech-tag">SaaS</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/ImL1s/bitfinex-lending-platform" target="_blank"
-                            class="project-link secondary">
+                        <a href="https://play.google.com/store/apps/details?id=com.cbstudio.yieldora" target="_blank"
+                            class="project-link primary">
                             <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
                             </svg>
-                            GitHub
+                            Android
                         </a>
                     </div>
                 </div>
 
-                <!-- Crypto AI Analysis -->
+                <!-- ChartWise - Market Research -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f59e0b, #ef4444);">
                     <div class="project-screenshots">
                         <div class="screenshot-item">
-                            <img src="assets/screenshots/crypto_ai_dashboard.png" alt="加密 AI 分析儀表板"
-                                style="object-position: center 35%;">
+                            <img src="assets/screenshots/chartwise_hero.png" alt="ChartWise 市場研究"
+                                style="object-position: center;">
                         </div>
                     </div>
-                    <div class="project-icon"><img src="assets/icons/crypto_ai.png" alt="加密 AI 分析"></div>
+                    <div class="project-icon"><img src="assets/icons/chartwise.png" alt="ChartWise 市場研究"></div>
                     <div class="platform-badges">
                         <span class="platform-badge web">Web</span>
+                        <span class="platform-badge ios">iOS</span>
+                        <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.cryptoai.title">加密 AI 分析</h3>
-                    <p class="project-desc" data-i18n="project.cryptoai.desc">AI 驅動的加密貨幣市場分析平台。整合恐懼貪婪指數、多空比、ETF 資金流等 5+
-                        數據源，支援 AI 圖表分析。</p>
+                    <h3 class="project-title">ChartWise – 市場研究</h3>
+                    <p class="project-desc">AI 驅動的加密貨幣與股票圖表分析平台。支援 355+ 交易標的即時數據，整合恐懼貪婪指數、多空比、ETF 資金流等多維數據源，提供 AI
+                        智能圖表分析。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Next.js 16</span>
                         <span class="tech-tag">FastAPI</span>
@@ -1231,29 +1732,47 @@
                         <span class="tech-tag">Firebase</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/ImL1s/crypto_ai_analysis" target="_blank"
-                            class="project-link secondary">
+                        <a href="https://profitai-app.web.app" target="_blank" class="project-link primary">
                             <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                             </svg>
-                            GitHub
+                            Web
                         </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.cbstudio.tradingsignalsbot"
+                            target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
+                            </svg>
+                            Android
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/chartwise-%E5%B8%82%E5%A0%B4%E7%A0%94%E7%A9%B6/id6756262660"
+                            target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z" />
+                            </svg>
+                            iOS
+                        </a>
+
                     </div>
                 </div>
 
                 <!-- Light Wallet Extension -->
                 <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ec4899, #8b5cf6);">
-                    <div class="project-hero-placeholder"
-                        style="--placeholder-gradient: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);">
-                        <span class="placeholder-icon">🔐</span>
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/light_wallet_extension_hero.png" alt="Light Wallet Extension"
+                                style="object-position: center;">
+                        </div>
                     </div>
                     <div class="project-icon">🔐</div>
                     <div class="platform-badges">
                         <span class="platform-badge extension">Chrome Extension</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.extension.title">Light Wallet Extension</h3>
-                    <p class="project-desc" data-i18n="project.extension.desc">輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript
+                    <h3 class="project-title">Light Wallet Extension</h3>
+                    <p class="project-desc">輕量級加密貨幣錢包瀏覽器擴充功能，使用 React + TypeScript
                         開發，支援 EVM 相容鏈。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React 19</span>
@@ -1270,14 +1789,7 @@
                             </svg>
                             Chrome
                         </a>
-                        <a href="https://github.com/ImL1s/light-wallet-extension" target="_blank"
-                            class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
+
                     </div>
                 </div>
 
@@ -1294,8 +1806,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.insurance.title">保險證照考試題庫</h3>
-                    <p class="project-desc" data-i18n="project.insurance.desc">台灣保險證照考試練習 APP，涵蓋人身、財產、投資型保險等。支援 AI
+                    <h3 class="project-title">保險證照考試題庫</h3>
+                    <p class="project-desc">台灣保險證照考試練習 APP，涵蓋人身、財產、投資型保險等。支援 AI
                         解釋、雲端同步、模擬考試。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1312,14 +1824,7 @@
                             </svg>
                             Android
                         </a>
-                        <a href="https://github.com/ImL1s/insurance_pass_tw" target="_blank"
-                            class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
+
                     </div>
                 </div>
 
@@ -1335,8 +1840,8 @@
                         <span class="platform-badge android">Android</span>
                         <span class="platform-badge web">Web</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.taxi.title">計程車執業登記證模擬考</h3>
-                    <p class="project-desc" data-i18n="project.taxi.desc">台灣計程車執業登記證考試練習 APP。包含交通法規、地理環境共 236 題，支援 AI
+                    <h3 class="project-title">計程車執業登記證模擬考</h3>
+                    <p class="project-desc">台灣計程車執業登記證考試練習 APP。包含交通法規、地理環境共 236 題，支援 AI
                         助手功能。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1345,12 +1850,60 @@
                         <span class="tech-tag">GoRouter</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/ImL1s/taxi_pass_tw" target="_blank" class="project-link secondary">
+                        <a href="https://play.google.com/store/apps/details?id=com.taxipass.taxi_pass" target="_blank"
+                            class="project-link primary">
                             <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                    d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z" />
                             </svg>
-                            GitHub
+                            Android
+                        </a>
+                        <a href="https://apps.apple.com/tw/app/%E5%B0%8F%E9%BB%83%E8%80%83%E7%85%A7%E9%80%9A/id6756231870"
+                            target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16.5 2a4.5 4.5 0 0 1-2.9 4.1 3.5 3.5 0 0 1-2.7-2.8A4.5 4.5 0 0 1 16.5 2Zm-1.2 6.1c-1 0-1.8.6-2.3.6-.5 0-1.3-.6-2.2-.6-1.7 0-3.6 1.4-3.6 4.3 0 2.6 1.7 5.6 3.7 5.6.8 0 1.2-.5 2.2-.5s1.3.5 2.2.5c1.5-.1 2.9-2.4 3.3-3.6-.7-.3-1.4-1-1.4-2s.6-1.7 1.3-2c-.4-.6-1.6-2.3-3.2-2.3Z" />
+                            </svg>
+                            iOS
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Safer Radar -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #ef4444, #f59e0b);">
+                    <div class="project-hero-placeholder"
+                        style="--placeholder-gradient: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(245, 158, 11, 0.15) 100%);">
+                        <div class="placeholder-icon">🛡️</div>
+                    </div>
+                    <div class="project-icon"><img src="assets/icons/safer_radar.png" alt="Safer Radar Safe Alert">
+                    </div>
+                    <div class="platform-badges">
+                        <span class="platform-badge ios">iOS</span>
+                        <span class="platform-badge android">Android</span>
+                    </div>
+                    <h3 class="project-title">安心雷達 Safer Radar</h3>
+                    <p class="project-desc">提供即時治安通知與犯罪風險地圖的社區安全應用。支援 12
+                        種語言，包含風險熱點分析與事件回報功能。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Riverpod</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Map</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="safer-radar-privacy.html" target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                            Privacy
+                        </a>
+                        <a href="safer-radar-terms.html" target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" />
+                            </svg>
+                            Terms
                         </a>
                     </div>
                 </div>
@@ -1368,8 +1921,8 @@
                         <span class="platform-badge ios">iOS</span>
                         <span class="platform-badge android">Android</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.autostar.title">AutoStar 汽車實價登錄</h3>
-                    <p class="project-desc" data-i18n="project.autostar.desc">專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero
+                    <h3 class="project-title">AutoStar 汽車實價登錄</h3>
+                    <p class="project-desc">專業的二手車實價登錄與查詢應用，支援 38 個品牌、折舊率分析、Hero
                         動畫。Clean Architecture 架構。</p>
                     <div class="project-tech">
                         <span class="tech-tag">Flutter</span>
@@ -1394,13 +1947,7 @@
                             </svg>
                             iOS
                         </a>
-                        <a href="https://github.com/ImL1s/auto_star" target="_blank" class="project-link secondary">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            GitHub
-                        </a>
+
                     </div>
                 </div>
 
@@ -1416,8 +1963,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge opensource">Open Source</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.helloworld.title">Multi-Language Hello World</h3>
-                    <p class="project-desc" data-i18n="project.helloworld.desc">60+ 程式語言的 Hello World
+                    <h3 class="project-title">Multi-Language Hello World</h3>
+                    <p class="project-desc">60+ 程式語言的 Hello World
                         實作集合，包含編譯型、直譯型、函數式等類別。附自動測試腳本。</p>
                     <div class="project-tech">
                         <span class="tech-tag">60+ Languages</span>
@@ -1448,8 +1995,8 @@
                     <div class="platform-badges">
                         <span class="platform-badge opensource">Open Source</span>
                     </div>
-                    <h3 class="project-title" data-i18n="project.todolist.title">TodoList - 100+ 技術棧</h3>
-                    <p class="project-desc" data-i18n="project.todolist.desc">同一個 Todo List 應用的 100+ 種實現。涵蓋
+                    <h3 class="project-title">TodoList - 100+ 技術棧</h3>
+                    <p class="project-desc">同一個 Todo List 應用的 100+ 種實現。涵蓋
                         Web、Mobile、Desktop、遊戲引擎等完整學習資源。</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
@@ -1460,6 +2007,276 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/ImL1s/TodoListDemo" target="_blank" class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ═══════════════════════════════════════════════════════════════════ -->
+                <!-- 🛠️ DEVELOPER TOOLS SECTION -->
+                <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+            </div>
+
+            <h3 class="section-subtitle"
+                style="text-align: center; margin: 4rem 0 2rem; font-size: 1.5rem; color: var(--text-secondary);">
+                Developer Tools & SDKs</h3>
+            <div class="projects-grid">
+                <!-- Flux - Flutter SDUI Engine -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #06b6d4, #8b5cf6);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/flux_sdui_hero.png" alt="Flux SDUI Engine"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon emoji">⚡</div>
+                    <div class="platform-badges">
+                        <span class="platform-badge opensource">Open Source</span>
+                        <span class="platform-badge web">Flutter</span>
+                    </div>
+                    <h3 class="project-title">Flux SDUI Engine</h3>
+                    <p class="project-desc">輕量級堆疊式腳本語言，專為 Flutter Server-Driven UI
+                        設計。實現動態更新與即時 UI 變更，無需重新發布應用。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">SDUI</span>
+                        <span class="tech-tag">Scripting</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ImL1s/flux" target="_blank" class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Termux Flutter IDE -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #22c55e, #3b82f6);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/termux_ide_hero.png" alt="Termux Flutter IDE"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon emoji">📱</div>
+                    <div class="platform-badges">
+                        <span class="platform-badge android">Android</span>
+                        <span class="platform-badge opensource">Open Source</span>
+                    </div>
+                    <h3 class="project-title">Termux Flutter IDE</h3>
+                    <p class="project-desc">在 Android Termux 環境中運行的完整 Flutter
+                        IDE。支援程式碼編輯、檔案管理、終端整合與 SSH 連線。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Termux</span>
+                        <span class="tech-tag">SSH</span>
+                        <span class="tech-tag">IDE</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ImL1s/termux-flutter-ide" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ═══════════════════════════════════════════════════════════════════ -->
+                <!-- ⛓️ BLOCKCHAIN & CRYPTO SDKs -->
+                <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+                <!-- Monero High-Level -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f97316, #eab308);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/monero_high_level_hero.png" alt="Monero High-Level"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon emoji">🔶</div>
+                    <div class="platform-badges">
+                        <span class="platform-badge opensource">Open Source</span>
+                        <span class="platform-badge web">KMP</span>
+                        <span class="platform-badge ios">Dart</span>
+                    </div>
+                    <h3 class="project-title">Monero High-Level</h3>
+                    <p class="project-desc">純 Kotlin Multiplatform 與 Dart
+                        實現的高性能門羅幣錢包庫。無需 C++ 綁定，原生支援 Android、iOS、Desktop。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Monero</span>
+                        <span class="tech-tag">Cryptography</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ImL1s/monero-high-level" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ordinals SDK -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f59e0b, #dc2626);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/ordinals_sdk_hero.png" alt="Ordinals SDK"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon emoji">₿</div>
+                    <div class="platform-badges">
+                        <span class="platform-badge opensource">Open Source</span>
+                        <span class="platform-badge web">Dart</span>
+                    </div>
+                    <h3 class="project-title">Ordinals SDK</h3>
+                    <p class="project-desc">Bitcoin Ordinals、BRC-20 代幣與 Inscription
+                        管理的完整 Dart SDK。支援 PSBT 建構與銘文交易。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Bitcoin</span>
+                        <span class="tech-tag">Ordinals</span>
+                        <span class="tech-tag">BRC-20</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pub.dev/packages/ordinals_sdk" target="_blank" class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg>
+                            pub.dev
+                        </a>
+                        <a href="https://github.com/ImL1s/ordinals-sdk" target="_blank" class="project-link secondary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dart Web3 -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #6366f1, #a855f7);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/dart_web3_hero.png" alt="Dart Web3"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon emoji">🌐</div>
+                    <div class="platform-badges">
+                        <span class="platform-badge opensource">Open Source</span>
+                        <span class="platform-badge web">Dart</span>
+                    </div>
+                    <h3 class="project-title">Dart Web3</h3>
+                    <p class="project-desc">Dart 語言的 Web3 工具庫，提供以太坊與 EVM
+                        相容鏈的完整互動功能。支援錢包、合約呼叫與交易簽署。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Web3</span>
+                        <span class="tech-tag">Ethereum</span>
+                        <span class="tech-tag">EVM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ImL1s/dart_web3" target="_blank" class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ═══════════════════════════════════════════════════════════════════ -->
+                <!-- 🖥️ DESKTOP APPLICATIONS -->
+                <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+                <!-- Screen Inu -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #14b8a6, #0ea5e9);">
+                    <div class="project-hero-placeholder"
+                        style="--placeholder-gradient: linear-gradient(135deg, rgba(20, 184, 166, 0.2) 0%, rgba(14, 165, 233, 0.2) 100%);">
+                        <span class="placeholder-icon">🐕</span>
+                    </div>
+                    <div class="project-icon emoji">🐕</div>
+                    <div class="platform-badges">
+                        <span class="platform-badge web">macOS</span>
+                        <span class="platform-badge android">Windows</span>
+                        <span class="platform-badge opensource">Linux</span>
+                    </div>
+                    <h3 class="project-title">Screen Inu</h3>
+                    <p class="project-desc">跨平台桌面截圖與螢幕錄製工具。使用 Tauri + React
+                        開發，輕量高效，支援快捷鍵與自動儲存功能。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ImL1s/screen_inu" target="_blank" class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ═══════════════════════════════════════════════════════════════════ -->
+                <!-- ⛏️ CRYPTOCURRENCY MINING -->
+                <!-- ═══════════════════════════════════════════════════════════════════ -->
+
+                <!-- XMRig Miner Android -->
+                <div class="project-card fade-in" style="--card-accent: linear-gradient(135deg, #f97316, #ea580c);">
+                    <div class="project-screenshots">
+                        <div class="screenshot-item">
+                            <img src="assets/screenshots/xmrig_miner_hero.png" alt="XMRig Miner Android"
+                                style="object-position: center;">
+                        </div>
+                    </div>
+                    <div class="project-icon emoji">⛏️</div>
+                    <div class="platform-badges">
+                        <span class="platform-badge android">Android</span>
+                        <span class="platform-badge opensource">GPLv3</span>
+                    </div>
+                    <h3 class="project-title">XMRig Miner Android</h3>
+                    <p class="project-desc">Android 平台的門羅幣 (Monero/XMR) 挖礦應用。整合 XMRig
+                        核心，支援背景挖礦、效能監控與自動重連。</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">NDK</span>
+                        <span class="tech-tag">XMRig</span>
+                        <span class="tech-tag">RandomX</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ImL1s/XMRigMiner-Android/releases" target="_blank"
+                            class="project-link primary">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm1-13h-2v6h2zm0 8h-2v2h2z" />
+                            </svg>
+                            Download
+                        </a>
+                        <a href="https://github.com/ImL1s/XMRigMiner-Android" target="_blank"
+                            class="project-link secondary">
                             <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path
                                     d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
@@ -1503,11 +2320,15 @@
                 <div class="skill-card fade-in">
                     <div class="skill-category">Backend & Cloud</div>
                     <div class="skill-list">
-                        <span class="skill-item">Firebase</span>
-                        <span class="skill-item">Supabase</span>
+                        <span class="skill-item">Go</span>
                         <span class="skill-item">Node.js</span>
-                        <span class="skill-item">Vercel</span>
+                        <span class="skill-item">.NET Core</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">Firebase</span>
+                        <span class="skill-item">GCP</span>
+                        <span class="skill-item">Supabase</span>
                         <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">Vercel</span>
                     </div>
                 </div>
 
@@ -1541,6 +2362,158 @@
                         <span class="skill-item">Firebase AI</span>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="section-header">
+                <div style="display: flex; justify-content: center;">
+                    <div class="availability-badge">
+                        <span class="availability-dot"></span>
+                        <span data-i18n="services.available">Available for Projects</span>
+                    </div>
+                </div>
+                <h2 class="section-title" data-i18n="services.title">What I Can Build For You</h2>
+                <p class="section-desc" data-i18n="services.subtitle">從構想到上架，一條龍完成。不限產業類型，任何案子都歡迎聊聊。</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Mobile App -->
+                <div class="service-card fade-in" style="--card-color-1: #3b82f6; --card-color-2: #06b6d4;">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper"
+                            style="--service-icon-bg: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(6, 182, 212, 0.15));">
+                            📱
+                        </div>
+                        <h3 class="service-title" data-i18n="services.mobile.title">Mobile App 開發</h3>
+                        <p class="service-desc" data-i18n="services.mobile.desc">iOS / Android 跨平台 App，以 Flutter
+                            為核心。從開發、上架到營利（IAP、廣告）一條龍服務。</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Flutter</span>
+                            <span class="service-tag">iOS</span>
+                            <span class="service-tag">Android</span>
+                            <span class="service-tag">Firebase</span>
+                            <span class="service-tag">RevenueCat</span>
+                            <span class="service-tag">AdMob</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web App -->
+                <div class="service-card fade-in" style="--card-color-1: #8b5cf6; --card-color-2: #ec4899;">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper"
+                            style="--service-icon-bg: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15));">
+                            🌐
+                        </div>
+                        <h3 class="service-title" data-i18n="services.web.title">Web / 全端開發</h3>
+                        <p class="service-desc" data-i18n="services.web.desc">前端 React / Next.js / Vue，後端 Go / Node.js /
+                            .NET Core / Java。全端一手包辦。</p>
+                        <div class="service-tags">
+                            <span class="service-tag">React</span>
+                            <span class="service-tag">Next.js</span>
+                            <span class="service-tag">Go</span>
+                            <span class="service-tag">Node.js</span>
+                            <span class="service-tag">.NET Core</span>
+                            <span class="service-tag">Java</span>
+                            <span class="service-tag">Vercel</span>
+                            <span class="service-tag">Supabase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blockchain -->
+                <div class="service-card fade-in" style="--card-color-1: #f59e0b; --card-color-2: #ef4444;">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper"
+                            style="--service-icon-bg: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(239, 68, 68, 0.15));">
+                            ⛓️
+                        </div>
+                        <h3 class="service-title" data-i18n="services.blockchain.title">區塊鏈 / Web3</h3>
+                        <p class="service-desc" data-i18n="services.blockchain.desc">加密錢包、DApp、智能合約整合。支援 43+
+                            區塊鏈，多鏈資產管理方案。</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Web3</span>
+                            <span class="service-tag">Multi-chain</span>
+                            <span class="service-tag">Wallet</span>
+                            <span class="service-tag">DApp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Integration -->
+                <div class="service-card fade-in" style="--card-color-1: #10b981; --card-color-2: #3b82f6;">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper"
+                            style="--service-icon-bg: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(59, 130, 246, 0.15));">
+                            🤖
+                        </div>
+                        <h3 class="service-title" data-i18n="services.ai.title">AI 整合</h3>
+                        <p class="service-desc" data-i18n="services.ai.desc">Gemini / OpenAI / Claude API 整合到你的產品中。AI
+                            聊天、圖像生成、智能分析、MCP Server 開發。</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Gemini</span>
+                            <span class="service-tag">OpenAI</span>
+                            <span class="service-tag">Claude</span>
+                            <span class="service-tag">MCP</span>
+                            <span class="service-tag">RAG</span>
+                            <span class="service-tag">Firebase AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop App -->
+                <div class="service-card fade-in" style="--card-color-1: #14b8a6; --card-color-2: #8b5cf6;">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper"
+                            style="--service-icon-bg: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(139, 92, 246, 0.15));">
+                            🖥️
+                        </div>
+                        <h3 class="service-title" data-i18n="services.desktop.title">Desktop App</h3>
+                        <p class="service-desc" data-i18n="services.desktop.desc">Tauri / Electron 跨平台桌面軟體。macOS
+                            公證簽署、Windows、Linux 三平台一次搞定。</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Tauri</span>
+                            <span class="service-tag">Electron</span>
+                            <span class="service-tag">Rust</span>
+                            <span class="service-tag">SwiftUI</span>
+                            <span class="service-tag">Notarization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Consulting -->
+                <div class="service-card fade-in" style="--card-color-1: #a855f7; --card-color-2: #f43f5e;">
+                    <div class="service-card-inner">
+                        <div class="service-icon-wrapper"
+                            style="--service-icon-bg: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(244, 63, 94, 0.15));">
+                            🔧
+                        </div>
+                        <h3 class="service-title" data-i18n="services.consulting.title">技術顧問</h3>
+                        <p class="service-desc" data-i18n="services.consulting.desc">架構設計、Code Review、技術選型建議。Firebase /
+                            GA4 / CI/CD 全方位支援。</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Architecture</span>
+                            <span class="service-tag">Code Review</span>
+                            <span class="service-tag">Firebase</span>
+                            <span class="service-tag">GA4</span>
+                            <span class="service-tag">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="hire-cta fade-in">
+                <h3 class="hire-cta-title"><span data-i18n="services.cta.title">有專案想法？讓我們聊聊</span></h3>
+                <p class="hire-cta-desc" data-i18n="services.cta.desc">無論是全新專案或現有產品的功能擴充，歡迎隨時聯繫。</p>
+                <a href="#contact" class="hire-cta-btn">
+                    <span data-i18n="services.cta.btn">聯繫我</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
             </div>
         </section>
 
@@ -1621,7 +2594,7 @@
     </main>
 
     <footer>
-        <p data-i18n="footer.copyright">© 2025 ImL1s. Built with passion.</p>
+        <p>© 2025 ImL1s. Built with passion.</p>
     </footer>
 
     <script>

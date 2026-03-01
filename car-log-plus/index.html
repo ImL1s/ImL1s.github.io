@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Car Log Plus 車記加 - 台灣專用車輛管理 App，整合監理站查詢、即時油價、油耗分析，讓您的愛車管理更輕鬆。">
+  <meta property="og:title" content="Car Log Plus 車記加 - 台灣車輛管理 App">
+  <meta property="og:description" content="整合監理站查詢、即時油價、油耗分析的台灣專用車輛管理 App。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iml1s.github.io/car-log-plus/">
+  <meta property="og:locale" content="zh_TW">
+  <title>Car Log Plus 車記加 - 台灣車輛管理 App</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1A56DB;
+      --primary-dark: #1344b8;
+      --primary-light: #EBF1FF;
+      --text: #111827;
+      --text-secondary: #6B7280;
+      --border: #E5E7EB;
+      --bg: #FFFFFF;
+      --bg-alt: #F9FAFB;
+      --radius: 8px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+                   "Noto Sans TC", "PingFang TC", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header / Nav ── */
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 0 24px;
+    }
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+    .header-title { font-size: 20px; font-weight: 700; }
+    .header-sub   { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+
+    nav {
+      background: var(--primary-dark);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+    }
+    nav a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      padding: 10px 16px;
+      font-size: 14px;
+      display: inline-block;
+      transition: color 0.15s, background 0.15s;
+    }
+    nav a:hover  { color: #fff; background: rgba(255,255,255,0.1); }
+    nav a.active { color: #fff; background: rgba(255,255,255,0.15); font-weight: 600; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #2563EB 50%, #1D4ED8 100%);
+      color: #fff;
+      padding: 72px 24px 80px;
+      text-align: center;
+    }
+    .hero .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 8px 20px 8px 10px;
+      margin-bottom: 28px;
+      font-size: 14px;
+    }
+    .hero .app-badge .badge-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .hero .tagline {
+      font-size: 20px;
+      opacity: 0.9;
+      margin-bottom: 16px;
+    }
+    .hero .desc {
+      font-size: 16px;
+      opacity: 0.8;
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: #fff;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+    .btn-primary:hover { opacity: 0.92; transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* ── Features ── */
+    .features {
+      padding: 64px 24px;
+      background: var(--bg);
+    }
+    .features-inner { max-width: 1000px; margin: 0 auto; }
+    .section-label {
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .section-desc {
+      text-align: center;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin: 0 auto 44px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 4px 20px rgba(26,86,219,0.1);
+    }
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+    .feature-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── Taiwan features highlight ── */
+    .taiwan-section {
+      background: var(--primary-light);
+      border-top: 1px solid #BFDBFE;
+      border-bottom: 1px solid #BFDBFE;
+      padding: 60px 24px;
+    }
+    .taiwan-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .taiwan-text h2 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .taiwan-text p {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+    .taiwan-list { list-style: none; padding: 0; }
+    .taiwan-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    .taiwan-list li::before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 2px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+      background-size: 14px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .taiwan-badge {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .taiwan-badge h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--primary); }
+    .badge-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .badge-item:last-child { border-bottom: none; }
+    .badge-item .badge-icon { font-size: 20px; width: 28px; text-align: center; }
+
+    /* ── Legal links ── */
+    .legal-section {
+      padding: 56px 24px;
+      background: var(--bg);
+    }
+    .legal-inner { max-width: 1000px; margin: 0 auto; }
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+    .legal-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-decoration: none;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      display: block;
+    }
+    .legal-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 2px 12px rgba(26,86,219,0.1);
+    }
+    .legal-card .lc-icon { font-size: 28px; margin-bottom: 12px; }
+    .legal-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .legal-card p  { font-size: 13px; color: var(--text-secondary); }
+    .legal-card .lc-arrow {
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: #111827;
+      color: #9CA3AF;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    footer a { color: #6B7280; text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: #D1D5DB; }
+    footer .copyright { margin-top: 10px; font-size: 12px; color: #6B7280; }
+
+    @media (max-width: 720px) {
+      .hero h1 { font-size: 30px; }
+      .hero .tagline { font-size: 16px; }
+      .taiwan-inner { grid-template-columns: 1fr; }
+      .taiwan-badge { display: none; }
+      .section-title { font-size: 24px; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 48px 16px 56px; }
+      .legal-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <div class="header-inner">
+    <div class="logo-mark">🚗</div>
+    <div>
+      <div class="header-title">Car Log Plus 車記加</div>
+      <div class="header-sub">台灣車輛管理 App</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="active">首頁</a>
+    <a href="privacy-policy.html">隱私政策</a>
+    <a href="terms-of-service.html">服務條款</a>
+    <a href="support.html">技術支援</a>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="app-badge">
+    <div class="badge-icon">🚗</div>
+    <span>台灣市場專用車輛管理 App</span>
+  </div>
+  <h1>Car Log Plus<br>車記加</h1>
+  <p class="tagline">讓愛車管理，從此輕鬆上手</p>
+  <p class="desc">加油記錄、保養提醒、油耗分析，整合台灣監理站查詢與即時油價，一切盡在掌握。</p>
+  <div class="hero-cta">
+    <a href="support.html" class="btn-primary">技術支援</a>
+    <a href="privacy-policy.html" class="btn-outline">隱私政策</a>
+  </div>
+</section>
+
+<!-- ── Features ── -->
+<section class="features">
+  <div class="features-inner">
+    <p class="section-label">核心功能</p>
+    <h2 class="section-title">全方位車輛管理</h2>
+    <p class="section-desc">從加油記錄到保養提醒，Car Log Plus 涵蓋您對車輛管理的所有需求。</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⛽</div>
+        <h3>加油記錄與油耗分析</h3>
+        <p>快速記錄每次加油，自動採用滿罐法計算油耗，圖表化展示油耗趨勢，輕鬆掌握愛車狀況。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3>保養記錄與到期提醒</h3>
+        <p>記錄每次保養工項與費用，設定里程或時間提醒，到期前自動通知，再也不會忘記保養。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>費用統計與年度報告</h3>
+        <p>分類統計保養、加油、罰款等各項費用，年度報告讓您清楚了解車輛的總體支出。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🚙</div>
+        <h3>多車管理</h3>
+        <p>同時管理多輛車輛，支援轎車、機車、電動車、油電混合車等車型，一個 App 搞定全家。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📷</div>
+        <h3>保養照片記錄</h3>
+        <p>為每次保養拍照存證，自動壓縮上傳，維修工單、零件照片一鍵保存，售車時有據可查。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>離線優先 + 資料加密</h3>
+        <p>所有資料優先儲存於本機，無需網路亦可正常使用。敏感憑證以 AES-256-CBC 加密保護。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Taiwan features ── -->
+<section class="taiwan-section">
+  <div class="taiwan-inner">
+    <div class="taiwan-text">
+      <h2>台灣在地化整合</h2>
+      <p>專為台灣駕駛設計，深度整合台灣政府與在地服務，讓您的用車生活更便利。</p>
+      <ul class="taiwan-list">
+        <li>監理站（MVDIS）驗車到期日查詢</li>
+        <li>監理站違規記錄與燃料費狀態查詢</li>
+        <li>經濟部能源局即時油價查詢</li>
+        <li>台灣中油 CPC 最新油價資訊</li>
+        <li>監理站里程歷史記錄（驗車紀錄）</li>
+      </ul>
+    </div>
+    <div class="taiwan-badge">
+      <h3>整合服務清單</h3>
+      <div class="badge-item">
+        <span class="badge-icon">🏛️</span>
+        <span>交通部公路局 MVDIS 監理服務網</span>
+      </div>
+      <div class="badge-item">
+        <span class="badge-icon">⚡</span>
+        <span>經濟部能源局油價查詢 API</span>
+      </div>
+      <div class="badge-item">
+        <span class="badge-icon">🛢️</span>
+        <span>台灣中油 CPC 油價資訊</span>
+      </div>
+      <div class="badge-item">
+        <span class="badge-icon">🗺️</span>
+        <span>Google Maps 附近加油站搜尋</span>
+      </div>
+      <div class="badge-item">
+        <span class="badge-icon">☁️</span>
+        <span>Firebase 雲端同步（可選）</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Legal / Info links ── -->
+<section class="legal-section">
+  <div class="legal-inner">
+    <p class="section-label">法律資訊</p>
+    <h2 class="section-title" style="margin-bottom: 32px;">政策與支援</h2>
+    <div class="legal-grid">
+      <a href="privacy-policy.html" class="legal-card">
+        <div class="lc-icon">🔒</div>
+        <h3>隱私權政策</h3>
+        <p>了解我們如何收集、使用及保護您的個人資料，包含 MVDIS 敏感資料的安全說明。</p>
+        <div class="lc-arrow">閱讀全文 →</div>
+      </a>
+      <a href="terms-of-service.html" class="legal-card">
+        <div class="lc-icon">📄</div>
+        <h3>服務條款</h3>
+        <p>使用規範、智慧財產權聲明、監理站資料免責聲明及準據法等重要條款。</p>
+        <div class="lc-arrow">閱讀全文 →</div>
+      </a>
+      <a href="support.html" class="legal-card">
+        <div class="lc-icon">💬</div>
+        <h3>技術支援</h3>
+        <p>常見問題解答、問題回報指引，以及各類聯繫方式。</p>
+        <div class="lc-arrow">前往支援 →</div>
+      </a>
+      <a href="mailto:support@carlogplus.com" class="legal-card">
+        <div class="lc-icon">📧</div>
+        <h3>聯繫我們</h3>
+        <p>有任何問題或建議，歡迎透過電子郵件直接聯繫我們的團隊。</p>
+        <div class="lc-arrow">寄送郵件 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div>
+    <a href="index.html">首頁</a>
+    <a href="privacy-policy.html">隱私政策</a>
+    <a href="terms-of-service.html">服務條款</a>
+    <a href="support.html">技術支援</a>
+    <a href="mailto:support@carlogplus.com">聯繫我們</a>
+  </div>
+  <div class="copyright">© 2026 Car Log Plus 車記加. All rights reserved. | 台灣製造，專為台灣駕駛設計</div>
+</footer>
+
+</body>
+</html>

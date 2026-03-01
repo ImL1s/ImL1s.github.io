@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LendLocal - Terms of Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: #1e293b;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+            padding: 3rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .logo {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: -1px;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: #D97706;
+            margin: 2rem 0 1rem;
+            padding-top: 1rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: #334155;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #475569;
+        }
+
+        ul,
+        ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: #475569;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: #1e293b;
+        }
+
+        .highlight {
+            background: #fef9ee;
+            border-left: 4px solid #F59E0B;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: #92400e;
+        }
+
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .warning p {
+            margin: 0;
+            color: #92400e;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+
+        a {
+            color: #D97706;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #f8fafc;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        td {
+            color: #475569;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">L</div>
+            <h1>LendLocal</h1>
+            <p class="subtitle">Terms of Service</p>
+        </header>
+
+        <main>
+            <p><strong>Effective Date:</strong> February 20, 2026</p>
+
+            <p>Please read these Terms of Service ("Terms") carefully before using LendLocal (the "App"), developed by
+                CB Studio ("we," "us," or "our"). By downloading or using the App, you agree to be bound by these
+                Terms. If you do not agree, do not use the App.</p>
+
+            <h2>1. Description of the App</h2>
+            <p>LendLocal is an automated lending tool that interfaces with the Bitfinex cryptocurrency exchange on your
+                behalf. The App runs entirely on your device and uses your own Bitfinex API credentials to manage
+                funding offers in the peer-to-peer lending market. The App does not provide brokerage, investment
+                advisory, or financial services.</p>
+
+            <div class="warning">
+                <p><strong>Not Financial Advice.</strong> LendLocal is a software tool only. Nothing in the App or
+                    these Terms constitutes financial advice, investment advice, or a recommendation to buy, sell, or
+                    hold any asset. All lending decisions are ultimately yours.</p>
+            </div>
+
+            <h2>2. Eligibility</h2>
+            <p>By using the App, you represent and warrant that:</p>
+            <ul>
+                <li>You are at least 18 years of age (or the age of majority in your jurisdiction)</li>
+                <li>You have a valid Bitfinex account and comply with Bitfinex's own terms of service</li>
+                <li>Your use of the App is lawful under the laws of your jurisdiction</li>
+                <li>You have the legal right and authority to engage in cryptocurrency lending activities in your
+                    country or region</li>
+            </ul>
+
+            <h2>3. User Responsibilities</h2>
+
+            <h3>3.1 API Key Security</h3>
+            <p>You are solely responsible for the security of your Bitfinex API keys. You should:</p>
+            <ul>
+                <li>Create API keys with only the minimum permissions necessary for lending (read access + funding
+                    order management; <strong>no withdrawal permissions</strong>)</li>
+                <li>Never share your API keys with anyone</li>
+                <li>Immediately revoke and replace keys if you suspect compromise</li>
+                <li>Protect your device with a passcode, Face ID, or fingerprint lock</li>
+            </ul>
+
+            <h3>3.2 Lending Decisions</h3>
+            <p>You acknowledge that:</p>
+            <ul>
+                <li>You are solely responsible for configuring the App's lending parameters (interest rates,
+                    durations, minimum amounts, etc.)</li>
+                <li>The App will execute lending actions automatically based on your configuration</li>
+                <li>Past lending rates and returns do not guarantee future results</li>
+                <li>You bear all financial risk associated with lending on the Bitfinex platform</li>
+            </ul>
+
+            <h3>3.3 Compliance with Bitfinex Terms</h3>
+            <p>Your use of LendLocal must comply with Bitfinex's own Terms of Service, acceptable use policies, and
+                API usage guidelines. We are not affiliated with Bitfinex and cannot be held responsible for any
+                actions Bitfinex takes with respect to your account.</p>
+
+            <h2>4. No Guarantee of Results</h2>
+            <p>We make no representations, warranties, or guarantees that:</p>
+            <ul>
+                <li>The App will generate any profit or specific return</li>
+                <li>The App will execute offers at any particular rate or timing</li>
+                <li>The App will be available or function without interruption</li>
+                <li>Any lending strategy implemented by the App is optimal or suitable for your circumstances</li>
+            </ul>
+
+            <div class="warning">
+                <p><strong>Risk Acknowledgment.</strong> Cryptocurrency lending involves significant financial risk,
+                    including but not limited to: counterparty default, exchange insolvency, regulatory changes,
+                    market volatility, and technical failures. You accept all such risks by using the App.</p>
+            </div>
+
+            <h2>5. Disclaimer of Warranties</h2>
+            <p>The App is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranty of
+                any kind. To the fullest extent permitted by applicable law, CB Studio expressly disclaims all
+                warranties, whether express, implied, statutory, or otherwise, including:</p>
+            <ul>
+                <li>Implied warranties of merchantability and fitness for a particular purpose</li>
+                <li>Warranties of title and non-infringement</li>
+                <li>Warranties that the App will be error-free, secure, or uninterrupted</li>
+                <li>Warranties as to the accuracy or reliability of any results obtained through the App</li>
+            </ul>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, CB Studio and its developers shall not be liable
+                for:</p>
+            <ul>
+                <li>Any direct, indirect, incidental, special, consequential, or punitive damages</li>
+                <li>Any financial losses, including lost profits or lost lending income</li>
+                <li>Losses arising from unauthorized access to your API keys or Bitfinex account</li>
+                <li>Losses due to exchange downtime, API changes, or Bitfinex platform issues</li>
+                <li>Any bugs, errors, or inaccuracies in the App's lending logic</li>
+                <li>Losses arising from your misconfiguration of the App's settings</li>
+            </ul>
+            <p>In no event shall our total liability exceed the amount you paid for the App (if any).</p>
+
+            <h2>7. Intellectual Property</h2>
+            <p>The App and its original content, features, and functionality are owned by CB Studio and are protected
+                by applicable intellectual property laws. You are granted a limited, non-exclusive, non-transferable
+                license to use the App for your personal, non-commercial use on your own devices.</p>
+            <p>You may not:</p>
+            <ul>
+                <li>Copy, modify, or distribute the App's source code</li>
+                <li>Reverse engineer or decompile the App</li>
+                <li>Sublicense, sell, or rent the App to third parties</li>
+            </ul>
+
+            <h2>8. Termination</h2>
+            <p>You may stop using the App at any time by uninstalling it. We reserve the right to discontinue the App
+                or release updates that change its functionality at any time without notice. We are not obligated to
+                provide maintenance, updates, or support.</p>
+
+            <h2>9. Third-Party Services</h2>
+            <p>The App connects to the Bitfinex API. Your use of Bitfinex is governed solely by Bitfinex's own terms
+                and policies. We are not responsible for Bitfinex's availability, accuracy, or actions. Links to
+                third-party websites or services are provided for convenience only and do not constitute our
+                endorsement.</p>
+
+            <h2>10. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of China
+                (Taiwan), without regard to its conflict of law provisions. Any disputes arising under these Terms
+                shall be subject to the exclusive jurisdiction of the courts located in Taiwan.</p>
+
+            <h2>11. Changes to These Terms</h2>
+            <p>We may update these Terms from time to time. We will indicate changes by updating the effective date
+                at the top of this page. Your continued use of the App after any changes constitutes your acceptance
+                of the new Terms. If you do not agree with the updated Terms, you must stop using the App.</p>
+
+            <h2>12. Severability</h2>
+            <p>If any provision of these Terms is found to be unenforceable or invalid under applicable law, that
+                provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions
+                will continue in full force and effect.</p>
+
+            <h2>13. Contact Us</h2>
+            <p>If you have questions about these Terms of Service, please contact us at:</p>
+            <p><a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></p>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 CB Studio. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="lendlocal-privacy.html">Privacy Policy</a>
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>

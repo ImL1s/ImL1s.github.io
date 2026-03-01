@@ -1,0 +1,163 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1772344338851,
+  "projectRoot": "/Users/iml1s/Documents/mine/iml1s.github.io",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "assets"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "assets": {
+      "path": "assets",
+      "purpose": "Static assets",
+      "fileCount": 9,
+      "lastAccessed": 1772344338843,
+      "keyFiles": [
+        "ai_workflow.png",
+        "banner_v1.png",
+        "global_map.png",
+        "hero_illustration.png",
+        "light_wallet_hero.png"
+      ]
+    },
+    "bitfinex-lending-platform": {
+      "path": "bitfinex-lending-platform",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1772344338843,
+      "keyFiles": []
+    },
+    "car-log-plus": {
+      "path": "car-log-plus",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1772344338843,
+      "keyFiles": [
+        "index.html",
+        "privacy-policy.html",
+        "support.html",
+        "terms-of-service.html"
+      ]
+    },
+    "js": {
+      "path": "js",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1772344338844,
+      "keyFiles": [
+        "i18n.js"
+      ]
+    },
+    "kashvox": {
+      "path": "kashvox",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1772344338844,
+      "keyFiles": [
+        "index.html",
+        "privacy-policy.html",
+        "terms-of-service.html"
+      ]
+    },
+    "moltx": {
+      "path": "moltx",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1772344338844,
+      "keyFiles": [
+        "child-safety.html",
+        "privacy.html",
+        "terms.html"
+      ]
+    },
+    "tidyup": {
+      "path": "tidyup",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1772344338845,
+      "keyFiles": []
+    },
+    "tron-wallet": {
+      "path": "tron-wallet",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1772344338845,
+      "keyFiles": [
+        "privacy-policy.html"
+      ]
+    },
+    "bitfinex-lending-platform/docs": {
+      "path": "bitfinex-lending-platform/docs",
+      "purpose": "Documentation",
+      "fileCount": 1,
+      "lastAccessed": 1772344338845,
+      "keyFiles": []
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "js/i18n.js",
+      "accessCount": 29,
+      "lastAccessed": 1772350817415,
+      "type": "directory"
+    },
+    {
+      "path": "resume.html",
+      "accessCount": 25,
+      "lastAccessed": 1772345217649,
+      "type": "file"
+    },
+    {
+      "path": "index.html",
+      "accessCount": 2,
+      "lastAccessed": 1772350809724,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1772350802686,
+      "type": "file"
+    },
+    {
+      "path": "README.zh-TW.md",
+      "accessCount": 1,
+      "lastAccessed": 1772350803048,
+      "type": "file"
+    },
+    {
+      "path": "CLAUDE.md",
+      "accessCount": 1,
+      "lastAccessed": 1772350873015,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

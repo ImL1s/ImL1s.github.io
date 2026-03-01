@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WearWallet - Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        .last-updated {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .contact {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WearWallet Privacy Policy</h1>
+    <p class="last-updated">Last Updated: January 2, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>
+        WearWallet is a multichain cryptocurrency wallet designed for Wear OS and watchOS smartwatches.
+        We are committed to protecting your privacy and ensuring the security of your digital assets.
+    </p>
+
+    <h2>2. Data Collection and Usage</h2>
+    <p>WearWallet is designed with privacy as a core principle. We collect minimal data necessary for the app to function:</p>
+    <ul>
+        <li><strong>Wallet Data:</strong> All wallet information (private keys, addresses, transaction history) is stored locally on your device and encrypted using industry-standard encryption (AES-256-GCM).</li>
+        <li><strong>Camera Permission:</strong> We request camera access solely for scanning QR codes to facilitate:
+            <ul>
+                <li>Transaction signing with Keystone 3 Pro hardware wallet (air-gapped communication)</li>
+                <li>Importing wallet addresses</li>
+                <li>Receiving cryptocurrency payments</li>
+            </ul>
+            Camera data is processed locally and never uploaded to any server.
+        </li>
+        <li><strong>Network Access:</strong> Required to connect to blockchain networks (Ethereum, BSC, Polygon, etc.) for checking balances and broadcasting transactions.</li>
+    </ul>
+
+    <h2>3. Data Storage and Security</h2>
+    <ul>
+        <li>All sensitive data (private keys, seed phrases) is encrypted and stored locally on your device using Android Keystore and iOS Keychain.</li>
+        <li>We do NOT store your private keys, passwords, or seed phrases on any remote server.</li>
+        <li>Transaction data is retrieved directly from public blockchain networks.</li>
+        <li>Optional 1Password integration is available for secure credential management.</li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <p>WearWallet may use the following third-party services:</p>
+    <ul>
+        <li><strong>Blockchain RPC Providers:</strong> Infura, Alchemy, or other RPC services to connect to blockchain networks.</li>
+        <li><strong>Firebase:</strong> For crash reporting and analytics (anonymized). You can opt-out in app settings.</li>
+        <li><strong>Price Data Providers:</strong> CoinGecko, CoinMarketCap for real-time cryptocurrency prices.</li>
+    </ul>
+    <p>These services have their own privacy policies. We do not share your personal wallet information with these services.</p>
+
+    <h2>5. Keystone Hardware Wallet Integration</h2>
+    <p>
+        When using Keystone 3 Pro hardware wallet features:
+    </p>
+    <ul>
+        <li>QR code communication is air-gapped and processed locally</li>
+        <li>Private keys never leave the Keystone device</li>
+        <li>Transaction data is transmitted via animated QR codes using bc-ur protocol</li>
+    </ul>
+
+    <h2>6. User Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+        <li>Access all data stored by the app (wallet data is fully accessible in the app)</li>
+        <li>Delete your wallet data at any time (uninstalling the app removes all local data)</li>
+        <li>Opt-out of analytics and crash reporting</li>
+        <li>Export your wallet using standard seed phrase or private key formats</li>
+    </ul>
+
+    <h2>7. Children's Privacy</h2>
+    <p>
+        WearWallet is not intended for use by individuals under the age of 18. We do not knowingly collect
+        personal information from children.
+    </p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>
+        We may update this privacy policy from time to time. We will notify users of significant changes
+        through app updates or notifications. Continued use of the app after changes constitutes acceptance
+        of the updated policy.
+    </p>
+
+    <h2>9. Open Source</h2>
+    <p>
+        WearWallet is an open-source project. You can review our source code and security practices at:
+        <a href="https://github.com/cbstudio/WearWallet" target="_blank">https://github.com/cbstudio/WearWallet</a>
+    </p>
+
+    <div class="contact">
+        <h2>10. Contact Us</h2>
+        <p>If you have questions or concerns about this privacy policy, please contact us:</p>
+        <ul>
+            <li><strong>Email:</strong> iml1s@outlook.com</li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/cbstudio/WearWallet/issues" target="_blank">Report an Issue</a></li>
+        </ul>
+    </div>
+
+    <hr style="margin-top: 50px; border: none; border-top: 1px solid #ddd;">
+    <p style="text-align: center; color: #7f8c8d; font-size: 0.9em;">
+        © 2026 WearWallet. An open-source cryptocurrency wallet for smartwatches.
+    </p>
+</body>
+</html>

@@ -107,7 +107,7 @@
 | :--- | :--- | :--- |
 | [**StickerAI Studio**](https://stickerstudio.xyz) | AI 驅動的 LINE 貼圖生成器 | `React` `Flutter` `Supabase` |
 | **Light Wallet** | 多鏈加密貨幣錢包（43+ 鏈） | `Flutter` `Ethers.js` `TypeScript` |
-| **加密 AI 分析** | 恐懼貪婪指數 + AI 市場洞察 | `Next.js` `FastAPI` |
+| **ChartWise – 市場研究** | 加密貨幣與股票 AI 圖表分析 | `Next.js` `FastAPI` |
 | **AutoStar** | 二手車實價登錄（38 品牌） | `Flutter` `Clean Architecture` |
 | **教育類 App** | 保險證照題庫、計程車駕照模擬考 | `Flutter` `Firebase` `AI` |
 

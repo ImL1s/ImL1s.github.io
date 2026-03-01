@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="User Guide and Documentation for the Bitfinex Lending Bot. Learn how to connect your API, choose lending strategies, and manage your passive income.">
+    <meta name="theme-color" content="#080808">
+
+    <title>User Guide | Bitfinex Lending Bot</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .guide-header {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .guide-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 80px;
+        }
+
+        .guide-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .guide-section h2 {
+            color: #d4af37;
+            /* text-gold */
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .guide-section h3 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: #fff;
+        }
+
+        .guide-section p,
+        .guide-section li {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .guide-section ul,
+        .guide-section ol {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .guide-section li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #d4af37;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="particle-bg" id="particles"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; color: inherit;">
+                    <span class="logo-icon">✦</span>
+                    <span class="logo-text">Lending<span class="text-gold">Bot</span></span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="/app" class="btn btn-primary">Launch App</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="guide-header">
+        <div class="container">
+            <h1 class="hero-title">User <span class="text-gradient">Guide</span></h1>
+            <p class="hero-subtitle" style="max-width: 600px; margin: 0 auto;">Everything you need to know about setting
+                up and running your automated Bitfinex lending strategies.</p>
+        </div>
+    </header>
+
+    <main class="guide-content">
+
+        <section class="guide-section">
+            <h2>1. Connecting Your Bitfinex Account</h2>
+            <p>To allow the bot to automate your lending, you must provide your Bitfinex API keys. We use these keys
+                <strong>strictly for lending operations</strong>.</p>
+
+            <h3>Required API Permissions</h3>
+            <p>For your security, you should only enable the minimum required permissions when creating your API key on
+                Bitfinex:</p>
+            <ul>
+                <li><strong>Margin Funding:</strong> Read & Write (Required to place and cancel lending offers)</li>
+                <li><strong>Wallets:</strong> Read (Required to check your available lending balance)</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Security Note:</strong> Make sure exactly <strong>zero</strong> withdrawal or trading
+                    permissions are enabled. The bot does not need them and cannot access your funds.</p>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <h2>2. Understanding Lending Strategies</h2>
+            <p>The Lending Bot supports multiple intelligent strategies designed for different market conditions. You
+                can switch between them at any time in the app.</p>
+
+            <h3>FRR (Flash Return Rate)</h3>
+            <p>A dynamic rate determined by the average of all fixed-rate funding contracts currently active. The bot
+                lends slightly above or below this rate to ensure maximum utilization of your funds while following the
+                market trend.</p>
+
+            <h3>Grid Strategy</h3>
+            <p>The Grid Strategy splits your available capital into multiple blocks and places them at staggered
+                interest rates (e.g., 10%, 15%, 20%). If the market interest rate spikes temporarily, your higher-tier
+                blocks will execute, capturing significant yields.</p>
+
+            <h3>Adaptive AI (Premium)</h3>
+            <p>Our proprietary machine learning model predicts short-term interest rate movements and adjusts your
+                lending rates automatically before market spikes occur.</p>
+        </section>
+
+        <section class="guide-section">
+            <h2>3. Managing Your Funds</h2>
+            <p>Once the bot is started, it will continuously monitor your Bitfinex funding wallet.</p>
+
+            <h3>Minimum Lending Amounts</h3>
+            <p>Bitfinex enforces strict minimums for placing lending offers. If your available balance is below this
+                threshold, the bot cannot place an offer:</p>
+            <ul>
+                <li><strong>USD:</strong> Minimum $50.00</li>
+                <li><strong>USDT:</strong> Minimum 50.00 USDT</li>
+            </ul>
+
+            <h3>Auto-Compounding</h3>
+            <p>By default, the Bitfinex Lending Bot fully embraces auto-compounding. As soon as a borrower repays a loan
+                plus interest, the bot immediately detects the newly available balance and includes it in your next
+                lending cycle.</p>
+        </section>
+
+        <section class="guide-section">
+            <h2>4. Troubleshooting</h2>
+
+            <h3>Why is my active session count 0?</h3>
+            <p>Ensure your API keys are correct and have not expired. Bitfinex API keys may require periodic renewal
+                depending on your security settings.</p>
+
+            <h3>Why are my funds sitting "Available"?</h3>
+            <p>This usually happens if your requested interest rate is currently much higher than the market rate, or if
+                your available balance is below the minimum required $50 threshold.</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <div class="logo">Lending<span class="text-gold">Bot</span></div>
+                <p class="copyright">© 2026 Lending Bot. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="aa22396584@gmail.com">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
