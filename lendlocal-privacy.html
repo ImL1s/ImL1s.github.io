@@ -70,19 +70,12 @@
             padding-top: 1rem;
         }
 
-        h3 {
-            font-size: 1.1rem;
-            color: #334155;
-            margin: 1.5rem 0 0.75rem;
-        }
-
         p {
             margin-bottom: 1rem;
             color: #475569;
         }
 
-        ul,
-        ol {
+        ul, ol {
             margin: 1rem 0 1rem 1.5rem;
             color: #475569;
         }
@@ -96,8 +89,8 @@
         }
 
         .highlight {
-            background: #fef9ee;
-            border-left: 4px solid #F59E0B;
+            background: #f0f7ff;
+            border-left: 4px solid #2196F3;
             padding: 1rem 1.25rem;
             border-radius: 0 8px 8px 0;
             margin: 1.5rem 0;
@@ -105,29 +98,30 @@
 
         .highlight p {
             margin: 0;
-            color: #92400e;
+            color: #1565c0;
         }
 
-        .warning {
-            background: #fef3c7;
-            border-left: 4px solid #f59e0b;
-            padding: 1rem 1.25rem;
-            border-radius: 0 8px 8px 0;
-            margin: 1.5rem 0;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
         }
 
-        .warning p {
-            margin: 0;
-            color: #92400e;
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.95rem;
         }
 
-        footer {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid #e2e8f0;
-            text-align: center;
-            color: #94a3b8;
-            font-size: 0.875rem;
+        th {
+            background: #f8fafc;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        td {
+            color: #475569;
         }
 
         a {
@@ -139,27 +133,13 @@
             text-decoration: underline;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-        }
-
-        th,
-        td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        th {
-            background: #f8fafc;
-            color: #334155;
-            font-weight: 600;
-        }
-
-        td {
-            color: #475569;
+        footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.875rem;
         }
     </style>
 </head>
@@ -173,106 +153,113 @@
         </header>
 
         <main>
-            <p><strong>Effective Date:</strong> February 20, 2026</p>
-
-            <h2>Overview</h2>
-            <p>LendLocal is an automated Bitfinex lending tool that runs entirely on your device. You provide your own
-                Bitfinex API keys and the app manages your lending positions on your behalf — locally, with no backend
-                server involved.</p>
+            <p><strong>Last updated:</strong> March 2026</p>
 
             <div class="highlight">
-                <p><strong>We do not collect any personal data.</strong> LendLocal has no servers, no accounts, no
-                    registration, and no cloud storage. Everything stays on your device.</p>
+                <p><strong>Summary:</strong> LendLocal stores your Bitfinex API credentials and lending
+                    configuration locally on your device. We use third-party services for ads,
+                    analytics, and crash reporting as described below.</p>
             </div>
 
-            <h2>Information We Collect</h2>
-            <p>LendLocal does <strong>not</strong> collect, transmit, or store any personal information on external
-                servers. Specifically:</p>
+            <h2>1. Overview</h2>
+            <p>LendLocal ("the App", "we", "us") is a local automation tool for Bitfinex lending.
+                This Privacy Policy explains what data we handle and how. Your Bitfinex API
+                credentials and lending configuration are stored exclusively on your device and
+                are never transmitted to our servers.</p>
+
+            <h2>2. Data Stored Locally on Your Device</h2>
+            <p>The App stores the following data <strong>exclusively on your device</strong>:</p>
             <ul>
-                <li>No account registration or login is required</li>
-                <li>No name, email address, or contact information is collected</li>
-                <li>No usage analytics or behavioral tracking</li>
-                <li>No crash reporting sent to external services</li>
-                <li>No advertising identifiers or device fingerprinting</li>
+                <li><strong>Bitfinex API Key &amp; Secret</strong> — stored in the platform's secure credential
+                    store (iOS Keychain / Android EncryptedSharedPreferences). Never leaves your device
+                    except when making authenticated requests directly to Bitfinex.</li>
+                <li><strong>Lending strategy configuration</strong> — rate ranges, min/max amounts, automation
+                    settings. Stored in encrypted local database (Hive CE).</li>
+                <li><strong>Historical lending records</strong> — offers, executions, and earnings data
+                    fetched from your Bitfinex account and cached locally for display.</li>
+            </ul>
+            <p>This data is never uploaded to any server controlled by LendLocal.</p>
+
+            <h2>3. Third-Party Services</h2>
+            <p>The App integrates the following third-party services:</p>
+
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Data Collected</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td><strong>Bitfinex API</strong></td>
+                    <td>Trading/lending data via your API key</td>
+                    <td>Core lending functionality</td>
+                </tr>
+                <tr>
+                    <td><strong>Google AdMob</strong></td>
+                    <td>Device identifiers, ad interaction data</td>
+                    <td>Displaying advertisements</td>
+                </tr>
+                <tr>
+                    <td><strong>Firebase Analytics</strong></td>
+                    <td>App usage events, screen views</td>
+                    <td>Understanding app usage patterns</td>
+                </tr>
+                <tr>
+                    <td><strong>Firebase Crashlytics</strong></td>
+                    <td>Crash logs, device info, stack traces</td>
+                    <td>Identifying and fixing bugs</td>
+                </tr>
+                <tr>
+                    <td><strong>RevenueCat</strong></td>
+                    <td>Purchase history, subscription status</td>
+                    <td>Managing in-app subscriptions</td>
+                </tr>
+            </table>
+
+            <p>Each of these services has its own privacy policy governing how they handle data:</p>
+            <ul>
+                <li><a href="https://www.bitfinex.com/privacy" target="_blank" rel="noopener">Bitfinex Privacy Policy</a></li>
+                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> (AdMob, Firebase)</li>
+                <li><a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a></li>
             </ul>
 
-            <h2>API Key Storage</h2>
-            <p>Your Bitfinex API keys are the only sensitive data the app handles. They are stored exclusively on your
-                device using the platform's built-in secure storage:</p>
+            <h2>4. Advertising</h2>
+            <p>The App displays ads via Google AdMob. AdMob may use device identifiers
+                (such as the Advertising ID) to serve personalized ads. You can opt out
+                of personalized ads through your device settings:</p>
             <ul>
-                <li><strong>iOS:</strong> Stored in the iOS Keychain — Apple's hardware-backed secure enclave</li>
-                <li><strong>Android:</strong> Stored in the Android KeyStore — Android's hardware-backed secure
-                    credential storage</li>
+                <li><strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking</li>
+                <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
             </ul>
 
-            <div class="highlight">
-                <p><strong>Your API keys never leave your device.</strong> They are never transmitted to our servers
-                    (we have no servers), never stored in the cloud, and never shared with any third party.</p>
-            </div>
-
-            <h2>How the App Communicates</h2>
-            <p>LendLocal communicates directly from your device to Bitfinex's own API using your API credentials. The
-                data flow is:</p>
+            <h2>5. Data We Do NOT Collect</h2>
             <ul>
-                <li>Your Device &rarr; Bitfinex API (direct connection)</li>
-                <li>There is no intermediate server or proxy owned by CB Studio</li>
-            </ul>
-            <p>All communication with Bitfinex is encrypted via HTTPS/TLS, consistent with Bitfinex's own security
-                standards. Please review <a href="https://www.bitfinex.com/legal/privacy" target="_blank"
-                    rel="noopener">Bitfinex's Privacy Policy</a> for details on how they handle API requests.</p>
-
-            <h2>Data Stored on Your Device</h2>
-            <p>The app may store the following information locally on your device only:</p>
-            <ul>
-                <li><strong>API Keys:</strong> Stored in Keychain / KeyStore (encrypted, secure)</li>
-                <li><strong>App Settings &amp; Preferences:</strong> Strategy configuration, rate thresholds, and other
-                    lending parameters</li>
-                <li><strong>Lending History Cache:</strong> Temporary cache of recent lending activity fetched from
-                    Bitfinex, used for display purposes only</li>
-            </ul>
-            <p>All of this data remains on your device and can be deleted at any time by uninstalling the app.</p>
-
-            <h2>Third-Party Services</h2>
-            <p>LendLocal does not integrate with any analytics, advertising, or tracking services. The only external
-                service the app communicates with is:</p>
-            <ul>
-                <li><strong>Bitfinex API</strong> — to execute lending operations on your behalf using your own
-                    credentials</li>
-            </ul>
-            <p>We have no other third-party integrations.</p>
-
-            <h2>No Analytics or Tracking</h2>
-            <p>LendLocal contains:</p>
-            <ul>
-                <li>No analytics SDKs (no Firebase Analytics, no Mixpanel, no Amplitude, etc.)</li>
-                <li>No advertising networks</li>
-                <li>No crash reporting services that transmit data externally</li>
-                <li>No cookies or web tracking of any kind</li>
+                <li>No personal information (name, email, phone number)</li>
+                <li>No location data</li>
+                <li>No contacts or photos</li>
+                <li>No financial data beyond what you explicitly configure locally</li>
             </ul>
 
-            <h2>Children's Privacy</h2>
-            <p>LendLocal is not intended for children under the age of 13. We do not knowingly collect any information
-                from children. As the app requires a Bitfinex account (which itself has age requirements), use by
-                minors is not applicable.</p>
-
-            <h2>Data Security</h2>
-            <p>Because we collect no data, there is no centralized database to breach. Your API keys are protected by
-                the same hardware-level security that protects your device passwords and banking apps. We strongly
-                recommend:</p>
+            <h2>6. Security</h2>
+            <p>Your API credentials are protected by the operating system's secure storage mechanisms:</p>
             <ul>
-                <li>Using a device passcode or biometric lock</li>
-                <li>Creating Bitfinex API keys with only the minimum required permissions (no withdrawal permissions
-                    needed)</li>
-                <li>Regularly reviewing your active API keys in your Bitfinex account settings</li>
+                <li><strong>iOS:</strong> Keychain Services with kSecAttrAccessibleWhenUnlocked</li>
+                <li><strong>Android:</strong> EncryptedSharedPreferences backed by Android Keystore</li>
             </ul>
+            <p>We recommend enabling device-level biometric authentication for additional security.
+                LendLocal never requests withdrawal permissions — use read-only or funding-only API keys.</p>
 
-            <h2>Changes to This Policy</h2>
-            <p>If we make material changes to this privacy policy, we will update the effective date at the top of this
-                page. We encourage you to review this page periodically. Since we collect no data, changes are unlikely
-                to affect your privacy.</p>
+            <h2>7. Children's Privacy</h2>
+            <p>The App is not directed at children under 13. We do not knowingly collect data from
+                minors.</p>
 
-            <h2>Contact Us</h2>
-            <p>If you have any questions about this privacy policy, please contact us at:</p>
+            <h2>8. Changes to This Policy</h2>
+            <p>If we ever change this Privacy Policy, we will update the "Last updated" date above
+                and notify users through an in-app notice. Continued use of the App after changes
+                constitutes acceptance of the updated policy.</p>
+
+            <h2>9. Contact</h2>
+            <p>If you have questions about this Privacy Policy, please contact us at:</p>
             <p><a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></p>
         </main>
 
