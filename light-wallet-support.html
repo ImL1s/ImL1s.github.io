@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Wallet - Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #e2e8f0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            min-height: 100vh;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            color: #94a3b8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .section-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-card h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(180deg, #60a5fa 0%, #a78bfa 100%);
+            border-radius: 2px;
+        }
+
+        .section-card p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+        }
+
+        .section-card ul {
+            margin: 1rem 0 0 1.5rem;
+            color: #cbd5e1;
+        }
+
+        .section-card li {
+            margin-bottom: 0.75rem;
+        }
+
+        .section-card strong {
+            color: #f1f5f9;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: opacity 0.2s;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.9;
+        }
+
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1rem 0;
+        }
+
+        .warning-box p {
+            color: #f87171;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .section-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <h1>Light Wallet</h1>
+        <p class="subtitle">Support Center</p>
+    </section>
+
+    <div class="container">
+        <div class="section-card">
+            <h2>Contact Us</h2>
+            <p>Have questions or need help? We're here to assist you.</p>
+            <a href="mailto:aa22396584@gmail.com" class="contact-btn">📧 Email Support</a>
+            <p style="margin-top: 1.5rem;"><strong>Email:</strong> aa22396584@gmail.com</p>
+            <p>We typically respond within 24-48 hours.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>Frequently Asked Questions</h2>
+            <ul>
+                <li><strong>How do I back up my wallet?</strong><br>Go to Settings → Security → Show Recovery Phrase.
+                    Write down the 12 or 24 words and store them in a safe offline location.</li>
+                <li><strong>Can I recover my wallet on a new device?</strong><br>Yes, use your recovery phrase to
+                    restore your wallet on any device by selecting "Restore Wallet" during setup.</li>
+                <li><strong>Which blockchains are supported?</strong><br>Light Wallet supports 40+ chains including
+                    Bitcoin, Ethereum, BNB Chain, Solana, TON, Cosmos, Polkadot, Tron, and many more.</li>
+                <li><strong>Is Light Wallet free?</strong><br>Yes, Light Wallet is free to use. Standard network fees
+                    apply for blockchain transactions.</li>
+                <li><strong>How is my wallet secured?</strong><br>Private keys are encrypted with AES-256 and stored in
+                    your device's secure enclave. The app supports PIN and biometric authentication.</li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h2>Security Warnings</h2>
+            <div class="warning-box">
+                <p>🚫 We will NEVER ask for your recovery phrase, private keys, or PIN. If someone asks for these, it is
+                    a scam.</p>
+            </div>
+            <ul>
+                <li>Never share your recovery phrase with anyone</li>
+                <li>Always verify transaction details before confirming</li>
+                <li>Be cautious of phishing websites and fake support channels</li>
+                <li>Only download Light Wallet from official app stores</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024-2026 CB Studio. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="light-wallet-privacy.html">Privacy Policy</a> · <a
+                href="light-wallet-terms.html">Terms of Service</a></p>
+        <p style="margin-top: 1rem;"><a href="index.html">← Back to Portfolio</a></p>
+    </footer>
+</body>
+
+</html>

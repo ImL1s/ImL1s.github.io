@@ -23,26 +23,10 @@
             min-height: 100vh;
         }
 
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 4rem 2rem 3rem;
             background: linear-gradient(180deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
-        }
-
-        .hero-image {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 2rem;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 0 60px rgba(59, 130, 246, 0.3);
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
         }
 
         .hero h1 {
@@ -60,14 +44,12 @@
             color: #94a3b8;
         }
 
-        /* Container */
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 2rem 4rem;
         }
 
-        /* Highlight Box */
         .highlight {
             background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
             border: 1px solid rgba(34, 197, 94, 0.3);
@@ -84,7 +66,6 @@
             margin: 0;
         }
 
-        /* Section Cards */
         .section-card {
             background: rgba(30, 41, 59, 0.5);
             border: 1px solid rgba(148, 163, 184, 0.1);
@@ -131,7 +112,6 @@
             color: #f1f5f9;
         }
 
-        /* Feature Grid */
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -158,7 +138,6 @@
             color: #94a3b8;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 2rem;
@@ -176,15 +155,9 @@
             text-decoration: underline;
         }
 
-        /* Responsive */
         @media (max-width: 640px) {
             .hero h1 {
                 font-size: 1.75rem;
-            }
-
-            .hero-image {
-                width: 150px;
-                height: 150px;
             }
 
             .section-card {
@@ -196,16 +169,13 @@
 
 <body>
     <section class="hero">
-        <div class="hero-image">
-            <img src="assets/privacy_shield.png" alt="Privacy Shield">
-        </div>
         <h1>Light Wallet</h1>
         <p class="subtitle">Privacy Policy</p>
     </section>
 
     <div class="container">
         <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">
-            <strong>Last updated:</strong> December 2024
+            <strong>Last updated:</strong> March 2026
         </p>
 
         <div class="highlight">
@@ -214,22 +184,11 @@
 
         <div class="section-card">
             <h2>Overview</h2>
-            <p>Light Wallet is a browser extension that allows users to manage Ethereum-based cryptocurrency. We are
-                committed to protecting your privacy and ensuring the security of your sensitive data.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>What We Collect</h2>
-            <p>We use <strong>Google Analytics</strong> to collect anonymous usage statistics to help improve the
-                extension:</p>
-            <ul>
-                <li>Page views and feature usage patterns</li>
-                <li>Device type and browser information</li>
-                <li>General geographic location (country/region level)</li>
-                <li>Session duration and interaction metrics</li>
-            </ul>
-            <p style="margin-top: 1rem; color: #94a3b8;"><em>This data is anonymized and cannot be used to identify you
-                    personally.</em></p>
+            <p>Light Wallet is a <strong>non-custodial, multi-chain cryptocurrency wallet</strong> application for
+                Android, iOS, and desktop platforms. We are committed to protecting your privacy and ensuring the
+                security of your sensitive data.</p>
+            <p>This privacy policy describes how CB Studio ("we", "us", or "our") collects, uses, and shares information
+                when you use the Light Wallet application ("App").</p>
         </div>
 
         <div class="section-card">
@@ -251,31 +210,63 @@
                     <div class="feature-icon">🔐</div>
                     <p>Passwords or PINs</p>
                 </div>
+                <div class="feature-item">
+                    <div class="feature-icon">👤</div>
+                    <p>Personal information (name, email, phone)</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📍</div>
+                    <p>Location data</p>
+                </div>
             </div>
         </div>
 
         <div class="section-card">
-            <h2>Local Data Storage</h2>
-            <p>All sensitive data is stored locally on your device using your browser's secure storage:</p>
+            <h2>Information We May Collect</h2>
+            <p>We use <strong>Firebase Crashlytics</strong> and <strong>Firebase Analytics</strong> to help improve app
+                stability and user experience:</p>
             <ul>
-                <li><strong>Private Keys & Seed Phrases:</strong> Encrypted and stored only on your device. They never
-                    leave your browser.</li>
-                <li><strong>Wallet Settings:</strong> Network preferences and settings are stored locally.</li>
-                <li><strong>Transaction History:</strong> Fetched from public blockchain explorers, not stored by us.
-                </li>
+                <li><strong>Crash Data:</strong> Anonymous crash reports including device model, OS version, and stack
+                    traces. This data is not linked to your identity.</li>
+                <li><strong>Usage Analytics:</strong> Anonymous interaction data such as screen views and feature usage
+                    patterns. No personal or financial data is included.</li>
+                <li><strong>Device Information:</strong> Device type, operating system version, and app version for
+                    diagnostic purposes.</li>
+            </ul>
+            <p style="margin-top: 1rem; color: #94a3b8;"><em>All collected data is anonymous and cannot be used to
+                    identify you personally or access your wallet.</em></p>
+        </div>
+
+        <div class="section-card">
+            <h2>Local Data Storage</h2>
+            <p>All sensitive wallet data is stored <strong>locally on your device</strong> using platform-native secure
+                storage:</p>
+            <ul>
+                <li><strong>Private Keys & Seed Phrases:</strong> Encrypted using AES-256 and stored in Android Keystore
+                    / iOS Keychain. They never leave your device.</li>
+                <li><strong>Wallet Settings:</strong> Network preferences, selected chains, and display settings are
+                    stored locally using Hive encrypted storage.</li>
+                <li><strong>Transaction History:</strong> Fetched from public blockchain nodes and explorers on demand;
+                    not stored on our servers.</li>
+                <li><strong>Biometric Data:</strong> Fingerprint/Face authentication is handled entirely by your
+                    device's secure hardware. We never access or store biometric data.</li>
             </ul>
         </div>
 
         <div class="section-card">
             <h2>Third-Party Services</h2>
-            <p>Light Wallet interacts with the following external services:</p>
+            <p>Light Wallet interacts with the following external services to provide core functionality:</p>
             <ol>
-                <li><strong>Google Analytics:</strong> For anonymous usage statistics</li>
-                <li><strong>Ethereum RPC Providers:</strong> To query blockchain data and submit transactions</li>
-                <li><strong>Block Explorers (Etherscan, etc.):</strong> To fetch transaction history</li>
-                <li><strong>CoinGecko API:</strong> To fetch current cryptocurrency prices</li>
+                <li><strong>Blockchain RPC Providers (Infura, public nodes):</strong> To query blockchain state and
+                    broadcast transactions</li>
+                <li><strong>Block Explorers (Etherscan, Blockchair, etc.):</strong> To fetch transaction history</li>
+                <li><strong>Price APIs (CoinGecko):</strong> To display current cryptocurrency prices</li>
+                <li><strong>Firebase (Google):</strong> For anonymous crash reporting and usage analytics</li>
+                <li><strong>WalletConnect:</strong> For connecting to decentralized applications (DApps)</li>
+                <li><strong>Rango Exchange / 0x Protocol:</strong> For token swap functionality</li>
             </ol>
-            <p>These services receive only necessary data and are subject to their own privacy policies.</p>
+            <p>These services may receive blockchain addresses or transaction data as required for their operation.
+                Please refer to their respective privacy policies for details.</p>
         </div>
 
         <div class="section-card">
@@ -283,36 +274,67 @@
             <div class="feature-grid">
                 <div class="feature-item">
                     <div class="feature-icon">🔐</div>
-                    <p>Industry-standard encryption</p>
+                    <p>AES-256 encryption for private keys</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">📱</div>
-                    <p>Keys never leave device</p>
+                    <p>Platform Keystore / Keychain integration</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <p>Screenshot protection (Android)</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">⏰</div>
-                    <p>Auto-lock protection</p>
+                    <p>Auto-lock with PIN/Biometric</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <p>HTTPS/TLS for all network communication</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📦</div>
+                    <p>R8 code obfuscation (Android)</p>
                 </div>
             </div>
         </div>
 
         <div class="section-card">
-            <h2>Your Rights</h2>
-            <p>Since we don't collect personal data, there is no personal data to access, correct, or delete. All your
-                data remains under your control on your device.</p>
+            <h2>Children's Privacy</h2>
+            <p>Light Wallet is not intended for use by children under the age of 13. We do not knowingly collect
+                information from children under 13.</p>
         </div>
 
         <div class="section-card">
-            <h2>Contact</h2>
-            <p>For questions about this privacy policy, please open an issue on our <a
-                    href="https://github.com/iml1s/light-wallet-extension" target="_blank" rel="noopener">GitHub
-                    repository</a>.</p>
+            <h2>Your Rights</h2>
+            <p>Since we do not collect personal data, there is no personal data to access, correct, or delete. All your
+                wallet data remains under your sole control on your device. You can delete all local data by
+                uninstalling the app.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new
+                Privacy Policy on this page and updating the "Last updated" date.</p>
+        </div>
+
+        <div class="section-card">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:aa22396584@gmail.com"
+                        style="color: #60a5fa;">aa22396584@gmail.com</a></li>
+                <li><strong>Developer:</strong> CB Studio</li>
+                <li><strong>Website:</strong> <a href="https://iml1s.github.io"
+                        style="color: #60a5fa;">https://iml1s.github.io</a></li>
+            </ul>
         </div>
     </div>
 
     <footer>
-        <p>Light Wallet is open-source software.</p>
-        <p>&copy; 2024 Light Wallet. All rights reserved.</p>
+        <p>&copy; 2024-2026 CB Studio. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;"><a href="light-wallet-terms.html">Terms of Service</a> · <a
+                href="light-wallet-support.html">Support</a></p>
         <p style="margin-top: 1rem;"><a href="index.html">← Back to Portfolio</a></p>
     </footer>
 </body>
