@@ -74,6 +74,8 @@ const translations = {
         // Project: Intake
         'project.intake.title': 'Intake',
         'project.intake.desc': 'AI 食物掃描與熱量追蹤，輕鬆記錄每日飲食與營養攝取。',
+        'project.kashvox.title': 'KashVox - AI 語音記帳',
+        'project.kashvox.desc': 'AI 語音與拍照智能記帳助手。語音描述或拍攝收據即可自動分類記帳，支援多帳戶、預算追蹤、統計報表。',
 
         // Project: FlashClaw
         'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
@@ -332,6 +334,8 @@ const translations = {
         // Project: Intake
         'project.intake.title': 'Intake',
         'project.intake.desc': 'AI 食物扫描与热量追踪，轻松记录每日饮食与营养摄取。',
+        'project.kashvox.title': 'KashVox - AI 语音记账',
+        'project.kashvox.desc': 'AI 语音与拍照智能记账助手。语音描述或拍摄收据即可自动分类记账，支持多账户、预算追踪、统计报表。',
 
         // Project: FlashClaw
         'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
@@ -590,6 +594,8 @@ const translations = {
         // Project: Intake
         'project.intake.title': 'Intake',
         'project.intake.desc': 'AI food scanner & calorie tracker. Effortlessly log daily meals and nutrition intake.',
+        'project.kashvox.title': 'KashVox - AI Voice Accounting',
+        'project.kashvox.desc': 'AI-powered voice & camera accounting assistant. Speak or snap receipts to auto-categorize expenses, with multi-account, budget tracking & analytics.',
 
         // Project: FlashClaw
         'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
@@ -848,6 +854,8 @@ const translations = {
         // Project: Intake
         'project.intake.title': 'Intake',
         'project.intake.desc': 'AI食品スキャナー＆カロリートラッカー。毎日の食事と栄養摂取を簡単に記録。',
+        'project.kashvox.title': 'KashVox - AI音声家計簿',
+        'project.kashvox.desc': 'AI音声＆カメラ対応のスマート家計簿。話すかレシートを撮るだけで自動分類記帳。複数口座・予算管理・統計レポート対応。',
 
         // Project: FlashClaw
         'project.flashclaw.title': 'FlashClaw - OpenClaw Agent',
