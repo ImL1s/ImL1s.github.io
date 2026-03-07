@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoLens — AI-Powered Crypto Chart Analysis</title>
+    <meta name="description"
+        content="CryptoLens uses AI to analyze cryptocurrency charts in 10 seconds. Screenshot your TradingView chart, get instant technical analysis with support levels, trend detection, and trading strategies.">
+    <meta name="keywords"
+        content="crypto chart analysis, AI trading, TradingView analysis, cryptocurrency technical analysis, Bitcoin analysis, crypto AI">
+    <link rel="canonical" href="https://iml1s.github.io/cryptolens/">
+    <link rel="alternate" hreflang="en" href="https://iml1s.github.io/cryptolens/">
+    <link rel="alternate" hreflang="zh-TW" href="https://iml1s.github.io/cryptolens/zh-TW/">
+    <link rel="alternate" hreflang="x-default" href="https://iml1s.github.io/cryptolens/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CryptoLens — AI Chart Analysis for Crypto">
+    <meta property="og:description"
+        content="Screenshot → 10-second AI analysis. Pro technical analysis with support/resistance, trend detection, and DCA strategies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iml1s.github.io/cryptolens/">
+    <meta property="og:image" content="https://iml1s.github.io/cryptolens/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CryptoLens — AI Chart Analysis">
+    <meta name="twitter:description" content="Screenshot your crypto chart → Get AI analysis in 10 seconds.">
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "CryptoLens",
+        "operatingSystem": ["Android"],
+        "applicationCategory": "FinanceApplication",
+        "description": "AI-powered cryptocurrency chart analysis tool. Screenshot your TradingView chart and get instant technical analysis with trend detection, support/resistance levels, and trading strategies.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "CB Studio"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "10"
+        }
+    }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is CryptoLens?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CryptoLens is an AI-powered cryptocurrency chart analysis tool. You screenshot a TradingView chart, and the AI analyzes it in about 10 seconds, providing trend detection, support/resistance levels, and actionable trading strategies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is CryptoLens free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, CryptoLens offers 5 free AI analyses per day. Pro users get unlimited analyses, professional-grade FIBO V6.0 reports, and swing trading strategies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What analysis modes does CryptoLens offer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CryptoLens offers three analysis modes: Quick Analysis (10-second trend + support/resistance), Pro Analysis (8-section comprehensive technical analysis with market structure and candlestick patterns), and Swing Strategy (DCA building plans with position management)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does CryptoLens have a Chrome Extension?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, CryptoLens has a Chrome Extension that integrates directly into TradingView. You can analyze charts without leaving your browser."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What AI powers CryptoLens?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CryptoLens is powered by Google Gemini AI, providing state-of-the-art multimodal chart understanding and technical analysis."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0A1628;
+            --bg-surface: #0F1D32;
+            --bg-card: #142238;
+            --accent: #00E5CC;
+            --accent-glow: rgba(0, 229, 204, 0.15);
+            --gold: #F5A623;
+            --gold-surface: rgba(245, 166, 35, 0.08);
+            --text: #E8ECF1;
+            --text-secondary: #8899AA;
+            --text-muted: #5A6A7A;
+            --border: rgba(255, 255, 255, 0.06);
+            --gradient-accent: linear-gradient(135deg, #00E5CC 0%, #00B8D4 100%);
+            --gradient-gold: linear-gradient(135deg, #F5A623 0%, #E0952B 100%);
+            --radius: 16px;
+            --radius-sm: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Animated gradient bg */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(0, 229, 204, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(245, 166, 35, 0.03) 0%, transparent 50%);
+            z-index: -1;
+            animation: bgDrift 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgDrift {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(-5%, 3%);
+            }
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ─── Navbar ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            padding: 16px 0;
+            background: rgba(10, 22, 40, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 18px;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .nav-brand .logo {
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-accent);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--bg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-cta {
+            padding: 8px 20px;
+            background: var(--gradient-accent);
+            color: var(--bg) !important;
+            border-radius: var(--radius-sm);
+            font-weight: 700 !important;
+            font-size: 13px !important;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px var(--accent-glow);
+        }
+
+        /* ─── Hero ─── */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 16px;
+            background: var(--accent-glow);
+            border: 1px solid rgba(0, 229, 204, 0.2);
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #B0C4DE 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero h1 .accent {
+            -webkit-text-fill-color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 36px;
+            background: var(--gradient-accent);
+            color: var(--bg);
+            font-weight: 800;
+            font-size: 16px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--accent-glow);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 56px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .stat-value.cyan {
+            color: var(--accent);
+        }
+
+        .stat-value.gold {
+            color: var(--gold);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* ─── Features ─── */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-tag {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 48px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: border-color 0.3s, transform 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(0, 229, 204, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .feature-icon.cyan {
+            background: var(--accent-glow);
+            color: var(--accent);
+        }
+
+        .feature-icon.gold {
+            background: var(--gold-surface);
+            color: var(--gold);
+        }
+
+        .feature-icon.blue {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3B82F6;
+        }
+
+        .feature-card h3 {
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 10px;
+            font-weight: 700;
+            border-radius: 4px;
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        .tag.pro {
+            background: var(--gold);
+            color: var(--bg);
+        }
+
+        .tag.free {
+            background: var(--accent);
+            color: var(--bg);
+        }
+
+        /* ─── How It Works ─── */
+        .how {
+            padding: 80px 0;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 32px 24px;
+            border-radius: var(--radius);
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+        }
+
+        .step-num {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 18px;
+            font-weight: 700;
+            background: var(--accent-glow);
+            color: var(--accent);
+            border: 1px solid rgba(0, 229, 204, 0.2);
+        }
+
+        .step h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .step p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* ─── Pricing ─── */
+        .pricing {
+            padding: 80px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 700px;
+            margin: 48px auto 0;
+        }
+
+        .price-card {
+            padding: 32px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+        }
+
+        .price-card.featured {
+            border-color: var(--gold);
+            background: linear-gradient(135deg, rgba(245, 166, 35, 0.05) 0%, var(--bg-card) 100%);
+            position: relative;
+        }
+
+        .price-card.featured::before {
+            content: 'POPULAR';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            padding: 3px 12px;
+            background: var(--gradient-gold);
+            color: var(--bg);
+            font-size: 10px;
+            font-weight: 800;
+            border-radius: 4px;
+        }
+
+        .price-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .price-amount {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 36px;
+            font-weight: 800;
+            margin: 16px 0;
+        }
+
+        .price-amount .currency {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        .price-amount .period {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .price-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .price-features li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .price-features li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .price-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            text-align: center;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+
+        .price-btn.primary {
+            background: var(--gradient-gold);
+            color: var(--bg);
+        }
+
+        .price-btn.secondary {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .price-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .hero-stats {
+                gap: 24px;
+            }
+
+            .stat-value {
+                font-size: 22px;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <a href="#" class="nav-brand">
+                <span class="logo">CL</span>
+                CryptoLens
+            </a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://play.google.com/store/apps/details?id=com.cbstudio.cryptolens_app"
+                    class="nav-cta">Download</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+                Powered by Gemini AI
+            </div>
+            <h1>Crypto Charts,<br><span class="accent">Analyzed in 10 Seconds</span></h1>
+            <p>Screenshot your TradingView chart — get instant AI-powered technical analysis with support levels, trend
+                detection, and actionable strategies.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.cbstudio.cryptolens_app" class="hero-cta">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                </svg>
+                Get on Google Play
+            </a>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value cyan">10s</div>
+                    <div class="stat-label">Analysis Speed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value gold">3</div>
+                    <div class="stat-label">Analysis Modes</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value cyan">AI</div>
+                    <div class="stat-label">Gemini Engine</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-tag">FEATURES</div>
+            <h2 class="section-title">Three Ways to Analyze</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon cyan">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
+                    <h3>Quick Analysis <span class="tag free">FREE</span></h3>
+                    <p>Screenshot your chart and get trend direction, support/resistance levels, and a trading
+                        recommendation in under 10 seconds.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon gold">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <h3>Pro Analysis <span class="tag pro">PRO</span></h3>
+                    <p>Complete 8-section technical analysis: market structure, candlestick patterns, indicator
+                        cross-validation, and three trading scenarios.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                        </svg>
+                    </div>
+                    <h3>Swing Strategy <span class="tag pro">PRO</span></h3>
+                    <p>Medium-to-long-term DCA building plans, position management strategies, and take-profit exit
+                        plans for swing traders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how" id="how">
+        <div class="container">
+            <div class="section-tag">HOW IT WORKS</div>
+            <h2 class="section-title">Three Steps to Insight</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Screenshot</h3>
+                    <p>Take a screenshot of any TradingView chart — any timeframe, any crypto pair.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>AI Analyzes</h3>
+                    <p>Gemini AI reads the chart visually — identifying patterns, trends, and key levels.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Get Report</h3>
+                    <p>Receive a structured technical analysis report with clear trading recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-tag">PRICING</div>
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3>Free</h3>
+                    <p style="color: var(--text-secondary); font-size: 14px;">Get started with AI analysis</p>
+                    <div class="price-amount"><span class="currency">$</span>0</div>
+                    <ul class="price-features">
+                        <li>5 analyses per day</li>
+                        <li>Quick Analysis mode</li>
+                        <li>ETF fund flow data</li>
+                        <li>Fear &amp; Greed Index</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.cbstudio.cryptolens_app"
+                        class="price-btn secondary">Download Free</a>
+                </div>
+                <div class="price-card featured">
+                    <h3>Pro</h3>
+                    <p style="color: var(--text-secondary); font-size: 14px;">Unlock full analysis power</p>
+                    <div class="price-amount" style="color: var(--gold);"><span class="currency">$</span>4.99<span
+                            class="period">/mo</span></div>
+                    <ul class="price-features">
+                        <li>Unlimited analyses</li>
+                        <li>Pro Analysis (8-section)</li>
+                        <li>Swing Strategy</li>
+                        <li>Priority processing</li>
+                        <li>No ads</li>
+                    </ul>
+                    <a href="https://play.google.com/store/apps/details?id=com.cbstudio.cryptolens_app"
+                        class="price-btn primary">Upgrade to Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:cbstudio.dev@gmail.com">Contact</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 CB Studio. CryptoLens is not financial advice.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
