@@ -7,62 +7,352 @@
 <style>
 body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
 h1 { color: #1a1a2e; }
-h2 { color: #2d2d5e; margin-top: 24px; }
+h2 { color: #2d2d5e; margin-top: 32px; border-bottom: 1px solid #e0e0e0; padding-bottom: 6px; }
+h3 { color: #3d3d6e; margin-top: 20px; }
 .updated { color: #666; font-style: italic; }
+.lang-switch { margin-bottom: 24px; }
+.lang-switch a { margin-right: 12px; color: #2d2d5e; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+th { background: #f5f5f5; }
 </style>
 </head>
 <body>
-<h1>Privacy Policy - Transa</h1>
-<p class="updated">Last updated: March 3, 2026</p>
 
-<h2>Introduction</h2>
-<p>Transa ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our AI translation application.</p>
+<div class="lang-switch">
+  <a href="#zh-TW">繁體中文</a>
+  <a href="#en">English</a>
+</div>
 
-<h2>Information We Collect</h2>
+<!-- ==================== 繁體中文版本 ==================== -->
+<section id="zh-TW">
+<h1>隱私權政策 - Transa AI 翻譯</h1>
+<p class="updated">最後更新日期：2026 年 3 月 6 日</p>
 
-<h3>Translation Data</h3>
-<p>Text, voice input, and images you submit for translation are processed in real-time and are NOT stored on our servers. Translations using cloud-based engines (OpenAI, Google Gemini, Google Cloud Translation, Firebase AI) are sent to the respective third-party APIs for processing according to their privacy policies.</p>
+<h2>1. 前言</h2>
+<p>Transa（「我們」）致力於保護您的隱私。本隱私權政策說明我們在您使用 Transa AI 翻譯應用程式時如何收集、使用、儲存及保護您的資訊。使用本應用程式即表示您同意本政策的條款。</p>
 
-<h3>Offline Translation</h3>
-<p>When using offline translation mode with MLKit, all processing occurs locally on your device. No data is transmitted.</p>
+<h2>2. 我們收集的資訊</h2>
 
-<h3>Analytics Data</h3>
-<p>We use Google Analytics for Firebase (GA4) to collect anonymous usage data including screen views, feature usage patterns, and crash reports. This data does not identify you personally and helps us improve the app.</p>
+<h3>2.1 翻譯資料</h3>
+<p>您提交翻譯的文字、語音輸入及圖片，係即時處理，<strong>不會儲存於我們的伺服器</strong>。使用雲端翻譯引擎（OpenAI、Google Gemini、Google Cloud Translation、Firebase AI）時，資料將傳送至各第三方 API 依其隱私政策處理。</p>
 
-<h3>Advertising</h3>
-<p>The free version of Transa displays ads via Google AdMob. AdMob may collect device identifiers and usage data for ad personalization. You can opt out of personalized ads in your device settings.</p>
+<h3>2.2 離線翻譯</h3>
+<p>使用 ML Kit 離線翻譯時，所有處理均在您的裝置本地執行，不傳送任何資料。</p>
 
-<h3>Crash Reports</h3>
-<p>We use Firebase Crashlytics to collect crash logs and diagnostic data to improve app stability.</p>
+<h3>2.3 帳號資訊</h3>
+<p>選擇以 Google 或 Apple 帳號登入時，我們會收集：電子郵件地址、顯示名稱、個人照片網址（如有提供）。</p>
 
-<h2>Third-Party Services</h2>
-<p>Transa uses the following third-party services:</p>
+<h3>2.4 使用分析資料</h3>
+<p>我們使用 Google Analytics for Firebase（GA4）收集匿名使用資料，包含畫面瀏覽、功能使用模式及當機報告。此資料無法識別您的個人身分，用於改善應用程式。</p>
+
+<h3>2.5 廣告識別碼</h3>
+<p>免費版本透過 Google AdMob 顯示廣告。AdMob 可能收集裝置廣告識別碼（IDFA/GAID）以提供個人化廣告。您可在裝置設定中選擇退出個人化廣告。</p>
+
+<h3>2.6 當機報告</h3>
+<p>我們使用 Firebase Crashlytics 收集當機日誌及診斷資料，以改善應用程式穩定性。</p>
+
+<h3>2.7 訂閱與付款資訊</h3>
+<p>付費訂閱透過 RevenueCat 管理。我們不直接處理您的付款資訊；付款由 Apple App Store 或 Google Play Store 處理。RevenueCat 可能收集購買記錄及訂閱狀態以提供訂閱管理服務。</p>
+
+<h2>3. 第三方服務揭露</h2>
+<p>本應用程式使用以下第三方服務，各服務均有其獨立的隱私政策：</p>
+
+<table>
+  <tr><th>服務</th><th>提供者</th><th>用途</th><th>可能收集的資料</th></tr>
+  <tr><td>Firebase Authentication</td><td>Google LLC</td><td>使用者身分驗證</td><td>電子郵件、UID</td></tr>
+  <tr><td>Cloud Firestore</td><td>Google LLC</td><td>翻譯紀錄同步</td><td>帳號資料、翻譯紀錄</td></tr>
+  <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>當機報告</td><td>裝置資訊、堆疊追蹤</td></tr>
+  <tr><td>Google Analytics for Firebase</td><td>Google LLC</td><td>使用分析</td><td>匿名使用事件</td></tr>
+  <tr><td>Firebase App Check</td><td>Google LLC</td><td>應用程式安全驗證</td><td>裝置完整性資料</td></tr>
+  <tr><td>RevenueCat</td><td>RevenueCat, Inc.</td><td>訂閱管理</td><td>購買記錄、訂閱狀態、裝置 ID</td></tr>
+  <tr><td>Google AdMob</td><td>Google LLC</td><td>廣告投放</td><td>廣告識別碼（IDFA/GAID）、使用資料</td></tr>
+  <tr><td>OpenAI API</td><td>OpenAI, L.L.C.</td><td>翻譯服務（選用）</td><td>使用者輸入文字</td></tr>
+  <tr><td>Google Gemini API</td><td>Google LLC</td><td>翻譯服務（選用）</td><td>使用者輸入文字</td></tr>
+  <tr><td>Google Cloud Translation API</td><td>Google LLC</td><td>翻譯服務（選用）</td><td>使用者輸入文字</td></tr>
+  <tr><td>Firebase AI（Vertex AI）</td><td>Google LLC</td><td>翻譯服務（Pro 功能）</td><td>使用者輸入文字</td></tr>
+  <tr><td>Google ML Kit</td><td>Google LLC</td><td>離線翻譯</td><td>不傳送資料（本地處理）</td></tr>
+</table>
+
+<p>Google 隱私政策：<a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a><br>
+RevenueCat 隱私政策：<a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a><br>
+OpenAI 隱私政策：<a href="https://openai.com/privacy" target="_blank">https://openai.com/privacy</a></p>
+
+<h2>4. 資料使用目的</h2>
+<p>我們收集的資料用於以下目的：</p>
 <ul>
-<li>Google AdMob (advertising)</li>
-<li>Google Analytics for Firebase (analytics)</li>
-<li>Firebase Crashlytics (crash reporting)</li>
-<li>OpenAI API (translation)</li>
-<li>Google Gemini API (translation)</li>
-<li>Google Cloud Translation API (translation)</li>
-<li>Firebase AI (translation, Pro feature)</li>
-<li>Google MLKit (offline translation)</li>
+  <li>提供翻譯服務</li>
+  <li>同步您的翻譯紀錄和設定（需登入）</li>
+  <li>管理訂閱狀態</li>
+  <li>改善應用程式效能與使用者體驗</li>
+  <li>顯示廣告（免費版本）</li>
+  <li>診斷並修復技術問題</li>
 </ul>
 
-<h2>Data Retention</h2>
-<p>Translation data is processed in real-time and not stored. Analytics and crash data are retained for up to 14 months.</p>
+<h2>5. 資料儲存與保留</h2>
+<ul>
+  <li>翻譯資料：即時處理，不儲存</li>
+  <li>帳號資料與翻譯紀錄：儲存於 Google Firebase，資料中心位於美國</li>
+  <li>分析與當機資料：保留最多 14 個月</li>
+  <li>訂閱資料：由 RevenueCat 依其政策保留</li>
+  <li>帳號刪除後，您的個人資料將在 30 天內刪除</li>
+</ul>
 
-<h2>Children's Privacy</h2>
-<p>Transa is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+<h2>6. 跨境資料傳輸</h2>
+<p>Firebase 及其他 Google 服務的伺服器主要位於美國。若您位於歐洲經濟區（EEA）、英國或其他司法管轄區，您的資料可能被傳輸至美國處理。Google 依據標準合約條款（SCCs）及其他符合 GDPR 的機制進行此類傳輸。RevenueCat 的伺服器亦位於美國。</p>
 
-<h2>Your Rights</h2>
-<p>You can request deletion of your data by contacting us at the email below.</p>
+<!-- GDPR 區塊 -->
+<h2>7. 歐盟/EEA 居民的 GDPR 權利</h2>
+<p>若您位於歐洲經濟區（EEA）、英國或瑞士，依據 GDPR 您享有以下權利：</p>
 
-<h2>Changes</h2>
-<p>We may update this Privacy Policy from time to time. We will notify you of changes by posting the new policy on this page.</p>
+<h3>7.1 法律依據</h3>
+<p>我們依據以下法律依據處理您的個人資料：</p>
+<ul>
+  <li><strong>同意</strong>（GDPR 第 6(1)(a) 條）：廣告個人化（您可隨時撤回）</li>
+  <li><strong>合約履行</strong>（GDPR 第 6(1)(b) 條）：提供翻譯服務及訂閱管理</li>
+  <li><strong>合法利益</strong>（GDPR 第 6(1)(f) 條）：應用程式安全、當機診斷、使用分析</li>
+</ul>
 
-<h2>Contact Us</h2>
+<h3>7.2 您的權利</h3>
+<ul>
+  <li><strong>存取權</strong>：要求取得我們持有的您的個人資料副本</li>
+  <li><strong>更正權</strong>：要求更正不準確的個人資料</li>
+  <li><strong>刪除權（被遺忘權）</strong>：要求刪除您的個人資料</li>
+  <li><strong>限制處理權</strong>：要求限制處理您的個人資料</li>
+  <li><strong>資料可攜性</strong>：以機器可讀格式接收您的資料</li>
+  <li><strong>反對權</strong>：反對基於合法利益的資料處理</li>
+  <li><strong>撤回同意</strong>：隨時撤回先前給予的同意，不影響撤回前處理的合法性</li>
+</ul>
+
+<p>如需行使以上權利，請透過下方聯絡方式與我們聯繫。我們將在 30 天內回覆。您也有權向您所在國家的資料保護監管機構提出申訴。</p>
+
+<h3>7.3 資料保護聯絡方式</h3>
+<p>本應用程式由個人開發者運營，目前未設立正式資料保護官（DPO）。如有 GDPR 相關問題，請透過以下電子郵件聯繫：<a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></p>
+
+<!-- CCPA 區塊 -->
+<h2>8. 加州居民的 CCPA 權利</h2>
+<p>若您是加州居民，依據《加州消費者隱私法》（CCPA）及《加州隱私權法》（CPRA），您享有以下權利：</p>
+
+<h3>8.1 我們收集的個人資訊類別</h3>
+<table>
+  <tr><th>類別</th><th>範例</th><th>是否收集</th></tr>
+  <tr><td>識別碼</td><td>電子郵件地址、裝置 ID、Firebase UID</td><td>是（登入用戶）</td></tr>
+  <tr><td>商業資訊</td><td>訂閱購買記錄</td><td>是（付費用戶）</td></tr>
+  <tr><td>網路活動資訊</td><td>應用程式使用模式（匿名）</td><td>是</td></tr>
+  <tr><td>推斷資料</td><td>語言偏好設定</td><td>是</td></tr>
+  <tr><td>生物特徵資訊</td><td>語音資料</td><td>否（即時處理後立即丟棄）</td></tr>
+  <tr><td>位置資料</td><td>精確位置</td><td>否</td></tr>
+</table>
+
+<h3>8.2 收集個人資訊的目的</h3>
+<ul>
+  <li>提供並改善應用程式功能</li>
+  <li>管理使用者帳號與訂閱</li>
+  <li>顯示廣告（免費版本）</li>
+  <li>應用程式安全性與防濫用</li>
+  <li>診斷技術問題</li>
+</ul>
+
+<h3>8.3 不出售或分享個人資訊</h3>
+<p><strong>我們不出售您的個人資訊，也不以廣告目的共享您的個人資訊給第三方。</strong>（依 CCPA/CPRA 定義的「出售」或「共享」）。我們僅依本政策第 3 節所述，與提供應用程式功能所必要的服務提供者共享資料。</p>
+
+<h3>8.4 加州居民的權利</h3>
+<ul>
+  <li><strong>知情權</strong>：了解我們收集哪些個人資訊及其使用方式</li>
+  <li><strong>刪除權</strong>：要求刪除我們收集的個人資訊（部分例外情況適用）</li>
+  <li><strong>更正權</strong>：要求更正不準確的個人資訊</li>
+  <li><strong>退出「出售/共享」</strong>：我們不出售或共享個人資訊，此項不適用</li>
+  <li><strong>限制使用敏感個人資訊</strong>：限制敏感個人資訊的使用方式</li>
+  <li><strong>不被歧視的權利</strong>：行使 CCPA 權利不會受到歧視性對待</li>
+</ul>
+
+<p>如需行使上述權利，請透過 <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a> 與我們聯繫，並於信件主旨標明「CCPA Request」。我們將於 45 天內回覆。</p>
+
+<h2>9. 資料安全</h2>
+<p>我們採取以下措施保護您的資料：</p>
+<ul>
+  <li>所有資料傳輸使用 HTTPS 加密</li>
+  <li>Firebase 安全規則限制資料存取</li>
+  <li>Firebase App Check 防止未授權存取</li>
+  <li>定期審查和更新安全措施</li>
+</ul>
+
+<h2>10. 兒童隱私</h2>
+<p>本應用程式不針對 13 歲以下兒童。我們不會有意收集兒童的個人資訊。如發現我們無意間收集了兒童的個人資訊，請立即聯繫我們，我們將盡快刪除相關資料。</p>
+
+<h2>11. 政策變更</h2>
+<p>我們可能會不時更新本隱私權政策。重大變更將透過應用程式內通知告知。繼續使用本應用程式即表示您接受更新後的政策。</p>
+
+<h2>12. 聯絡我們</h2>
+<p>開發者：Yushang Lung<br>
+電子郵件：<a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a><br>
+網站：<a href="https://iml1s.github.io">https://iml1s.github.io</a></p>
+</section>
+
+<hr style="margin: 60px 0;">
+
+<!-- ==================== English Version ==================== -->
+<section id="en">
+<h1>Privacy Policy - Transa AI Translation</h1>
+<p class="updated">Last updated: March 6, 2026</p>
+
+<h2>1. Introduction</h2>
+<p>Transa ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your information when you use the Transa AI translation application. By using the app, you agree to the terms of this policy.</p>
+
+<h2>2. Information We Collect</h2>
+
+<h3>2.1 Translation Data</h3>
+<p>Text, voice input, and images you submit for translation are processed in real-time and are <strong>NOT stored on our servers</strong>. Translations using cloud-based engines (OpenAI, Google Gemini, Google Cloud Translation, Firebase AI) are sent to the respective third-party APIs for processing according to their privacy policies.</p>
+
+<h3>2.2 Offline Translation</h3>
+<p>When using offline translation with ML Kit, all processing occurs locally on your device. No data is transmitted.</p>
+
+<h3>2.3 Account Information</h3>
+<p>When you sign in with Google or Apple, we collect: email address, display name, and profile photo URL (if provided).</p>
+
+<h3>2.4 Analytics Data</h3>
+<p>We use Google Analytics for Firebase (GA4) to collect anonymous usage data including screen views, feature usage patterns, and crash reports. This data does not identify you personally and helps us improve the app.</p>
+
+<h3>2.5 Advertising Identifiers</h3>
+<p>The free version displays ads via Google AdMob. AdMob may collect device advertising identifiers (IDFA/GAID) for ad personalization. You can opt out of personalized ads in your device settings.</p>
+
+<h3>2.6 Crash Reports</h3>
+<p>We use Firebase Crashlytics to collect crash logs and diagnostic data to improve app stability.</p>
+
+<h3>2.7 Subscription and Purchase Information</h3>
+<p>Paid subscriptions are managed through RevenueCat. We do not directly process your payment information; payments are handled by the Apple App Store or Google Play Store. RevenueCat may collect purchase history and subscription status to provide subscription management services.</p>
+
+<h2>3. Third-Party Services Disclosure</h2>
+<p>Transa uses the following third-party services, each with their own privacy policies:</p>
+
+<table>
+  <tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Data Collected</th></tr>
+  <tr><td>Firebase Authentication</td><td>Google LLC</td><td>User authentication</td><td>Email, UID</td></tr>
+  <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Translation history sync</td><td>Account data, translation history</td></tr>
+  <tr><td>Firebase Crashlytics</td><td>Google LLC</td><td>Crash reporting</td><td>Device info, stack traces</td></tr>
+  <tr><td>Google Analytics for Firebase</td><td>Google LLC</td><td>Usage analytics</td><td>Anonymous usage events</td></tr>
+  <tr><td>Firebase App Check</td><td>Google LLC</td><td>App security verification</td><td>Device integrity data</td></tr>
+  <tr><td>RevenueCat</td><td>RevenueCat, Inc.</td><td>Subscription management</td><td>Purchase history, subscription status, device ID</td></tr>
+  <tr><td>Google AdMob</td><td>Google LLC</td><td>Advertising</td><td>Advertising ID (IDFA/GAID), usage data</td></tr>
+  <tr><td>OpenAI API</td><td>OpenAI, L.L.C.</td><td>Translation (optional)</td><td>User-submitted text</td></tr>
+  <tr><td>Google Gemini API</td><td>Google LLC</td><td>Translation (optional)</td><td>User-submitted text</td></tr>
+  <tr><td>Google Cloud Translation API</td><td>Google LLC</td><td>Translation (optional)</td><td>User-submitted text</td></tr>
+  <tr><td>Firebase AI (Vertex AI)</td><td>Google LLC</td><td>Translation (Pro feature)</td><td>User-submitted text</td></tr>
+  <tr><td>Google ML Kit</td><td>Google LLC</td><td>Offline translation</td><td>None (local processing only)</td></tr>
+</table>
+
+<p>Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a><br>
+RevenueCat Privacy Policy: <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a><br>
+OpenAI Privacy Policy: <a href="https://openai.com/privacy" target="_blank">https://openai.com/privacy</a></p>
+
+<h2>4. How We Use Your Information</h2>
+<ul>
+  <li>Provide translation services</li>
+  <li>Sync translation history and settings (signed-in users)</li>
+  <li>Manage subscription status</li>
+  <li>Improve app performance and user experience</li>
+  <li>Display advertisements (free version)</li>
+  <li>Diagnose and fix technical issues</li>
+</ul>
+
+<h2>5. Data Retention</h2>
+<ul>
+  <li>Translation data: processed in real-time, not stored</li>
+  <li>Account data and translation history: stored in Google Firebase (US data centers)</li>
+  <li>Analytics and crash data: retained for up to 14 months</li>
+  <li>Subscription data: retained by RevenueCat per their policy</li>
+  <li>Upon account deletion, your personal data will be deleted within 30 days</li>
+</ul>
+
+<h2>6. International Data Transfers</h2>
+<p>Firebase and other Google services are primarily hosted on servers in the United States. If you are located in the European Economic Area (EEA), United Kingdom, or other jurisdictions, your data may be transferred to and processed in the United States. Google performs such transfers pursuant to Standard Contractual Clauses (SCCs) and other GDPR-compliant mechanisms. RevenueCat servers are also located in the United States.</p>
+
+<!-- GDPR Section -->
+<h2>7. GDPR Rights for EU/EEA Residents</h2>
+<p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have the following rights under the General Data Protection Regulation (GDPR):</p>
+
+<h3>7.1 Legal Basis for Processing</h3>
+<ul>
+  <li><strong>Consent</strong> (Art. 6(1)(a) GDPR): Ad personalization — you may withdraw at any time</li>
+  <li><strong>Contract performance</strong> (Art. 6(1)(b) GDPR): Providing translation services and subscription management</li>
+  <li><strong>Legitimate interests</strong> (Art. 6(1)(f) GDPR): App security, crash diagnostics, anonymous usage analytics</li>
+</ul>
+
+<h3>7.2 Your Rights</h3>
+<ul>
+  <li><strong>Right of access</strong>: Request a copy of the personal data we hold about you</li>
+  <li><strong>Right to rectification</strong>: Request correction of inaccurate personal data</li>
+  <li><strong>Right to erasure ("right to be forgotten")</strong>: Request deletion of your personal data</li>
+  <li><strong>Right to restriction of processing</strong>: Request that we restrict processing of your personal data</li>
+  <li><strong>Right to data portability</strong>: Receive your data in a machine-readable format</li>
+  <li><strong>Right to object</strong>: Object to processing based on legitimate interests</li>
+  <li><strong>Right to withdraw consent</strong>: Withdraw consent at any time without affecting the lawfulness of processing before withdrawal</li>
+</ul>
+
+<p>To exercise these rights, please contact us using the contact information below. We will respond within 30 days. You also have the right to lodge a complaint with your national data protection supervisory authority.</p>
+
+<h3>7.3 Data Protection Contact</h3>
+<p>This app is operated by an individual developer and does not currently have a formally designated Data Protection Officer (DPO). For GDPR-related inquiries, please contact: <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></p>
+
+<!-- CCPA Section -->
+<h2>8. CCPA Rights for California Residents</h2>
+<p>If you are a California resident, under the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA), you have the following rights:</p>
+
+<h3>8.1 Categories of Personal Information Collected</h3>
+<table>
+  <tr><th>Category</th><th>Examples</th><th>Collected</th></tr>
+  <tr><td>Identifiers</td><td>Email address, device ID, Firebase UID</td><td>Yes (signed-in users)</td></tr>
+  <tr><td>Commercial information</td><td>Subscription purchase records</td><td>Yes (paid users)</td></tr>
+  <tr><td>Internet/network activity</td><td>App usage patterns (anonymous)</td><td>Yes</td></tr>
+  <tr><td>Inferences</td><td>Language preference settings</td><td>Yes</td></tr>
+  <tr><td>Biometric information</td><td>Voice data</td><td>No (discarded after real-time processing)</td></tr>
+  <tr><td>Geolocation data</td><td>Precise location</td><td>No</td></tr>
+</table>
+
+<h3>8.2 Purposes for Collecting Personal Information</h3>
+<ul>
+  <li>Providing and improving app functionality</li>
+  <li>Managing user accounts and subscriptions</li>
+  <li>Displaying advertisements (free version)</li>
+  <li>App security and anti-abuse measures</li>
+  <li>Diagnosing technical issues</li>
+</ul>
+
+<h3>8.3 We Do Not Sell or Share Personal Information</h3>
+<p><strong>We do not sell your personal information, nor do we share it with third parties for advertising purposes</strong> (as defined under CCPA/CPRA). We only share data with service providers as described in Section 3 above, to the extent necessary to provide app functionality.</p>
+
+<h3>8.4 Your Rights as a California Resident</h3>
+<ul>
+  <li><strong>Right to know</strong>: Know what personal information we collect and how it is used</li>
+  <li><strong>Right to delete</strong>: Request deletion of your personal information (certain exceptions apply)</li>
+  <li><strong>Right to correct</strong>: Request correction of inaccurate personal information</li>
+  <li><strong>Right to opt out of sale/sharing</strong>: We do not sell or share personal information — this right is not applicable</li>
+  <li><strong>Right to limit use of sensitive personal information</strong>: Limit how sensitive personal information is used</li>
+  <li><strong>Right to non-discrimination</strong>: You will not be discriminated against for exercising your CCPA rights</li>
+</ul>
+
+<p>To exercise these rights, contact us at <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a> with "CCPA Request" in the subject line. We will respond within 45 days.</p>
+
+<h2>9. Data Security</h2>
+<p>We implement the following measures to protect your data:</p>
+<ul>
+  <li>HTTPS encryption for all data transfers</li>
+  <li>Firebase security rules to restrict data access</li>
+  <li>Firebase App Check to prevent unauthorized access</li>
+  <li>Regular security reviews and updates</li>
+</ul>
+
+<h2>10. Children's Privacy</h2>
+<p>Transa is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected information from a child, please contact us immediately and we will promptly delete it.</p>
+
+<h2>11. Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Significant changes will be communicated via in-app notifications. Continued use of the app constitutes acceptance of the updated policy.</p>
+
+<h2>12. Contact Us</h2>
 <p>Developer: Yushang Lung<br>
 Email: <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a><br>
 Website: <a href="https://iml1s.github.io">https://iml1s.github.io</a></p>
+</section>
+
 </body>
 </html>
