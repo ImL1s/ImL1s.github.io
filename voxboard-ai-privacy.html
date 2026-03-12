@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
 <body>
 <div class="container">
     <h1>Voxboard AI — Privacy Policy</h1>
-    <p class="date">Last updated: March 2, 2026</p>
+    <p class="date">Last updated: March 12, 2026</p>
 
     <h2>Overview</h2>
     <p>Voxboard AI ("the App") is a voice-powered keyboard application developed by CB Studio. We are committed to protecting your privacy. This policy explains what data the App collects, how it is used, and your rights.</p>
@@ -30,25 +30,37 @@
         <li><strong>Does not collect personal data.</strong> We do not collect your name, email address, phone number, or any other personally identifiable information.</li>
         <li><strong>Does not store your voice recordings.</strong> Voice input is processed in real-time for speech-to-text conversion and is not saved on our servers.</li>
         <li><strong>Does not track your location.</strong></li>
-        <li><strong>Does not use advertising IDs.</strong> The App does not contain ads and does not use Google Advertising ID.</li>
     </ul>
 
+    <h2>Advertising</h2>
+    <p>The free version of the App displays advertisements provided by Google AdMob. To deliver relevant ads, AdMob may collect and use the following data:</p>
+    <ul>
+        <li><strong>Advertising Identifier (IDFA/GAID)</strong> — used to show personalized ads. You may opt out of personalized ads via your device settings or the App Tracking Transparency prompt on iOS.</li>
+        <li><strong>Device information</strong> — such as device model, operating system version, and screen size, used for ad targeting and optimization.</li>
+        <li><strong>IP address</strong> — used for approximate location-based ad delivery and fraud prevention.</li>
+    </ul>
+    <p>Pro subscribers do not see ads, and no advertising data is collected for Pro users.</p>
+    <p>For more information on how Google uses data, see <a href="https://policies.google.com/technologies/partner-sites">Google's Partner Sites Policy</a>.</p>
+
     <h2>Speech Processing</h2>
-    <p>When you use the voice input feature, your speech is sent to Google Cloud Speech-to-Text for transcription. This data is processed according to <a href="https://cloud.google.com/terms/data-processing-addendum">Google Cloud's Data Processing terms</a>. The transcribed text may then be processed by Firebase AI (Gemini) for text polishing. These services process your data in real-time and do not retain it.</p>
+    <p>When you use the voice input feature, your speech may be sent to Google Cloud Speech-to-Text or processed on-device using Whisper for transcription. The transcribed text may then be processed by Firebase AI (Gemini) or an on-device LLM for text polishing. Cloud services process your data in real-time and do not retain it. On-device processing keeps all data locally on your device.</p>
 
     <h2>Third-Party Services</h2>
     <p>The App uses the following third-party services:</p>
     <ul>
-        <li><strong>Google Cloud Speech-to-Text</strong> — for voice recognition</li>
-        <li><strong>Firebase AI Logic (Gemini)</strong> — for text polishing</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — for cloud voice recognition</li>
+        <li><strong>Firebase AI Logic (Gemini)</strong> — for cloud text polishing</li>
+        <li><strong>Google AdMob</strong> — for displaying advertisements (free version only)</li>
+        <li><strong>Firebase Analytics</strong> — for anonymous usage analytics</li>
+        <li><strong>Firebase Crashlytics</strong> — for crash reporting</li>
         <li><strong>RevenueCat</strong> — for subscription management (processes only anonymous user IDs)</li>
     </ul>
 
     <h2>Data Storage</h2>
-    <p>App preferences and settings are stored locally on your device using SharedPreferences. This data never leaves your device.</p>
+    <p>App preferences and settings are stored locally on your device using SharedPreferences. This data never leaves your device. Dictation history is stored locally and retained for 3 days (free) or unlimited (Pro).</p>
 
     <h2>Children's Privacy</h2>
-    <p>The App is not intended for children under the age of 18. We do not knowingly collect data from children.</p>
+    <p>The App is not intended for children under the age of 13. We do not knowingly collect data from children.</p>
 
     <h2>Changes to This Policy</h2>
     <p>We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
