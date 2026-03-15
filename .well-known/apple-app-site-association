@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["ZAZT4JZ625.com.cbstudio.saferradar"],
+        "paths": ["/safer-radar/*"]
+      }
+    ]
+  }
+}
