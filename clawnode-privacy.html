@@ -9,6 +9,7 @@
         h1 { color: #4F46E5; }
         h2 { color: #7C3AED; margin-top: 2em; }
         .date { color: #666; font-size: 0.9em; }
+        code { background: #f4f4f5; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
     </style>
     <script type="application/ld+json">
     {
@@ -68,7 +69,7 @@
 </head>
 <body>
     <h1>Privacy Policy — ClawNode</h1>
-    <p class="date">Last Updated: March 6, 2026</p>
+    <p class="date">Last Updated: March 15, 2026</p>
 
     <h2>Overview</h2>
     <p>ClawNode is a companion app for managing AI gateway devices. We are committed to protecting your privacy.</p>
@@ -77,21 +78,66 @@
     <p>ClawNode collects minimal data to provide its services:</p>
     <ul>
         <li><strong>Device Identifiers</strong>: Used by Google AdMob for ad personalization. You can opt out via your device settings.</li>
-        <li><strong>Crash Logs & Diagnostics</strong>: Collected by Firebase Crashlytics to improve app stability.</li>
+        <li><strong>Crash Logs &amp; Diagnostics</strong>: Collected by Firebase Crashlytics to improve app stability.</li>
         <li><strong>Analytics Data</strong>: Collected by Firebase Analytics (GA4) to understand app usage patterns.</li>
+        <li><strong>Motion &amp; Activity Data</strong>: When granted permission, the app may access the device's motion/pedometer sensor (via <code>ACTIVITY_RECOGNITION</code> on Android / <code>CMPedometer</code> on iOS) to report step count and activity type to your connected AI gateway. This data is transmitted only to your personal gateway and is not stored on our servers.</li>
     </ul>
     <p>We do NOT collect personal information such as names, email addresses, or phone numbers.</p>
+
+    <h2>Health &amp; Fitness Data</h2>
+    <p>ClawNode may access health and fitness data through the device's activity recognition sensor. Specifically:</p>
+    <ul>
+        <li><strong>What we access</strong>: Step count and physical activity type (walking, running, stationary) from the device's pedometer sensor.</li>
+        <li><strong>Purpose</strong>: This data is forwarded to your personal OpenClaw AI gateway so your AI agent can be context-aware of your activity status. For example, it can adjust notifications or responses based on whether you are active or stationary.</li>
+        <li><strong>How it is processed</strong>: Data is transmitted in real-time over your local network or encrypted WebSocket connection directly to your gateway. It is <strong>not</strong> sent to any third-party server, advertising network, or analytics service.</li>
+        <li><strong>User control</strong>: You can revoke activity recognition permission at any time via your device's system settings. The app will continue to function normally without this permission.</li>
+    </ul>
+
+    <h2>Device Permissions</h2>
+    <p>ClawNode may request the following permissions to enable gateway commands:</p>
+    <ul>
+        <li><strong>Camera</strong>: Used to take photos or scan QR codes when requested by your AI gateway.</li>
+        <li><strong>Microphone</strong>: Used for voice-to-text input and push-to-talk communication with your gateway.</li>
+        <li><strong>Location</strong>: Used to share your location with your gateway when requested.</li>
+        <li><strong>Contacts</strong>: Used to look up contact information when requested by your gateway.</li>
+        <li><strong>Calendar</strong>: Used to access calendar events when requested by your gateway.</li>
+        <li><strong>Notifications</strong>: Used to forward device notifications to your gateway and receive push notifications.</li>
+        <li><strong>Activity Recognition</strong>: Used to access motion/pedometer data as described in the Health &amp; Fitness Data section above.</li>
+    </ul>
+    <p>All permissions are optional. ClawNode will only request permissions when a specific gateway command requires them, and you can deny or revoke any permission at any time.</p>
 
     <h2>Third-Party Services</h2>
     <p>ClawNode uses the following third-party services:</p>
     <ul>
         <li><a href="https://policies.google.com/privacy">Google AdMob</a> — Advertising</li>
-        <li><a href="https://firebase.google.com/support/privacy">Firebase Analytics & Crashlytics</a> — Analytics and crash reporting</li>
+        <li><a href="https://firebase.google.com/support/privacy">Firebase Analytics &amp; Crashlytics</a> — Analytics and crash reporting</li>
         <li><a href="https://www.revenuecat.com/privacy">RevenueCat</a> — Subscription management</li>
     </ul>
 
+    <h2>Data Retention</h2>
+    <p>We retain data for the minimum period necessary:</p>
+    <ul>
+        <li><strong>Analytics Data</strong>: Retained by Firebase Analytics according to <a href="https://firebase.google.com/support/privacy">Google's data retention policy</a> (default 14 months, configurable).</li>
+        <li><strong>Crash Logs</strong>: Retained by Firebase Crashlytics for 90 days.</li>
+        <li><strong>Ad Identifiers</strong>: Managed by Google AdMob per <a href="https://policies.google.com/technologies/ads">Google's advertising policies</a>.</li>
+        <li><strong>Subscription Data</strong>: Managed by RevenueCat for the duration of your subscription and as required for billing purposes.</li>
+        <li><strong>Device Identity Key</strong>: Your Ed25519 device identity key pair is stored locally on your device in secure storage and is never transmitted to our servers. It persists until you uninstall the app or clear app data.</li>
+        <li><strong>Gateway Connection Data</strong>: Gateway URLs and connection settings are stored locally on your device and are never sent to our servers.</li>
+        <li><strong>Health/Activity Data</strong>: Motion and activity data is transmitted in real-time and is <strong>not</strong> stored persistently by the app or on any server we control.</li>
+    </ul>
+
+    <h2>Data Deletion</h2>
+    <p>You can delete your data at any time through the following methods:</p>
+    <ul>
+        <li><strong>Uninstall the App</strong>: Removing ClawNode from your device will delete all locally stored data, including your device identity key, gateway settings, and chat history.</li>
+        <li><strong>Clear App Data</strong>: On Android, go to Settings → Apps → ClawNode → Storage → Clear Data. On iOS, uninstall and reinstall the app.</li>
+        <li><strong>Reset Advertising ID</strong>: To reset the advertising identifier used by AdMob, go to your device settings (Android: Settings → Google → Ads; iOS: Settings → Privacy → Tracking).</li>
+        <li><strong>Opt Out of Analytics</strong>: You can limit ad tracking and analytics collection through your device's privacy settings.</li>
+        <li><strong>Request Deletion</strong>: For any data held by third-party services, you can contact us at <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a> and we will assist with deletion requests to Firebase, AdMob, and RevenueCat on your behalf.</li>
+    </ul>
+
     <h2>Data Security</h2>
-    <p>All data transmitted between the app and third-party services is encrypted in transit using HTTPS/TLS.</p>
+    <p>All data transmitted between the app and third-party services is encrypted in transit using HTTPS/TLS. Communication with your OpenClaw gateway uses authenticated WebSocket connections with Ed25519 cryptographic signatures.</p>
 
     <h2>Children's Privacy</h2>
     <p>ClawNode is not intended for children under 13. We do not knowingly collect data from children.</p>
