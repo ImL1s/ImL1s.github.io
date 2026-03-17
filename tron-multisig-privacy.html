@@ -4,262 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Sign TRON Wallet - 隱私政策</title>
+    <title>TRON Vault 多簽錢包 - 隱私政策 Privacy Policy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #e2e8f0;
+            line-height: 1.7; color: #e2e8f0;
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
             min-height: 100vh;
         }
-
         .hero {
-            text-align: center;
-            padding: 4rem 2rem 3rem;
+            text-align: center; padding: 4rem 2rem 3rem;
             background: linear-gradient(180deg, rgba(239, 68, 68, 0.1) 0%, transparent 100%);
         }
-
         .hero-image {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 2rem;
-            border-radius: 50%;
-            overflow: hidden;
+            width: 200px; height: 200px; margin: 0 auto 2rem; border-radius: 50%; overflow: hidden;
             box-shadow: 0 0 60px rgba(239, 68, 68, 0.3);
             background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
         }
-
-        .hero-image span {
-            font-size: 80px;
-        }
-
+        .hero-image span { font-size: 80px; }
         .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.5rem; font-weight: 700;
             background: linear-gradient(135deg, #f87171 0%, #fbbf24 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
             margin-bottom: 0.5rem;
         }
-
-        .hero .subtitle {
-            font-size: 1.25rem;
-            color: #94a3b8;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem 4rem;
-        }
-
+        .hero .subtitle { font-size: 1.25rem; color: #94a3b8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem 4rem; }
         .highlight {
             background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%);
-            border: 1px solid rgba(34, 197, 94, 0.3);
-            border-radius: 16px;
-            padding: 1.5rem 2rem;
-            margin: 2rem 0;
-            text-align: center;
+            border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 16px;
+            padding: 1.5rem 2rem; margin: 2rem 0; text-align: center;
         }
-
-        .highlight p {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #22c55e;
-            margin: 0;
-        }
-
+        .highlight p { font-size: 1.25rem; font-weight: 600; color: #22c55e; margin: 0; }
         .section-card {
-            background: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            border-radius: 16px;
-            padding: 2rem;
-            margin: 2rem 0;
-            backdrop-filter: blur(10px);
+            background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 16px; padding: 2rem; margin: 2rem 0; backdrop-filter: blur(10px);
         }
-
         .section-card h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #f87171;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            font-size: 1.5rem; font-weight: 600; color: #f87171; margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.75rem;
         }
-
         .section-card h2::before {
-            content: '';
-            width: 4px;
-            height: 24px;
-            background: linear-gradient(180deg, #f87171 0%, #fbbf24 100%);
-            border-radius: 2px;
+            content: ''; width: 4px; height: 24px;
+            background: linear-gradient(180deg, #f87171 0%, #fbbf24 100%); border-radius: 2px;
         }
-
-        .section-card p {
-            color: #cbd5e1;
-            margin-bottom: 1rem;
-        }
-
-        .section-card ul,
-        .section-card ol {
-            margin: 1rem 0 0 1.5rem;
-            color: #cbd5e1;
-        }
-
-        .section-card li {
-            margin-bottom: 0.75rem;
-        }
-
-        .section-card strong {
-            color: #f1f5f9;
-        }
-
+        .section-card p { color: #cbd5e1; margin-bottom: 1rem; }
+        .section-card ul, .section-card ol { margin: 1rem 0 0 1.5rem; color: #cbd5e1; }
+        .section-card li { margin-bottom: 0.75rem; }
+        .section-card strong { color: #f1f5f9; }
         .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1.5rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem; margin-top: 1.5rem;
         }
-
         .feature-item {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            border-radius: 12px;
-            padding: 1.25rem;
-            text-align: center;
+            background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px; padding: 1.25rem; text-align: center;
         }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-item p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
-
+        .feature-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .feature-item p { margin: 0; font-size: 0.9rem; color: #94a3b8; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+        th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid rgba(148, 163, 184, 0.15); }
+        th { color: #f87171; font-weight: 600; }
+        td { color: #cbd5e1; }
         footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid rgba(148, 163, 184, 0.1);
-            color: #64748b;
-            font-size: 0.875rem;
+            text-align: center; padding: 2rem; border-top: 1px solid rgba(148, 163, 184, 0.1);
+            color: #64748b; font-size: 0.875rem;
         }
-
-        footer a {
-            color: #f87171;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
+        footer a { color: #f87171; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
         @media (max-width: 640px) {
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-
-            .hero-image {
-                width: 150px;
-                height: 150px;
-            }
-
-            .hero-image span {
-                font-size: 60px;
-            }
-
-            .section-card {
-                padding: 1.5rem;
-            }
+            .hero h1 { font-size: 1.75rem; }
+            .hero-image { width: 150px; height: 150px; }
+            .hero-image span { font-size: 60px; }
+            .section-card { padding: 1.5rem; }
         }
     </style>
 </head>
 
 <body>
     <section class="hero">
-        <div class="hero-image">
-            <span>🔐</span>
-        </div>
-        <h1>Multi-Sign TRON Wallet</h1>
+        <div class="hero-image"><span>🔐</span></div>
+        <h1>TRON Vault 多簽錢包</h1>
         <p class="subtitle">隱私政策 Privacy Policy</p>
     </section>
 
     <div class="container">
         <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">
-            <strong>最後更新：</strong>2025 年 12 月
+            <strong>最後更新：</strong>2026 年 3 月
         </p>
 
         <div class="highlight">
-            <p>🔒 您的私鑰和錢包數據永遠不會離開您的設備</p>
+            <p>🔒 您的私鑰和助記詞永遠不會離開您的設備</p>
         </div>
 
         <div class="section-card">
             <h2>概述</h2>
-            <p>Multi-Sign TRON Wallet 是一款非託管多簽錢包應用程式，讓用戶能夠安全地管理 TRON 區塊鏈資產。我們致力於保護您的隱私並確保敏感數據的安全。</p>
-            <p><strong>非託管</strong>意味著您完全控制自己的私鑰，我們無法訪問、恢復或凍結您的資產。</p>
+            <p>TRON Vault 多簽錢包（以下簡稱「本 App」）是一款<strong>非託管 (Non-Custodial)</strong> 多簽名錢包應用程式，讓用戶安全管理 TRON 區塊鏈資產。</p>
+            <p><strong>非託管</strong>意味著您完全控制自己的私鑰，我們無法存取、恢復或凍結您的資產。請務必安全備份您的助記詞。</p>
         </div>
 
         <div class="section-card">
             <h2>我們收集的資訊</h2>
-            <p>我們<strong>不收集</strong>任何個人識別資訊。具體來說：</p>
-            <ul>
-                <li><strong>無分析追蹤：</strong>我們沒有整合任何分析 SDK（如 Google Analytics）</li>
-                <li><strong>無廣告：</strong>應用內沒有廣告網路</li>
-                <li><strong>無崩潰報告：</strong>我們不會傳輸任何錯誤報告到外部伺服器</li>
-            </ul>
+            <p>為了改善 App 品質和提供廣告支持，我們透過第三方服務收集以下<strong>非個人識別</strong>資訊：</p>
+            <table>
+                <thead>
+                    <tr><th>資料類型</th><th>收集方式</th><th>用途</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>裝置識別碼 (Device ID)</td><td>Google AdMob SDK</td><td>廣告投放與歸因</td></tr>
+                    <tr><td>崩潰日誌</td><td>Firebase Crashlytics</td><td>App 穩定性監測</td></tr>
+                    <tr><td>效能診斷資料</td><td>Firebase Crashlytics</td><td>效能優化</td></tr>
+                    <tr><td>使用分析事件</td><td>Firebase Analytics</td><td>了解功能使用模式</td></tr>
+                    <tr><td>購買記錄</td><td>App Store / Google Play IAP</td><td>Pro 訂閱管理</td></tr>
+                </tbody>
+            </table>
+            <p>所有網路傳輸均使用 <strong>HTTPS/TLS</strong> 加密。</p>
         </div>
 
         <div class="section-card">
             <h2>我們絕不收集的資訊</h2>
             <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">🔑</div>
-                    <p>私鑰或助記詞</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <p>錢包餘額或地址</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📝</div>
-                    <p>交易詳情</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔐</div>
-                    <p>密碼或 PIN 碼</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📍</div>
-                    <p>位置資訊</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👤</div>
-                    <p>個人身份資訊</p>
-                </div>
+                <div class="feature-item"><div class="feature-icon">🔑</div><p>私鑰或助記詞</p></div>
+                <div class="feature-item"><div class="feature-icon">💰</div><p>錢包餘額或地址</p></div>
+                <div class="feature-item"><div class="feature-icon">📝</div><p>交易詳情</p></div>
+                <div class="feature-item"><div class="feature-icon">🔐</div><p>密碼或 PIN 碼</p></div>
+                <div class="feature-item"><div class="feature-icon">📍</div><p>位置資訊</p></div>
+                <div class="feature-item"><div class="feature-icon">👤</div><p>姓名、電子郵件等個人資訊</p></div>
             </div>
         </div>
 
         <div class="section-card">
             <h2>本地數據存儲</h2>
-            <p>所有敏感數據都使用設備原生的安全存儲方式加密存儲在本地：</p>
+            <p>所有敏感數據都使用設備原生的安全存儲方式加密存儲在<strong>本地</strong>：</p>
             <ul>
                 <li><strong>Android：</strong>使用 EncryptedSharedPreferences（由 Android Keystore 支持的 AES-256-GCM 加密）</li>
                 <li><strong>iOS：</strong>使用 Keychain Services（由 Secure Enclave 硬體支持）</li>
@@ -269,40 +150,49 @@
 
         <div class="section-card">
             <h2>第三方服務</h2>
-            <p>我們的應用與以下公開區塊鏈服務互動：</p>
+            <p>本 App 使用以下第三方服務：</p>
             <ol>
-                <li><strong>TRON 全節點 API (api.trongrid.io)：</strong>查詢區塊鏈數據和提交交易</li>
-                <li><strong>TronScan：</strong>（僅當用戶選擇在瀏覽器中查看時）查看交易詳情</li>
+                <li><strong>TRON 全節點 API (api.trongrid.io)：</strong>查詢區塊鏈公開數據和提交交易</li>
+                <li><strong>Firebase Analytics / Crashlytics：</strong>收集匿名使用統計和崩潰報告</li>
+                <li><strong>Google AdMob：</strong>顯示廣告（收集裝置識別碼用於廣告投放）</li>
+                <li><strong>WalletConnect：</strong>連接第三方 DApp（僅在用戶主動發起時）</li>
+                <li><strong>App Store / Google Play：</strong>處理應用內購買（Pro 訂閱）</li>
             </ol>
-            <p>這些服務僅接收公開的區塊鏈數據（如錢包地址），不會接收任何私人信息。</p>
+            <p>各第三方服務的隱私政策請參閱其官方網站。</p>
+        </div>
+
+        <div class="section-card">
+            <h2>廣告</h2>
+            <p>本 App 使用 Google AdMob 顯示廣告。AdMob 可能會收集裝置識別碼以提供個性化廣告。您可以在設備設定中選擇退出個性化廣告：</p>
+            <ul>
+                <li><strong>Android：</strong>設定 → Google → 廣告 → 選擇停用廣告個人化功能</li>
+                <li><strong>iOS：</strong>設定 → 隱私權與安全性 → 追蹤 → 關閉「允許 App 要求追蹤」</li>
+            </ul>
         </div>
 
         <div class="section-card">
             <h2>安全措施</h2>
             <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">🔐</div>
-                    <p>硬體級加密存儲</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👆</div>
-                    <p>生物識別認證</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📱</div>
-                    <p>私鑰永不離開設備</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📸</div>
-                    <p>敏感頁面截圖保護</p>
-                </div>
+                <div class="feature-item"><div class="feature-icon">🔐</div><p>硬體級加密存儲</p></div>
+                <div class="feature-item"><div class="feature-icon">👆</div><p>Face ID / 指紋辨識</p></div>
+                <div class="feature-item"><div class="feature-icon">📱</div><p>私鑰永不離開設備</p></div>
+                <div class="feature-item"><div class="feature-icon">📸</div><p>敏感頁面截圖保護</p></div>
             </div>
         </div>
 
         <div class="section-card">
+            <h2>兒童隱私</h2>
+            <p>本 App 不針對 13 歲以下兒童。我們不會故意收集兒童的個人資訊。</p>
+        </div>
+
+        <div class="section-card">
             <h2>您的權利</h2>
-            <p>由於我們不收集任何個人數據，因此沒有需要訪問、更正或刪除的個人數據。您的所有數據都在您的控制之下，存儲在您的設備上。</p>
-            <p>如果您解除安裝應用程式，所有本地數據都將被刪除（請確保先備份您的助記詞）。</p>
+            <p>您可以隨時：</p>
+            <ul>
+                <li>在設備設定中停用個性化廣告</li>
+                <li>解除安裝 App 以刪除所有本地數據（請先備份助記詞）</li>
+                <li>透過下方聯繫方式要求刪除我們持有的相關資訊</li>
+            </ul>
         </div>
 
         <div class="section-card">
@@ -314,16 +204,17 @@
             <h2>聯繫我們</h2>
             <p>如果您對此隱私政策有任何疑問，請通過以下方式聯繫我們：</p>
             <ul>
-                <li>GitHub：<a href="https://github.com/iml1s/multi_sign_tron" target="_blank"
-                        rel="noopener">github.com/iml1s/multi_sign_tron</a></li>
+                <li><strong>開發者：</strong>Yushang Lung</li>
+                <li><strong>電子郵件：</strong><a href="mailto:aa22396584@gmail.com" style="color: #f87171;">aa22396584@gmail.com</a></li>
+                <li><strong>網站：</strong><a href="https://iml1s.github.io" target="_blank" rel="noopener" style="color: #f87171;">iml1s.github.io</a></li>
             </ul>
         </div>
     </div>
 
     <footer>
-        <p>Multi-Sign TRON Wallet - 安全的多簽錢包</p>
-        <p>&copy; 2025 All rights reserved.</p>
-        <p style="margin-top: 1rem;"><a href="index.html">← 返回首頁</a></p>
+        <p>TRON Vault 多簽錢包 - 安全的非託管多簽錢包</p>
+        <p>&copy; 2026 Yushang Lung. All rights reserved.</p>
+        <p style="margin-top: 1rem;"><a href="tron-multisig-terms.html">使用條款</a> | <a href="index.html">← 返回首頁</a></p>
     </footer>
 </body>
 
