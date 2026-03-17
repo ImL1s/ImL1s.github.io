@@ -232,6 +232,9 @@
                     patterns. No personal or financial data is included.</li>
                 <li><strong>Device Information:</strong> Device type, operating system version, and app version for
                     diagnostic purposes.</li>
+                <li><strong>Push Notification Token:</strong> A device token is collected via Firebase Cloud Messaging
+                    to deliver push notifications (e.g., price alerts, transaction notifications). This token is not
+                    linked to your identity.</li>
             </ul>
             <p style="margin-top: 1rem; color: #94a3b8;"><em>All collected data is anonymous and cannot be used to
                     identify you personally or access your wallet.</em></p>
@@ -261,7 +264,8 @@
                     broadcast transactions</li>
                 <li><strong>Block Explorers (Etherscan, Blockchair, etc.):</strong> To fetch transaction history</li>
                 <li><strong>Price APIs (CoinGecko):</strong> To display current cryptocurrency prices</li>
-                <li><strong>Firebase (Google):</strong> For anonymous crash reporting and usage analytics</li>
+                <li><strong>Firebase (Google):</strong> For anonymous crash reporting, usage analytics, and push
+                    notification delivery (Firebase Cloud Messaging)</li>
                 <li><strong>WalletConnect:</strong> For connecting to decentralized applications (DApps)</li>
                 <li><strong>Rango Exchange / 0x Protocol:</strong> For token swap functionality</li>
             </ol>
