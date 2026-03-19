@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WildCore — One App. All Survival Skills. Fully Offline.</title>
+  <meta name="description" content="WildCore is the ultimate wilderness survival app. Navigation, SOS, plant ID, fire & shelter guides — all fully offline. No data collected. For iOS and Android.">
+  <link rel="canonical" href="https://iml1s.github.io/wildcore/">
+
+  <!-- Apple Smart Banner -->
+  <meta name="apple-itunes-app" content="app-id=PLACEHOLDER_APP_ID">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="WildCore — One App. All Survival Skills. Fully Offline.">
+  <meta property="og:description" content="Navigation, SOS, plant ID, fire &amp; shelter guides — all fully offline. No tracking, no ads, no data collection.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iml1s.github.io/wildcore/">
+  <meta property="og:image" content="https://iml1s.github.io/wildcore/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WildCore — One App. All Survival Skills. Fully Offline.">
+  <meta name="twitter:description" content="Navigation, SOS, plant ID, fire &amp; shelter guides — all fully offline.">
+  <meta name="twitter:image" content="https://iml1s.github.io/wildcore/og-image.png">
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="en" href="https://iml1s.github.io/wildcore/">
+  <link rel="alternate" hreflang="zh-TW" href="https://iml1s.github.io/wildcore/?lang=zh-TW">
+  <link rel="alternate" hreflang="x-default" href="https://iml1s.github.io/wildcore/">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "WildCore",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": ["iOS", "Android"],
+      "description": "The ultimate wilderness survival app. Navigation, SOS, plant identification, fire & shelter guides — all fully offline.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Independent Developer"
+      },
+      "url": "https://iml1s.github.io/wildcore/",
+      "privacyPolicyUrl": "https://iml1s.github.io/wildcore/privacy.html"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does WildCore work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. WildCore is designed to work fully offline. All survival guides, plant identification (AI on-device), navigation, and tools are available without an internet connection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does WildCore collect my data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. WildCore does not collect, store, or transmit personal data to any server. Location, camera, microphone, and emergency contacts are processed entirely on your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the SOS feature work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The SOS feature sends an SMS with your GPS coordinates to your pre-configured emergency contacts directly from your device via your carrier. It requires cellular signal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the plant identification safe to use for foraging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plant identification uses on-device AI for reference only. Never consume any wild plant based solely on AI identification. Always verify with authoritative sources and qualified experts."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    :root {
+      --bg: #0D0D0D;
+      --bg2: #111111;
+      --panel: #161616;
+      --ink: #e8e8e8;
+      --muted: #9ca3af;
+      --line: #222222;
+      --accent: #4ADE80;
+      --accent-dim: rgba(74, 222, 128, 0.10);
+      --accent-glow: rgba(74, 222, 128, 0.25);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---- NAV ---- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 32px;
+    }
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ---- HERO ---- */
+    .hero {
+      text-align: center;
+      padding: 100px 24px 80px;
+      background:
+        radial-gradient(ellipse 80% 40% at 50% 0%, rgba(74,222,128,0.08), transparent),
+        var(--bg);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      border: 1px solid rgba(74,222,128,0.3);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 4px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .hero h1 .accent { color: var(--accent); }
+    .hero .tagline {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 40px;
+    }
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 22px;
+      color: var(--ink);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: border-color 0.2s, background 0.2s;
+      text-decoration: none;
+    }
+    .btn-store:hover {
+      border-color: var(--accent);
+      background: var(--accent-dim);
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .btn-store .store-icon { font-size: 1.5rem; }
+    .btn-store .store-text-sub { font-size: 0.7rem; color: var(--muted); display: block; line-height: 1; }
+    .btn-store .store-text-main { font-size: 0.92rem; font-weight: 600; display: block; margin-top: 2px; }
+
+    /* ---- FEATURES ---- */
+    .features {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .section-label {
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 56px;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .feature-card:hover {
+      border-color: rgba(74,222,128,0.35);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ---- PRIVACY CALLOUT ---- */
+    .privacy-callout {
+      background: var(--panel);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .privacy-callout .shield {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+      filter: drop-shadow(0 0 20px var(--accent-glow));
+    }
+    .privacy-callout h2 {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .privacy-callout p {
+      max-width: 540px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .privacy-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .pill {
+      background: var(--accent-dim);
+      border: 1px solid rgba(74,222,128,0.25);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    /* ---- FAQ ---- */
+    .faq-section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 20px 0;
+    }
+    .faq-item:first-of-type { border-top: 1px solid var(--line); }
+    .faq-q {
+      font-weight: 600;
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .faq-a {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      background: var(--panel);
+      border-top: 1px solid var(--line);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 20px;
+      font-size: 0.85rem;
+    }
+    .footer-links a { color: var(--muted); }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: #555;
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 14px 20px; }
+      .nav-links { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">&#127807; WildCore</div>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Wilderness Survival App</div>
+  <h1>One App.<br><span class="accent">All Survival Skills.</span><br>Fully Offline.</h1>
+  <p class="tagline">Navigation, SOS, plant ID, fire &amp; shelter guides — everything you need to survive, even when there's no signal.</p>
+  <div class="hero-cta">
+    <a href="https://apps.apple.com/app/idPLACEHOLDER" class="btn-store" rel="noopener">
+      <span class="store-icon">&#63743;</span>
+      <span>
+        <span class="store-text-sub">Download on the</span>
+        <span class="store-text-main">App Store</span>
+      </span>
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=PLACEHOLDER" class="btn-store" rel="noopener">
+      <span class="store-icon">&#9654;</span>
+      <span>
+        <span class="store-text-sub">Get it on</span>
+        <span class="store-text-main">Google Play</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <p class="section-label">Core Features</p>
+  <h2 class="section-title">Built for the Wild</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <span class="feature-icon">&#127758;</span>
+      <h3>Offline Navigation</h3>
+      <p>GPS-based navigation with offline maps. No signal required. Track your location, mark waypoints, and find your way back.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">&#128680;</span>
+      <h3>One-Tap SOS</h3>
+      <p>Send your GPS coordinates to emergency contacts via SMS with a single tap. Configurable contacts, stored encrypted on-device.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">&#127807;</span>
+      <h3>Plant Identification</h3>
+      <p>On-device AI (TFLite) identifies plants from your camera. Works offline. Always verify before consuming — AI is a reference tool only.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">&#128293;</span>
+      <h3>Fire &amp; Shelter Guides</h3>
+      <p>Step-by-step survival guides for building fire, finding shelter, water purification, and more — all available offline.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">&#127758;</span>
+      <h3>Sunrise &amp; Sunset</h3>
+      <p>Accurate sunrise, sunset, and golden hour times calculated using your GPS location. Plan your day in the wild.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">&#127908;</span>
+      <h3>Voice Commands</h3>
+      <p>Hands-free operation with voice commands. Processed entirely on-device — no audio ever leaves your phone.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">&#128274;</span>
+      <h3>Zero Data Collection</h3>
+      <p>No analytics, no ads, no tracking. Your location, photos, and contacts never leave your device. Privacy by design.</p>
+    </div>
+    <div class="feature-card">
+      <span class="feature-icon">&#9889;</span>
+      <h3>Offline First</h3>
+      <p>Every feature works without internet. Built for the backcountry where connectivity is never guaranteed.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY CALLOUT -->
+<section class="privacy-callout" id="privacy">
+  <span class="shield">&#128737;</span>
+  <h2>Privacy by Design</h2>
+  <p>WildCore was built with a single commitment: <strong style="color:#fff">your data never leaves your device.</strong> No servers. No tracking. No compromise.</p>
+  <div class="privacy-pills">
+    <span class="pill">No analytics</span>
+    <span class="pill">No ads</span>
+    <span class="pill">No data transmission</span>
+    <span class="pill">On-device AI</span>
+    <span class="pill">Encrypted local storage</span>
+    <span class="pill">Keychain-protected contacts</span>
+  </div>
+  <p style="margin-top: 28px">
+    <a href="/wildcore/privacy.html">Read the full Privacy Policy &rarr;</a>
+  </p>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <p class="section-label">FAQ</p>
+  <h2 class="section-title" style="text-align:center; font-size:clamp(1.4rem,3.5vw,2rem)">Common Questions</h2>
+
+  <div class="faq-item">
+    <p class="faq-q">Does WildCore work without internet?</p>
+    <p class="faq-a">Yes — fully. All survival guides, plant identification (on-device AI), navigation, SOS setup, and tools work completely offline. An internet connection is only required for the initial download and subscription management.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">Does the app collect my location data?</p>
+    <p class="faq-a">No. Your GPS location is used locally on your device for navigation, SOS coordinates, and sunrise/sunset calculations. It is never transmitted to our servers. SOS SMS sends your coordinates directly to your contacts via your carrier — we never see them.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">Is plant identification safe for foraging?</p>
+    <p class="faq-a">The AI plant ID feature is a reference tool only. It is not 100% accurate and many edible plants have toxic look-alikes. Never consume any wild plant based solely on the app's output. Always verify with multiple authoritative sources and a qualified botanist.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">How does the SOS feature work?</p>
+    <p class="faq-a">WildCore sends an SMS containing your current GPS coordinates to the emergency contacts you've configured in the app. The SMS is sent from your device via your mobile carrier. The feature requires cellular signal. It is a supplemental safety tool — always try to reach official emergency services (911, 112, etc.) first.</p>
+  </div>
+
+  <div class="faq-item">
+    <p class="faq-q">Is WildCore free?</p>
+    <p class="faq-a">WildCore offers core features for free. A premium subscription unlocks additional content, guides, and features. Subscriptions are managed via Apple App Store or Google Play.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">&#127807; WildCore</span>
+  <div class="footer-links">
+    <a href="/wildcore/privacy.html">Privacy Policy</a>
+    <a href="/wildcore/terms.html">Terms of Service</a>
+    <a href="mailto:wildcore.app@gmail.com">Contact</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 WildCore. All rights reserved. &nbsp;&mdash;&nbsp; App is for reference only. Not a substitute for professional survival training.</p>
+</footer>
+
+</body>
+</html>

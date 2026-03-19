@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WildCore Privacy Policy | 隱私權政策</title>
+  <meta name="description" content="WildCore wilderness survival app privacy policy. All data stays on-device. No tracking, no ads, no data sharing.">
+  <link rel="canonical" href="https://iml1s.github.io/wildcore/privacy.html">
+  <meta property="og:title" content="WildCore Privacy Policy">
+  <meta property="og:description" content="WildCore collects no personal data. Location, camera, microphone, and emergency contacts are processed entirely on-device.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iml1s.github.io/wildcore/privacy.html">
+  <style>
+    :root {
+      --bg: #0D0D0D;
+      --panel: #161616;
+      --panel-soft: #1a1a1a;
+      --ink: #e8e8e8;
+      --muted: #9ca3af;
+      --line: #2a2a2a;
+      --accent: #4ADE80;
+      --accent-dim: rgba(74, 222, 128, 0.12);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    header .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+    }
+    header .logo span { font-size: 1.6rem; }
+    header p {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 24px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+    .lang-switcher a {
+      padding: 4px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .lang-switcher a.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-dim);
+    }
+
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    .section-lang {
+      border-top: 1px solid var(--line);
+      padding-top: 48px;
+      margin-top: 48px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 12px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 16px 0 6px;
+    }
+    p { margin-bottom: 12px; color: var(--ink); }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    ul li { margin-bottom: 6px; }
+
+    .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      border: 1px solid rgba(74,222,128,0.3);
+      color: var(--accent);
+      border-radius: 6px;
+      padding: 2px 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-right: 6px;
+      margin-bottom: 4px;
+      vertical-align: middle;
+    }
+
+    .highlight-box {
+      background: var(--accent-dim);
+      border: 1px solid rgba(74,222,128,0.25);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 20px;
+    }
+    .highlight-box p { margin: 0; font-weight: 500; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+    th {
+      text-align: left;
+      padding: 10px 14px;
+      background: var(--panel-soft);
+      color: var(--muted);
+      font-weight: 600;
+      border-bottom: 1px solid var(--line);
+    }
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="/wildcore/"><span>&#127807;</span> WildCore</a>
+  <p>Wilderness Survival — Offline First</p>
+</header>
+
+<div class="lang-switcher">
+  <a href="#en" class="active">English</a>
+  <a href="#zh">繁體中文</a>
+</div>
+
+<main>
+
+  <!-- ===== ENGLISH ===== -->
+  <section id="en">
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective Date: March 19, 2026 &nbsp;|&nbsp; App: WildCore &nbsp;|&nbsp; Developer: Independent Developer</p>
+
+    <div class="highlight-box">
+      <p>WildCore is built on a simple principle: <strong>your data never leaves your device.</strong> We do not collect, store, or transmit any personal information to our servers.</p>
+    </div>
+
+    <section>
+      <h2>1. Information We Collect (On-Device Only)</h2>
+      <p>All data listed below is processed <strong>exclusively on your device</strong> and is never transmitted to any server operated by us.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Purpose</th>
+            <th>Storage &amp; Transmission</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Location (GPS)</strong></td>
+            <td>Navigation, SOS coordinates, sunrise/sunset calculation</td>
+            <td>On-device only. Never transmitted to our servers. SOS SMS sends coordinates directly from your device to your configured emergency contacts via your carrier.</td>
+          </tr>
+          <tr>
+            <td><strong>Emergency Contacts</strong></td>
+            <td>SOS feature — name and phone number of your chosen contacts</td>
+            <td>Stored encrypted on-device using the platform keychain (iOS Keychain / Android Keystore). Never transmitted to our servers.</td>
+          </tr>
+          <tr>
+            <td><strong>Camera</strong></td>
+            <td>Plant identification using on-device AI (TFLite model)</td>
+            <td>Images are processed locally. No images are uploaded or stored beyond the current session.</td>
+          </tr>
+          <tr>
+            <td><strong>Microphone</strong></td>
+            <td>Voice commands for hands-free operation</td>
+            <td>Audio is processed on-device. No audio is recorded, stored, or uploaded.</td>
+          </tr>
+          <tr>
+            <td><strong>SMS</strong></td>
+            <td>SOS emergency — send GPS coordinates to your emergency contacts</td>
+            <td>Sent from your device via your carrier directly to your contacts. We never see or store the content.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>2. What We Do NOT Collect</h2>
+      <ul>
+        <li>No analytics or usage tracking</li>
+        <li>No advertising identifiers (IDFA, GAID)</li>
+        <li>No crash reports sent to our servers</li>
+        <li>No personally identifiable information (PII)</li>
+        <li>No behavioral profiling</li>
+        <li>No third-party advertising SDKs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Third-Party SDKs</h2>
+
+      <h3>RevenueCat (Subscription Management)</h3>
+      <p>WildCore uses <strong>RevenueCat</strong> to process in-app purchases and manage subscription status. RevenueCat may collect the following for purchase validation:</p>
+      <ul>
+        <li>Device identifiers (anonymous)</li>
+        <li>Purchase receipts (processed by Apple / Google)</li>
+        <li>Subscription status</li>
+      </ul>
+      <p>RevenueCat does not receive your location, emergency contacts, camera data, or microphone data. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
+
+      <h3>Apple App Store / Google Play</h3>
+      <p>Payment processing for purchases is handled entirely by Apple or Google. We do not process or store payment information. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>4. Data Storage and Security</h2>
+      <ul>
+        <li>All app data is stored locally on your device.</li>
+        <li>Emergency contacts are encrypted using the platform-native keychain (iOS Keychain / Android Keystore).</li>
+        <li>We have no servers that store your personal data.</li>
+        <li>To delete all data: uninstall the app.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Children's Privacy</h2>
+      <p>WildCore is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has provided personal data, please contact us at the address below and we will take steps to delete it.</p>
+    </section>
+
+    <section>
+      <h2>6. GDPR (European Users)</h2>
+      <p>Because WildCore does not transmit personal data to our servers, the GDPR data processing obligations that typically apply to server-side data collection do not apply. Your data remains solely under your control on your own device. For any questions, contact us at the email below.</p>
+    </section>
+
+    <section>
+      <h2>7. CCPA (California Users)</h2>
+      <p>WildCore does not sell personal information. We do not share personal information with third parties for monetary or other valuable consideration. California residents have rights under the CCPA — because we hold no personal data on our servers, there is no personal data to access, delete, or opt out of sale.</p>
+    </section>
+
+    <section>
+      <h2>8. Changes to This Policy</h2>
+      <p>If we make material changes to this Privacy Policy, we will update the "Effective Date" at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2>9. Contact</h2>
+      <p>For privacy-related questions or concerns, contact us at:</p>
+      <p><strong>Email:</strong> <a href="mailto:wildcore.app@gmail.com">wildcore.app@gmail.com</a></p>
+    </section>
+  </section>
+
+  <!-- ===== TRADITIONAL CHINESE ===== -->
+  <div class="section-lang"></div>
+  <section id="zh" lang="zh-Hant">
+    <h1>隱私權政策</h1>
+    <p class="meta">生效日期：2026 年 3 月 19 日 &nbsp;|&nbsp; 應用程式：WildCore &nbsp;|&nbsp; 開發者：獨立開發者</p>
+
+    <div class="highlight-box">
+      <p>WildCore 建立在一個簡單的原則上：<strong>您的資料永遠不會離開您的設備。</strong>我們不會收集、儲存或傳輸任何個人資訊至我們的伺服器。</p>
+    </div>
+
+    <section>
+      <h2>1. 我們收集的資訊（僅限裝置本機）</h2>
+      <p>以下所有資料均<strong>僅在您的裝置上</strong>處理，絕不會傳輸至我們運營的任何伺服器。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>資料類型</th>
+            <th>用途</th>
+            <th>儲存與傳輸</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>位置（GPS）</strong></td>
+            <td>導航、SOS 座標、日出日落計算</td>
+            <td>僅在裝置本機使用，絕不傳輸至我們的伺服器。SOS 簡訊由您的裝置直接透過電信商傳送給您設定的緊急聯絡人。</td>
+          </tr>
+          <tr>
+            <td><strong>緊急聯絡人</strong></td>
+            <td>SOS 功能 — 您選擇的聯絡人姓名與電話號碼</td>
+            <td>使用平台鑰匙圈加密儲存於裝置（iOS Keychain / Android Keystore），絕不傳輸至我們的伺服器。</td>
+          </tr>
+          <tr>
+            <td><strong>相機</strong></td>
+            <td>使用裝置端 AI（TFLite 模型）進行植物辨識</td>
+            <td>影像在本機處理。不會上傳或儲存超出當前使用階段的任何影像。</td>
+          </tr>
+          <tr>
+            <td><strong>麥克風</strong></td>
+            <td>語音指令，實現免持操作</td>
+            <td>音訊在裝置上處理。不會錄製、儲存或上傳任何音訊。</td>
+          </tr>
+          <tr>
+            <td><strong>SMS 簡訊</strong></td>
+            <td>SOS 緊急功能 — 將 GPS 座標傳送給緊急聯絡人</td>
+            <td>由您的裝置透過電信商直接傳送給您的聯絡人。我們不會看到或儲存任何內容。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>2. 我們不收集的資訊</h2>
+      <ul>
+        <li>不進行分析或使用行為追蹤</li>
+        <li>不收集廣告識別碼（IDFA、GAID）</li>
+        <li>不向我們的伺服器傳送崩潰報告</li>
+        <li>不收集個人識別資訊（PII）</li>
+        <li>不進行行為分析</li>
+        <li>不整合第三方廣告 SDK</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. 第三方 SDK</h2>
+
+      <h3>RevenueCat（訂閱管理）</h3>
+      <p>WildCore 使用 <strong>RevenueCat</strong> 處理應用程式內購買及管理訂閱狀態。RevenueCat 可能收集以下資訊以進行購買驗證：</p>
+      <ul>
+        <li>裝置識別碼（匿名）</li>
+        <li>購買收據（由 Apple / Google 處理）</li>
+        <li>訂閱狀態</li>
+      </ul>
+      <p>RevenueCat 不會收到您的位置、緊急聯絡人、相機或麥克風資料。請參閱 <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat 隱私權政策</a>。</p>
+
+      <h3>Apple App Store / Google Play</h3>
+      <p>購買的付款處理完全由 Apple 或 Google 負責。我們不處理或儲存付款資訊。請參閱 <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隱私權政策</a> 及 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</p>
+    </section>
+
+    <section>
+      <h2>4. 資料儲存與安全</h2>
+      <ul>
+        <li>所有應用程式資料均儲存在您的裝置本機。</li>
+        <li>緊急聯絡人使用平台原生鑰匙圈加密（iOS Keychain / Android Keystore）。</li>
+        <li>我們沒有任何伺服器儲存您的個人資料。</li>
+        <li>如需刪除所有資料：解除安裝應用程式即可。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. 兒童隱私</h2>
+      <p>WildCore 不針對 13 歲以下兒童。我們不會有意收集兒童的個人資訊。如果您認為兒童已提供個人資料，請透過下方電子郵件聯繫我們，我們將採取措施予以刪除。</p>
+    </section>
+
+    <section>
+      <h2>6. GDPR（歐洲用戶）</h2>
+      <p>由於 WildCore 不向我們的伺服器傳輸個人資料，通常適用於伺服器端資料收集的 GDPR 資料處理義務並不適用。您的資料完全由您在自己的裝置上掌控。如有任何問題，請透過下方電子郵件聯繫我們。</p>
+    </section>
+
+    <section>
+      <h2>7. CCPA（加州用戶）</h2>
+      <p>WildCore 不出售個人資訊，也不以金錢或其他有價對價與第三方共享個人資訊。加州居民在 CCPA 下享有相關權利 — 由於我們在伺服器上不持有任何個人資料，因此沒有個人資料需要存取、刪除或選擇退出出售。</p>
+    </section>
+
+    <section>
+      <h2>8. 政策變更</h2>
+      <p>若我們對本隱私權政策進行重大變更，將更新本頁頂部的「生效日期」。變更後繼續使用應用程式即表示您接受更新後的政策。</p>
+    </section>
+
+    <section>
+      <h2>9. 聯絡我們</h2>
+      <p>如有隱私相關問題或疑慮，請聯繫：</p>
+      <p><strong>電子郵件：</strong><a href="mailto:wildcore.app@gmail.com">wildcore.app@gmail.com</a></p>
+    </section>
+  </section>
+
+</main>
+
+<footer>
+  <p>WildCore &mdash; <a href="/wildcore/">Home</a> &nbsp;|&nbsp; <a href="/wildcore/privacy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="/wildcore/terms.html">Terms of Service</a></p>
+  <p style="margin-top:8px">&copy; 2026 WildCore. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
