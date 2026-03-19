@@ -158,4 +158,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <!-- Car Log Plus -->
+  <url>
+    <loc>https://iml1s.github.io/car-log-plus/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://iml1s.github.io/car-log-plus/og-image.png</image:loc>
+      <image:title>Car Log Plus 車記加 — 智能車輛管理 App</image:title>
+      <image:caption>加油記錄、油耗計算、保養提醒、費用追蹤。台灣在地化整合 MVDIS 監理站、即時油價。</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://iml1s.github.io/car-log-plus/privacy-policy.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iml1s.github.io/car-log-plus/terms-of-service.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://iml1s.github.io/car-log-plus/support.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
