@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用條款 - 供應鏈預警 | Terms of Service - Upstream Alert</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { border-bottom: 2px solid #1E40AF; padding-bottom: 10px; color: #1E40AF; }
+        h2 { margin-top: 30px; color: #1E3A8A; }
+        h3 { color: #1E40AF; }
+        ul { padding-left: 20px; }
+        a { color: #1E40AF; }
+        .lang-toggle { text-align: right; margin-bottom: 20px; }
+        .lang-toggle a { padding: 5px 15px; border: 1px solid #1E40AF; border-radius: 4px; text-decoration: none; margin-left: 5px; }
+        .lang-toggle a.active { background: #1E40AF; color: white; }
+        .en { display: none; }
+    </style>
+    <script>
+        function toggleLang(lang) {
+            document.querySelectorAll('.zh').forEach(el => el.style.display = lang === 'zh' ? '' : 'none');
+            document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+            document.querySelectorAll('.lang-toggle a').forEach(a => a.classList.remove('active'));
+            document.querySelector('.lang-toggle a[onclick*="' + lang + '"]').classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="lang-toggle">
+        <a href="#" class="active" onclick="toggleLang('zh'); return false;">中文</a>
+        <a href="#" onclick="toggleLang('en'); return false;">English</a>
+    </div>
+
+    <!-- Chinese Version -->
+    <div class="zh">
+    <h1>使用條款</h1>
+    <p><strong>最後更新日期：2026 年 3 月 20 日</strong></p>
+
+    <p>歡迎使用「Upstream Alert 供應鏈預警」。使用本應用程式即表示您同意以下使用條款。請仔細閱讀。</p>
+
+    <h2>1. 條款接受</h2>
+    <p>存取或使用「Upstream Alert 供應鏈預警」（以下簡稱「本應用程式」），即表示您同意受本使用條款及我們的<a href="https://iml1s.github.io/upstream-alert-privacy">隱私權政策</a>約束。若您不同意這些條款，請勿使用本應用程式。</p>
+
+    <h2>2. 服務說明</h2>
+    <p>Upstream Alert 供應鏈預警是一款專為台灣中小零售業者設計的供應鏈異常預警行動應用程式。本應用程式整合 5 大公開數據源（GDELT 全球事件、台灣新聞 RSS、主計處 CPI 統計、海關貿易資料、FBX 運價指數），透過風險引擎計算風險評分（0-100），即時推播供應鏈異常警示。</p>
+    <p>本應用程式另提供 AI 聊天功能，使用 Google Gemini AI 進行供應鏈風險分析。</p>
+
+    <h2>3. 重要免責聲明 — 資料準確性</h2>
+    <p><strong>本應用程式提供之所有供應鏈風險資訊均來自公開數據源，僅供一般參考之用。</strong></p>
+    <ul>
+        <li>風險評分及分析結果<strong>不構成任何投資建議、財務建議或商業決策建議</strong>。</li>
+        <li>公開數據源可能存在延遲、不完整或錯誤的情況。</li>
+        <li>風險評分為演算法自動計算結果，可能無法完全反映實際市場狀況。</li>
+        <li>請勿將本應用程式提供的資訊作為重大商業決策或採購決策的唯一依據。</li>
+        <li>對於因依賴本應用程式資訊而產生的任何商業損失或損害，我們不承擔任何責任。</li>
+        <li>建議使用者結合自身專業判斷及其他資訊來源，綜合評估供應鏈風險。</li>
+    </ul>
+
+    <h2>4. AI 分析免責聲明</h2>
+    <p>本應用程式使用 Google Gemini AI 進行供應鏈風險分析。請注意：</p>
+    <ul>
+        <li>AI 分析結果<strong>僅供參考</strong>，不構成任何專業建議。</li>
+        <li>AI 回覆可能包含錯誤、不完整或過時的資訊。</li>
+        <li>AI 分析基於有限的數據及模型推論，可能無法涵蓋所有影響供應鏈的因素。</li>
+        <li>您的查詢內容將透過 Firebase AI 傳送至 Google 的 Gemini AI 服務進行處理。</li>
+        <li>對於因依賴 AI 分析結果而產生的任何損失或損害，我們不承擔任何責任。</li>
+        <li>重大商業決策應諮詢相關領域的專業顧問。</li>
+    </ul>
+
+    <h2>5. 使用限制</h2>
+    <p>免費方案使用者可追蹤有限數量的品項，並會顯示廣告。升級為 Pro 會員可享有更多追蹤品項數量及無廣告體驗。</p>
+
+    <h2>6. 使用者行為規範</h2>
+    <p>您同意不會：</p>
+    <ul>
+        <li>將本應用程式用於任何非法或未經授權的目的。</li>
+        <li>提交虛假或惡意的異常回報。</li>
+        <li>嘗試未經授權存取本應用程式或其後端系統。</li>
+        <li>干擾或破壞本應用程式的運作。</li>
+        <li>使用自動化工具大量查詢以濫用服務或 API。</li>
+        <li>嘗試繞過 Firebase App Check 或其他安全機制。</li>
+        <li>違反任何適用法律或法規。</li>
+    </ul>
+
+    <h2>7. 訂閱與付款</h2>
+    <p>部分進階功能需要付費訂閱（Pro 方案）。訂閱條款如下：</p>
+    <ul>
+        <li>訂閱價格及方案內容顯示在應用程式的設定頁面中。</li>
+        <li>訂閱透過 Apple App Store 或 Google Play Store 處理，其各自的條款適用。</li>
+        <li><strong>訂閱將自動續訂</strong>，除非您在當期結束前至少 24 小時取消。</li>
+        <li>續訂費用將在當期結束前 24 小時內向您的帳戶收取。</li>
+        <li>您可隨時透過裝置的商店設定管理或取消訂閱：
+            <ul>
+                <li>iOS：「設定」>「Apple ID」>「訂閱項目」</li>
+                <li>Android：Google Play 商店 >「付款與訂閱」>「訂閱」</li>
+            </ul>
+        </li>
+        <li>取消訂閱後，您仍可使用 Pro 功能至當期結束。</li>
+        <li>退款依各商店平台的退款政策處理。</li>
+        <li>免費試用期（如有提供）結束後若未取消，將自動轉為付費訂閱。</li>
+    </ul>
+
+    <h2>8. 智慧財產權</h2>
+    <p>本應用程式及其所有內容、功能和設計均為我們或其授權人的財產，受著作權及其他智慧財產權法律保護。公開數據源之資料依其各自之授權條款使用。AI 生成之回覆不構成任何一方的智慧財產權。</p>
+
+    <h2>9. 保證免責聲明</h2>
+    <p>本應用程式按「現狀」及「現有」基礎提供，不提供任何明示或暗示的保證。我們不保證：</p>
+    <ul>
+        <li>本應用程式不會中斷、安全或無錯誤。</li>
+        <li>風險評分或 AI 分析的準確性、完整性或時效性。</li>
+        <li>公開數據源的持續可用性或資料品質。</li>
+        <li>推播通知的即時性或送達率。</li>
+    </ul>
+
+    <h2>10. 責任限制</h2>
+    <p>在法律允許的最大範圍內，我們對因您使用本應用程式而產生的任何間接、附帶、特殊、衍生性或懲罰性損害不承擔責任，包括但不限於：</p>
+    <ul>
+        <li>因依賴風險評分或 AI 分析而產生的商業損失。</li>
+        <li>因資料延遲或錯誤而錯過的商業機會。</li>
+        <li>因推播通知未送達而產生的損失。</li>
+    </ul>
+
+    <h2>11. 賠償</h2>
+    <p>您同意賠償並使 Upstream Alert 及其營運者（CB Studio）免受因您使用本應用程式或違反本條款而產生的任何索賠、損害或費用的損害。</p>
+
+    <h2>12. 終止</h2>
+    <p>我們保留在任何時候以任何理由（無論有無通知）暫停或終止您對本應用程式的存取權的權利，特別是在您違反本使用條款或濫用服務的情況下。</p>
+
+    <h2>13. 條款變更</h2>
+    <p>我們可能隨時修改本條款。修改後繼續使用本應用程式即表示您接受修改後的條款。重大條款變更將透過應用程式內通知告知使用者。</p>
+
+    <h2>14. 人工智慧基本法合規聲明</h2>
+    <p>依據《人工智慧基本法》（2026 年 1 月 14 日施行），本應用程式承諾：</p>
+    <ul>
+        <li><strong>透明可解釋</strong>：明確告知使用者風險分析及聊天回覆由 AI 生成，並揭示所使用之 AI 模型（Google Gemini）。</li>
+        <li><strong>人類自主</strong>：AI 分析僅供參考，最終商業決策由使用者自主判斷，本應用程式不代替使用者做決定。</li>
+        <li><strong>公平不歧視</strong>：AI 系統不因任何因素對使用者或品項有差別對待。</li>
+        <li><strong>問責</strong>：本應用程式開發者對 AI 系統之運作承擔責任，如有申訴請透過本頁底部聯絡方式提出。</li>
+    </ul>
+
+    <h2>15. 準據法</h2>
+    <p>本條款受中華民國（台灣）法律管轄並依其解釋，不考慮其法律衝突條款。</p>
+
+    <h2>16. 聯繫我們</h2>
+    <p>如果您對本使用條款有任何疑問，請透過以下方式聯繫我們：</p>
+    <ul>
+        <li><strong>開發者</strong>：Yushang Lung (CB Studio)</li>
+        <li><strong>電子郵件</strong>：<a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></li>
+        <li><strong>電話</strong>：+886 963723347</li>
+        <li><strong>網站</strong>：<a href="https://iml1s.github.io">https://iml1s.github.io</a></li>
+    </ul>
+    </div>
+
+    <!-- English Version -->
+    <div class="en">
+    <h1>Terms of Service</h1>
+    <p><strong>Last Updated: March 20, 2026</strong></p>
+
+    <p>Welcome to Upstream Alert. By using this App, you agree to these Terms of Service. Please read them carefully.</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By accessing or using Upstream Alert ("the App"), you agree to be bound by these Terms of Service and our <a href="https://iml1s.github.io/upstream-alert-privacy">Privacy Policy</a>. If you do not agree to these terms, please do not use the App.</p>
+
+    <h2>2. Description of Service</h2>
+    <p>Upstream Alert is a supply chain risk monitoring mobile application designed for Taiwan SMB retailers. The App integrates 5 public data sources (GDELT global events, Taiwan RSS news, DGBAS CPI statistics, Customs trade data, FBX freight index) and uses a risk engine to calculate risk scores (0-100), delivering real-time push notifications for supply chain anomalies.</p>
+    <p>The App also provides an AI Chat feature powered by Google Gemini AI for supply chain risk analysis.</p>
+
+    <h2>3. Important Disclaimer -- Data Accuracy</h2>
+    <p><strong>All supply chain risk information provided by this App is sourced from public data sources and is for general reference only.</strong></p>
+    <ul>
+        <li>Risk scores and analysis results <strong>do not constitute investment advice, financial advice, or business decision recommendations</strong>.</li>
+        <li>Public data sources may have delays, be incomplete, or contain errors.</li>
+        <li>Risk scores are algorithmically computed and may not fully reflect actual market conditions.</li>
+        <li>Do not use information provided by this App as the sole basis for major business or procurement decisions.</li>
+        <li>We are not responsible for any business losses or damages arising from reliance on information provided by this App.</li>
+        <li>Users are advised to combine their own professional judgment and other information sources for a comprehensive supply chain risk assessment.</li>
+    </ul>
+
+    <h2>4. AI Analysis Disclaimer</h2>
+    <p>This App uses Google Gemini AI for supply chain risk analysis. Please note:</p>
+    <ul>
+        <li>AI analysis results are <strong>for reference only</strong> and do not constitute professional advice.</li>
+        <li>AI responses may contain errors, incomplete, or outdated information.</li>
+        <li>AI analysis is based on limited data and model inference, and may not cover all factors affecting supply chains.</li>
+        <li>Your queries are sent to Google's Gemini AI service via Firebase AI for processing.</li>
+        <li>We are not responsible for any losses or damages arising from reliance on AI analysis results.</li>
+        <li>Major business decisions should be made in consultation with relevant professional advisors.</li>
+    </ul>
+
+    <h2>5. Usage Limits</h2>
+    <p>Free tier users can track a limited number of items and will see advertisements. Upgrading to Pro membership provides a higher item tracking limit and an ad-free experience.</p>
+
+    <h2>6. User Conduct</h2>
+    <p>You agree not to:</p>
+    <ul>
+        <li>Use the App for any illegal or unauthorized purpose.</li>
+        <li>Submit false or malicious anomaly reports.</li>
+        <li>Attempt to gain unauthorized access to the App or its backend systems.</li>
+        <li>Interfere with or disrupt the operation of the App.</li>
+        <li>Use automated tools to mass-query and abuse the service or APIs.</li>
+        <li>Attempt to bypass Firebase App Check or other security mechanisms.</li>
+        <li>Violate any applicable laws or regulations.</li>
+    </ul>
+
+    <h2>7. Subscriptions and Payments</h2>
+    <p>Certain premium features require a paid subscription (Pro plan). Subscription terms are as follows:</p>
+    <ul>
+        <li>Subscription pricing and plan details are displayed in the App's settings page.</li>
+        <li>Subscriptions are processed through Apple App Store or Google Play Store, and their respective terms apply.</li>
+        <li><strong>Subscriptions automatically renew</strong> unless canceled at least 24 hours before the end of the current period.</li>
+        <li>Renewal charges will be billed to your account within 24 hours before the end of the current period.</li>
+        <li>You can manage or cancel subscriptions at any time through your device's store settings:
+            <ul>
+                <li>iOS: Settings > Apple ID > Subscriptions</li>
+                <li>Android: Google Play Store > Payments & subscriptions > Subscriptions</li>
+            </ul>
+        </li>
+        <li>After cancellation, you may continue to use Pro features until the end of the current billing period.</li>
+        <li>Refunds are handled according to the respective store platform's refund policy.</li>
+        <li>Free trial periods (if offered), if not canceled, will automatically convert to paid subscriptions upon expiration.</li>
+    </ul>
+
+    <h2>8. Intellectual Property</h2>
+    <p>The App and all its content, features, and design are the property of us or our licensors, protected by copyright and other intellectual property laws. Public data source content is used under their respective license terms. AI-generated responses do not constitute intellectual property of any party.</p>
+
+    <h2>9. Disclaimer of Warranties</h2>
+    <p>The App is provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not guarantee:</p>
+    <ul>
+        <li>That the App will be uninterrupted, secure, or error-free.</li>
+        <li>The accuracy, completeness, or timeliness of risk scores or AI analysis.</li>
+        <li>The continued availability or data quality of public data sources.</li>
+        <li>The timeliness or delivery rate of push notifications.</li>
+    </ul>
+
+    <h2>10. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App, including but not limited to:</p>
+    <ul>
+        <li>Business losses arising from reliance on risk scores or AI analysis.</li>
+        <li>Missed business opportunities due to data delays or errors.</li>
+        <li>Losses arising from undelivered push notifications.</li>
+    </ul>
+
+    <h2>11. Indemnification</h2>
+    <p>You agree to indemnify and hold harmless Upstream Alert and its operator (CB Studio) from any claims, damages, or expenses arising from your use of the App or violation of these Terms.</p>
+
+    <h2>12. Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to the App at any time, with or without cause, with or without notice, particularly in cases where you violate these Terms of Service or abuse the service.</p>
+
+    <h2>13. Changes to Terms</h2>
+    <p>We may modify these Terms at any time. Continued use of the App after changes constitutes acceptance of the modified Terms. Users will be notified of significant changes via in-app notifications.</p>
+
+    <h2>14. AI Basic Act Compliance</h2>
+    <p>In accordance with the Artificial Intelligence Basic Act (effective January 14, 2026), this App commits to:</p>
+    <ul>
+        <li><strong>Transparency and Explainability</strong>: Users are clearly informed that risk analysis and chat responses are AI-generated, and the AI model used (Google Gemini) is disclosed.</li>
+        <li><strong>Human Autonomy</strong>: AI analysis is for reference only. Final business decisions rest with the user; the App does not make decisions on the user's behalf.</li>
+        <li><strong>Fairness and Non-discrimination</strong>: The AI system does not treat users or items differently based on any discriminatory factors.</li>
+        <li><strong>Accountability</strong>: The App developer takes responsibility for the operation of the AI system. Complaints may be submitted through the contact information at the bottom of this page.</li>
+    </ul>
+
+    <h2>15. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of China (Taiwan), without regard to its conflict of law provisions.</p>
+
+    <h2>16. Contact Us</h2>
+    <p>If you have any questions about these Terms of Service, please contact us:</p>
+    <ul>
+        <li><strong>Developer</strong>: Yushang Lung (CB Studio)</li>
+        <li><strong>Email</strong>: <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></li>
+        <li><strong>Phone</strong>: +886 963723347</li>
+        <li><strong>Website</strong>: <a href="https://iml1s.github.io">https://iml1s.github.io</a></li>
+    </ul>
+    </div>
+</body>
+</html>
