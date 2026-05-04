@@ -1,59 +1,449 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>隱私權政策 — 垃圾車追蹤</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
-    h1 { color: #2E7D32; }
-    h2 { color: #388E3C; margin-top: 2em; }
-    .updated { color: #666; font-size: 0.9em; }
-  </style>
+  <meta name="description" content="垃圾車追蹤 App 的隱私權政策，說明我們如何收集、使用、保護您的個人資料，以及您依 GDPR、CCPA、個資法享有的權利。">
+  <meta name="theme-color" content="#2E7D32" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="_shared.css">
 </head>
 <body>
-  <h1>隱私權政策</h1>
-  <p class="updated">最後更新：2026 年 3 月 1 日</p>
+  <a href="#main" class="skip-link">略過導覽，跳至內文</a>
 
-  <h2>1. 概述</h2>
-  <p>「垃圾車追蹤」（以下簡稱「本 App」）由 CB Studio 開發與維護。我們重視您的隱私權，本政策說明我們如何收集、使用及保護您的個人資訊。</p>
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="垃圾車追蹤首頁">
+        <svg class="site-brand__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 17h2a3 3 0 0 0 6 0h2a3 3 0 0 0 6 0h2v-5l-3-4h-3V5H3v12zm5 1.5A1.5 1.5 0 1 1 8 15.5a1.5 1.5 0 0 1 0 3zm8 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-1-9.5h2.5l2 2.7V14h-1.5a3 3 0 0 0-6 0H8a3 3 0 0 0-6 0V7h13v2z"/>
+        </svg>
+        垃圾車追蹤
+      </a>
+      <nav class="site-nav" aria-label="法律文件導覽">
+        <a href="privacy.html" aria-current="page">隱私權政策</a>
+        <a href="terms.html">使用條款</a>
+        <a href="support.html">支援中心</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>2. 資料收集</h2>
-  <p>本 App 可能收集以下資訊：</p>
-  <ul>
-    <li><strong>位置資訊</strong>：用於顯示附近清運站點及計算距離。僅在您授權後使用，不會在背景持續追蹤。</li>
-    <li><strong>通知偏好</strong>：您設定的提醒時間及偏好，僅儲存於本機裝置。</li>
-    <li><strong>使用分析</strong>：透過 Firebase Analytics 收集匿名使用統計，協助改善 App 體驗。</li>
-    <li><strong>崩潰報告</strong>：透過 Firebase Crashlytics 收集匿名崩潰資訊，協助修復問題。</li>
-  </ul>
+  <main id="main" tabindex="-1">
+    <div class="page-hero">
+      <span class="page-hero__eyebrow">Privacy Policy</span>
+      <h1>隱私權政策</h1>
+      <p>本政策說明 CB Studio 如何收集、使用、儲存及保護您在使用「垃圾車追蹤」App 期間的個人資料，並闡明您依各項隱私法規享有的權利。</p>
+      <div class="page-hero__meta">
+        <span><strong>生效日期：</strong>2026 年 5 月 4 日</span>
+        <span><strong>最後更新：</strong>2026 年 5 月 4 日</span>
+        <span><strong>版本：</strong>2.0</span>
+      </div>
+    </div>
 
-  <h2>3. 資料使用</h2>
-  <p>收集的資料僅用於：</p>
-  <ul>
-    <li>提供垃圾車即時追蹤功能</li>
-    <li>發送清運提醒通知</li>
-    <li>改善 App 效能與使用體驗</li>
-    <li>修復技術問題</li>
-  </ul>
+    <nav class="toc" aria-labelledby="toc-title">
+      <p class="toc__title" id="toc-title">目錄</p>
+      <ol>
+        <li><a href="#overview">概述與適用範圍</a></li>
+        <li><a href="#controller">資料控制者</a></li>
+        <li><a href="#data-collected">我們收集的資料</a></li>
+        <li><a href="#how-used">資料使用方式</a></li>
+        <li><a href="#third-party">第三方服務</a></li>
+        <li><a href="#advertising">廣告與廣告識別碼</a></li>
+        <li><a href="#location">位置資訊使用細則</a></li>
+        <li><a href="#ai">AI 助手與圖片辨識</a></li>
+        <li><a href="#retention">資料保留期限</a></li>
+        <li><a href="#cross-border">跨境資料傳輸</a></li>
+        <li><a href="#user-rights">您的權利（GDPR / CCPA / 個資法）</a></li>
+        <li><a href="#deletion">資料刪除請求流程</a></li>
+        <li><a href="#children">兒童隱私（COPPA）</a></li>
+        <li><a href="#security">資料安全措施</a></li>
+        <li><a href="#changes">政策變更</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ol>
+    </nav>
 
-  <h2>4. 第三方服務</h2>
-  <p>本 App 使用以下第三方服務：</p>
-  <ul>
-    <li><a href="https://firebase.google.com/support/privacy">Firebase (Google)</a> — 分析與崩潰報告</li>
-    <li><a href="https://policies.google.com/privacy">Google Maps</a> — 地圖顯示</li>
-    <li><a href="https://support.google.com/admob/answer/6128543">AdMob (Google)</a> — 廣告服務</li>
-  </ul>
+    <section id="overview" aria-labelledby="overview-h">
+      <h2 id="overview-h">1. 概述與適用範圍</h2>
+      <p>「垃圾車追蹤」（以下簡稱「<strong>本 App</strong>」）由 CB Studio 開發與維護，提供台灣 22 縣市清運班表查詢、6 縣市即時 GPS 車輛追蹤、AI 垃圾分類辨識、到站提醒等功能。本政策適用於所有 iOS 與 Android 版本之使用者。</p>
+      <p>使用本 App 即表示您同意本隱私權政策所述之資料處理方式。若您不同意，請停止使用並解除安裝本 App。</p>
+    </section>
 
-  <h2>5. 資料安全</h2>
-  <p>我們採取適當的技術措施保護您的資料。您的偏好設定儲存於本機裝置，不會傳輸至我們的伺服器。</p>
+    <section id="controller" aria-labelledby="controller-h">
+      <h2 id="controller-h">2. 資料控制者</h2>
+      <dl class="dl-clean">
+        <dt>資料控制者</dt>
+        <dd>CB Studio</dd>
+        <dt>聯絡 Email</dt>
+        <dd><a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></dd>
+        <dt>App 套件名稱</dt>
+        <dd>Android：<code>com.cbstudio.garbage_truck</code><br>iOS：<code>com.cbstudio.garbageTruck</code></dd>
+      </dl>
+      <p>依據歐盟 GDPR 第 4(7) 條，CB Studio 為您個人資料的「<strong>資料控制者</strong>」；下列第三方服務為「<strong>資料處理者</strong>」（詳見第 5 節）。</p>
+    </section>
 
-  <h2>6. 兒童隱私</h2>
-  <p>本 App 不針對 13 歲以下兒童收集個人資訊。</p>
+    <section id="data-collected" aria-labelledby="data-collected-h">
+      <h2 id="data-collected-h">3. 我們收集的資料</h2>
 
-  <h2>7. 政策變更</h2>
-  <p>本政策可能隨時更新。重大變更將透過 App 內通知或更新說明告知。</p>
+      <h3>3.1 您主動提供的資料</h3>
+      <ul>
+        <li><strong>位置資訊</strong>：在您授權後，App 取得 GPS 經緯度以顯示附近清運站點與計算 ETA</li>
+        <li><strong>偏好設定</strong>：選擇的縣市、收藏站點、通知時段等（僅儲存於本機裝置）</li>
+        <li><strong>AI 助手輸入</strong>：您與 AI 助手對話的文字內容</li>
+        <li><strong>分類辨識照片</strong>：您主動拍攝或從相簿選取、用於垃圾分類辨識的圖片</li>
+      </ul>
 
-  <h2>8. 聯絡我們</h2>
-  <p>如有隱私相關問題，請聯繫：<a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></p>
+      <h3>3.2 自動收集的資料</h3>
+      <ul>
+        <li><strong>裝置資訊</strong>：作業系統版本、裝置型號、App 版本、語言設定</li>
+        <li><strong>使用統計（匿名）</strong>：開啟次數、停留頁面、按鈕點擊事件（透過 Firebase Analytics）</li>
+        <li><strong>崩潰報告（匿名）</strong>：例外堆疊、發生時的 breadcrumb（透過 Firebase Crashlytics）</li>
+        <li><strong>FCM 推播 Token</strong>：用於發送遠端通知的識別碼（透過 Firebase Cloud Messaging）</li>
+        <li><strong>裝置完整性 Token</strong>：透過 Play Integrity（Android）或 App Attest / DeviceCheck（iOS）驗證裝置真實性，避免 API 濫用（透過 Firebase App Check）</li>
+        <li><strong>廣告識別碼</strong>：Android GAID、iOS IDFA（在 iOS 由 ATT 對話框決定是否提供，詳見第 6 節）</li>
+        <li><strong>訂閱識別碼</strong>：RevenueCat 匿名 user ID、purchase token（僅 Premium 訂閱用戶）</li>
+        <li><strong>網路 Metadata</strong>：當 App 呼叫政府開放資料 API 或我們的 Cloud Functions 代理時，伺服器會記錄 IP 位址（標準 HTTPS 服務行為）</li>
+      </ul>
+
+      <h3>3.3 我們<em>不</em>收集的資料</h3>
+      <ul>
+        <li>姓名、電話、身分證號、地址等可直接識別個人之資訊</li>
+        <li>聯絡人、簡訊、相簿全集（僅讀取您主動選取的單張照片）</li>
+        <li>麥克風、Bluetooth 配對裝置資訊</li>
+      </ul>
+    </section>
+
+    <section id="how-used" aria-labelledby="how-used-h">
+      <h2 id="how-used-h">4. 資料使用方式</h2>
+      <p>我們蒐集的資料僅用於以下目的，且法律基礎為您的「明確同意」、「履行契約」或「合法利益」：</p>
+      <ul>
+        <li>提供垃圾車即時追蹤、班表查詢、到站提醒功能</li>
+        <li>透過 AI 模型回答您的提問與辨識垃圾分類</li>
+        <li>處理 Premium 訂閱與廣告獎勵機制</li>
+        <li>分析使用模式以改善 App 介面與穩定性</li>
+        <li>修復技術錯誤與防止 API 濫用</li>
+        <li>遵守法律義務（如稅務、消費者保護）</li>
+      </ul>
+    </section>
+
+    <section id="third-party" aria-labelledby="third-party-h">
+      <h2 id="third-party-h">5. 第三方服務</h2>
+      <p>本 App 使用下列第三方服務以提供核心功能。每項服務皆獨立適用其自有隱私權政策，您可點擊連結了解詳情：</p>
+
+      <div class="data-table-wrap" role="region" aria-label="第三方服務清單" tabindex="0">
+        <table class="data-table">
+          <caption>第三方服務與資料處理者</caption>
+          <thead>
+            <tr>
+              <th scope="col">服務</th>
+              <th scope="col">提供商</th>
+              <th scope="col">處理的資料</th>
+              <th scope="col">用途</th>
+              <th scope="col">隱私權政策</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Firebase Analytics</td>
+              <td>Google LLC</td>
+              <td>匿名事件、screen view、user property、device 資訊</td>
+              <td>使用統計分析</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a></td>
+            </tr>
+            <tr>
+              <td>Firebase Crashlytics</td>
+              <td>Google LLC</td>
+              <td>崩潰堆疊、device model、OS 版本、breadcrumb（匿名）</td>
+              <td>App 崩潰修復</td>
+              <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私資訊</a></td>
+            </tr>
+            <tr>
+              <td>Firebase Cloud Messaging</td>
+              <td>Google LLC</td>
+              <td>FCM device token、推播訊息內容</td>
+              <td>遠端推播通知</td>
+              <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私資訊</a></td>
+            </tr>
+            <tr>
+              <td>Firebase AI（Gemini）</td>
+              <td>Google LLC</td>
+              <td>您輸入的文字 + 您主動選取的照片</td>
+              <td>AI 助手回答 + 垃圾分類辨識</td>
+              <td><a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 條款</a></td>
+            </tr>
+            <tr>
+              <td>Firebase App Check</td>
+              <td>Google LLC</td>
+              <td>Play Integrity / App Attest / DeviceCheck token</td>
+              <td>驗證裝置真實性、防止 API 濫用</td>
+              <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私資訊</a></td>
+            </tr>
+            <tr>
+              <td>Google Maps SDK</td>
+              <td>Google LLC</td>
+              <td>地圖互動、IP 位址</td>
+              <td>顯示地圖與街景</td>
+              <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a></td>
+            </tr>
+            <tr>
+              <td>Google AdMob</td>
+              <td>Google LLC</td>
+              <td><strong>廣告識別碼（GAID / IDFA）</strong>、device info、IP、廣告互動</td>
+              <td>顯示橫幅與獎勵廣告</td>
+              <td><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob 隱私資訊</a></td>
+            </tr>
+            <tr>
+              <td>RevenueCat</td>
+              <td>RevenueCat, Inc.（美國）</td>
+              <td>匿名 user ID、purchase token、訂閱狀態</td>
+              <td>處理 Premium 訂閱與還原購買</td>
+              <td><a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">RevenueCat 隱私權政策</a></td>
+            </tr>
+            <tr>
+              <td>Apple App Store / Google Play</td>
+              <td>Apple Inc. / Google LLC</td>
+              <td>付款資料（信用卡 / 帳戶餘額）</td>
+              <td>處理訂閱計費（資料由商店持有，本 App 無法存取）</td>
+              <td><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隱私權政策</a> / <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a></td>
+            </tr>
+            <tr>
+              <td>政府開放資料 API</td>
+              <td>各縣市政府 / 環境部</td>
+              <td>HTTPS 請求 metadata（IP、timestamp）</td>
+              <td>取得垃圾車位置與班表</td>
+              <td>各機關依《政府資料開放授權條款第 1 版》提供</td>
+            </tr>
+            <tr>
+              <td>Cloud Functions（自架）</td>
+              <td>CB Studio（部署於 Google Cloud asia-east1）</td>
+              <td>HTTPS 請求 metadata（IP、x-app-source header）</td>
+              <td>代理新北市車輛 API（繞過 WAF）</td>
+              <td>本政策</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>所有處理者皆已簽署資料處理協議（DPA）或受其自身隱私法規約束，符合 GDPR 第 28 條對處理者的要求。</p>
+    </section>
+
+    <section id="advertising" aria-labelledby="advertising-h">
+      <h2 id="advertising-h">6. 廣告與廣告識別碼</h2>
+      <p>本 App 使用 Google AdMob 顯示橫幅廣告與獎勵廣告（觀看廣告可增加每日免費 AI 使用次數）。AdMob 會收集您裝置的<strong>廣告識別碼（Android GAID 或 iOS IDFA）</strong>以及裝置與互動資訊，用以提供個人化廣告與防止廣告詐欺。</p>
+
+      <div class="callout callout--info">
+        <p class="callout__title">您可隨時管理廣告識別碼</p>
+        <ul>
+          <li><strong>Android</strong>：設定 → Google → 廣告 → 重設廣告 ID 或停用個人化廣告</li>
+          <li><strong>iOS</strong>：設定 → 隱私權與安全性 → Apple 廣告 → 個人化廣告（您也可在 App 首次啟動時透過 ATT 對話框拒絕追蹤，App 將不會取得 IDFA）</li>
+        </ul>
+      </div>
+
+      <p>本 App 已啟用 AdMob 之「<strong>不向兒童顯示個人化廣告</strong>」設定，並依 Google Families Policy 處理廣告請求。</p>
+    </section>
+
+    <section id="location" aria-labelledby="location-h">
+      <h2 id="location-h">7. 位置資訊使用細則</h2>
+      <p>本 App 僅在您於系統對話框中授權後才會存取位置資訊，且<strong>不會在背景持續追蹤</strong>。具體使用情境：</p>
+      <ul>
+        <li><strong>顯示附近站點</strong>：地圖頁開啟時讀取一次當前位置以居中地圖</li>
+        <li><strong>計算到站距離</strong>：在收藏站點清單中依距離排序</li>
+        <li><strong>ETA 即時提醒（僅 Premium 訂閱用戶）</strong>：在地圖頁追蹤模式開啟時，每 30 秒比對車輛與您的位置以發送通知；當您離開地圖頁或關閉追蹤即停止</li>
+      </ul>
+      <p><strong>您的精確位置不會傳送至我們的伺服器，</strong>所有距離 / ETA 計算皆在您的裝置端執行後即丟棄。</p>
+      <p>您可隨時在裝置「設定 → 隱私權 → 位置服務」中撤回位置授權；撤回後僅影響附近站點與 ETA 提醒功能，其他功能（班表、AI 分類、收藏管理）仍可正常使用。</p>
+    </section>
+
+    <section id="ai" aria-labelledby="ai-h">
+      <h2 id="ai-h">8. AI 助手與圖片辨識</h2>
+      <p>本 App 整合 Firebase AI（Google Gemini 模型）提供以下功能：</p>
+      <ul>
+        <li><strong>AI 助手對話</strong>：您輸入的問題會傳送至 Google AI 推論伺服器（位於美國），AI 回覆後對話內容不會在伺服器持久儲存</li>
+        <li><strong>垃圾分類辨識</strong>：當您主動拍攝或選取照片時，照片會經 Firebase AI 進行內容分析；分析完成後即丟棄</li>
+      </ul>
+      <div class="callout callout--warn">
+        <p class="callout__title">使用 AI 功能注意事項</p>
+        <ul>
+          <li>請勿在 AI 對話或上傳照片中包含敏感個人資料（如身分證、信用卡照、他人臉部）</li>
+          <li>AI 分類建議僅供參考，實際分類規定請以各縣市環保局公告為準</li>
+          <li>免費用戶每日有使用次數限制；可選擇觀看廣告或訂閱 Premium 解除</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="retention" aria-labelledby="retention-h">
+      <h2 id="retention-h">9. 資料保留期限</h2>
+      <div class="data-table-wrap" role="region" aria-label="資料保留期限" tabindex="0">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">資料類型</th>
+              <th scope="col">保留期限</th>
+              <th scope="col">儲存位置</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>偏好設定、收藏清單、通知排程、AI 使用次數計數</td>
+              <td>直到您卸載 App 或在 App 內主動清除</td>
+              <td>本機裝置（shared_preferences）</td>
+            </tr>
+            <tr>
+              <td>Firebase Analytics 事件</td>
+              <td>預設 14 個月（依 Firebase 政策可調整）</td>
+              <td>Google 伺服器</td>
+            </tr>
+            <tr>
+              <td>Firebase Crashlytics 崩潰報告</td>
+              <td>90 天</td>
+              <td>Google 伺服器</td>
+            </tr>
+            <tr>
+              <td>FCM device token</td>
+              <td>直到您卸載 App 或重新安裝</td>
+              <td>Google 伺服器</td>
+            </tr>
+            <tr>
+              <td>AI 助手對話與上傳照片</td>
+              <td><strong>不持久儲存</strong>，僅推論期間於伺服器記憶體中</td>
+              <td>Google AI 推論伺服器（短暫）</td>
+            </tr>
+            <tr>
+              <td>訂閱記錄</td>
+              <td>訂閱期間 + 法定稅務年限（依各國法規）</td>
+              <td>RevenueCat / Apple / Google</td>
+            </tr>
+            <tr>
+              <td>HTTPS 伺服器存取日誌</td>
+              <td>30 天（標準 GCP / 政府 API 行為）</td>
+              <td>各服務供應商</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="cross-border" aria-labelledby="cross-border-h">
+      <h2 id="cross-border-h">10. 跨境資料傳輸</h2>
+      <p>本 App 使用之 Firebase / Google 服務，資料可能傳輸至 Google 位於<strong>美國</strong>、<strong>歐盟</strong>或其他地區的資料中心進行處理。RevenueCat 同樣位於美國。</p>
+      <p>對於來自歐盟 / 英國的使用者，Google 與 RevenueCat 已採用<strong>歐盟標準契約條款（SCCs）</strong>作為跨境傳輸的合法依據。Cloud Functions 代理服務部署於 Google Cloud <code>asia-east1</code>（台灣）區域。</p>
+      <p>當您使用本 App，即表示您理解並同意此跨境資料傳輸。</p>
+    </section>
+
+    <section id="user-rights" aria-labelledby="user-rights-h">
+      <h2 id="user-rights-h">11. 您的權利</h2>
+
+      <h3>11.1 GDPR 與英國 UK GDPR（歐盟 / 英國使用者）</h3>
+      <p>依據 GDPR 第 15-22 條，您享有：</p>
+      <ul>
+        <li><strong>存取權</strong>：要求我們提供您的個人資料副本</li>
+        <li><strong>更正權</strong>：要求修正不正確或不完整的資料</li>
+        <li><strong>刪除權（被遺忘權）</strong>：要求刪除您的個人資料</li>
+        <li><strong>限制處理權</strong>：要求暫停特定類型的資料處理</li>
+        <li><strong>資料可攜權</strong>：以結構化、機器可讀的格式取得您的資料</li>
+        <li><strong>反對權</strong>：反對基於合法利益的資料處理</li>
+        <li><strong>撤回同意權</strong>：隨時撤回您先前的同意（不影響撤回前的處理）</li>
+        <li><strong>向監管機關申訴權</strong>：向您所在地的資料保護機關提出申訴</li>
+      </ul>
+
+      <h3>11.2 加州 CCPA / CPRA（加州居民）</h3>
+      <p>依加州消費者隱私法，加州居民享有：知悉權、刪除權、更正權、限制使用敏感個資權、拒絕販售或分享個資權。</p>
+      <p><strong>我們不販售您的個人資訊</strong>（依 CCPA 定義之「販售」），亦不為跨脈絡行為廣告分享您的資料。</p>
+
+      <h3>11.3 中華民國個人資料保護法</h3>
+      <p>依個資法第 3 條，您享有：查詢、閱覽、製給副本、補充更正、停止蒐集處理利用、刪除等權利。</p>
+
+      <h3>11.4 行使方式</h3>
+      <p>請寄信至 <a href="mailto:aa22396584@gmail.com?subject=隱私權請求">aa22396584@gmail.com</a>，主旨註明「隱私權請求」並指明您要行使的權利。我們將在收到請求後 <strong>30 天內</strong> 回覆。為驗證您的身分，我們可能要求您提供裝置型號 / App 安裝時間等用以定位資料的資訊。</p>
+    </section>
+
+    <section id="deletion" aria-labelledby="deletion-h">
+      <h2 id="deletion-h">12. 資料刪除請求流程</h2>
+
+      <h3>12.1 自助刪除（立即生效）</h3>
+      <ul>
+        <li><strong>本機資料</strong>：解除安裝 App 即會清除所有本機儲存的偏好設定、收藏清單、通知排程、AI 使用次數計數</li>
+        <li><strong>訂閱</strong>：在 App Store「訂閱項目」或 Google Play「訂閱項目」中取消</li>
+        <li><strong>位置權限</strong>：在裝置設定中撤回位置授權</li>
+        <li><strong>廣告識別碼</strong>：在裝置設定中重設廣告 ID 或停用個人化廣告（步驟見第 6 節）</li>
+        <li><strong>FCM 推播 Token</strong>：解除安裝 App 後 token 即失效</li>
+      </ul>
+
+      <h3>12.2 請求刪除已上傳的資料</h3>
+      <p>若您希望刪除 Firebase Analytics、Crashlytics 上的匿名遙測資料，或希望刪除 RevenueCat 上的訂閱記錄（需先取消訂閱），請：</p>
+      <ol>
+        <li>寄信至 <a href="mailto:aa22396584@gmail.com?subject=資料刪除請求">aa22396584@gmail.com</a></li>
+        <li>主旨：「資料刪除請求」</li>
+        <li>提供：您使用的裝置 model、App 版本、最後使用日期（用以定位資料）</li>
+        <li>我們將在 <strong>30 天內</strong> 透過 Firebase / RevenueCat 後台執行刪除並回信確認</li>
+      </ol>
+
+      <div class="callout">
+        <p class="callout__title">無帳號設計</p>
+        <p>本 App 採無帳號設計，不需註冊即可使用。因此本機資料的刪除可由您自行透過解除安裝完成；僅 server-side 匿名遙測資料需要寄信請求刪除。</p>
+      </div>
+    </section>
+
+    <section id="children" aria-labelledby="children-h">
+      <h2 id="children-h">13. 兒童隱私（COPPA / GDPR-K）</h2>
+      <ul>
+        <li>本 App <strong>非針對 13 歲以下兒童</strong>（GDPR 部分國家為 16 歲以下）設計</li>
+        <li>我們不會刻意收集未滿法定年齡兒童的個人資料</li>
+        <li>本 App 已啟用 AdMob「<strong>不向兒童顯示個人化廣告</strong>」設定</li>
+        <li>若您是家長 / 監護人，發現未滿法定年齡的兒童在未經同意下使用本 App 並提供了個人資料，請立即聯繫 <a href="mailto:aa22396584@gmail.com?subject=兒童隱私請求">aa22396584@gmail.com</a>，我們會在 7 天內刪除相關資料並關閉相關功能</li>
+      </ul>
+    </section>
+
+    <section id="security" aria-labelledby="security-h">
+      <h2 id="security-h">14. 資料安全措施</h2>
+      <ul>
+        <li>所有網路傳輸採用 <strong>HTTPS / TLS 1.2+</strong> 加密</li>
+        <li>Firebase 與 RevenueCat 在伺服器端皆採用靜態加密儲存</li>
+        <li>透過 Firebase App Check（Play Integrity / App Attest / DeviceCheck）防止偽冒裝置濫用 API</li>
+        <li>本 App 程式碼經 ProGuard / R8（Android）混淆與 iOS bitcode 處理</li>
+        <li>定期更新依賴套件以修補已知漏洞</li>
+      </ul>
+      <p>儘管採取上述措施，網際網路傳輸無法保證 100% 安全。如發生資料外洩事件，我們將依法律規定通知受影響使用者與主管機關。</p>
+    </section>
+
+    <section id="changes" aria-labelledby="changes-h">
+      <h2 id="changes-h">15. 政策變更</h2>
+      <p>我們可能因法律要求、服務變更或最佳實務而更新本政策。重大變更將透過下列方式通知：</p>
+      <ul>
+        <li>App 內推播通知或啟動畫面提醒</li>
+        <li>更新本頁的「最後更新」日期與版本號</li>
+        <li>於 App 商店的版本更新說明中註明</li>
+      </ul>
+      <p>建議您定期檢視本政策。繼續使用本 App 即表示同意更新後的政策；若您不同意，請停止使用並解除安裝。</p>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">16. 聯絡我們</h2>
+      <div class="contact-card">
+        <p class="contact-card__title">隱私權相關問題？</p>
+        <p>歡迎來信討論本政策、行使您的權利、或回報任何隱私疑慮。我們通常在 24 小時內初次回覆，正式請求 30 天內處理完畢。</p>
+        <a href="mailto:aa22396584@gmail.com?subject=隱私權問題" aria-label="寄信給 CB Studio">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          aa22396584@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <div>
+        <p class="site-footer__brand">垃圾車追蹤</p>
+        <p class="site-footer__meta">
+          © 2026 CB Studio · 最後更新 2026-05-04<br>
+          資料來源依《政府資料開放授權條款第 1 版》使用
+        </p>
+      </div>
+      <nav class="site-footer__nav" aria-label="頁尾導覽">
+        <a href="privacy.html">隱私權政策</a>
+        <a href="terms.html">使用條款</a>
+        <a href="support.html">支援中心</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>

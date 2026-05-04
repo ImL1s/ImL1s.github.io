@@ -1,89 +1,336 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
-
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>支援 — 垃圾車追蹤</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        h1 {
-            color: #2E7D32;
-        }
-
-        h2 {
-            color: #388E3C;
-            margin-top: 2em;
-        }
-
-        .contact-card {
-            background: #E8F5E9;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-
-        .faq-item {
-            margin: 1.5em 0;
-        }
-
-        .faq-item strong {
-            color: #2E7D32;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>支援中心 — 垃圾車追蹤</title>
+  <meta name="description" content="垃圾車追蹤 App 支援中心：常見問題、資料刪除請求、回報問題、聯絡管道。">
+  <meta name="theme-color" content="#2E7D32" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0F172A" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="_shared.css">
 </head>
-
 <body>
-    <h1>支援中心</h1>
+  <a href="#main" class="skip-link">略過導覽，跳至內文</a>
+
+  <header class="site-header" role="banner">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-brand" aria-label="垃圾車追蹤首頁">
+        <svg class="site-brand__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 17h2a3 3 0 0 0 6 0h2a3 3 0 0 0 6 0h2v-5l-3-4h-3V5H3v12zm5 1.5A1.5 1.5 0 1 1 8 15.5a1.5 1.5 0 0 1 0 3zm8 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-1-9.5h2.5l2 2.7V14h-1.5a3 3 0 0 0-6 0H8a3 3 0 0 0-6 0V7h13v2z"/>
+        </svg>
+        垃圾車追蹤
+      </a>
+      <nav class="site-nav" aria-label="法律文件導覽">
+        <a href="privacy.html">隱私權政策</a>
+        <a href="terms.html">使用條款</a>
+        <a href="support.html" aria-current="page">支援中心</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="page-hero">
+      <span class="page-hero__eyebrow">Support</span>
+      <h1>支援中心</h1>
+      <p>遇到問題、有功能建議、或想行使您的隱私權利？我們在這裡協助您。</p>
+      <div class="page-hero__meta">
+        <span><strong>最後更新：</strong>2026 年 5 月 4 日</span>
+        <span><strong>回覆時間：</strong>通常 24 小時內</span>
+      </div>
+    </div>
 
     <div class="contact-card">
-        <h2 style="margin-top: 0;">聯絡我們</h2>
-        <p>📧 Email: <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></p>
-        <p>我們通常會在 24 小時內回覆您的問題。</p>
+      <p class="contact-card__title">聯絡我們</p>
+      <p>所有問題、建議、隱私權請求皆透過 Email 處理。我們通常在 24 小時內初次回覆，正式請求 30 天內處理完畢。</p>
+      <a href="mailto:aa22396584@gmail.com" aria-label="寄信給支援團隊">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        aa22396584@gmail.com
+      </a>
     </div>
 
-    <h2>常見問題</h2>
+    <nav class="toc" aria-labelledby="toc-title">
+      <p class="toc__title" id="toc-title">目錄</p>
+      <ol>
+        <li><a href="#cities">支援的縣市</a></li>
+        <li><a href="#faq-tracking">即時追蹤常見問題</a></li>
+        <li><a href="#faq-schedule">班表與通知</a></li>
+        <li><a href="#faq-ai">AI 助手與分類辨識</a></li>
+        <li><a href="#faq-premium">Premium 訂閱與廣告</a></li>
+        <li><a href="#faq-widget">桌面 Widget 與 Live Activity</a></li>
+        <li><a href="#data-deletion">資料刪除請求</a></li>
+        <li><a href="#privacy-rights">行使隱私權利</a></li>
+        <li><a href="#report-issue">回報問題</a></li>
+      </ol>
+    </nav>
 
-    <div class="faq-item">
-        <strong>Q: 為什麼我看不到附近的垃圾車？</strong>
-        <p>A: 請確認已授予位置權限，並選擇正確的縣市。目前支援新北市及台南市的即時追蹤功能。</p>
+    <section id="cities" aria-labelledby="cities-h">
+      <h2 id="cities-h">1. 支援的縣市</h2>
+      <p>本 App 目前支援全台 22 縣市，依功能分為兩類：</p>
+
+      <div class="data-table-wrap" role="region" aria-label="縣市支援狀態" tabindex="0">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">縣市</th>
+              <th scope="col">即時 GPS</th>
+              <th scope="col">清運班表</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>新北市</td><td>✓</td><td>✓</td></tr>
+            <tr><td>台北市</td><td>✓</td><td>✓</td></tr>
+            <tr><td>台中市</td><td>✓</td><td>✓</td></tr>
+            <tr><td>台南市</td><td>✓</td><td>✓</td></tr>
+            <tr><td>高雄市</td><td>✓</td><td>✓</td></tr>
+            <tr><td>桃園市</td><td>—</td><td>✓</td></tr>
+            <tr><td>基隆市、新竹市、新竹縣、苗栗縣</td><td>—</td><td>✓</td></tr>
+            <tr><td>彰化縣、南投縣、雲林縣</td><td>—</td><td>✓</td></tr>
+            <tr><td>嘉義市、嘉義縣</td><td>—</td><td>✓</td></tr>
+            <tr><td>宜蘭縣、屏東縣、花蓮縣、台東縣</td><td>—</td><td>✓</td></tr>
+            <tr><td>澎湖縣、金門縣、連江縣</td><td>—</td><td>✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout--info">
+        <p class="callout__title">資料來源說明</p>
+        <p>即時 GPS 來自各地方政府開放資料平台；班表來自環境部資源循環署 EPA。資料即時性受政府 API 影響，非清運時段可能無資料。</p>
+      </div>
+    </section>
+
+    <section id="faq-tracking" aria-labelledby="faq-tracking-h">
+      <h2 id="faq-tracking-h">2. 即時追蹤常見問題</h2>
+
+      <div class="faq-item">
+        <p class="faq-item__q">為什麼我看不到附近的垃圾車？</p>
+        <div class="faq-item__a">
+          <p>請依序檢查：</p>
+          <ol>
+            <li>確認您所在縣市是否支援即時 GPS（目前僅 5 縣市，見上表）</li>
+            <li>授予位置權限：設定 → App → 垃圾車追蹤 → 位置 → 允許</li>
+            <li>確認當前為清運時段（多數縣市為 17:00-21:00，依地區不同）</li>
+            <li>政府 API 可能因 WAF 或維護暫時無資料，稍待 1-2 分鐘再試</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">到站時間準確嗎？</p>
+        <div class="faq-item__a">
+          <p>到站時間為根據車輛 GPS 位置與您的位置之直線距離計算的預估值，使用平均速度 12 km/h 估算。實際時間可能因交通狀況、繞路、車輛停留而有差異。建議提前 5-10 分鐘到達清運地點。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">為什麼地圖無法載入？</p>
+        <div class="faq-item__a">
+          <p>請檢查網路連線；若仍無法載入可能是 Google Maps 服務暫時異常，或您的地區網路無法連通 Google 服務。可嘗試開關飛航模式重置網路。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">準誤點狀態如何判斷？</p>
+        <div class="faq-item__a">
+          <p>App 比對班表時間與車輛即時位置，標示為：即將到達、準時、延誤、已完成、未知。誤差緩衝為 ±5 分鐘。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq-schedule" aria-labelledby="faq-schedule-h">
+      <h2 id="faq-schedule-h">3. 班表與通知</h2>
+
+      <div class="faq-item">
+        <p class="faq-item__q">通知沒有出現？</p>
+        <div class="faq-item__a">
+          <p>請確認：</p>
+          <ol>
+            <li>系統通知權限已開啟：設定 → App → 垃圾車追蹤 → 通知</li>
+            <li>App 內「設定 → 通知偏好」中啟用對應通知（每日提醒、到站提醒、ETA 提醒）</li>
+            <li>iOS：請確認「勿擾模式」與「專注模式」未阻擋通知</li>
+            <li>Android：低電量模式或省電白名單可能影響通知，建議將 App 加入白名單</li>
+            <li>到站提醒需要先在班表頁將該班次加入提醒清單</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">如何設定到站提醒？</p>
+        <div class="faq-item__a">
+          <p>進入「班表」頁，點選您要追蹤的班次旁邊的鈴鐺圖示即可加入提醒。可在「設定 → 通知偏好」調整提前幾分鐘通知（預設 10 分鐘）。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">ETA 即時提醒是什麼？</p>
+        <div class="faq-item__a">
+          <p>Premium 訂閱專屬功能：在 App 開啟期間，每 30 秒比對車輛 GPS 與您的位置，當預估時間小於設定門檻時自動發送通知。每 30 分鐘最多通知一次以避免騷擾。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq-ai" aria-labelledby="faq-ai-h">
+      <h2 id="faq-ai-h">4. AI 助手與分類辨識</h2>
+
+      <div class="faq-item">
+        <p class="faq-item__q">AI 分類辨識準確嗎？</p>
+        <div class="faq-item__a">
+          <p>AI 分類建議基於 Google Gemini 模型，僅供參考。實際分類規定請以您所在縣市環保局公告為準。請勿在照片中包含他人臉部、身分證等敏感資料。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">免費版 AI 每日次數限制？</p>
+        <div class="faq-item__a">
+          <p>免費用戶每日 3 次 AI 使用機會。可選擇觀看獎勵廣告增加當日次數，或訂閱 Premium 解除限制。次數每日凌晨重置。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">AI 對話會被儲存嗎？</p>
+        <div class="faq-item__a">
+          <p>對話內容傳送至 Google AI 推論伺服器後即丟棄，不會在伺服器持久儲存。詳見<a href="privacy.html#ai">隱私權政策第 8 節</a>。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq-premium" aria-labelledby="faq-premium-h">
+      <h2 id="faq-premium-h">5. Premium 訂閱與廣告</h2>
+
+      <div class="faq-item">
+        <p class="faq-item__q">Premium 提供哪些功能？</p>
+        <div class="faq-item__a">
+          <ul>
+            <li>移除所有橫幅廣告</li>
+            <li>AI 助手與分類辨識無每日次數限制</li>
+            <li>ETA 即時提醒（Premium 獨享）</li>
+            <li>無限收藏站點（免費版限 3 個）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">如何取消訂閱？</p>
+        <div class="faq-item__a">
+          <ul>
+            <li><strong>iOS</strong>：設定 → Apple ID → 訂閱項目 → 垃圾車追蹤 → 取消訂閱</li>
+            <li><strong>Android</strong>：Google Play 商店 → 個人檔案 → 付款與訂閱項目 → 訂閱項目 → 垃圾車追蹤 → 取消</li>
+          </ul>
+          <p>取消後當期仍可使用至期末，下個週期不再自動續訂。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">換手機後訂閱會跟著走嗎？</p>
+        <div class="faq-item__a">
+          <p>會。在新裝置安裝 App 後，於「設定 → 訂閱」點選「還原購買」，使用相同 Apple ID / Google 帳號即可還原 Premium 狀態。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">退款政策？</p>
+        <div class="faq-item__a">
+          <p>退款請依商店政策辦理：<a href="https://support.apple.com/zh-tw/HT204084" target="_blank" rel="noopener">Apple 退款</a> / <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">Google Play 退款</a>。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">如何透過廣告增加 AI 次數？</p>
+        <div class="faq-item__a">
+          <p>進入「AI 助手」頁，當免費次數用盡時會出現「觀看廣告增加次數」按鈕。完整觀看 30 秒獎勵廣告即可獲得 1 次 AI 使用機會。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq-widget" aria-labelledby="faq-widget-h">
+      <h2 id="faq-widget-h">6. 桌面 Widget 與 Live Activity</h2>
+
+      <div class="faq-item">
+        <p class="faq-item__q">如何加入桌面 Widget？</p>
+        <div class="faq-item__a">
+          <ul>
+            <li><strong>iOS</strong>：長按桌面空白處 → 點 + → 搜尋「垃圾車追蹤」→ 選擇 Small / Medium 尺寸 → 加入</li>
+            <li><strong>Android</strong>：長按桌面空白處 → 小工具 → 找到「垃圾車追蹤」→ 拖曳到桌面</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">iOS Live Activity / Dynamic Island 怎麼啟用？</p>
+        <div class="faq-item__a">
+          <p>需 iOS 16.1+。在地圖頁點選車輛 marker 的 info window 即會開始追蹤；Lock Screen 與 Dynamic Island 會顯示路線資訊。離開地圖頁追蹤自動結束。</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-item__q">Widget 多久更新一次？</p>
+        <div class="faq-item__a">
+          <p>Widget 在 App 開啟時推送最新班表資料；系統依設定每 30 分鐘自動觸發更新。Live Activity 則每 30 秒更新一次（追蹤期間）。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="data-deletion" aria-labelledby="data-deletion-h">
+      <h2 id="data-deletion-h">7. 資料刪除請求</h2>
+      <p>本 App 採無帳號設計。資料刪除依您的需求分為兩種途徑：</p>
+
+      <h3>7.1 自助刪除（立即生效，無需聯絡）</h3>
+      <ul>
+        <li><strong>本機資料</strong>：解除安裝 App 即清除所有偏好設定、收藏、通知排程、AI 使用次數等資料</li>
+        <li><strong>位置權限</strong>：設定 → 隱私權 → 位置服務 → 垃圾車追蹤 → 從不</li>
+        <li><strong>廣告識別碼</strong>：在裝置設定中重設或停用廣告 ID（步驟見<a href="privacy.html#advertising">隱私權政策第 6 節</a>）</li>
+        <li><strong>訂閱</strong>：在 App Store / Google Play 訂閱項目中取消</li>
+      </ul>
+
+      <h3>7.2 請求刪除已上傳的匿名資料</h3>
+      <p>若您希望刪除 Firebase Analytics、Crashlytics 上的匿名遙測資料：</p>
+      <ol>
+        <li>寄信至 <a href="mailto:aa22396584@gmail.com?subject=資料刪除請求&body=請提供以下資訊以協助定位資料：%0A裝置 model：%0AApp 版本：%0A最後使用日期：">aa22396584@gmail.com</a>（點選會自動帶入主旨範本）</li>
+        <li>主旨：「資料刪除請求」</li>
+        <li>提供：裝置 model、App 版本、最後使用日期（用以定位資料）</li>
+        <li>我們將在 <strong>30 天內</strong> 透過 Firebase 後台執行刪除並回信確認</li>
+      </ol>
+
+      <div class="callout">
+        <p class="callout__title">為什麼要寄信？</p>
+        <p>本 App 不收集姓名、Email 等可直接識別個人之資料，所有遙測都是匿名的。為了避免錯刪他人資料，我們需要您主動提供裝置資訊以精確定位。</p>
+      </div>
+    </section>
+
+    <section id="privacy-rights" aria-labelledby="privacy-rights-h">
+      <h2 id="privacy-rights-h">8. 行使隱私權利</h2>
+      <p>依 GDPR、CCPA、個資法，您享有存取、更正、刪除、限制處理、可攜、反對、撤回同意等權利。詳細權利清單與行使方式請見<a href="privacy.html#user-rights">隱私權政策第 11 節</a>。</p>
+      <p>行使方式：寄信 <a href="mailto:aa22396584@gmail.com?subject=隱私權請求">aa22396584@gmail.com</a>，主旨「隱私權請求」+ 指明要行使的權利，我們將在 30 天內回覆。</p>
+    </section>
+
+    <section id="report-issue" aria-labelledby="report-issue-h">
+      <h2 id="report-issue-h">9. 回報問題</h2>
+      <p>如果您遇到技術問題、想建議新功能、或回報不當廣告，歡迎來信描述：</p>
+      <ul>
+        <li>裝置型號與作業系統版本（如：iPhone 15 / iOS 17.4 或 Pixel 8 / Android 14）</li>
+        <li>App 版本（在「設定」頁底部可見）</li>
+        <li>問題發生的步驟（盡量詳細）</li>
+        <li>相關截圖或錄影（如適用）</li>
+        <li>網路環境（Wi-Fi / 行動數據 / 電信業者）</li>
+      </ul>
+      <p>越詳細的回報越能幫助我們快速定位問題。感謝您協助我們改善 App 品質。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <div>
+        <p class="site-footer__brand">垃圾車追蹤</p>
+        <p class="site-footer__meta">
+          © 2026 CB Studio · 最後更新 2026-05-04<br>
+          資料來源依《政府資料開放授權條款第 1 版》使用
+        </p>
+      </div>
+      <nav class="site-footer__nav" aria-label="頁尾導覽">
+        <a href="privacy.html">隱私權政策</a>
+        <a href="terms.html">使用條款</a>
+        <a href="support.html">支援中心</a>
+      </nav>
     </div>
-
-    <div class="faq-item">
-        <strong>Q: 到站時間準確嗎？</strong>
-        <p>A: 到站時間為根據車輛 GPS 位置的預估值，實際時間可能因交通狀況而有差異。建議提前 5-10 分鐘到達清運地點。</p>
-    </div>
-
-    <div class="faq-item">
-        <strong>Q: 如何取消訂閱？</strong>
-        <p>A: iOS 用戶請至「設定 > Apple ID > 訂閱項目」管理；Android 用戶請至 Google Play 商店「訂閱項目」管理。</p>
-    </div>
-
-    <div class="faq-item">
-        <strong>Q: AI 分類辨識準確嗎？</strong>
-        <p>A: AI 分類建議僅供參考，建議同時參考各縣市環保局的分類公告。</p>
-    </div>
-
-    <div class="faq-item">
-        <strong>Q: 這個 App 支援哪些縣市？</strong>
-        <p>A: 目前支援新北市、台南市的即時追蹤。我們持續擴展支援的縣市，歡迎提供建議。</p>
-    </div>
-
-    <h2>回報問題</h2>
-    <p>如果您遇到技術問題或有功能建議，歡迎來信描述：</p>
-    <ul>
-        <li>您的裝置型號與作業系統版本</li>
-        <li>問題發生的步驟</li>
-        <li>相關截圖（如適用）</li>
-    </ul>
+  </footer>
 </body>
-
 </html>
