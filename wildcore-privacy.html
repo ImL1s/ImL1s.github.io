@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildCore 隱私權政策 / Privacy Policy</title>
+    <style>
+        :root {
+            --primary: #4ADE80;
+            --background: #0D0D0D;
+            --surface: #1A1A1A;
+            --text: #E5E5E5;
+            --text-muted: #A3A3A3;
+            --accent: #16A34A;
+            --border: #2A2A2A;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        h1 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+            font-size: 2rem;
+            margin-top: 0;
+        }
+        h2 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-top: 30px;
+            border-left: 4px solid var(--accent);
+            padding-left: 12px;
+        }
+        p, li {
+            color: var(--text);
+            font-size: 1rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .last-updated {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+        .section-split {
+            border-top: 1px solid var(--border);
+            margin: 40px 0;
+        }
+        .english-version {
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WildCore 隱私權政策 (Privacy Policy)</h1>
+        <div class="last-updated">最後更新日期：2026 年 7 月 12 日 | Last Updated: July 12, 2026</div>
+
+        <p>歡迎使用 WildCore！我們致力於為您提供卓越的野外生存工具箱，同時保護您的隱私。本隱私權政策說明了 WildCore 應用程式如何處理您的資料。</p>
+
+        <h2>1. 本機資料處理 (離線安全)</h2>
+        <p>作為一個以「離線優先 (Offline-first)」為設計核心的工具，我們絕大部分的功能完全在您的個人裝置上執行，任何相關資料均不會離開您的手機：</p>
+        <ul>
+            <li><strong>野外生存知識、物種資料庫與結繩教學：</strong> 所有搜尋與瀏覽均完全在裝置本機 SQLite 資料庫中處理。</li>
+            <li><strong>AI 植物與物種識別 (On-device Plant ID)：</strong> 使用本機 TensorFlow Lite (TFLite) 深度學習模型進行圖片分類。您的照片與鏡頭畫面完全在裝置本機處理，絕不傳送到任何雲端伺服器。</li>
+            <li><strong>離線 LLM 助手：</strong> 使用本地編譯的 <code>llama.cpp</code> 進行本機 GGUF 模型推論，聊天歷史記錄安全地加密儲存於本機 Drift (SQLite) 資料庫中。</li>
+            <li><strong>感測器數據 (氣壓計、指北針、GPS)：</strong> GPS 軌跡錄製、航向與氣壓高度感測完全在裝置本機讀取並儲存為本機 GPX 檔案。</li>
+            <li><strong>緊急 SOS 聯絡人與安全計時器：</strong> 您的緊急聯絡人資訊與計時器狀態儲存在本機 Hive 儲存庫，僅在觸發緊急情況時才會調用系統簡訊進行發送。</li>
+        </ul>
+
+        <h2>2. 必要之網路傳輸</h2>
+        <p>當您在使用特定網路串接功能時，App 將會在合理必要範圍內傳送部分資料：</p>
+        <ul>
+            <li><strong>RevenueCat 訂閱驗證：</strong> 當您購買或驗證 Pro 專業版資格時，應用程式會與 RevenueCat API 通訊以取得與核對您的收據資訊及客戶識別碼。</li>
+            <li><strong>線上地圖 (OpenStreetMap)：</strong> 當您使用線上地圖模式時，應用程式會向 OpenStreetMap 伺服器發送 Tiles 請求，此過程會向其揭露您的 IP 位址及顯示範圍。離線向量地圖包 (PMTiles) 下載則會連線至我們的 Cloudflare R2 儲存庫進行。</li>
+            <li><strong>雲端 AI 備用連線 (選配)：</strong> 若您本機 LLM 推論效能受限，且您主動配置並啟用了 API Proxy base URL，則對話文字將會通過安全通道傳送至您設定的 proxy-server 進行處理。</li>
+            <li><strong>語音助手 (Speech to Text)：</strong> 語音辨識功能調用系統 API，可能會將語音數據傳送至 Apple 或 Google 的伺服器進行語音轉文字解析。</li>
+        </ul>
+
+        <h2>3. 資料收集與第三方服務</h2>
+        <p>我們本身<strong>不收集、不儲存、亦不追蹤</strong>您的任何個人識別資訊或定位記錄。我們也沒有內建任何第三方廣告追蹤器。以下為 WildCore 使用的第三方 SDK：</p>
+        <ul>
+            <li><strong>RevenueCat SDK：</strong> 用於提供和管理內購與訂閱功能。<a href="https://www.revenuecat.com/privacy" target="_blank" style="color: var(--primary);">閱讀 RevenueCat 隱私政策</a>。</li>
+        </ul>
+
+        <div class="section-split"></div>
+
+        <h1 class="english-version">Privacy Policy</h1>
+        <p>Welcome to WildCore! We are committed to providing you with a premium outdoor survival toolkit while respecting your privacy. This policy details how your data is processed.</p>
+
+        <h2>1. Local Processing (On-Device Security)</h2>
+        <p>As an offline-first utility, the vast majority of our features run entirely on your personal device. No data leaves your phone for these features:</p>
+        <ul>
+            <li><strong>Survival Guide, Species Database, & Knot Tutorials:</strong> All search and browsing calculations are executed locally using an on-device SQLite database.</li>
+            <li><strong>AI Plant Identification:</strong> Image classification uses on-device TensorFlow Lite (TFLite) models. Your images and camera frames are processed locally and are never uploaded to the cloud.</li>
+            <li><strong>Offline LLM Chat:</strong> Chat inference runs locally via <code>llama.cpp</code>, and conversation history is saved securely in a local Drift (SQLite) database.</li>
+            <li><strong>Sensors (Barometer, Compass, GPS):</strong> GPS tracking, magnetic heading, and barometric altitude indicators read directly from device hardware and are saved as local GPX files.</li>
+            <li><strong>Emergency SOS Settings:</strong> Emergency contacts are saved locally via Hive and are only accessed when triggering SMS alerts via the device system composer.</li>
+        </ul>
+
+        <h2>2. Minimal Network Operations</h2>
+        <p>The application only initiates network connections under the following scenarios:</p>
+        <ul>
+            <li><strong>RevenueCat Purchases:</strong> Processing and validating Pro entitlement eligibility communicates receipts and customer identifiers securely with RevenueCat APIs.</li>
+            <li><strong>Online Basemaps (OpenStreetMap):</strong> Fetching online map tiles sends HTTP requests to OpenStreetMap servers, exposing your IP address and map viewport to them. Offline vector PMTiles downloads connect to our Cloudflare R2 repository.</li>
+            <li><strong>Cloud AI Fallback (Optional):</strong> If on-device LLM inference is disabled/unsupported and you configure an API Proxy Base URL, conversation text is routed via your proxy server.</li>
+            <li><strong>Speech-to-Text:</strong> Platform speech recognition APIs may process voice data via Apple or Google cloud endpoints depending on your OS configuration.</li>
+        </ul>
+
+        <h2>3. Data Collection & Third-Party SDKs</h2>
+        <p>We do **not** collect, store, or sell your personal information or real-time location. No ad trackers are embedded in the app. The SDK used is:</p>
+        <ul>
+            <li><strong>RevenueCat SDK:</strong> Used strictly for managing standard in-app purchases and subscriptions. <a href="https://www.revenuecat.com/privacy" target="_blank" style="color: var(--primary);">View RevenueCat Privacy Policy</a>.</li>
+        </ul>
+    </div>
+</body>
+</html>
