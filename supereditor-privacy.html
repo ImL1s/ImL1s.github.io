@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SuperEditor privacy policy. Learn how local files, optional SFTP connections, and opt-in diagnostics are handled.">
+    <link rel="canonical" href="https://iml1s.github.io/supereditor-privacy.html">
+    <title>SuperEditor 隱私權政策 | Privacy Policy</title>
+    <style>
+        :root { color-scheme: light dark; --ink:#172033; --muted:#59657a; --line:#dbe2ec; --paper:#ffffff; --soft:#f4f7fb; --brand:#3157d5; --accent:#18a985; }
+        * { box-sizing: border-box; }
+        body { margin:0; background:var(--soft); color:var(--ink); font:16px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+        main { width:min(920px,calc(100% - 32px)); margin:32px auto; padding:clamp(24px,5vw,56px); background:var(--paper); border:1px solid var(--line); border-radius:24px; box-shadow:0 18px 50px rgba(32,48,80,.08); }
+        h1 { margin:0 0 8px; font-size:clamp(2rem,5vw,3.4rem); line-height:1.08; letter-spacing:-.04em; }
+        h2 { margin:48px 0 16px; padding-top:16px; border-top:1px solid var(--line); font-size:1.65rem; }
+        h3 { margin:30px 0 8px; font-size:1.12rem; }
+        p,li,td { max-width:76ch; }
+        a { color:var(--brand); text-underline-offset:3px; }
+        .eyebrow { color:var(--brand); font-weight:750; letter-spacing:.08em; text-transform:uppercase; }
+        .date,.note { color:var(--muted); }
+        .switcher { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 32px; }
+        .switcher a { padding:9px 14px; border:1px solid var(--line); border-radius:999px; text-decoration:none; font-weight:700; }
+        .summary { margin:24px 0; padding:20px 22px; border-left:4px solid var(--accent); border-radius:0 14px 14px 0; background:var(--soft); }
+        table { width:100%; border-collapse:collapse; margin:18px 0; }
+        th,td { padding:12px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+        th { background:var(--soft); }
+        code { padding:.1em .35em; border-radius:5px; background:var(--soft); }
+        footer { margin-top:48px; padding-top:22px; border-top:1px solid var(--line); color:var(--muted); }
+        @media (prefers-color-scheme:dark) { :root { --ink:#edf2ff; --muted:#aeb9ce; --line:#33405a; --paper:#111827; --soft:#0b1220; --brand:#9bb0ff; --accent:#5de0bb; } body{background:#070c15;} }
+        @media (max-width:640px) { main{width:100%;margin:0;border:0;border-radius:0;} table{display:block;overflow-x:auto;} }
+    </style>
+</head>
+<body>
+<main>
+    <div class="eyebrow">SuperEditor · Privacy</div>
+    <h1>隱私權政策<br><span lang="en">Privacy Policy</span></h1>
+    <p class="date">最後更新日期 / Last updated: 2026-07-14</p>
+    <nav class="switcher" aria-label="Language"><a href="#zh">繁體中文</a><a href="#en" lang="en">English</a><a href="supereditor-support.html">支援 / Support</a></nav>
+
+    <section id="zh" lang="zh-Hant">
+        <h2>繁體中文版</h2>
+        <div class="summary"><strong>重點摘要：</strong>SuperEditor 不要求建立帳號、不含廣告，也不會把您的文件內容傳送給開發者。文件主要留在您的裝置，或依您的指示透過 SFTP 傳送至您選擇的伺服器。Firebase 診斷功能預設關閉，只有在您主動同意後才會啟用。</div>
+
+        <h3>1. 適用範圍</h3>
+        <p>本政策說明 SuperEditor（以下稱「本 App」）如何處理資訊。本政策不適用於您自行選擇的檔案提供者、SFTP 伺服器、網路服務商或其他第三方服務；該等服務受其各自條款與政策規範。</p>
+
+        <h3>2. 核心編輯功能處理的資料</h3>
+        <ul>
+            <li><strong>文件內容與檔案資訊：</strong>您開啟或編輯的文字、檔名、URI、編碼與儲存位置，會在裝置上處理。本 App 不會將這些內容傳送給開發者。</li>
+            <li><strong>復原草稿：</strong>為協助在中斷或失敗後復原未儲存內容，本 App 可能在 App 私有空間保存加密草稿；加密金鑰由 Android Keystore 管理。解除安裝 App 會移除這些本機資料。</li>
+            <li><strong>本機檔案：</strong>檔案存取由您透過 Android Storage Access Framework 選擇並授權。本 App 不會掃描未經您選擇的儲存空間。</li>
+        </ul>
+
+        <h3>3. SFTP 連線</h3>
+        <p>若您使用 SFTP，主機、連接埠、使用者名稱與驗證資料會在裝置上處理，並只用於連線至您指定的伺服器。文件內容會透過加密的 SSH/SFTP 連線在您的裝置與該伺服器間傳輸。已信任的主機金鑰會保存在不參與裝置備份的 App 私有空間，以協助偵測伺服器金鑰變更。開發者不營運、不控制也無法存取您選擇的 SFTP 伺服器。</p>
+
+        <h3>4. 可選的診斷資料</h3>
+        <p>Firebase Analytics 與 Firebase Crashlytics 均預設停用。只有當您在設定中主動開啟「可選診斷」後，Firebase 才可能處理下列資料：</p>
+        <ul>
+            <li>有限且預先允許的 App 互動事件與粗略結果，例如功能類型、成功／失敗、延遲或檔案大小區間；</li>
+            <li>App 版本、裝置型號、作業系統版本、Firebase App Instance／Installation 識別碼；</li>
+            <li>當機、ANR、堆疊追蹤、技術診斷資訊及相關 Analytics breadcrumbs。</li>
+        </ul>
+        <p>診斷事件的設計不接受文件文字、檔名、URI、本機或遠端路徑、SFTP 主機、使用者名稱、密碼、私鑰或主機金鑰。廣告 ID、廣告個人化訊號與安裝推薦來源收集已停用或由 App 移除。</p>
+
+        <h3>5. 第三方處理者</h3>
+        <table>
+            <thead><tr><th>服務</th><th>用途</th><th>啟用方式</th><th>政策</th></tr></thead>
+            <tbody>
+                <tr><td>Firebase Analytics</td><td>了解功能使用與產品品質</td><td>使用者主動同意後</td><td><a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase 隱私權與安全性</a></td></tr>
+                <tr><td>Firebase Crashlytics</td><td>當機與穩定性診斷</td><td>使用者主動同意後</td><td><a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase 隱私權與安全性</a></td></tr>
+            </tbody>
+        </table>
+        <p>本 App 目前不含 AdMob、第三方廣告 SDK 或帳號登入服務，也不出售個人資料。</p>
+
+        <h3>6. 選擇、停用與刪除請求</h3>
+        <p>您可隨時在 App 設定中關閉可選診斷。關閉後，本 App 會停用後續 Analytics 與 Crashlytics 收集、重設裝置上的 Analytics 資料，並刪除尚未送出的 Crashlytics 報告。此操作無法保證自動刪除先前已傳送至 Firebase 的資料。</p>
+        <p>如需詢問或請求處理先前傳送的診斷資料，請寄信至 <a href="mailto:aa22396584@gmail.com?subject=SuperEditor%20privacy%20request">aa22396584@gmail.com</a>，並提供可協助辨識請求範圍的 App 版本、裝置平台與大約日期。請勿寄送密碼、私鑰或不必要的文件內容。</p>
+
+        <h3>7. 保存與安全</h3>
+        <p>本機文件與遠端檔案的保存由您選擇的位置及服務決定。復原草稿只為編輯復原而保存，並受 App 私有儲存與 Android Keystore 加密保護。SFTP 使用 SSH 加密傳輸；Firebase 的保存與刪除依 Google/Firebase 的設定及政策辦理。任何安全措施都無法保證零風險，請自行保留重要文件備份並確認遠端主機指紋。</p>
+
+        <h3>8. 兒童隱私</h3>
+        <p>本 App 是一般用途的生產力工具，不以兒童為主要對象，也不會故意要求兒童提供個人資料。</p>
+
+        <h3>9. 政策更新與聯絡</h3>
+        <p>本政策如有重大變更，將更新本頁日期，並在適當情況下於 App 或商店頁面告知。問題或隱私請求請聯絡 <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a>；網站：<a href="https://iml1s.github.io">https://iml1s.github.io</a>。</p>
+    </section>
+
+    <section id="en" lang="en">
+        <h2>English Version</h2>
+        <div class="summary"><strong>Summary:</strong> SuperEditor does not require an account, contains no advertising, and does not send your document content to the developer. Documents stay on your device or are sent, at your direction, to an SFTP server you choose. Firebase diagnostics are off by default and activate only after you opt in.</div>
+
+        <h3>1. Scope</h3>
+        <p>This policy explains how SuperEditor (the “App”) handles information. It does not govern a file provider, SFTP server, network provider, or other third party you choose; those services are governed by their own terms and policies.</p>
+
+        <h3>2. Data processed for core editing</h3>
+        <ul>
+            <li><strong>Documents and file metadata:</strong> text, file names, URIs, encoding, and storage locations you open or edit are processed on your device. The App does not send this content to the developer.</li>
+            <li><strong>Recovery drafts:</strong> to recover unsaved work after an interruption or failure, the App may keep encrypted drafts in private app storage. Encryption keys are managed by Android Keystore. Uninstalling the App removes this local data.</li>
+            <li><strong>Local files:</strong> access is selected and granted by you through Android's Storage Access Framework. The App does not scan storage you have not selected.</li>
+        </ul>
+
+        <h3>3. SFTP connections</h3>
+        <p>If you use SFTP, the host, port, username, and authentication material are processed on your device and used only to connect to the server you specify. Documents travel between your device and that server over an encrypted SSH/SFTP connection. Trusted host keys are kept in private app storage excluded from device backup so the App can detect host-key changes. The developer does not operate, control, or have access to your chosen SFTP server.</p>
+
+        <h3>4. Optional diagnostics</h3>
+        <p>Firebase Analytics and Firebase Crashlytics are disabled by default. Only after you turn on optional diagnostics in Settings may Firebase process:</p>
+        <ul>
+            <li>limited, allowlisted app interaction events and coarse outcomes, such as feature type, success or failure, latency bucket, or file-size bucket;</li>
+            <li>app version, device model, operating-system version, and Firebase app-instance or installation identifiers; and</li>
+            <li>crashes, ANRs, stack traces, technical diagnostics, and related Analytics breadcrumbs.</li>
+        </ul>
+        <p>Diagnostic events are designed not to accept document text, file names, URIs, local or remote paths, SFTP hosts, usernames, passwords, private keys, or host keys. Advertising ID, ad-personalization signals, and install-referrer collection are disabled or removed from the App.</p>
+
+        <h3>5. Third-party processors</h3>
+        <table>
+            <thead><tr><th>Service</th><th>Purpose</th><th>Activation</th><th>Policy</th></tr></thead>
+            <tbody>
+                <tr><td>Firebase Analytics</td><td>Feature-use and product-quality measurement</td><td>User opt-in</td><td><a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a></td></tr>
+                <tr><td>Firebase Crashlytics</td><td>Crash and stability diagnostics</td><td>User opt-in</td><td><a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security</a></td></tr>
+            </tbody>
+        </table>
+        <p>The current App contains no AdMob or third-party advertising SDK, provides no account sign-in, and does not sell personal data.</p>
+
+        <h3>6. Choice, opt-out, and deletion requests</h3>
+        <p>You may turn optional diagnostics off in App Settings at any time. The App will disable future Analytics and Crashlytics collection, reset local Analytics data, and delete unsent Crashlytics reports. This action cannot guarantee automatic deletion of diagnostic data previously transmitted to Firebase.</p>
+        <p>To ask about or request handling of previously transmitted diagnostic data, email <a href="mailto:aa22396584@gmail.com?subject=SuperEditor%20privacy%20request">aa22396584@gmail.com</a> with the App version, platform, and approximate date needed to scope the request. Do not send passwords, private keys, or unnecessary document content.</p>
+
+        <h3>7. Retention and security</h3>
+        <p>Retention of local and remote files is controlled by the storage location and services you choose. Recovery drafts are retained only to support editing recovery and are protected by private app storage and Android Keystore encryption. SFTP uses SSH encryption in transit. Firebase retention and deletion follow Google/Firebase settings and policies. No security measure can guarantee zero risk; keep backups of important documents and verify remote host fingerprints.</p>
+
+        <h3>8. Children's privacy</h3>
+        <p>The App is a general-purpose productivity tool, is not directed primarily to children, and does not knowingly ask children to provide personal data.</p>
+
+        <h3>9. Updates and contact</h3>
+        <p>If this policy changes materially, we will update the date on this page and provide notice in the App or store listing where appropriate. Contact <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a> for questions or privacy requests. Website: <a href="https://iml1s.github.io">https://iml1s.github.io</a>.</p>
+    </section>
+
+    <footer><a href="supereditor-terms.html">使用條款 / Terms</a> · <a href="supereditor-support.html">支援 / Support</a></footer>
+</main>
+</body>
+</html>

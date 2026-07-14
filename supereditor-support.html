@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SuperEditor support for local files, encoding, recovery drafts, and SFTP connections.">
+    <link rel="canonical" href="https://iml1s.github.io/supereditor-support.html">
+    <title>SuperEditor 支援 | Support</title>
+    <style>
+        :root{color-scheme:light dark;--ink:#172033;--muted:#59657a;--line:#dbe2ec;--paper:#fff;--soft:#f4f7fb;--brand:#3157d5;--accent:#18a985}*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#eef3ff,#f5fbf8);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}main{width:min(920px,calc(100% - 32px));margin:32px auto;padding:clamp(24px,5vw,56px);background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:0 18px 50px rgba(32,48,80,.08)}h1{margin:0 0 8px;font-size:clamp(2.2rem,6vw,4rem);line-height:1.04;letter-spacing:-.05em}h2{margin:44px 0 16px;font-size:1.5rem}h3{margin:0 0 8px;font-size:1.06rem}a{color:var(--brand);text-underline-offset:3px}.eyebrow{color:var(--brand);font-weight:750;letter-spacing:.08em;text-transform:uppercase}.lead{font-size:1.15rem;color:var(--muted);max-width:66ch}.switcher{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.switcher a{padding:9px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-weight:700}.contact{margin:28px 0;padding:24px;background:var(--soft);border-radius:18px;border-left:4px solid var(--accent)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:20px;border:1px solid var(--line);border-radius:16px}.card p{margin-bottom:0;color:var(--muted)}footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted)}@media(prefers-color-scheme:dark){:root{--ink:#edf2ff;--muted:#aeb9ce;--line:#33405a;--paper:#111827;--soft:#0b1220;--brand:#9bb0ff;--accent:#5de0bb}body{background:#070c15}}@media(max-width:700px){main{width:100%;margin:0;border:0;border-radius:0}.grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+<main>
+    <div class="eyebrow">SuperEditor · Support</div>
+    <h1>寫得更安心。<br><span lang="en">Edit with confidence.</span></h1>
+    <p class="lead">本機文字編輯、編碼處理、復原草稿與安全 SFTP 連線的支援中心。<br><span lang="en">Support for local text editing, encodings, recovery drafts, and secure SFTP connections.</span></p>
+    <nav class="switcher" aria-label="Language"><a href="#zh">繁體中文</a><a href="#en" lang="en">English</a></nav>
+
+    <div class="contact">
+        <strong>聯絡 / Contact</strong>
+        <p><a href="mailto:aa22396584@gmail.com?subject=SuperEditor%20support">aa22396584@gmail.com</a></p>
+        <p>回報問題時，請附上 App 版本、Android 版本、裝置型號、重現步驟，以及不含敏感內容的畫面。請勿寄送密碼、私鑰、完整主機資料或未遮蔽的私人文件。<br><span lang="en">When reporting an issue, include the App version, Android version, device model, reproduction steps, and a redacted screenshot. Never send passwords, private keys, full server details, or unredacted private documents.</span></p>
+    </div>
+
+    <section id="zh" lang="zh-Hant">
+        <h2>常見問題</h2>
+        <div class="grid">
+            <article class="card"><h3>為什麼無法儲存檔案？</h3><p>確認檔案提供者仍授予寫入權限。若來源只提供暫時或唯讀權限，請使用「另存新檔」選擇可寫入的位置。</p></article>
+            <article class="card"><h3>文字顯示亂碼怎麼辦？</h3><p>重新開啟文件並選擇正確編碼。儲存前請保留原檔備份，避免以錯誤編碼覆寫。</p></article>
+            <article class="card"><h3>什麼是復原草稿？</h3><p>App 會在私有空間保存加密復原內容，協助在程序中斷或儲存失敗後找回未儲存編輯。</p></article>
+            <article class="card"><h3>SFTP 顯示主機金鑰變更？</h3><p>先停止連線，透過管理員或可信管道確認新指紋。不要在無法確認時直接信任新金鑰。</p></article>
+            <article class="card"><h3>App 會上傳我的文件嗎？</h3><p>不會上傳給開發者。只有當您主動使用 SFTP 時，內容才會傳到您選擇的伺服器。</p></article>
+            <article class="card"><h3>如何關閉診斷？</h3><p>前往設定關閉「可選診斷」。功能預設關閉；關閉後會停止後續收集並清除尚未送出的當機報告。</p></article>
+        </div>
+    </section>
+
+    <section id="en" lang="en">
+        <h2>Frequently asked questions</h2>
+        <div class="grid">
+            <article class="card"><h3>Why can't I save a file?</h3><p>Confirm that the file provider still grants write access. If the source is temporary or read-only, use Save As and select a writable destination.</p></article>
+            <article class="card"><h3>Why does text look garbled?</h3><p>Reopen the document with the correct encoding. Keep a backup before saving so you do not overwrite the original with the wrong encoding.</p></article>
+            <article class="card"><h3>What is a recovery draft?</h3><p>The App keeps encrypted recovery content in private storage to help restore unsaved edits after interruption or a failed save.</p></article>
+            <article class="card"><h3>SFTP says the host key changed. What now?</h3><p>Stop and verify the new fingerprint with the server administrator through a trusted channel. Do not trust a replacement you cannot verify.</p></article>
+            <article class="card"><h3>Does the App upload my documents?</h3><p>Not to the developer. Content is transmitted only when you deliberately use SFTP, and then only to the server you select.</p></article>
+            <article class="card"><h3>How do I turn diagnostics off?</h3><p>Turn off Optional Diagnostics in Settings. It is off by default; opting out stops future collection and deletes unsent crash reports.</p></article>
+        </div>
+    </section>
+
+    <footer><a href="supereditor-privacy.html">隱私權政策 / Privacy</a> · <a href="supereditor-terms.html">使用條款 / Terms</a> · <a href="https://iml1s.github.io">開發者網站 / Developer website</a></footer>
+</main>
+</body>
+</html>
