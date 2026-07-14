@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="生存相簿 App 隱私權政策：本機資料、ML Kit、選用 Gemini 與 Supabase 雲端副本的資料處理說明。">
+  <meta name="theme-color" content="#E8833A">
+  <title>生存相簿 — 隱私權政策</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fffaf4;
+      --surface: #ffffff;
+      --text: #2f241c;
+      --muted: #665b53;
+      --accent: #a84d0c;
+      --border: #dccfc3;
+      --callout: #fff0df;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+    main { width: min(860px, calc(100% - 32px)); margin: 0 auto; padding: 40px 0 72px; }
+    h1, h2, h3 { line-height: 1.3; }
+    h1 { margin: 8px 0 12px; font-size: clamp(2rem, 7vw, 3.2rem); }
+    h2 { margin-top: 42px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    h3 { margin-top: 28px; }
+    a { color: var(--accent); text-underline-offset: 3px; }
+    code { overflow-wrap: anywhere; }
+    .eyebrow { color: var(--accent); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .meta { color: var(--muted); }
+    .summary, .note {
+      padding: 20px 22px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+    }
+    .summary { margin: 28px 0; border-left: 5px solid var(--accent); }
+    .note { background: var(--callout); }
+    nav ul { columns: 2; padding-left: 22px; }
+    table { width: 100%; border-collapse: collapse; margin: 18px 0; background: var(--surface); }
+    th, td { padding: 12px; border: 1px solid var(--border); text-align: left; vertical-align: top; }
+    th { background: var(--callout); }
+    footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); }
+    @media (max-width: 640px) {
+      nav ul { columns: 1; }
+      table, thead, tbody, tr, th, td { display: block; }
+      thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+      tr { margin: 0 0 16px; border: 1px solid var(--border); }
+      td { border: 0; border-bottom: 1px solid var(--border); }
+      td:last-child { border-bottom: 0; }
+      td::before { content: attr(data-label); display: block; font-weight: 800; color: var(--muted); }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #211b16;
+        --surface: #2c241e;
+        --text: #fff5ea;
+        --muted: #d4c5b8;
+        --accent: #ffb77c;
+        --border: #665448;
+        --callout: #3b2b20;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main id="main">
+    <header>
+      <div class="eyebrow">Privacy Policy</div>
+      <h1>生存相簿隱私權政策</h1>
+      <p class="meta">生效與最後更新日期：2026 年 7 月 14 日</p>
+    </header>
+
+    <div class="summary">
+      <strong>重點摘要：</strong>生存相簿採本機優先設計，不需要建立開發者帳號。照片、辨識結果、備註與提醒預設只保存在您的裝置。Gemini 輔助分類與 Supabase 雲端副本預設關閉，只有在您閱讀說明、明確啟用並提供自己的服務設定後才會連線。
+    </div>
+
+    <nav aria-label="本頁目錄">
+      <h2>目錄</h2>
+      <ul>
+        <li><a href="#controller">資料控制者與適用範圍</a></li>
+        <li><a href="#local">本機資料</a></li>
+        <li><a href="#permissions">裝置權限</a></li>
+        <li><a href="#services">第三方服務與資料傳輸</a></li>
+        <li><a href="#analytics">分析、廣告與付款</a></li>
+        <li><a href="#retention">保留與刪除</a></li>
+        <li><a href="#security">安全措施</a></li>
+        <li><a href="#choices">您的選擇與權利</a></li>
+        <li><a href="#children">兒童隱私</a></li>
+        <li><a href="#changes">政策更新</a></li>
+        <li><a href="#contact">聯絡方式</a></li>
+      </ul>
+    </nav>
+
+    <section id="controller">
+      <h2>1. 資料控制者與適用範圍</h2>
+      <p>「生存相簿」（以下稱「本 App」）由 CB Studio 開發。本政策適用於 Android 套件 <code>com.cbstudio.survival_album</code>，說明本 App 目前版本實際使用及處理資料的方式。</p>
+      <p>聯絡信箱：<a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></p>
+    </section>
+
+    <section id="local">
+      <h2>2. 本機資料</h2>
+      <p>為提供整理與提醒功能，本 App 會在 App 私有儲存空間保存：</p>
+      <ul>
+        <li>您拍攝或主動選取的照片副本；</li>
+        <li>裝置端辨識產生的 OCR 文字、條碼、影像標籤、分類與信心度；</li>
+        <li>您輸入的標題、備註、收藏狀態與提醒時間；</li>
+        <li>雲端功能開關與其他 App 偏好設定。</li>
+      </ul>
+      <p>核心整理、搜尋、分類及本機提醒可離線使用。開發者目前沒有一個集中式伺服器接收上述本機相簿資料。</p>
+    </section>
+
+    <section id="permissions">
+      <h2>3. 裝置權限</h2>
+      <table>
+        <thead><tr><th>權限</th><th>用途</th><th>不授權的影響</th></tr></thead>
+        <tbody>
+          <tr><td data-label="權限">相機</td><td data-label="用途">拍攝要整理的照片</td><td data-label="不授權的影響">仍可使用系統選擇器匯入既有照片</td></tr>
+          <tr><td data-label="權限">通知</td><td data-label="用途">顯示您建立的本機提醒</td><td data-label="不授權的影響">整理與搜尋仍可使用，但不會顯示通知</td></tr>
+          <tr><td data-label="權限">精準鬧鐘</td><td data-label="用途">在支援的 Android 裝置上盡量準時送出提醒</td><td data-label="不授權的影響">App 會使用系統允許的非精準排程，通知時間可能延後</td></tr>
+          <tr><td data-label="權限">開機完成</td><td data-label="用途">由通知套件在重新開機後恢復已排程提醒</td><td data-label="不授權的影響">此為系統層級權限，沒有個別對話框</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="services">
+      <h2>4. 第三方服務與資料傳輸</h2>
+      <h3>4.1 Google ML Kit（核心裝置端辨識）</h3>
+      <p>本 App 使用 Google ML Kit 的文字辨識、條碼掃描及影像標籤 SDK。照片與辨識結果由這些 SDK 在裝置上處理，不會為了 ML Kit 推論而上傳照片內容；但 ML Kit SDK 可能依 Google 的說明傳送技術性裝置、使用及診斷資訊。詳見 <a href="https://developers.google.com/ml-kit/android-data-disclosure" rel="noopener">ML Kit Android Data Disclosure</a> 與 <a href="https://developers.google.com/ml-kit/terms" rel="noopener">ML Kit Terms</a>。</p>
+
+      <h3>4.2 Gemini 輔助分類（選用、預設關閉）</h3>
+      <p>只有在您同意雲端功能、啟用 Gemini 並提供自己的 API key 後，本機分類信心不足的照片才會送往 Google Gemini API。請求包含該照片、可能的 OCR 提示文字與分類提示詞。API key 保存在裝置安全儲存空間，並透過 HTTPS 傳送給 Google。資料後續處理受您使用的 Google 服務條款及隱私政策規範。</p>
+
+      <h3>4.3 Supabase 單向雲端副本（選用、預設關閉）</h3>
+      <p>只有在您同意雲端功能、啟用同步並提供自己的 Supabase 專案 URL 與 key 後，本 App 才會將照片副本及對應的分類資料上傳到您的 Supabase 專案。App 會使用匿名驗證工作階段；工作階段資料與 key 保存在裝置安全儲存空間。遠端資料的地區、保留、存取權限、費用與刪除由您的 Supabase 專案設定決定。</p>
+      <div class="note"><strong>重要：</strong>這是單向雲端副本。本機刪除不會自動刪除既有遠端副本，本 App 目前也不提供從雲端還原。請直接到您的 Supabase 專案管理或刪除遠端內容。</div>
+    </section>
+
+    <section id="analytics">
+      <h2>5. 分析、廣告與付款</h2>
+      <p>目前版本沒有整合 Firebase Analytics、Google Analytics、Firebase Crashlytics、廣告 SDK、Google Play Billing 或其他開發者營運的遠端行為分析服務。本 App 內部的事件介面目前不會把事件上傳到開發者伺服器。</p>
+      <p>若未來新增任何遠端分析、廣告或付費功能，我們會先更新本政策、App 內說明與商店 Data Safety 聲明，再依適用規定提供必要的選擇。</p>
+    </section>
+
+    <section id="retention">
+      <h2>6. 保留與刪除</h2>
+      <ul>
+        <li><strong>本機項目：</strong>保留到您在 App 內刪除該項目為止。刪除照片項目時，App 會一併移除其本機資料與相關提醒。</li>
+        <li><strong>解除安裝：</strong>Android 會清除 App 私有儲存空間；本 App 已停用 Android 備份。已存在於您個人 Supabase 專案的副本不會因解除安裝而自動刪除。</li>
+        <li><strong>Gemini 與 Supabase：</strong>第三方收到的資料依您的第三方帳戶、專案設定及其政策保留。請使用相應服務的管理工具提出存取或刪除要求。</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2>7. 安全措施</h2>
+      <p>本 App 使用 App 私有目錄保存照片與資料庫，並停用 Android 系統備份。Gemini API key、Supabase key 與雲端工作階段使用裝置安全儲存介面保存。Gemini 使用固定的 HTTPS 端點；使用者輸入的 Supabase 位址必須是有效 HTTPS origin 才會接受。</p>
+      <p>任何系統都無法保證絕對安全。您應妥善保管裝置解鎖資訊、第三方 API key 與 Supabase 專案權限，並定期檢查遠端專案的 RLS 與存取設定。</p>
+    </section>
+
+    <section id="choices">
+      <h2>8. 您的選擇與權利</h2>
+      <ul>
+        <li>您可以拒絕或撤回通知、精準鬧鐘與選用雲端功能；離線核心功能仍可使用。</li>
+        <li>您可以在 App 內刪除個別本機項目，或解除安裝以移除 App 私有空間資料。</li>
+        <li>選用雲端服務由您自己的帳戶與專案提供；請在 Google 或 Supabase 的控制台行使遠端資料存取、匯出或刪除權利。</li>
+        <li>如對本 App 的資料處理有疑問，可使用下方信箱聯絡我們。</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <h2>9. 兒童隱私</h2>
+      <p>本 App 是一般生產力工具，不以兒童為主要對象，也不要求使用者提供生日、姓名或其他建立開發者帳戶所需的個人資料。我們不會故意透過自己的伺服器收集兒童個人資料。</p>
+    </section>
+
+    <section id="changes">
+      <h2>10. 政策更新</h2>
+      <p>功能或資料處理方式有重大變更時，本頁會更新內容與日期。若變更需要新的同意，我們會在 App 內提供相應說明與選擇。</p>
+    </section>
+
+    <section id="contact">
+      <h2>11. 聯絡方式</h2>
+      <p>開發者：CB Studio<br>電子郵件：<a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a><br>網站：<a href="https://iml1s.github.io/">https://iml1s.github.io/</a></p>
+    </section>
+
+    <footer>© 2026 CB Studio · 生存相簿</footer>
+  </main>
+</body>
+</html>
