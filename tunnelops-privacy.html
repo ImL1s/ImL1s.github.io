@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071014">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="TunnelOps 隱私權政策：說明 Firebase Functions 自動技術資料、App Check、搜尋請求與 Android 路況快取的實際處理邊界。">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TunnelOps Privacy Policy｜隱私權政策">
+    <meta property="og:description" content="Current, bilingual privacy disclosures for TunnelOps road-tunnel traffic status.">
+    <meta property="og:url" content="https://iml1s.github.io/tunnelops-privacy.html">
+    <meta property="og:site_name" content="TunnelOps">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://iml1s.github.io/tunnelops-privacy.html">
+    <link rel="stylesheet" href="tunnelops-legal.css">
+    <title>TunnelOps Privacy Policy｜隱私權政策</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">跳至主要內容 / Skip to content</a>
+
+    <header class="site-header">
+        <div class="shell header-inner">
+            <a class="brand" href="tunnelops-support.html" aria-label="TunnelOps 支援首頁">
+                <span class="brand-mark" aria-hidden="true">T</span>
+                <span class="brand-copy">
+                    <strong>TunnelOps</strong>
+                    <small>Road tunnel status / truthful by design</small>
+                </span>
+            </a>
+            <nav class="site-nav" aria-label="TunnelOps 文件導覽">
+                <a href="tunnelops-privacy.html" aria-current="page">Privacy 隱私</a>
+                <a href="tunnelops-terms.html">Terms 條款</a>
+                <a href="tunnelops-support.html">Support 支援</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <div class="shell">
+            <section class="hero" aria-labelledby="page-title">
+                <div>
+                    <p class="route-chip">Route / Legal / Privacy</p>
+                    <h1 id="page-title">
+                        資料邊界，清楚標示
+                        <span class="en-title" lang="en">Privacy policy · what moves, what stays, what is not collected</span>
+                    </h1>
+                    <p class="hero-lede">
+                        TunnelOps 會透過 Firebase 取得道路隧道路況，也會在 Android 儲存有限的路況快取。
+                        本政策明確區分裝置端資料、網路請求、第三方處理，以及目前沒有啟用的功能。
+                    </p>
+                </div>
+                <aside class="hero-panel" aria-label="政策版本">
+                    <p class="label">Effective date</p>
+                    <p class="date"><time datetime="2026-07-14">2026 · 07 · 14</time></p>
+                    <p class="version">Policy version 1.1<br>繁體中文與 English 同頁提供</p>
+                    <nav class="language-switch" aria-label="語言快速跳轉">
+                        <a href="#zh">繁體中文</a>
+                        <a href="#en" lang="en">English</a>
+                    </nav>
+                </aside>
+            </section>
+
+            <section class="truth-strip" aria-label="目前版本的隱私重點">
+                <div class="truth-item">
+                    <strong><span class="signal-dot" aria-hidden="true"></span>不需帳戶</strong>
+                    <span>No sign-in or user profile</span>
+                </div>
+                <div class="truth-item">
+                    <strong><span class="signal-dot" aria-hidden="true"></span>不取用裝置位置</strong>
+                    <span>No location permission</span>
+                </div>
+                <div class="truth-item">
+                    <strong><span class="signal-dot" aria-hidden="true"></span>沒有廣告或付費方案</strong>
+                    <span>No ads or purchases in the current build</span>
+                </div>
+                <div class="truth-item">
+                    <strong><span class="signal-dot" aria-hidden="true"></span>Firebase 網路服務</strong>
+                    <span>Functions and app-attestation signals</span>
+                </div>
+            </section>
+
+            <article class="document" aria-label="TunnelOps 隱私權政策全文">
+                <header class="document-intro">
+                    <h2>先說結論<br><span lang="en">At a glance</span></h2>
+                    <div>
+                        <p>
+                            TunnelOps 不要求姓名、電子郵件、電話、登入帳戶或精確位置。為顯示路況，App
+                            會向 Google Firebase Functions 傳送有限的隧道查詢；使用搜尋時，搜尋文字或國家代碼也會送出。
+                            Firebase SDK／服務亦會自動處理函式名稱、呼叫端 IP、FCM token、安裝識別資訊、裝置中繼資料與完整性 token，詳細用途與保存邊界如下。
+                        </p>
+                        <div class="callout info">
+                            <strong>目前沒有整合 Firebase Analytics 或 Firebase Crashlytics。</strong>
+                            這不代表網路完全沒有技術紀錄；Firebase／Google 基礎設施仍可能依其政策處理 IP 位址、請求中繼資料、裝置與安全訊號。
+                        </div>
+                    </div>
+                </header>
+
+                <section class="language-section" id="zh" lang="zh-Hant" aria-labelledby="zh-title">
+                    <span class="language-tag">ZH-HANT / 正式中文版</span>
+                    <h2 id="zh-title">TunnelOps 隱私權政策</h2>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">01</span>
+                        <div class="policy-copy">
+                            <h3>適用範圍與資料控制者</h3>
+                            <p>
+                                本政策適用於 CB Studio 提供的 TunnelOps 道路隧道路況 App（以下稱「本 App」）及其支援聯絡。
+                                本 App 用於呈現道路隧道目錄、來源狀態與可用的即時／近期路況，不是導航、緊急通報或駕駛輔助系統。
+                            </p>
+                            <p>
+                                資料控制與政策聯絡人為 CB Studio。您可透過
+                                <a href="mailto:aa22396584@gmail.com?subject=TunnelOps%20Privacy">aa22396584@gmail.com</a>
+                                與我們聯絡。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">02</span>
+                        <div class="policy-copy">
+                            <h3>本 App 實際處理哪些資料</h3>
+                            <div class="table-wrap" role="region" aria-label="資料處理表，可水平捲動" tabindex="0">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">資料類型</th>
+                                            <th scope="col">何時處理</th>
+                                            <th scope="col">用途與去向</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>固定隧道識別碼、方向與筆數上限</td>
+                                            <td>載入路況或隧道詳情時</td>
+                                            <td>傳送至 Google Firebase Functions，由 CB Studio 的後端程式處理，以取得相對應的公開道路路況與隧道資料。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>您輸入的搜尋文字與選用的國家代碼</td>
+                                            <td>您使用隧道搜尋時</td>
+                                            <td>傳送至 Google Firebase Functions，由 CB Studio 的後端程式完成目錄查詢。我們不把它寫入搜尋歷史或開發者使用者檔案；請勿在搜尋欄輸入個人資料。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Firebase 函式名稱、呼叫端 IP 位址與 FCM token</td>
+                                            <td>每次呼叫 Firebase callable function 時</td>
+                                            <td>Cloud Functions 用戶端 SDK／服務會自動將這些資料提供給 Google Firebase，用於定位與執行函式、回傳結果、安全及防濫用。Firebase 官方說明指出，即使 App 未包含或使用 Firebase Cloud Messaging SDK，Functions 仍會收集 FCM token；TunnelOps 目前不發送通知，也不在 CB Studio 後端使用或儲存該 token。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Firebase Installation ID（FID）與 Firebase user-agent 裝置中繼資料</td>
+                                            <td>Firebase 相依元件初始化或連線時</td>
+                                            <td>目前 Android dependency graph 會帶入 Firebase Installations；其產生並傳送每次安裝的 FID（不等同於唯一使用者或實體裝置識別碼）。Google Firebase 亦可能收到作業系統版本、名稱、型號、品牌、裝置類型、安裝來源，以及 Firebase SDK 名稱／版本，用於識別 App 安裝並提供、維護及改善 Firebase。TunnelOps 不把 FID 對應到帳戶或開發者使用者檔案。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>App／裝置完整性訊號、App Check token 與 Play Integrity token</td>
+                                            <td>staging 或 production App 啟動及呼叫 Firebase 服務時</td>
+                                            <td>傳送至 Firebase App Check 與 Android release 使用的 Google Play Integrity；若發行 Apple release，則也由 Apple App Attest 處理。用途是驗證 App 執行環境、保護後端與防止濫用。主要 callable 的 enforcement 可能分階段啟用。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>公開路況快照、來源健康狀態、時間與快取版本</td>
+                                            <td>Android 成功取得有效路況後</td>
+                                            <td>儲存於 App 私有的 Android SharedPreferences，供短暫離線／弱網顯示。內容是道路資料，不是您的行蹤。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>支援信件內容與寄件地址</td>
+                                            <td>只有當您主動寄信給我們</td>
+                                            <td>用於回覆問題、調查錯誤與保存必要的支援紀錄；這發生在您的郵件服務中，不是 App 內背景蒐集。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4>目前版本不要求或未整合</h4>
+                            <ul>
+                                <li>使用者帳戶、登入憑證、聯絡人、照片、麥克風、相機或精確／背景位置。</li>
+                                <li>Firebase Analytics、Firebase Crashlytics、廣告 SDK、廣告識別碼、訂閱或 App 內購買。</li>
+                                <li>背景位置追蹤、個人化警示、行車路線或使用者產生內容的雲端同步。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">03</span>
+                        <div class="policy-copy">
+                            <h3>本機快取、保存與刪除</h3>
+                            <p>
+                                Android 版會將通過驗證的路況 feed 儲存在 App 私有空間。App 以來源最舊觀測時間為基準，超過兩小時的資料不再符合顯示資格；
+                                無效、環境不符或過期資料會在下次驗證時清除。因此，快取檔可能在尚未再次開啟／驗證前留在裝置上，但不會被重新整理時間延長為「有效即時資料」。
+                            </p>
+                            <p>
+                                您可透過 Android「設定 → 應用程式 → TunnelOps → 儲存空間 → 清除儲存空間」，或解除安裝本 App，刪除本機資料。
+                                Android 是否將 App 資料納入裝置備份，取決於作業系統、Google 帳戶與您的備份設定。
+                            </p>
+                            <p>
+                                我們的後端保存道路路況快照、來源健康與庫存發布資料；這些不是使用者帳戶資料。
+                                CB Studio 的 callable 程式會使用查詢內容處理當次請求，但不會把搜尋文字、國家代碼、固定隧道識別碼、呼叫端 IP、FCM token、FID、Firebase user-agent 中繼資料或完整性 token 寫入開發者管理的使用者檔案或應用程式資料表。
+                            </p>
+                            <p>
+                                這不表示所有網路處理都是即時拋棄。Firebase／Google 可能依其服務設定、資安需求、法令與保存政策保留請求、安全或營運紀錄，且可能使用協助提供 Firebase 的服務分包商。
+                                CB Studio 不控制 Google 各類技術紀錄的確切保存期，也通常無法在沒有帳戶對應資訊的情況下，從該等紀錄辨識並刪除特定使用者的單筆資料。
+                                支援郵件只在處理問題、法律義務或防止濫用所需期間內保留；您可來信要求刪除您提供的支援內容，但依法或為資安所需者可能須繼續保存。
+                            </p>
+                            <p>
+                                清除 App 儲存空間或解除安裝會移除裝置上的 TunnelOps 快取與本機 SDK 資料，但不保證同步刪除 Firebase／Google 已產生的技術或安全紀錄；重新安裝或再次初始化 Firebase 可能產生新的 FID 或 token。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">04</span>
+                        <div class="policy-copy">
+                            <h3>第三方服務與資料分享</h3>
+                            <p>我們不販售個人資料，也不使用資料投放廣告。下列服務供應商及其服務分包商可能為提供本 App 而接收或處理技術資料：</p>
+                            <div class="table-wrap" role="region" aria-label="第三方服務表，可水平捲動" tabindex="0">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">服務</th>
+                                            <th scope="col">實際用途</th>
+                                            <th scope="col">政策</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Google Firebase Core / Cloud Functions / Installations</td>
+                                            <td>初始化 Firebase、建立 FID、接收查詢與固定隧道識別碼、處理函式名稱／呼叫端 IP／FCM token／Firebase user-agent 中繼資料，並回傳隧道目錄、路況與來源狀態。</td>
+                                            <td>
+                                                <a href="https://firebase.google.com/docs/android/play-data-disclosure" target="_blank" rel="noopener noreferrer">Firebase Android data disclosure</a><br>
+                                                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Firebase App Check / Google Play Integrity / Apple App Attest</td>
+                                            <td>產生與驗證 App／裝置完整性訊號，以降低未授權客戶端與濫用。App Attest 僅適用於可能發行的 Apple release build。</td>
+                                            <td>
+                                                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a><br>
+                                                <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>
+                                Google Play 要求隱私權政策完整揭露 App 存取、蒐集、使用與分享的資料，以及安全、保存與刪除方式；本政策依照
+                                <a href="https://support.google.com/googleplay/android-developer/answer/10144311?hl=en" target="_blank" rel="noopener noreferrer">Google Play User Data policy</a>
+                                呈現目前實作。
+                            </p>
+                            <p>
+                                已實作的後端資料管道在完成設定與部署後，會向官方運輸資料來源取得道路資料；本 App 不會把您的搜尋文字直接轉交給該上游交通來源。
+                                我們可能依法令、法院命令，或為保護服務與使用者安全而揭露必要資料。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">05</span>
+                        <div class="policy-copy">
+                            <h3>安全、跨境處理與您的選擇</h3>
+                            <p>
+                                Firebase 對上述資料使用 HTTPS 加密傳輸；Android 快取使用 App 私有儲存空間。我們採取與資料性質相稱的措施，但任何網路或裝置儲存均無法保證絕對安全。
+                                Google，以及 Apple release 如發行時的 Apple，可能在您所在地以外的資料中心處理技術資料，並依其契約與隱私政策提供保護。
+                            </p>
+                            <ul>
+                                <li><strong>停止網路處理：</strong>您可停止使用或解除安裝本 App；主要功能需要網路才能取得新資料。</li>
+                                <li><strong>刪除本機資料：</strong>使用 Android 系統的清除儲存空間功能或解除安裝。</li>
+                                <li><strong>支援資料請求：</strong>您可來信要求查詢或刪除您主動提供給我們的支援信件；我們可能需要確認來信地址。</li>
+                            </ul>
+                            <p>
+                                本 App 目前不建立使用者帳戶、Firebase Authentication user ID 或 CB Studio 使用者檔案。FID、FCM token 與完整性 token 是技術識別／安全資料，不是 TunnelOps 帳戶；我們通常無法把 Firebase 基礎設施紀錄與可操作的帳戶關聯，也不會假裝提供不存在的「刪除帳戶」按鈕。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">06</span>
+                        <div class="policy-copy">
+                            <h3>兒童、政策更新與聯絡</h3>
+                            <p>
+                                本 App 是一般道路資訊工具，並非專為兒童設計。我們不透過帳戶或廣告功能故意蒐集兒童個人資料。
+                                若您認為兒童曾透過支援郵件提供個人資料，請聯絡我們處理。
+                            </p>
+                            <p>
+                                功能、SDK 或資料處理方式有實質變更時，我們會更新本頁、版本與生效日期；新政策不會回溯地把過去未蒐集的資料視為已蒐集。
+                            </p>
+                            <div class="contact-block">
+                                <div>
+                                    <h3>隱私問題或資料請求</h3>
+                                    <p>請在信中註明「TunnelOps Privacy」，且不要附上不必要的個人資料。</p>
+                                </div>
+                                <a class="button-link" href="mailto:aa22396584@gmail.com?subject=TunnelOps%20Privacy">寄信給 CB Studio</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="language-section" id="en" lang="en" aria-labelledby="en-title">
+                    <span class="language-tag">EN / Official English version</span>
+                    <h2 id="en-title">TunnelOps Privacy Policy</h2>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">01</span>
+                        <div class="policy-copy">
+                            <h3>Scope and controller</h3>
+                            <p>
+                                This Policy applies to the TunnelOps road-tunnel traffic app (the “App”) provided by CB Studio and to related support communications.
+                                The App displays a road-tunnel directory, source status, and available live or recent traffic information. It is not a navigation, emergency-reporting, or driver-assistance system.
+                            </p>
+                            <p>
+                                CB Studio is the contact for this Policy. Email
+                                <a href="mailto:aa22396584@gmail.com?subject=TunnelOps%20Privacy">aa22396584@gmail.com</a>
+                                with privacy questions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">02</span>
+                        <div class="policy-copy">
+                            <h3>Information the App actually processes</h3>
+                            <div class="table-wrap" role="region" aria-label="Data processing table; scroll horizontally if needed" tabindex="0">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Data</th>
+                                            <th scope="col">When</th>
+                                            <th scope="col">Purpose and destination</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Fixed tunnel identifiers, direction, and result limit</td>
+                                            <td>When traffic or tunnel details load</td>
+                                            <td>Sent to Google Firebase Functions and processed by CB Studio backend code to retrieve corresponding public road-tunnel information.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Search text you enter and an optional country code</td>
+                                            <td>When you use tunnel search</td>
+                                            <td>Sent to Google Firebase Functions and processed by CB Studio backend code to query the inventory. We do not write it to a search history or developer user profile. Do not enter personal information in search.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Firebase function name, caller IP address, and FCM token</td>
+                                            <td>At each Firebase callable function invocation</td>
+                                            <td>The Cloud Functions client SDK/service automatically provides this data to Google Firebase to locate and execute the function, return results, secure the service, and prevent abuse. Firebase states that Functions collects the FCM token even when an app does not include or use the Firebase Cloud Messaging SDK. TunnelOps does not currently send notifications or use or store this token in the CB Studio backend.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Firebase installation ID (FID) and Firebase user-agent device metadata</td>
+                                            <td>When Firebase dependencies initialize or connect</td>
+                                            <td>The current Android dependency graph includes Firebase Installations, which generates and transmits a per-installation FID that does not uniquely identify a user or physical device. Google Firebase may also receive OS version, name, model, brand, form factor, installer, and Firebase SDK names/versions to identify an app installation and provide, maintain, and improve Firebase. TunnelOps does not map an FID to an account or developer user profile.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>App/device integrity signals, App Check token, and Play Integrity token</td>
+                                            <td>When staging or production builds initialize and call Firebase services</td>
+                                            <td>Sent to Firebase App Check and Google Play Integrity for Android release builds. Apple App Attest also processes attestation if an Apple release build is distributed. These signals validate the app environment, protect backend resources, and prevent abuse. Enforcement on primary callable endpoints may be rolled out in stages.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Public traffic snapshots, source health, timestamps, and cache version</td>
+                                            <td>After Android receives a valid feed</td>
+                                            <td>Stored in app-private Android SharedPreferences for limited weak-network/offline fallback. This is road data, not a record of your movements.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Support email and sender address</td>
+                                            <td>Only when you choose to email us</td>
+                                            <td>Used to answer, investigate, and retain necessary support records. This occurs through your email provider, not through background App collection.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <h4>Not requested or integrated in the current build</h4>
+                            <ul>
+                                <li>User accounts, login credentials, contacts, photos, microphone, camera, or precise/background location.</li>
+                                <li>Firebase Analytics, Firebase Crashlytics, advertising SDKs, advertising identifiers, subscriptions, or in-app purchases.</li>
+                                <li>Background location tracking, personalized alerts, route guidance, or cloud sync for user-generated content.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">03</span>
+                        <div class="policy-copy">
+                            <h3>Local cache, retention, and deletion</h3>
+                            <p>
+                                Android stores a validated traffic feed in app-private storage. Data older than two hours from the oldest source observation is never display-eligible.
+                                Invalid, environment-mismatched, or expired entries are cleared when next validated. A cache file can therefore remain on the device until the next validation or manual clearing, but a refresh timestamp cannot make old source data “live” again.
+                            </p>
+                            <p>
+                                Delete local data through Android Settings → Apps → TunnelOps → Storage → Clear storage, or uninstall the App.
+                                Whether Android includes app data in a device backup depends on the operating system, Google account, and your backup settings.
+                            </p>
+                            <p>
+                                Our backend retains road-traffic snapshots, source-health records, and inventory release data; these are not user-account records.
+                                CB Studio callable code uses query content to handle the request but does not write search text, country codes, fixed tunnel identifiers, caller IP addresses, FCM tokens, FIDs, Firebase user-agent metadata, or integrity tokens to developer-managed user profiles or application tables.
+                            </p>
+                            <p>
+                                This does not mean all network processing is immediately discarded. Firebase/Google may retain request, security, or operational logs under its service settings, security needs, legal requirements, and retention policies, and may use subprocessors that help provide Firebase.
+                                CB Studio does not control the exact retention period for each category of Google technical log and generally cannot identify and delete an individual user's entry without account-linked information.
+                                Support mail is retained only as needed to resolve an issue, meet legal obligations, or prevent abuse. You may ask us to delete support content you provided, although legal or security needs may require continued retention.
+                            </p>
+                            <p>
+                                Clearing App storage or uninstalling removes TunnelOps cache and local SDK data from the device, but does not guarantee deletion of technical or security logs already generated by Firebase/Google. Reinstallation or Firebase reinitialization may create a new FID or token.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">04</span>
+                        <div class="policy-copy">
+                            <h3>Service providers and disclosures</h3>
+                            <p>We do not sell personal information and do not use it for advertising. These service providers and their service subprocessors may receive or process technical data to provide the App:</p>
+                            <div class="table-wrap" role="region" aria-label="Service provider table; scroll horizontally if needed" tabindex="0">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Provider</th>
+                                            <th scope="col">Actual purpose</th>
+                                            <th scope="col">Policy</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Google Firebase Core / Cloud Functions / Installations</td>
+                                            <td>Initialize Firebase, create an FID, receive queries and fixed tunnel identifiers, process function name / caller IP / FCM token / Firebase user-agent metadata, and return tunnel inventory, traffic, and source status.</td>
+                                            <td>
+                                                <a href="https://firebase.google.com/docs/android/play-data-disclosure" target="_blank" rel="noopener noreferrer">Firebase Android data disclosure</a><br>
+                                                <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy and Security</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Firebase App Check / Google Play Integrity / Apple App Attest</td>
+                                            <td>Produce and verify app/device integrity signals to reduce unauthorized clients and abuse. App Attest applies only if an Apple release build is distributed.</td>
+                                            <td>
+                                                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a><br>
+                                                <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p>
+                                Google Play requires a privacy policy to comprehensively disclose how an app accesses, collects, uses, and shares user data, plus security, retention, and deletion practices. This policy describes the current implementation with reference to the
+                                <a href="https://support.google.com/googleplay/android-developer/answer/10144311?hl=en" target="_blank" rel="noopener noreferrer">Google Play User Data policy</a>.
+                            </p>
+                            <p>
+                                Once configured and deployed, the implemented backend data pipeline obtains road information from an official transport-data source; the App does not send your search text directly to that upstream traffic source.
+                                We may disclose necessary information when required by law, court order, or to protect the service and users.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">05</span>
+                        <div class="policy-copy">
+                            <h3>Security, international processing, and your choices</h3>
+                            <p>
+                                Firebase encrypts the data described above in transit using HTTPS, and the Android cache uses app-private storage. We use measures appropriate to the limited data involved, but no network or device storage is absolutely secure.
+                                Google—and Apple if an Apple release build is distributed—may process technical data in data centers outside your location subject to their contracts and privacy terms.
+                            </p>
+                            <ul>
+                                <li><strong>Stop network processing:</strong> stop using or uninstall the App. New traffic information requires network access.</li>
+                                <li><strong>Delete local data:</strong> use Android’s clear-storage control or uninstall the App.</li>
+                                <li><strong>Support-data request:</strong> email us to ask about or delete support correspondence you provided. We may need to verify the sending address.</li>
+                            </ul>
+                            <p>
+                                The current App creates no user account, Firebase Authentication user ID, or CB Studio user profile. FIDs, FCM tokens, and integrity tokens are technical identifiers or security data, not TunnelOps accounts. We generally cannot associate Firebase infrastructure logs with an actionable account, and we do not present a fictional “delete account” control.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="policy-section">
+                        <span class="section-number" aria-hidden="true">06</span>
+                        <div class="policy-copy">
+                            <h3>Children, updates, and contact</h3>
+                            <p>
+                                The App is a general road-information utility and is not directed to children. We do not knowingly collect children’s personal information through accounts or advertising features.
+                                Contact us if you believe a child submitted personal information in support mail.
+                            </p>
+                            <p>
+                                We will update this page, version, and effective date when features, SDKs, or data practices materially change. A future update will not retroactively turn data we never collected into collected data.
+                            </p>
+                            <div class="contact-block">
+                                <div>
+                                    <h3>Privacy question or data request</h3>
+                                    <p>Use the subject “TunnelOps Privacy” and avoid attaching unnecessary personal information.</p>
+                                </div>
+                                <a class="button-link" href="mailto:aa22396584@gmail.com?subject=TunnelOps%20Privacy">Email CB Studio</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-inner">
+            <div>
+                <strong>TunnelOps · CB Studio</strong><br>
+                <span>Road status is informational. Always follow on-site signs and authorities.</span>
+            </div>
+            <nav class="footer-links" aria-label="頁尾導覽">
+                <a href="tunnelops-privacy.html" aria-current="page">Privacy</a>
+                <a href="tunnelops-terms.html">Terms</a>
+                <a href="tunnelops-support.html">Support</a>
+                <a href="https://iml1s.github.io">Developer site</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
