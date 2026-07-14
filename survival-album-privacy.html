@@ -137,10 +137,10 @@
       <p>本 App 使用 Google ML Kit 的文字辨識、條碼掃描及影像標籤 SDK。照片與辨識結果由這些 SDK 在裝置上處理，不會為了 ML Kit 推論而上傳照片內容；但 ML Kit SDK 可能依 Google 的說明傳送技術性裝置、使用及診斷資訊。詳見 <a href="https://developers.google.com/ml-kit/android-data-disclosure" rel="noopener">ML Kit Android Data Disclosure</a> 與 <a href="https://developers.google.com/ml-kit/terms" rel="noopener">ML Kit Terms</a>。</p>
 
       <h3>4.2 Gemini 輔助分類（選用、預設關閉）</h3>
-      <p>只有在您同意雲端功能、啟用 Gemini 並提供自己的 API key 後，本機分類信心不足的照片才會送往 Google Gemini API。請求包含該照片、可能的 OCR 提示文字與分類提示詞。API key 保存在裝置安全儲存空間，並透過 HTTPS 傳送給 Google。資料後續處理受您使用的 Google 服務條款及隱私政策規範。</p>
+      <p>只有在您同意雲端功能、啟用 Gemini 並提供自己的 API key 後，本機分類信心不足時，完整照片、可能的 OCR 提示文字與分類提示詞才會送往 Google Gemini API，以取得分類、短標題與摘要建議。API key 保存在裝置安全儲存空間，並透過 HTTPS 傳送給 Google。資料後續處理受您使用的 Google 服務條款及隱私政策規範。</p>
 
       <h3>4.3 Supabase 單向雲端副本（選用、預設關閉）</h3>
-      <p>只有在您同意雲端功能、啟用同步並提供自己的 Supabase 專案 URL 與 key 後，本 App 才會將照片副本及對應的分類資料上傳到您的 Supabase 專案。App 會使用匿名驗證工作階段；工作階段資料與 key 保存在裝置安全儲存空間。遠端資料的地區、保留、存取權限、費用與刪除由您的 Supabase 專案設定決定。</p>
+      <p>只有在您同意雲端功能、啟用同步並提供自己的 Supabase 專案 URL 與 key 後，本 App 才會將照片副本，以及標題、分類、OCR 文字、影像標籤、條碼、備註、座標（若有）、收藏狀態、建立時間、匿名工作階段識別碼、遠端物件識別／儲存路徑與同步更新時間，上傳到您的 Supabase 專案。App 會使用匿名驗證工作階段；工作階段資料與 key 保存在裝置安全儲存空間。遠端資料的地區、保留、存取權限、費用與刪除由您的 Supabase 專案設定決定。</p>
       <div class="note"><strong>重要：</strong>這是單向雲端副本。本機刪除不會自動刪除既有遠端副本，本 App 目前也不提供從雲端還原。請直接到您的 Supabase 專案管理或刪除遠端內容。</div>
     </section>
 
