@@ -37,7 +37,7 @@
     <!-- Chinese Version -->
     <div class="zh">
     <h1>隱私權政策</h1>
-    <p><strong>最後更新日期：2026 年 2 月 28 日</strong></p>
+    <p><strong>最後更新日期：2026 年 7 月 17 日</strong></p>
 
     <p>本隱私權政策說明「AI 法律助手」（以下簡稱「本應用程式」）如何收集、使用及保護您的資訊。本應用程式是一款利用人工智慧技術提供台灣法律資訊參考的行動應用程式。</p>
 
@@ -48,7 +48,7 @@
     <h3>1.1 帳戶資訊</h3>
     <p>當您使用本應用程式時，我們可能收集：</p>
     <ul>
-        <li><strong>匿名登入</strong>：系統會自動產生一組匿名使用者 ID，不涉及任何個人資訊。</li>
+        <li><strong>匿名登入</strong>：系統會自動產生一組假名化使用者 ID，並將該 ID 與您的使用紀錄連結；您不必提供姓名或電子郵件。</li>
         <li><strong>Google 登入</strong>：您的 Google 帳戶電子郵件地址及基本個人檔案資訊。</li>
         <li><strong>Apple 登入</strong>：您的 Apple ID 相關資訊（可選擇隱藏電子郵件）。</li>
     </ul>
@@ -60,16 +60,25 @@
         <li>AI 生成的回覆內容。</li>
         <li>對話紀錄（儲存於您的帳戶下）。</li>
     </ul>
-    <p>這些資料僅用於提供服務及改善 AI 回覆品質，不會用於其他目的。</p>
+    <p>這些資料用於提供對話、引用來源、安全防護與紀錄查閱功能，不會用於廣告個人化或訓練公開 AI 模型。</p>
 
-    <h3>1.3 使用量資料</h3>
+    <h3>1.3 存證信函草稿資料</h3>
+    <p>當您使用存證信函產生器時，我們會處理：</p>
+    <ul>
+        <li>寄件人及收件人的姓名與地址。</li>
+        <li>案件類別、事實經過、訴求、金額、日期及履行期限等您輸入的內容。</li>
+        <li>AI 產生的存證信函草稿、請求識別碼、建立時間及與購買額度核對所需的狀態。</li>
+    </ul>
+    <p>上述資料由您直接提供，僅用於產生、儲存及重新開啟您的草稿、防止重複扣款、驗證購買額度及處理申訴。請僅提供完成草稿所必要且您有合法權限提供的資料，並避免輸入身分證字號、完整金融帳號、醫療、性生活、犯罪前科或其他非必要敏感資料。您可選擇不提供，但缺少表單必填資料時將無法產生信函草稿。</p>
+
+    <h3>1.4 使用量與購買狀態資料</h3>
     <p>我們會追蹤：</p>
     <ul>
         <li>每日提問次數（用於免費方案使用限制）。</li>
-        <li>每月使用量統計。</li>
+        <li>每月使用量統計、訂閱狀態、單次購買次數及已使用的信函產生額度。</li>
     </ul>
 
-    <h3>1.4 廣告相關資料</h3>
+    <h3>1.5 廣告相關資料</h3>
     <p>為了提供廣告服務，我們及廣告合作夥伴可能收集：</p>
     <ul>
         <li>廣告識別碼（iOS 的 IDFA、Android 的 AAID）。</li>
@@ -82,9 +91,9 @@
     <p>我們使用收集的資訊來：</p>
     <ul>
         <li>提供並維護法律諮詢服務。</li>
-        <li>處理您的法律問題並生成 AI 回覆。</li>
-        <li>儲存您的對話紀錄以供日後查閱。</li>
-        <li>管理使用量限制及訂閱狀態。</li>
+        <li>處理您的法律問題並生成 AI 回覆或存證信函草稿。</li>
+        <li>儲存您的對話紀錄與已完成信函草稿以供日後查閱。</li>
+        <li>管理使用量限制、訂閱狀態、單次購買、額度核對與付款中斷復原。</li>
         <li>顯示廣告（免費方案使用者）。</li>
         <li>改善應用程式效能及使用體驗。</li>
     </ul>
@@ -93,10 +102,10 @@
     <p>本應用程式整合以下第三方服務：</p>
     <ul>
         <li><strong>Firebase Authentication</strong>：用於使用者身份驗證。請參閱 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase 隱私權政策</a>。</li>
-        <li><strong>Cloud Firestore</strong>：用於儲存對話紀錄及使用量資料。請參閱 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase 隱私權政策</a>。</li>
-        <li><strong>Google Vertex AI (Gemini)</strong>：用於處理法律問題並生成 AI 回覆。您的問題內容會傳送至 Google 的 AI 服務進行處理。請參閱 <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/data-governance" target="_blank">Vertex AI 資料治理政策</a>。</li>
+        <li><strong>Cloud Firestore</strong>：用於儲存對話紀錄、已完成的信函草稿、使用量及額度資料。請參閱 <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase 隱私權政策</a>。</li>
+        <li><strong>Google Vertex AI (Gemini)</strong>：用於處理法律問題並生成 AI 回覆或存證信函草稿。您提交的對話或信函內容會傳送至 Google 的 AI 服務進行處理。請參閱 <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/data-governance" target="_blank">Vertex AI 資料治理政策</a>。</li>
         <li><strong>Google AdMob</strong>：用於顯示廣告。AdMob 可能收集裝置識別碼、使用資料及概略位置以提供個人化或非個人化廣告。請參閱 <a href="https://policies.google.com/privacy" target="_blank">Google 隱私權政策</a>。</li>
-        <li><strong>RevenueCat</strong>：用於管理訂閱及應用程式內購買。請參閱 <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat 隱私權政策</a>。</li>
+        <li><strong>RevenueCat 與 Google Play</strong>：用於管理訂閱、單次應用程式內購買、購買次數與付款狀態。我們不會取得完整付款卡號。請參閱 <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat 隱私權政策</a>及 <a href="https://policies.google.com/privacy" target="_blank">Google 隱私權政策</a>。</li>
     </ul>
 
     <h2>4. AI 生成內容聲明</h2>
@@ -109,10 +118,10 @@
     </ul>
 
     <h2>5. 資料儲存與安全</h2>
-    <p>您的資料儲存在 Google Cloud Platform 的伺服器上，採用業界標準的安全措施進行保護。我們實施適當的技術和組織措施，防止您的資訊遭到未經授權的存取、更改或銷毀。但是，透過網際網路傳輸的任何方式都無法保證 100% 安全。</p>
+    <p>您的資料會透過加密連線傳送，並儲存在 Google Cloud Platform / Firebase 或暫時儲存在您裝置的安全儲存區。Cloud Functions 主要在台灣區域處理，Vertex AI 內容處理目前使用美國區域；Google、RevenueCat 與其服務供應商亦可能在其營運地區處理資料。我們實施適當的技術和組織措施，防止未經授權的存取、更改或銷毀，但任何網路傳輸方式均無法保證 100% 安全。</p>
 
     <h2>5-1. 個資事故通報</h2>
-    <p>依據中華民國《個人資料保護法》（2025 年修正），若發生可能影響您個人資料安全的事故，我們將：</p>
+    <p>依據中華民國《個人資料保護法》及適用規定，若發生可能影響您個人資料安全的事故，我們將：</p>
     <ul>
         <li>於知悉後依法定時限內，向主管機關（個人資料保護委員會）提出通報。</li>
         <li>以適當方式（電子郵件或應用程式通知）告知受影響的使用者。</li>
@@ -129,21 +138,27 @@
     </ul>
 
     <h2>7. 資料保留</h2>
-    <p>您的對話紀錄將保留至您刪除帳戶為止。使用量資料按月統計並定期清理。</p>
+    <ul>
+        <li>對話紀錄及已完成的信函草稿會保留至您刪除帳戶為止；完成帳戶刪除後，與帳戶直接關聯的內容會依刪除流程移除或去識別化。</li>
+        <li>為避免付款中斷造成重複扣款，未完成的信函請求會加密暫存在您的裝置，並於完成、取消或切換帳戶時清除。若仍未清除，應用程式下次進入信函功能並檢查安全儲存區時，會刪除已存放超過 7 日的資料；若您未再使用該功能，資料可能保留至下次檢查或您清除應用程式資料為止。</li>
+        <li>購買與額度稽核紀錄可能依防詐、退款、帳務及法定保存需要保留必要期間，並採資料最小化方式處理。</li>
+        <li>使用量資料按月統計並定期清理。</li>
+    </ul>
 
     <h2>8. 您的權利</h2>
     <p>您有權：</p>
     <ul>
-        <li>存取您的個人資料。</li>
-        <li>要求刪除您的帳戶及相關資料。</li>
+        <li>查詢、閱覽或請求複製您的個人資料。</li>
+        <li>請求補充、更正、停止蒐集／處理／利用或刪除您的個人資料；法律或帳務要求保留者除外。</li>
+        <li>透過應用程式要求刪除您的帳戶及相關資料，或使用下方聯絡方式提出請求或申訴。</li>
         <li>選擇退出個人化廣告。</li>
-        <li>匿名使用本應用程式（不提供任何個人資訊）。</li>
+        <li>在不提供姓名或電子郵件的情況下使用匿名帳戶。</li>
     </ul>
 
     <h2>9. 人工智慧透明度</h2>
     <p>依據《人工智慧基本法》（2026 年 1 月 14 日施行）揭示之透明原則：</p>
     <ul>
-        <li>本應用程式使用 Google Gemini 2.5 Flash AI 模型生成回覆，使用者可清楚知悉回覆係由 AI 生成。</li>
+        <li>本應用程式使用 Google Gemini 2.5 Flash Lite AI 模型生成回覆與信函草稿，使用者可清楚知悉內容係由 AI 生成。</li>
         <li>AI 模型可能存在偏誤或不完整性，請以批判性思維評估回覆內容。</li>
         <li>本服務依人工智慧基本法七大原則（永續發展、人類自主、隱私保護、資安安全、透明可解釋、公平不歧視、問責）設計與運營。</li>
     </ul>
@@ -157,7 +172,8 @@
     <h2>12. 聯繫我們</h2>
     <p>如果您對本隱私權政策有任何疑問，請透過以下方式聯繫我們：</p>
     <ul>
-        <li><strong>開發者</strong>：Yushang Lung</li>
+        <li><strong>資料蒐集者／開發者</strong>：CB Studio（龍育賞／Yushang Lung）</li>
+        <li><strong>地址</strong>：台北市文山區萬安街 66-1 號 11653</li>
         <li><strong>電子郵件</strong>：<a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></li>
         <li><strong>電話</strong>：+886 963723347</li>
         <li><strong>網站</strong>：<a href="https://iml1s.github.io">https://iml1s.github.io</a></li>
@@ -167,7 +183,7 @@
     <!-- English Version -->
     <div class="en">
     <h1>Privacy Policy</h1>
-    <p><strong>Last Updated: February 28, 2026</strong></p>
+    <p><strong>Last Updated: July 17, 2026</strong></p>
 
     <p>This Privacy Policy describes how AI Legal Assistant ("the App") collects, uses, and protects your information. The App is a mobile application that provides Taiwan legal information reference using artificial intelligence technology.</p>
 
@@ -178,7 +194,7 @@
     <h3>1.1 Account Information</h3>
     <p>When you use the App, we may collect:</p>
     <ul>
-        <li><strong>Anonymous Login</strong>: The system automatically generates an anonymous user ID that does not involve any personal information.</li>
+        <li><strong>Anonymous Login</strong>: The system generates a pseudonymous user ID and links it to your usage records; you do not need to provide a name or email address.</li>
         <li><strong>Google Sign-In</strong>: Your Google account email address and basic profile information.</li>
         <li><strong>Apple Sign-In</strong>: Information related to your Apple ID (you may choose to hide your email).</li>
     </ul>
@@ -190,16 +206,25 @@
         <li>AI-generated responses.</li>
         <li>Conversation history (stored under your account).</li>
     </ul>
-    <p>This data is used solely to provide the service and improve AI response quality, and will not be used for other purposes.</p>
+    <p>This data is used to provide conversations, source citations, safety controls, and history access. It is not used for personalized advertising or to train public AI models.</p>
 
-    <h3>1.3 Usage Data</h3>
+    <h3>1.3 Registered Legal Letter Draft Data</h3>
+    <p>When you use the registered legal letter generator, we process:</p>
+    <ul>
+        <li>The sender's and recipient's names and addresses.</li>
+        <li>The case category, facts, requests, amounts, dates, and performance deadline that you enter.</li>
+        <li>The AI-generated draft, request identifier, creation time, and status needed to reconcile purchased generation credits.</li>
+    </ul>
+    <p>You provide this data directly. It is used only to generate, store, and reopen your draft, prevent duplicate charges, verify purchased credits, and handle complaints. Provide only data necessary for the draft that you are legally authorized to provide. Avoid national ID numbers, full financial account numbers, medical data, sexual-life data, criminal records, or other unnecessary sensitive data. You may decline to provide it, but a draft cannot be generated without the required form fields.</p>
+
+    <h3>1.4 Usage and Purchase Status Data</h3>
     <p>We track:</p>
     <ul>
         <li>Daily question count (for free plan usage limits).</li>
-        <li>Monthly usage statistics.</li>
+        <li>Monthly usage statistics, subscription status, one-time purchase count, and consumed letter-generation credits.</li>
     </ul>
 
-    <h3>1.4 Advertising Data</h3>
+    <h3>1.5 Advertising Data</h3>
     <p>To provide advertising services, we and our advertising partners may collect:</p>
     <ul>
         <li>Advertising identifiers (IDFA on iOS, AAID on Android).</li>
@@ -212,9 +237,9 @@
     <p>We use the collected information to:</p>
     <ul>
         <li>Provide and maintain the legal consultation service.</li>
-        <li>Process your legal questions and generate AI responses.</li>
-        <li>Store your conversation history for future reference.</li>
-        <li>Manage usage limits and subscription status.</li>
+        <li>Process your legal questions and generate AI responses or registered legal letter drafts.</li>
+        <li>Store conversation history and completed letter drafts for future access.</li>
+        <li>Manage usage limits, subscriptions, one-time purchases, credit reconciliation, and interrupted-payment recovery.</li>
         <li>Display advertisements (for free plan users).</li>
         <li>Improve app performance and user experience.</li>
     </ul>
@@ -223,10 +248,10 @@
     <p>The App integrates the following third-party services:</p>
     <ul>
         <li><strong>Firebase Authentication</strong>: For user authentication. See <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>.</li>
-        <li><strong>Cloud Firestore</strong>: For storing conversation history and usage data. See <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>.</li>
-        <li><strong>Google Vertex AI (Gemini)</strong>: For processing legal questions and generating AI responses. Your question content is sent to Google's AI service for processing. See <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/data-governance" target="_blank">Vertex AI Data Governance</a>.</li>
+        <li><strong>Cloud Firestore</strong>: For storing conversation history, completed letter drafts, usage data, and credit records. See <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a>.</li>
+        <li><strong>Google Vertex AI (Gemini)</strong>: For processing legal questions and generating AI responses or registered legal letter drafts. Conversation or letter content you submit is sent to Google's AI service for processing. See <a href="https://cloud.google.com/vertex-ai/docs/generative-ai/data-governance" target="_blank">Vertex AI Data Governance</a>.</li>
         <li><strong>Google AdMob</strong>: For displaying advertisements. See <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
-        <li><strong>RevenueCat</strong>: For managing subscriptions and in-app purchases. See <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</li>
+        <li><strong>RevenueCat and Google Play</strong>: For managing subscriptions, one-time in-app purchases, purchase counts, and payment status. We do not receive your full payment-card number. See the <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
     </ul>
 
     <h2>4. AI-Generated Content Disclaimer</h2>
@@ -239,10 +264,10 @@
     </ul>
 
     <h2>5. Data Storage and Security</h2>
-    <p>Your data is stored on Google Cloud Platform servers and protected using industry-standard security measures. We implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+    <p>Your data is transmitted over encrypted connections and stored on Google Cloud Platform / Firebase or temporarily in secure storage on your device. Cloud Functions are primarily processed in a Taiwan region, while Vertex AI content processing currently uses a United States region. Google, RevenueCat, and their service providers may also process data in their operating regions. We use appropriate technical and organizational safeguards, but no internet transmission method is 100% secure.</p>
 
     <h2>5-1. Data Breach Notification</h2>
-    <p>In accordance with the Republic of China Personal Data Protection Act (2025 Amendment), if an incident occurs that may affect the security of your personal data, we will:</p>
+    <p>In accordance with the Republic of China Personal Data Protection Act and applicable requirements, if an incident occurs that may affect the security of your personal data, we will:</p>
     <ul>
         <li>Report the incident to the competent authority (Personal Data Protection Commission) within the legally prescribed timeframe upon becoming aware of it.</li>
         <li>Notify affected users through appropriate channels (email or in-app notification).</li>
@@ -259,21 +284,27 @@
     </ul>
 
     <h2>7. Data Retention</h2>
-    <p>Your conversation history is retained until you delete your account. Usage data is aggregated monthly and periodically cleaned up.</p>
+    <ul>
+        <li>Conversation history and completed letter drafts are retained until you delete your account. After account deletion completes, directly associated content is removed or de-identified through the deletion process.</li>
+        <li>To prevent duplicate charges after an interrupted payment, an unfinished letter request is encrypted on your device and cleared on completion, cancellation, or an account change. If it has not already been cleared, the App deletes it after it is more than 7 days old the next time the letter feature checks secure storage. If you do not use that feature again, it may remain until the next check or until you clear the App's data.</li>
+        <li>Purchase and credit-audit records may be retained for the period necessary for fraud prevention, refunds, accounting, and legal obligations, using data minimization.</li>
+        <li>Usage data is aggregated monthly and periodically cleaned up.</li>
+    </ul>
 
     <h2>8. Your Rights</h2>
     <p>You have the right to:</p>
     <ul>
-        <li>Access your personal data.</li>
-        <li>Request deletion of your account and associated data.</li>
+        <li>Inquire about, review, or request a copy of your personal data.</li>
+        <li>Request supplementation, correction, cessation of collection/processing/use, or deletion, except where retention is legally or financially required.</li>
+        <li>Request account and associated-data deletion in the App, or submit a request or complaint using the contact information below.</li>
         <li>Opt out of personalized advertising.</li>
-        <li>Use the App anonymously (without providing any personal information).</li>
+        <li>Use a pseudonymous account without providing a name or email address.</li>
     </ul>
 
     <h2>9. AI Transparency</h2>
     <p>In accordance with the transparency principles of the Artificial Intelligence Basic Act (effective January 14, 2026):</p>
     <ul>
-        <li>This App uses the Google Gemini 2.5 Flash AI model to generate responses. Users are clearly informed that responses are AI-generated.</li>
+        <li>This App uses the Google Gemini 2.5 Flash Lite AI model to generate responses and letter drafts. Users are clearly informed that the content is AI-generated.</li>
         <li>AI models may contain biases or inaccuracies. Please evaluate responses critically.</li>
         <li>This service is designed and operated in accordance with the seven principles of the AI Basic Act: sustainable development, human autonomy, privacy protection, information security, transparency and explainability, fairness and non-discrimination, and accountability.</li>
     </ul>
@@ -287,7 +318,8 @@
     <h2>12. Contact Us</h2>
     <p>If you have any questions about this Privacy Policy, please contact us:</p>
     <ul>
-        <li><strong>Developer</strong>: Yushang Lung</li>
+        <li><strong>Data Controller / Developer</strong>: CB Studio (Yushang Lung)</li>
+        <li><strong>Address</strong>: No. 66-1, Wan'an St., Wenshan Dist., Taipei City 11653, Taiwan</li>
         <li><strong>Email</strong>: <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></li>
         <li><strong>Phone</strong>: +886 963723347</li>
         <li><strong>Website</strong>: <a href="https://iml1s.github.io">https://iml1s.github.io</a></li>
