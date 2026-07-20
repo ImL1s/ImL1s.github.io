@@ -35,8 +35,8 @@
       <p>本政策說明 CB Studio 如何收集、使用、儲存及保護您在使用「垃圾車追蹤」App 期間的個人資料，並闡明您依各項隱私法規享有的權利。</p>
       <div class="page-hero__meta">
         <span><strong>生效日期：</strong>2026 年 5 月 4 日</span>
-        <span><strong>最後更新：</strong>2026 年 5 月 4 日</span>
-        <span><strong>版本：</strong>2.0</span>
+        <span><strong>最後更新：</strong>2026 年 7 月 21 日</span>
+        <span><strong>版本：</strong>2.1</span>
       </div>
     </div>
 
@@ -49,6 +49,7 @@
         <li><a href="#how-used">資料使用方式</a></li>
         <li><a href="#third-party">第三方服務</a></li>
         <li><a href="#advertising">廣告與廣告識別碼</a></li>
+        <li><a href="#affiliate">分潤商品提示（蝦皮外連）</a></li>
         <li><a href="#location">位置資訊使用細則</a></li>
         <li><a href="#ai">AI 助手與圖片辨識</a></li>
         <li><a href="#retention">資料保留期限</a></li>
@@ -87,7 +88,7 @@
       <h3>3.1 您主動提供的資料</h3>
       <ul>
         <li><strong>位置資訊</strong>：在您授權後，App 取得 GPS 經緯度以顯示附近清運站點與計算 ETA</li>
-        <li><strong>偏好設定</strong>：選擇的縣市、收藏站點、通知時段等（僅儲存於本機裝置）</li>
+        <li><strong>偏好設定</strong>：選擇的縣市、收藏站點、通知時段、分潤商品提示是否顯示／當日關閉紀錄等（僅儲存於本機裝置）</li>
         <li><strong>AI 助手輸入</strong>：您與 AI 助手對話的文字內容</li>
         <li><strong>分類辨識照片</strong>：您主動拍攝或從相簿選取、用於垃圾分類辨識的圖片</li>
       </ul>
@@ -119,6 +120,7 @@
         <li>提供垃圾車即時追蹤、班表查詢、到站提醒功能</li>
         <li>透過 AI 模型回答您的提問與辨識垃圾分類</li>
         <li>處理 Premium 訂閱與廣告獎勵機制</li>
+        <li>在您同意的情境下，顯示可關閉的清運相關商品提示，並於您點擊後導向第三方購物平台（詳見第 6A 節）</li>
         <li>分析使用模式以改善 App 介面與穩定性</li>
         <li>修復技術錯誤與防止 API 濫用</li>
         <li>遵守法律義務（如稅務、消費者保護）</li>
@@ -219,6 +221,13 @@
               <td>代理新北市車輛 API（繞過 WAF）</td>
               <td>本政策</td>
             </tr>
+            <tr>
+              <td>蝦皮購物（Shopee TW）</td>
+              <td>Shopee / 蝦皮台灣</td>
+              <td>當您主動點擊「在蝦皮查看」時，外開至蝦皮 App 或網站；後續瀏覽、登入、購買由蝦皮處理。本 App <strong>不會</strong>將您的姓名、電話、精確位置傳送給蝦皮以建立商品提示。</td>
+              <td>可選的清運相關商品外連（分潤連結）</td>
+              <td><a href="https://shopee.tw/docs/3602" target="_blank" rel="noopener">蝦皮隱私權相關說明</a>（以蝦皮官網最新版為準）</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -239,6 +248,25 @@
       </div>
 
       <p>本 App 已啟用 AdMob 之「<strong>不向兒童顯示個人化廣告</strong>」設定，並依 Google Families Policy 處理廣告請求。</p>
+    </section>
+
+    <section id="affiliate" aria-labelledby="affiliate-h">
+      <h2 id="affiliate-h">6A. 分潤商品提示（蝦皮外連）</h2>
+      <p>在 Remote Config 啟用時，本 App 可能於首頁顯示<strong>可關閉</strong>的「清運相關用品」商品提示（標示為廣告）。此功能與 AdMob 橫幅／獎勵廣告不同：</p>
+      <ul>
+        <li><strong>標示</strong>：卡片標示「廣告」，並揭露「含分潤連結，購買可能讓本 App 獲得佣金」。</li>
+        <li><strong>互動</strong>：僅「在蝦皮查看」按鈕會外開；點標題或內文不會外開。關閉（X）後當日不再顯示；亦可在設定中永久關閉。</li>
+        <li><strong>外連</strong>：點擊後以系統瀏覽器／蝦皮 App 開啟<strong>僅允許</strong>的蝦皮網域（如 <code>s.shopee.tw</code>、<code>shopee.tw</code>）短連結；後續登入、購物、付款由蝦皮處理。</li>
+        <li><strong>商品圖（可選）</strong>：若商品設定含圖片，App 可能從蝦皮允許的 CDN 網域以 HTTPS 載入縮圖（例如 <code>susercontent.com</code>）。載入失敗則不顯示圖片。本 App 不會將您的相簿或個人照片上傳至蝦皮。</li>
+        <li><strong>本機偏好</strong>：是否顯示、當日關閉、曝光次數上限等僅存於裝置本機（SharedPreferences），用於避免過度打擾，不會上傳至 CB Studio 伺服器作為使用者檔案。</li>
+        <li><strong>分析事件（匿名）</strong>：可能記錄商品 ID、版位、點擊／關閉等事件至 Firebase Analytics，用於評估提示是否有效；不包含您的姓名、電話、精確 GPS 軌跡或完整商品 URL 字串作為識別碼。</li>
+        <li><strong>關閉方式</strong>：首頁卡片右上角關閉 → 當日安靜；SnackBar「永久關閉」或「設定 → 資料來源 → 顯示清運相關用品（廣告）」關閉後不再顯示。</li>
+      </ul>
+      <div class="callout callout--info">
+        <p class="callout__title">分潤說明</p>
+        <p>若您透過 App 內分潤連結完成購買，本 App 開發者可能自平台（蝦皮聯盟／分潤計畫）獲得佣金。此不影響您支付的商品價格。商品品質、物流、退換貨與售後服務由賣家與蝦皮負責，CB Studio 非交易當事人。</p>
+      </div>
+      <p>Premium 訂閱使用者預設不顯示此類分潤提示。功能可由伺服器端 Remote Config 關閉；關閉後即使本機偏好為開啟也不會顯示。</p>
     </section>
 
     <section id="location" aria-labelledby="location-h">
@@ -283,7 +311,7 @@
           </thead>
           <tbody>
             <tr>
-              <td>偏好設定、收藏清單、通知排程、AI 使用次數計數</td>
+              <td>偏好設定、收藏清單、通知排程、AI 使用次數計數、分潤提示關閉／曝光偏好</td>
               <td>直到您卸載 App 或在 App 內主動清除</td>
               <td>本機裝置（shared_preferences）</td>
             </tr>
@@ -434,7 +462,7 @@
       <div>
         <p class="site-footer__brand">垃圾車追蹤</p>
         <p class="site-footer__meta">
-          © 2026 CB Studio · 最後更新 2026-05-04<br>
+          © 2026 CB Studio · 最後更新 2026-07-21<br>
           資料來源依《政府資料開放授權條款第 1 版》使用
         </p>
       </div>
