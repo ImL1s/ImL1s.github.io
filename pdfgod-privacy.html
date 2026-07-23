@@ -65,6 +65,22 @@
         <li><strong>Performance Diagnostics</strong> — app performance metrics via Firebase Analytics</li>
     </ul>
 
+    <h3>2.3 Device Identifier (Anti-Abuse Only)</h3>
+    <p>To enforce free-tier daily limits and to ensure the free trial can only be claimed once per device, the App reads
+        the Android device identifier (<code>Settings.Secure.ANDROID_ID</code>). This identifier is unique to this app on
+        your device and cannot be used to identify you across other apps.</p>
+    <ul>
+        <li><strong>Purpose</strong>: fraud and abuse prevention only — specifically, preventing repeated resets of usage
+            allowances by clearing app data or reinstalling.</li>
+        <li><strong>How it is stored</strong>: the identifier is never stored in its raw form. It is converted into an
+            irreversible cryptographic hash (HMAC-SHA256) on our server, and only that hash is retained.</li>
+        <li><strong>What is stored with it</strong>: only usage counters (number of AI requests and PDF unlocks used
+            today) and the trial start date. No document content, file names, personal information, or advertising
+            identifiers are stored.</li>
+        <li><strong>Not used for advertising</strong>: this identifier is never used for advertising, tracking, profiling,
+            or combined with any other identifier.</li>
+    </ul>
+
     <h2>3. Cloud Synchronization</h2>
     <p>If you choose to enable cloud synchronization:</p>
     <ul>
@@ -75,10 +91,12 @@
     </ul>
 
     <h2>4. AI Features</h2>
-    <p>PDF God uses <strong>Google Gemini API</strong> to provide AI summarization and Q&A features.</p>
+    <p>PDF God uses <strong>Google Gemini</strong> to provide AI summarization and Q&A features.</p>
     <ul>
-        <li>When you use these features, relevant text from your document is sent to Google's servers for processing.
-        </li>
+        <li>When you use these features, relevant text from your document is sent to our processing service (Google
+            Cloud Functions), which forwards it to Google's Gemini model and returns the response to you. This step
+            exists to enforce usage limits; the text is used only to produce your answer and is <strong>not
+                stored</strong> by us.</li>
         <li>This data is used solely to generate the response and is handled in accordance with <a
                 href="https://ai.google/responsibility/principles/">Google's AI Data Policy</a>.</li>
         <li>We do not store or use your content for any other purpose.</li>
