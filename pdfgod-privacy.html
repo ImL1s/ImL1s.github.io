@@ -43,79 +43,118 @@
 
 <body>
     <h1>PDF God Privacy Policy</h1>
-    <p class="date">Last Updated: March 9, 2026</p>
+    <p class="date">Last Updated: July 24, 2026</p>
 
     <h2>1. Introduction</h2>
     <p>PDF God ("we", "us", or "our") is an AI-powered PDF reader application developed by Yushang Lung. This Privacy
         Policy explains how we handle your information when you use our mobile application.</p>
 
-    <h2>2. Information We Collect</h2>
-    <h3>2.1 Data NOT Collected</h3>
-    <p>We prioritize your privacy. <strong>We do not collect, store, or share your personal information.</strong></p>
-    <ul>
-        <li><strong>Files</strong>: Your PDF files and annotations are stored locally on your device or in your personal
-            cloud storage (if enabled). We do not have access to them.</li>
-        <li><strong>Account</strong>: Login is used solely for Google Drive authentication to enable synchronization. We
-            do not store your credentials.</li>
-    </ul>
+    <h2>2. Information We Collect and Process</h2>
+    <p>PDF God processes the following categories of data. Some collection is automatic when you use the App, while
+        optional features only process data after you choose to use them.</p>
 
-    <h3>2.2 Analytics Data (Automatically Collected)</h3>
-    <ul>
-        <li><strong>Crash Reports</strong> — collected via Firebase Crashlytics to improve app stability</li>
-        <li><strong>Performance Diagnostics</strong> — app performance metrics via Firebase Analytics</li>
-    </ul>
-
-    <h3>2.3 Device Identifier (Anti-Abuse Only)</h3>
+    <h3>2.1 Device and App Identifiers</h3>
     <p>To enforce free-tier daily limits and to ensure the free trial can only be claimed once per device, the App reads
-        the Android device identifier (<code>Settings.Secure.ANDROID_ID</code>). This identifier is unique to this app on
-        your device and cannot be used to identify you across other apps.</p>
+        the Android device identifier (<code>Settings.Secure.ANDROID_ID</code>). The App sends this identifier over an
+        encrypted connection to our Google Cloud Function, where it is processed to create a pseudonymous quota key.</p>
     <ul>
         <li><strong>Purpose</strong>: fraud and abuse prevention only — specifically, preventing repeated resets of usage
             allowances by clearing app data or reinstalling.</li>
-        <li><strong>How it is stored</strong>: the identifier is never stored in its raw form. It is converted into an
-            irreversible cryptographic hash (HMAC-SHA256) on our server, and only that hash is retained.</li>
+        <li><strong>How it is stored</strong>: the raw identifier is processed transiently by our Cloud Function and is
+            not written to our database. It is converted into a keyed cryptographic hash (HMAC-SHA256), and only that
+            pseudonymous hash is retained.</li>
         <li><strong>What is stored with it</strong>: only usage counters (number of AI requests and PDF unlocks used
             today) and the trial start date. No document content, file names, personal information, or advertising
             identifiers are stored.</li>
-        <li><strong>Not used for advertising</strong>: this identifier is never used for advertising, tracking, profiling,
-            or combined with any other identifier.</li>
+        <li><strong>Not used for advertising</strong>: this identifier is not used for advertising, tracking, or
+            profiling. The raw identifier is not retained in our database; the pseudonymous quota key is retained only
+            for quota and trial-abuse prevention.</li>
+    </ul>
+    <p>Firebase, Google Analytics, Google Mobile Ads, ML Kit, and RevenueCat may also process per-installation,
+        advertising, app-set, or similar identifiers as described in their privacy documentation. Google Mobile Ads
+        uses advertising identifiers for advertising, analytics, and fraud prevention. You can reset or delete the
+        Android advertising ID in your device settings.</p>
+
+    <h3>2.2 App Activity, Diagnostics, and Approximate Location</h3>
+    <ul>
+        <li><strong>App activity</strong>: app launches, screen views, taps, ad interactions, and similar usage events
+            may be processed by Firebase Analytics and Google Mobile Ads.</li>
+        <li><strong>Diagnostics</strong>: device/app information, performance measurements, SDK events, and error
+            information may be processed by Google Mobile Ads, Firebase, and ML Kit to operate, secure, and improve
+            their services and the App.</li>
+        <li><strong>Approximate location</strong>: Google Mobile Ads may derive a general area from an IP address. PDF
+            God does not request precise device location.</li>
+    </ul>
+
+    <h3>2.3 Purchases</h3>
+    <p>RevenueCat processes purchase and subscription history, such as product identifiers and transaction status, to
+        provide paid features, restore purchases, prevent fraud, and measure product performance. PDF God does not
+        receive or store your complete payment-card or bank-account details.</p>
+
+    <h3>2.4 Optional Google Drive Authorization</h3>
+    <p>If you enable Google Drive synchronization, Google Sign-In authenticates your Google account and authorizes the
+        App to access its private App Data folder. PDF God uses the resulting authorization headers only for Drive
+        operations; the App does not read or store your Google profile name, email address, account identifier, or
+        password.</p>
+
+    <h3>2.5 Files, Documents, and Other User Content</h3>
+    <ul>
+        <li>Your original PDF files remain on your device unless you independently store them in a cloud provider. PDF
+            God does not upload complete PDF files to our servers.</li>
+        <li>If you enable cloud synchronization, reading progress, document metadata, annotations, and handwriting are
+            stored in the App Data area of your own Google Drive account. See Section 3.</li>
+        <li>If you use an AI feature, the relevant extracted document text, selected text, and your prompt are sent to
+            our Google Cloud processing service and Google's Vertex AI model solely to generate the requested result.
+            See Section 4.</li>
     </ul>
 
     <h2>3. Cloud Synchronization</h2>
     <p>If you choose to enable cloud synchronization:</p>
     <ul>
-        <li>The app uses <strong>Google Drive API</strong> to store your app data (annotations, reading progress) in a
-            hidden App Data folder on your own Google Drive.</li>
-        <li>This data is private to you and cannot be accessed by other apps or by us.</li>
+        <li>The app uses <strong>Google Drive API</strong> to store reading progress, document metadata, annotations,
+            and handwriting in a hidden App Data folder on your own Google Drive. PDF file contents are not synced.</li>
+        <li>The App accesses this data on your device under the Google Drive authorization you grant. The developer
+            does not keep a separate server-side copy of the Drive sync file.</li>
         <li>You can delete this data at any time via your Google Drive management settings.</li>
     </ul>
 
     <h2>4. AI Features</h2>
-    <p>PDF God uses <strong>Google Gemini</strong> to provide AI summarization and Q&A features.</p>
+    <p>PDF God uses <strong>Google Vertex AI (Gemini models)</strong> to provide AI summarization and Q&amp;A features.
+        These features are optional and the App asks for your consent before sending document text.</p>
     <ul>
         <li>When you use these features, relevant text from your document is sent to our processing service (Google
-            Cloud Functions), which forwards it to Google's Gemini model and returns the response to you. This step
-            exists to enforce usage limits; the text is used only to produce your answer and is <strong>not
-                stored</strong> by us.</li>
-        <li>This data is used solely to generate the response and is handled in accordance with <a
-                href="https://ai.google/responsibility/principles/">Google's AI Data Policy</a>.</li>
-        <li>We do not store or use your content for any other purpose.</li>
+            Cloud Functions), which forwards it to Google's Vertex AI service and returns the response to you. This step
+            exists to enforce usage limits and generate the answer you requested.</li>
+        <li>The App does not intentionally write your AI prompt, document input, or generated output to our own
+            database. Google processes this content under its applicable service terms and retention controls. See
+            <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance">Vertex AI data
+                governance</a>.</li>
     </ul>
 
     <h2>5. Third-Party Services</h2>
-    <p>The App uses the following third-party services that may collect data:</p>
+    <p>The App uses the following service providers and SDKs. Google Mobile Ads also receives data for advertising,
+        analytics, and fraud-prevention purposes:</p>
     <ul>
-        <li><strong>Firebase Crashlytics</strong> — collects crash reports and diagnostics. <a
+        <li><strong>Firebase Analytics, App Check, and Cloud Functions</strong> — usage analytics, app integrity,
+            request routing, and backend processing. <a
                 href="https://firebase.google.com/support/privacy">Firebase Privacy</a></li>
-        <li><strong>Firebase Analytics</strong> — collects anonymized usage statistics. <a
-                href="https://firebase.google.com/support/privacy">Firebase Privacy</a></li>
-        <li><strong>Google Gemini API</strong> — processes text for AI features. <a
+        <li><strong>Google Mobile Ads</strong> — advertising, analytics, and fraud prevention. <a
                 href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+        <li><strong>Google Sign-In and Google Drive</strong> — optional authentication and cloud synchronization. <a
+                href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+        <li><strong>Google Vertex AI</strong> — optional processing of document text and prompts for AI features. <a
+                href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+        <li><strong>Google ML Kit</strong> — on-device handwriting recognition plus service diagnostics and usage
+            analytics. <a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+        <li><strong>RevenueCat</strong> — purchase validation, subscription entitlement, and purchase analytics. <a
+                href="https://www.revenuecat.com/privacy/">RevenueCat Privacy Policy</a></li>
     </ul>
 
     <h2>6. Data Security</h2>
-    <p>All data transmitted between the App and third-party services is encrypted using HTTPS/TLS protocols. We do not
-        store personal data on our servers.</p>
+    <p>Data transmitted between the App and the services described above is encrypted in transit using HTTPS/TLS.
+        Access to our backend resources is protected by Firebase App Check and server-side authorization. We retain
+        only the data needed for the purposes described above and rely on the retention controls of the applicable
+        service providers.</p>
 
     <h2>7. Children's Privacy</h2>
     <p>PDF God is not directed at children under the age of 13. We do not knowingly collect personal information from
@@ -125,8 +164,9 @@
     <p>You may:</p>
     <ul>
         <li>Disable cloud synchronization at any time within app settings</li>
-        <li>Delete your synced data from Google Drive</li>
-        <li>Request deletion of crash report data by contacting us</li>
+        <li>Use the in-app delete flow to remove local data and, when offered, the App's Google Drive sync data</li>
+        <li>Delete synced data through Google Drive management settings</li>
+        <li>Reset or delete your Android advertising ID in device settings</li>
     </ul>
 
     <h2>9. Changes to This Policy</h2>
