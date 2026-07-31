@@ -1,102 +1,114 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隱私權政策 - PawCast</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        h2 { margin-top: 30px; }
-        ul { padding-left: 20px; }
-        a { color: #0066cc; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <title>PawCast Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; --accent: #b45309; --muted: #666; }
+    @media (prefers-color-scheme: dark) { :root { --accent: #ff9a4a; --muted: #aaa; } }
+    * { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+    body { font: 16px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 0; }
+    main { width: 100%; max-width: 820px; margin: 0 auto; padding: 32px 20px 64px; }
+    h1, h2 { line-height: 1.25; }
+    h2 { margin-top: 2rem; }
+    a { color: var(--accent); overflow-wrap: anywhere; }
+    table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+    th, td { border: 1px solid #9996; padding: 10px; text-align: left; vertical-align: top; }
+    .meta, footer { color: var(--muted); }
+    .notice { border-left: 4px solid var(--accent); padding: 8px 16px; background: #ef6c0012; overflow-wrap: anywhere; }
+  </style>
 </head>
 <body>
-    <h1>隱私權政策 / Privacy Policy</h1>
-    <p><strong>最後更新: 2026 年 2 月 24 日</strong></p>
+<main>
+  <h1>PawCast Privacy Policy</h1>
+  <p class="meta"><strong>Effective:</strong> July 14, 2026 · <strong>Last updated:</strong> July 31, 2026</p>
+  <p>This policy explains how PawCast, operated by Yushang Lung under CB Studio ("PawCast", "we", "us"), handles information in the Android app. Contact us at <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a>.</p>
+  <p class="notice">PawCast can continue location sampling in the background only during a walk that you explicitly start. Firebase Analytics and Crashlytics records may be linked to your Firebase user ID and are not described as anonymous.</p>
 
-    <p>本隱私權政策說明 PawCast（以下稱「本 App」）如何收集、使用及保護您的資訊。PawCast 是一款 AI 遛狗天氣助手，幫助飼主根據即時天氣狀況規劃最佳遛狗時段。</p>
+  <h2>1. Information PawCast handles</h2>
+  <h3>Account and identity</h3>
+  <p>PawCast uses Firebase Authentication. The app may create an anonymous Firebase account so account-backed features can work without a registration form. If you choose Google sign-in, Firebase may receive your email address, display name, profile image, and Google/Firebase account identifiers. PawCast uses the Firebase user ID to associate cloud records with your account and may provide it to Firebase Analytics, Firebase Crashlytics, and RevenueCat.</p>
 
-    <h2>1. 資料收集</h2>
+  <h3>Location, weather, maps, and walks</h3>
+  <ul>
+    <li><strong>Weather:</strong> after you grant location access and request local weather, precise coordinates are sent to a Firebase backend protected by Firebase App Check. The backend sends coordinates to OpenWeatherMap and Open-Meteo. Weather cache records use coordinates rounded to approximately two decimal places.</li>
+    <li><strong>Active walks:</strong> after you explicitly start a walk, PawCast may process precise coordinates, timestamps, speed, distance, duration, and a simplified route. On Android, a foreground location service can continue this user-started session while the app is in the background. PawCast is not designed to start passive location tracking when no walk is active.</li>
+    <li><strong>Walk history:</strong> walk summaries and routes may be saved locally and, when an account is available, in Cloud Firestore under your Firebase user ID.</li>
+    <li><strong>Maps:</strong> OpenStreetMap's standard tile service receives the requested tile coordinates, PawCast's identifying User-Agent, IP address, and ordinary network metadata when a map is displayed.</li>
+  </ul>
+  <p>You can deny or revoke location access in Android settings, and you can stop an active walk in the app. Weather, route tracking, and map features will not work fully without the relevant access.</p>
 
-    <h3>1.1 位置資料</h3>
-    <p>本 App 會在您授權後收集位置資訊，用於：</p>
-    <ul>
-        <li>取得您所在地區的即時天氣資訊</li>
-        <li>提供在地化的遛狗建議</li>
-        <li>記錄遛狗路線軌跡（僅限遛狗追蹤功能開啟時）</li>
-    </ul>
-    <p>位置資料僅在 App 使用期間收集，不會在背景持續追蹤。</p>
+  <h3>Dog profiles, photos, AI, and pet-health features</h3>
+  <p>You may provide dog profile details such as name, breed, age, weight, coat information, health-related tags, special needs, and a photo. These details can be stored locally or in Firebase and may be included in an AI-advice request when you use that feature.</p>
+  <p>If a pet-health feature is available and you choose to use it, PawCast may process a camera or gallery image, a re-encoded copy with EXIF metadata removed, scan inputs and results, consent records, and technical quota or cleanup records. Requested AI processing can use Firebase services and a deployed Google Gemini service. AI output is informational and is not veterinary diagnosis or emergency care.</p>
 
-    <h3>1.2 寵物資料</h3>
-    <p>您可以在 App 中建立狗狗個人檔案，包括：</p>
-    <ul>
-        <li>名字、品種、年齡、體重</li>
-        <li>健康狀況與特殊需求</li>
-    </ul>
-    <p>這些資料儲存在您的裝置及 Firebase 雲端服務中，用於提供個人化的遛狗建議。</p>
+  <h3>Purchases and subscriptions</h3>
+  <p>Google Play handles Android purchases. PawCast uses RevenueCat to manage entitlements and may process product identifiers, store and environment, purchase history, transaction identifiers, expiration and entitlement status, and a RevenueCat App User ID. When you are signed in, that identifier may be linked to your Firebase user ID.</p>
 
-    <h3>1.3 使用分析資料</h3>
-    <p>我們收集匿名的使用資料以改善 App 體驗：</p>
-    <ul>
-        <li>App 使用模式與功能互動（透過 Firebase Analytics）</li>
-        <li>裝置類型、作業系統版本</li>
-        <li>當機報告與效能數據（透過 Firebase Crashlytics）</li>
-    </ul>
+  <h3>Feedback, local drafts, and exports</h3>
+  <p>If you send feedback, PawCast processes the category you select, your description, an optional contact value, client and server timestamps, a submission identifier, a public reference, internal correlation identifiers, and your Firebase account association. Do not include passwords, authentication tokens, precise coordinates, pet-health details, or other sensitive information in free-text fields.</p>
+  <p>You can choose whether to attach a limited diagnostic preview. Only the fields shown in the app can be submitted: app version, platform, operating-system version, locale, device model, network state, and authentication state. PawCast validates these fields and rejects common secret, contact, coordinate, URL, and pet-health patterns, but no automated filter can identify every sensitive value.</p>
+  <p>Feedback drafts are stored only on your device for up to 30 days after the last edit and can be deleted at any time. Submitted feedback is stored in Firebase under your account. Authenticated users can export their unexpired feedback history in Settings; the result is displayed on the device unless you copy it elsewhere.</p>
 
-    <h2>2. 資料用途</h2>
-    <p>我們使用收集的資訊來：</p>
-    <ul>
-        <li>提供即時天氣資訊與遛狗評分</li>
-        <li>透過 AI 分析提供量身定做的遛狗建議</li>
-        <li>追蹤與記錄遛狗路線和時間</li>
-        <li>改善 App 效能與使用者體驗</li>
-        <li>發送重要的服務通知</li>
-    </ul>
+  <h3>Usage, diagnostics, messaging, security, and ads</h3>
+  <ul>
+    <li><strong>Firebase Analytics:</strong> app interactions, selected feature events, locale, subscription state, app-instance identifiers, and the Firebase user ID assigned by PawCast. PawCast's event contract excludes raw coordinates, email addresses, dog names, notification text, and raw error text.</li>
+    <li><strong>Firebase Crashlytics:</strong> crash traces, diagnostics, device and app state, installation identifiers, developer-supplied logs or keys, and the Firebase user ID assigned by PawCast.</li>
+    <li><strong>Firebase Cloud Messaging:</strong> installation and registration tokens, app version, and delivery metadata needed for service messages.</li>
+    <li><strong>Firebase App Check, Play Integrity, Remote Config, and Firebase Installations:</strong> attestation, installation-linked identifiers, and technical data used to prevent abuse and deliver app configuration.</li>
+    <li><strong>Google AdMob:</strong> PawCast uses AdMob for the ad placements already present in the app. Google may process or share IP address, product interactions, diagnostics, advertising or device identifiers, and approximate location inferred from network information for ads, analytics, and fraud prevention. Ad personalization and consent options depend on your region, device settings, and Google's consent controls; you can manage choices when they are presented and through applicable device or Google settings.</li>
+  </ul>
 
-    <h2>3. 第三方服務</h2>
-    <p>本 App 整合以下第三方服務：</p>
-    <ul>
-        <li><strong>Firebase Analytics & Crashlytics</strong>：用於匿名使用統計與當機報告。參見 <a href="https://policies.google.com/privacy" target="_blank">Google 隱私政策</a>。</li>
-        <li><strong>Firebase AI (Gemini)</strong>：用於 AI 遛狗建議生成。處理的文字不包含個人識別資訊。</li>
-        <li><strong>Google AdMob</strong>：用於投放廣告。AdMob 可能收集裝置識別碼和使用資料。參見 <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob 資料揭露</a>。</li>
-        <li><strong>天氣資料提供者</strong>：透過第三方 API 取得天氣資訊，僅傳送座標位置，不傳送個人資訊。</li>
-    </ul>
+  <h2>2. Why we use information</h2>
+  <p>We use information to authenticate accounts; provide weather, maps, walks, reminders, dog profiles, subscriptions, feedback, exports, and optional AI features; synchronize and recover account data; respond to feedback; send service messages; measure feature use; diagnose failures; protect the service and enforce quotas; show and measure existing ads; process privacy requests; and meet legal obligations.</p>
 
-    <h2>4. 資料儲存與安全</h2>
-    <p>您的資料儲存在 Firebase 雲端服務中，以加密方式傳輸。我們採取適當的技術和組織措施保護您的資訊。</p>
+  <h2>3. Providers and disclosure</h2>
+  <table>
+    <thead><tr><th>Provider</th><th>Purpose and information involved</th></tr></thead>
+    <tbody>
+      <tr><td>Google Firebase</td><td>Authentication, Firestore, Storage, Functions, Analytics, Crashlytics, FCM, App Check, Remote Config, and installation services; account IDs, user content, photos, walk/location records, feedback, optional feedback contact and diagnostics, usage, tokens, IP address, and request metadata as applicable.</td></tr>
+      <tr><td>Google Play</td><td>App distribution, billing, and Play Integrity; purchase, account, transaction, device, and integrity information.</td></tr>
+      <tr><td>Google AdMob</td><td>Advertising, measurement, and fraud prevention; network, device/advertising identifiers, product interactions, and diagnostics.</td></tr>
+      <tr><td>RevenueCat</td><td>Subscription entitlement management; subscriber IDs, product and entitlement status, and purchase history.</td></tr>
+      <tr><td>OpenWeatherMap and Open-Meteo</td><td>Weather requested for a coordinate; coordinates and backend request/network metadata.</td></tr>
+      <tr><td>Google Gemini</td><td>AI features you request; the minimum relevant dog, weather, walk, image, or pet-health inputs.</td></tr>
+      <tr><td>OpenStreetMap standard tile service</td><td>Map tiles; IP address, PawCast User-Agent, and requested tile coordinates.</td></tr>
+    </tbody>
+  </table>
+  <p>We may also disclose information when required by law, to protect users or the service, during a business transfer subject to appropriate safeguards, or when you direct us to do so. Some advertising transfers may be treated as a "sale" or "sharing" under regional law even when PawCast receives no payment for personal information.</p>
 
-    <h2>5. 資料分享</h2>
-    <p>我們不會出售您的個人資訊。我們僅在以下情況下分享資料：</p>
-    <ul>
-        <li>經您明確同意</li>
-        <li>為遵守法律義務</li>
-        <li>為保護使用者的權益與安全</li>
-    </ul>
+  <h2>4. Retention</h2>
+  <ul>
+    <li>Account-backed dog, walk, reminder, AI, and pet-health records are generally kept until you delete the applicable record or your account, subject to security records and provider backups. Removing an individual dog profile does not currently prove that a separately stored dog photo was removed; completed account deletion targets the account's dog-photo Storage prefix, and you can contact us for individual-photo cleanup.</li>
+    <li>Local dog, walk, reminder, and temporary data remain on the device until removed by the feature, account deletion, app-data clearing, or uninstall.</li>
+    <li>Local feedback drafts expire up to 30 days after the last edit. Submitted feedback reports, submission-deduplication records, and public-reference records are assigned an expiry approximately 180 days after submission; feedback rate-limit records use shorter expiry periods. Firestore TTL and scheduled cleanup are asynchronous, so physical deletion can occur later. Public-reference records use a SHA-256-derived account hash rather than the raw Firebase user ID.</li>
+    <li>Finalized pet-health media is assigned a backend deletion-eligibility timestamp approximately 24 hours after finalization. Scheduled cleanup, retries, audit and security records, and provider backups can remain longer; do not interpret the timestamp as proof of physical deletion at exactly 24 hours.</li>
+    <li>Weather cache entries stop being treated as fresh after about ten minutes and are removed by bounded scheduled cleanup (with asynchronous Firestore TTL used where configured). Because entries are keyed by rounded coordinates rather than a Firebase user ID, account deletion may not identify a specific cache record, and physical deletion may occur after freshness expires.</li>
+    <li><a href="https://firebase.google.com/support/privacy">Firebase documents</a> approximately 90-day retention for Crashlytics crash traces and associated identifiers. When Android account deletion requests removal of the current Firebase Installation ID, <a href="https://firebase.google.com/docs/projects/manage-installations">Firebase documents</a> that removal from live and backup systems can take up to 180 days; Firebase services may later create a new, unrelated Installation ID. Deleting that ID does not itself delete Google Analytics data. Firebase Authentication, FCM, Analytics, and other backup data follow Google's configured retention and deletion processes, so provider-side removal may not be immediate.</li>
+    <li>RevenueCat and Google Play may retain purchase, tax, fraud-prevention, and transaction records as required. AdMob, OpenWeatherMap, Open-Meteo, Gemini, and OpenStreetMap retain service logs under their own settings and policies.</li>
+    <li>After you request account deletion, PawCast keeps two server-only deletion guards: a SHA-256-derived pseudonymous key used by backend transactions, and a Firebase-user-ID-keyed access block required so Firestore and Storage Security Rules can reject still-valid pre-deletion sign-in tokens. A separate opaque continuation receipt may retain the raw Firebase user ID for up to seven days after PawCast data deletion so a lost response or offline device cannot strand Firebase Authentication deletion. Daily cleanup first finishes any pending Authentication deletion, converts the receipt to an identifier-free completion proof, and only then removes eligible guards. Guard bodies contain timestamps and a schema version but no profile, dog, walk, health, purchase, or activity fields. Cleanup eligibility begins after seven days from the most recent deletion-processing event, so physical removal can occur approximately 24 hours later.</li>
+    <li>We may retain limited records when needed for security, fraud prevention, legal claims, accounting, or compliance, and may retain aggregate or de-identified statistics that no longer identify you.</li>
+  </ul>
 
-    <h2>6. 您的權利</h2>
-    <p>您有權利：</p>
-    <ul>
-        <li>存取您的個人資料</li>
-        <li>要求刪除您的帳戶和資料</li>
-        <li>退出非必要的資料收集</li>
-        <li>隨時透過裝置設定撤回位置或廣告追蹤授權</li>
-    </ul>
-    <p>若您位於歐洲經濟區（EEA）、英國或瑞士，您根據 GDPR 享有額外權利，包括資料可攜權及向監管機構提出申訴的權利。</p>
+  <h2>5. Account and data deletion</h2>
+  <p>In PawCast, open <strong>Settings → Delete account</strong>. You can also use our public <a href="https://iml1s.github.io/pawcast-account-deletion.html">account-deletion instructions</a> if you cannot access the app.</p>
+  <p>A completed in-app deletion requests removal of the Firebase user tree and related dog, walk, health, usage, AI-cache, merge-ticket, feedback-report, and Storage records that PawCast can associate with the Firebase user ID. It also clears PawCast local preferences, feedback drafts, reminders, notifications, and temporary health media; makes best-effort requests to delete the current FCM token and Android Firebase Installation ID; resets the app's Analytics identity; logs out of RevenueCat; and deletes the Firebase Authentication account. Expiring global feedback-reference and abuse-prevention records are not stored inside the Firebase user tree and may remain until their scheduled expiry. Connectivity or recent-sign-in requirements can delay completion, and the app may retry a pending request. Do not assume deletion is complete until PawCast confirms it.</p>
+  <p>Deleting a PawCast account does <strong>not</strong> cancel a Google Play subscription and does not by itself guarantee deletion of RevenueCat's customer profile, Google Play transaction records, provider logs, backups, or records not linked to your Firebase user ID. The public deletion page explains how to request provider-linked cleanup. Manage or cancel subscriptions separately in Google Play.</p>
 
-    <h2>7. 兒童隱私</h2>
-    <p>PawCast 不適用於 13 歲以下的兒童。我們不會故意收集 13 歲以下兒童的個人資訊。</p>
+  <h2>6. Your choices and rights</h2>
+  <p>You can manage Android permissions, stop an active walk, manage notification access, make available advertising-consent choices, delete records in the app, export unexpired feedback from Settings, clear app data, uninstall PawCast, or request account deletion. Depending on your location, you may also have rights to access, correct, export, object to, restrict, or delete personal information. Email <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a>. We may need to verify your identity before acting on a request.</p>
 
-    <h2>8. 政策變更</h2>
-    <p>我們可能會不時更新本隱私權政策。任何變更將在此頁面公告，並更新「最後更新」日期。</p>
+  <h2>7. Security, international processing, and children</h2>
+  <p>PawCast and its providers use measures such as HTTPS/TLS, Firebase access controls, App Check, authenticated backend functions, scoped storage paths, and image re-encoding. No system is completely secure. Providers may process information in countries other than yours under their contractual and legal safeguards.</p>
+  <p>PawCast is a general-audience dog-walking app and is not knowingly directed to children below the age at which they can consent to data processing in their region. A parent or guardian who believes a child submitted information without valid consent should contact us for review and deletion.</p>
 
-    <h2>9. 聯絡我們</h2>
-    <p>如果您對本隱私權政策有任何疑問，請透過以下方式聯繫我們：</p>
-    <ul>
-        <li>Email: <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a></li>
-        <li>電話: +886 963723347</li>
-        <li>網站: <a href="https://iml1s.github.io">https://iml1s.github.io</a></li>
-    </ul>
+  <h2>8. Changes and contact</h2>
+  <p>We may update this policy when features, providers, or legal requirements change. We will update the date above and provide additional notice when required.</p>
+  <p><strong>Operator:</strong> Yushang Lung, CB Studio<br><strong>Email:</strong> <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a><br><strong>Deletion page:</strong> <a href="https://iml1s.github.io/pawcast-account-deletion.html">https://iml1s.github.io/pawcast-account-deletion.html</a></p>
+  <footer><p>Related provider policies: <a href="https://policies.google.com/privacy">Google</a>, <a href="https://www.revenuecat.com/privacy/">RevenueCat</a>, <a href="https://openweathermap.org/privacy-policy">OpenWeatherMap</a>, <a href="https://open-meteo.com/en/terms">Open-Meteo</a>, and <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a>.</p></footer>
+</main>
 </body>
 </html>
