@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱私權政策 - 靜讀 QuietInbox | Privacy Policy - QuietInbox</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: #223; max-width: 800px; margin: 0 auto; padding: 24px; }
+        h1 { border-bottom: 2px solid #1F6F6B; padding-bottom: 10px; color: #1F6F6B; }
+        h2 { margin-top: 30px; color: #16514E; }
+        ul { padding-left: 20px; }
+        a { color: #1F6F6B; }
+        .lang-toggle { text-align: right; margin-bottom: 20px; }
+        .lang-toggle a { padding: 5px 15px; border: 1px solid #1F6F6B; border-radius: 4px; text-decoration: none; margin-left: 5px; }
+        .lang-toggle a.active { background: #1F6F6B; color: white; }
+        .en { display: none; }
+        code { background: #eef5f4; padding: 1px 5px; border-radius: 3px; }
+    </style>
+    <script>
+        function toggleLang(lang) {
+            document.querySelectorAll('.zh').forEach(el => el.style.display = lang === 'zh' ? '' : 'none');
+            document.querySelectorAll('.en').forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+            document.querySelectorAll('.lang-toggle a').forEach(a => a.classList.remove('active'));
+            document.querySelector('.lang-toggle a[onclick*="' + lang + '"]').classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <div class="lang-toggle">
+        <a href="#" class="active" onclick="toggleLang('zh'); return false;">中文</a>
+        <a href="#" onclick="toggleLang('en'); return false;">English</a>
+    </div>
+
+    <div class="zh">
+    <h1>靜讀 QuietInbox 隱私權政策</h1>
+    <p><strong>最後更新日期：2026 年 9 月 6 日</strong></p>
+    <p>靜讀（QuietInbox）是一款 Android 應用程式，把通訊 App 發到通知列的內容，以加密方式留一份副本在你的手機裡。本政策說明 App 會存取什麼、絕不會做什麼、資料放在哪裡，以及你如何刪除它。</p>
+
+    <h2>1. 我們不收集任何資料</h2>
+    <ul>
+        <li>App <strong>沒有 INTERNET 網路權限</strong>。它在技術上無法把任何資料傳送到開發者或任何第三方。</li>
+        <li>沒有分析工具、沒有廣告 SDK、沒有當機回報、沒有帳號、沒有伺服器。</li>
+        <li>開發者無法看到你的通知內容、對話、聯絡人或使用情形。</li>
+    </ul>
+
+    <h2>2. App 在手機上會存取什麼</h2>
+    <ul>
+        <li><strong>通知存取（Notification Listener）</strong>：只用來讀取你自行啟用的來源 App 所發出的通知文字與中繼資料（寄件者、時間、對話標題）。App 不會讀取其他 App 的儲存空間。</li>
+        <li><strong>通知中的圖片</strong>：只有在你開啟「複製圖片」時，才會複製通知內附的圖片。</li>
+        <li><strong>發送通知權限</strong>：只用於 App 自己的測試通知與你設定的提醒。</li>
+        <li><strong>生物辨識／螢幕鎖</strong>：只在你開啟「App 鎖」時用來解鎖畫面，驗證由系統完成，App 不會取得任何生物辨識資料。</li>
+    </ul>
+
+    <h2>3. App 絕不會做的事</h2>
+    <ul>
+        <li>不會對來源通知採取任何動作：不回覆、不關閉、不標記已讀、不觸發通知內的任何連結。</li>
+        <li>不會把資料上傳到雲端、不會參與 Android 自動備份或裝置間轉移。</li>
+        <li>不會把訊息內容寫入日誌；本機診斷只包含代碼與計數。</li>
+    </ul>
+
+    <h2>4. 資料存放在哪裡</h2>
+    <ul>
+        <li>所有副本都以 SQLCipher（AES-256）加密儲存在 App 的私有儲存空間，金鑰為這次安裝隨機產生，並由 Android Keystore 保護。</li>
+        <li>非敏感的偏好設定（主題、保留天數等）存放在 App 私有的設定檔中。</li>
+    </ul>
+
+    <h2>5. 什麼資料會離開手機</h2>
+    <p>只有在你主動操作時：匯出的加密備份（只有持有你的復原金鑰才能讀取），以及你自己複製或分享的文字。</p>
+
+    <h2>6. 保留與刪除</h2>
+    <ul>
+        <li>副本會在你設定的保留期限後自動刪除（預設 30 天，可設 7 到 365 天）。</li>
+        <li>你可以隨時刪除單則訊息、整個對話，或使用「刪除全部資料」連同金鑰一起清除。解除安裝 App 也會一併移除所有資料。</li>
+    </ul>
+
+    <h2>7. 兒童</h2>
+    <p>本 App 不針對 13 歲以下兒童設計，也不會收集任何人的個人資料。</p>
+
+    <h2>8. 開放原始碼</h2>
+    <p>靜讀以 GPL-3.0-or-later 授權開放原始碼，任何人都可以在 <a href="https://github.com/ImL1s/quietinbox">github.com/ImL1s/quietinbox</a> 檢視本政策所述的每一項行為。</p>
+
+    <h2>9. 聯絡方式</h2>
+    <p>開發者：Yushang Lung（CB Studio）<br>Email：<a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a><br>問題回報：<a href="https://github.com/ImL1s/quietinbox/issues">github.com/ImL1s/quietinbox/issues</a></p>
+    </div>
+
+    <div class="en">
+    <h1>QuietInbox Privacy Policy</h1>
+    <p><strong>Last updated: 6 September 2026</strong></p>
+    <p>QuietInbox is an Android app that keeps an encrypted copy of what your messaging apps post to the notification shade, on your phone. This policy explains what the app accesses, what it never does, where data lives and how you delete it.</p>
+
+    <h2>1. We collect nothing</h2>
+    <ul>
+        <li>The app has <strong>no INTERNET permission</strong>. It is technically unable to send any data to the developer or to any third party.</li>
+        <li>No analytics, no advertising SDK, no crash reporting, no accounts, no servers.</li>
+        <li>The developer cannot see your notifications, conversations, contacts or usage.</li>
+    </ul>
+
+    <h2>2. What the app accesses on your phone</h2>
+    <ul>
+        <li><strong>Notification access (Notification Listener)</strong>: used only to read the text and metadata (sender, time, conversation title) of notifications posted by the source apps you enable. The app never reads other apps' storage.</li>
+        <li><strong>Images in notifications</strong>: copied only while "Copy images" is turned on.</li>
+        <li><strong>Post notifications</strong>: used only for the app's own test notification and the reminders you configure.</li>
+        <li><strong>Biometrics / screen lock</strong>: used only to unlock the app when "Lock the app" is on; verification is done by the system and the app receives no biometric data.</li>
+    </ul>
+
+    <h2>3. What the app never does</h2>
+    <ul>
+        <li>It never acts on a source notification: no reply, no dismiss, no mark-as-read, no opening of links inside it.</li>
+        <li>It never uploads data, and it opts out of Android auto-backup and device-to-device transfer.</li>
+        <li>It never logs message content; local diagnostics contain codes and counts only.</li>
+    </ul>
+
+    <h2>4. Where data lives</h2>
+    <ul>
+        <li>All copies are stored in the app's private storage, encrypted with SQLCipher (AES-256) under a random per-installation key protected by the Android Keystore.</li>
+        <li>Non-sensitive preferences (theme, retention period, …) live in the app's private settings.</li>
+    </ul>
+
+    <h2>5. What leaves the phone</h2>
+    <p>Only what you move yourself: an encrypted backup you export (readable only with your recovery key), and text you copy or share.</p>
+
+    <h2>6. Retention and deletion</h2>
+    <ul>
+        <li>Copies are deleted automatically after the retention period you set (default 30 days, 7–365 days).</li>
+        <li>You can delete a message, a whole conversation, or use "Delete all data" to wipe everything including the keys. Uninstalling the app removes all data as well.</li>
+    </ul>
+
+    <h2>7. Children</h2>
+    <p>The app is not directed at children under 13 and collects no personal data from anyone.</p>
+
+    <h2>8. Open source</h2>
+    <p>QuietInbox is free software under GPL-3.0-or-later. Every behaviour described here can be verified in the source code at <a href="https://github.com/ImL1s/quietinbox">github.com/ImL1s/quietinbox</a>.</p>
+
+    <h2>9. Contact</h2>
+    <p>Developer: Yushang Lung (CB Studio)<br>Email: <a href="mailto:aa22396584@gmail.com">aa22396584@gmail.com</a><br>Issues: <a href="https://github.com/ImL1s/quietinbox/issues">github.com/ImL1s/quietinbox/issues</a></p>
+    </div>
+</body>
+</html>
